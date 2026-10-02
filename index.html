@@ -33,6 +33,30 @@
 .member-preview{max-width:920px;margin:30px auto 0;padding:18px;border:1px solid #453025;background:#100b08;display:flex;justify-content:space-between;gap:18px;align-items:center;text-align:left}
 .member-preview h3{font:600 21px var(--serif);margin:0 0 5px}.member-preview p{font-size:10px;color:#83766d;margin:0}
 @media(max-width:720px){.dashboard-grid{grid-template-columns:1fr}.dash-card.wide{grid-column:auto}.receipt-form{grid-template-columns:1fr}.member-preview{display:block}.member-preview button{margin-top:14px}}
+
+/* FOUNDING ACCESS POPUP */
+.founder-popup{position:fixed;inset:0;z-index:145;background:rgba(5,3,2,.84);backdrop-filter:blur(12px);display:none;place-items:center;padding:18px}
+.founder-popup.open{display:grid}
+.founder-shell{width:min(980px,96vw);max-height:92vh;overflow:auto;position:relative;background:radial-gradient(circle at 92% 8%,rgba(170,102,59,.2),transparent 32%),linear-gradient(145deg,#1b100b,#090604 68%);border:1px solid #a46c46;box-shadow:0 44px 120px #000;padding:32px}
+.founder-close{position:absolute;right:16px;top:16px;width:40px;height:40px;border-radius:50%;border:1px solid #78523a;background:#100a06;color:#fff;font-size:23px;cursor:pointer;z-index:2}
+.founder-kicker{font:700 8px var(--sans);letter-spacing:.24em;color:#c98d62}
+.founder-shell h2{font:600 clamp(42px,6vw,72px)/.94 var(--serif);letter-spacing:-.035em;margin:10px 0 14px}
+.founder-shell>p{max-width:690px;color:#b7a598;font-size:13px;line-height:1.65;margin:0 0 22px}
+.founder-email{display:grid;grid-template-columns:1fr auto;gap:8px;margin:0 0 22px}
+.founder-email input{background:#0b0705;border:1px solid #6d4933;color:#fff;padding:15px 16px;font:12px var(--sans);outline:none}
+.founder-email button{min-width:205px}
+.founder-offers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.founder-offer{border:1px solid #493125;background:rgba(17,10,7,.82);padding:20px;min-height:235px;position:relative}
+.founder-offer.best{border-color:#c98a5f;box-shadow:inset 0 0 0 1px #6f4027,0 14px 35px rgba(0,0,0,.25)}
+.founder-offer .tag{position:absolute;right:12px;top:12px;border:1px solid #a56f4b;border-radius:99px;padding:5px 8px;font:700 7px var(--sans);letter-spacing:.12em;color:#e6bb98}
+.founder-offer small{font:700 8px var(--sans);letter-spacing:.15em;color:#9e8d80}
+.founder-offer h3{font:600 25px var(--serif);margin:11px 0 4px}
+.founder-price{font:600 34px var(--serif);color:#e2b081;margin:0 0 14px}.founder-price em{font:500 12px var(--sans);color:#8c7d72}
+.founder-offer ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}.founder-offer li{font-size:10px;color:#aa9a8e}.founder-offer li:before{content:'✓';margin-right:8px;color:#d69b6d}
+.founder-note{display:flex;justify-content:center;gap:10px;align-items:center;margin-top:18px;padding-top:16px;border-top:1px solid #3b281e;color:#a79080;font:600 8px var(--sans);letter-spacing:.14em;text-align:center}
+.founder-message{min-height:18px;margin-top:10px;color:#dfb28c;font-size:10px}
+@media(max-width:760px){.founder-shell{padding:26px 18px 22px}.founder-offers{grid-template-columns:1fr}.founder-offer{min-height:auto}.founder-email{grid-template-columns:1fr}.founder-email button{min-width:0}.founder-shell h2{font-size:45px}}
+
 </style>
 </head>
 <body>
@@ -250,6 +274,27 @@
   </footer>
 
   <div class="route-layer" id="routeLayer" aria-hidden="true"><div class="route-header"><div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><div><strong>DIVINE SHADES OF BROWN</strong><p id="routeLabel">TOOL</p></div></div><button class="route-close" id="routeClose" aria-label="Close tool">×</button></div><div class="route-content" id="routeContent"></div></div>
+
+  <div class="founder-popup" id="founderPopup" aria-hidden="true">
+    <div class="founder-shell" role="dialog" aria-modal="true" aria-labelledby="founderPopupTitle">
+      <button class="founder-close" id="founderClose" aria-label="Close">×</button>
+      <div class="founder-kicker">DIVINE SHADES OF BROWN · FOUNDING ROLLOUT</div>
+      <h2 id="founderPopupTitle">Founding access<br><em>is open.</em></h2>
+      <p>Join free now, explore the platform, and get first access to introductory member pricing while the founding rollout lasts.</p>
+      <form class="founder-email" id="founderPopupForm">
+        <input type="email" id="founderPopupEmail" required autocomplete="email" placeholder="Enter your email">
+        <button type="submit" class="shine-btn">JOIN FREE & EXPLORE <span>↗</span></button>
+      </form>
+      <div class="founder-offers">
+        <article class="founder-offer"><small>FREE EXPLORER</small><h3>Explore</h3><div class="founder-price">$0</div><ul><li>Browse core tools</li><li>Save favorites</li><li>Get founding updates</li></ul></article>
+        <article class="founder-offer"><small>ANNUAL MEMBER</small><h3>Belong</h3><div class="founder-price">$49 <em>/ year</em></div><ul><li>My DSB dashboard</li><li>Premium resources</li><li>Member deals</li></ul></article>
+        <article class="founder-offer best"><span class="tag">FOUNDING VALUE</span><small>FOUNDING LIFETIME</small><h3>Build</h3><div class="founder-price">$399 <em>one time</em></div><ul><li>Lifetime access</li><li>Founding status</li><li>Best long-term value</li></ul></article>
+      </div>
+      <div class="founder-note">LIMITED INTRODUCTORY PRICING DURING THE FOUNDING ROLLOUT.</div>
+      <div class="founder-message" id="founderPopupMessage"></div>
+    </div>
+  </div>
+
   <div class="modal" id="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
   <div class="toast" id="toast"></div>
   <script>
@@ -313,9 +358,25 @@ document.querySelector('#passportBtn').onclick=()=>document.querySelector('#pass
 document.querySelector('#downloadStarter').onclick=()=>{const content=`DIVINE SHADES OF BROWN\nMY STORY — STARTER REFLECTION PAGES\n\n1. I COME FROM...\nWrite five things about your family, neighborhood, culture, people, places or traditions that shaped who you are.\n\n2. I CARRY...\nName three strengths you inherited and three strengths you are building for yourself.\n\n3. I KNOW...\nWrite down one piece of Black history that changed the way you see yourself or the world.\n\n4. I WILL...\nName one goal you will complete in the next 30 days. What is your first step?\n\n5. I LEAVE...\nWhat do you want the next generation to inherit from you besides money?\n\nDivine Shades of Brown · Founding Preview · InAct Entertainment LLC`;const blob=new Blob([content],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Divine-Shades-of-Brown-Starter-Reflection-Pages.txt';a.click();URL.revokeObjectURL(a.href);toast('Starter reflection pages downloaded.');};
 
 const modal=document.querySelector('#modal'),modalContent=document.querySelector('#modalContent');function openModal(html){modalContent.innerHTML=html;modal.classList.add('open');modal.setAttribute('aria-hidden','false')}function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true')}document.querySelector('#modalClose').onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const founderPopup=document.getElementById('founderPopup');
+const founderPopupKey='dsb-founding-popup-dismissed';
+const founderSignupKey='dsb-founding-email';
+let founderPopupShown=false;
+function canShowFounderPopup(){if(localStorage.getItem(founderSignupKey))return false;const dismissed=Number(localStorage.getItem(founderPopupKey)||0);return !dismissed||(Date.now()-dismissed)>(7*24*60*60*1000);}
+function openFounderPopup(){if(founderPopupShown||!canShowFounderPopup())return;founderPopupShown=true;founderPopup.classList.add('open');founderPopup.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>document.getElementById('founderPopupEmail')?.focus(),150);}
+function closeFounderPopup(){founderPopup.classList.remove('open');founderPopup.setAttribute('aria-hidden','true');document.body.style.overflow='';localStorage.setItem(founderPopupKey,String(Date.now()));}
+document.getElementById('founderClose').onclick=closeFounderPopup;
+founderPopup.onclick=e=>{if(e.target===founderPopup)closeFounderPopup();};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&founderPopup.classList.contains('open'))closeFounderPopup();});
+document.getElementById('founderPopupForm').onsubmit=e=>{e.preventDefault();const email=document.getElementById('founderPopupEmail').value.trim();localStorage.setItem(founderSignupKey,email);document.getElementById('founderPopupMessage').textContent='You are on the founding list. Explore now — member pricing will be announced before public launch.';const mainEmail=document.getElementById('foundingEmail');if(mainEmail)mainEmail.value=email;setTimeout(()=>{founderPopup.classList.remove('open');founderPopup.setAttribute('aria-hidden','true');document.body.style.overflow='';document.getElementById('membership')?.scrollIntoView({behavior:'smooth'});},900);};
+setTimeout(()=>openFounderPopup(),20000);
+let founderScrollArmed=true;
+window.addEventListener('scroll',()=>{if(!founderScrollArmed||founderPopupShown)return;const doc=document.documentElement;const depth=(window.scrollY+window.innerHeight)/(doc.scrollHeight||1);if(depth>=0.35){founderScrollArmed=false;openFounderPopup();}},{passive:true});
+document.addEventListener('mouseout',e=>{if(e.clientY<=0&&!founderPopupShown&&window.innerWidth>900)openFounderPopup();});
+
 document.querySelector('#shopPreview').onclick=()=>openModal(`<p class="section-kicker">SHOP BLACK · COMING LAYER</p><h3>DSB Marketplace Preview</h3><p>The production version will feature DSB journals and downloads, Examine the Past Black History products, plus curated Black-owned partners. We will separate DSB-owned products from affiliate partner products clearly.</p><div class="modal-list"><button onclick="document.querySelector('#resources').scrollIntoView({behavior:'smooth'});document.querySelector('#modal').classList.remove('open')">Open free DSB resources →</button><a href="https://www.etsy.com/" target="_blank" rel="noreferrer">External marketplace connection placeholder ↗</a></div>`);
 
-document.querySelectorAll('.member-grid button').forEach(b=>b.onclick=()=>document.querySelector('#foundingEmail').focus());document.querySelector('#foundingForm').onsubmit=e=>{e.preventDefault();const email=document.querySelector('#foundingEmail').value.trim();document.querySelector('#formMessage').textContent=`Thanks — ${email} is captured locally for this Build 3 demo. Supabase will make this persistent in the data phase.`;toast('Founding interest captured in demo mode.');};
+document.querySelectorAll('.member-grid button').forEach(b=>b.onclick=()=>document.querySelector('#foundingEmail').focus());document.querySelector('#foundingForm').onsubmit=e=>{e.preventDefault();const email=document.querySelector('#foundingEmail').value.trim();localStorage.setItem('dsb-founding-email',email);document.querySelector('#formMessage').textContent=`Thanks — ${email} is on the founding list in this Build 3 preview. Supabase will make this account-based next.`;toast('Founding interest captured.');};
 
 
 /* BUILD 2 DATA + INTERACTIONS */
