@@ -59,6 +59,33 @@
 
 
 .checkout-link{text-decoration:none;justify-content:center;align-items:center;gap:8px}.member-grid .checkout-link{width:100%;box-sizing:border-box}.founder-offer .checkout-link{width:100%;box-sizing:border-box;margin-top:16px}
+
+/* BUILD 4 — VALUE CLARITY + MEMBER ADVANTAGE */
+.hero-value-strip{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 0}
+.hero-value-strip span{border:1px solid #5a3b2a;background:#110b08aa;border-radius:99px;padding:7px 10px;font:700 7px var(--sans);letter-spacing:.13em;color:#c6aa94}
+.week-section{padding:110px max(24px,calc((100vw - var(--max))/2));background:linear-gradient(180deg,#efe4d5,#e6d6c4);color:#1a120e}
+.week-section .section-kicker{color:#7e4a2f}.week-section>p{max-width:780px;color:#67594e;line-height:1.75}
+.week-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
+.week-card{background:#f7efe5;border:1px solid #c8b3a0;padding:24px;min-height:220px;display:flex;flex-direction:column;position:relative}
+.week-card b{font:600 38px var(--serif);color:#9d6948}.week-card h3{font:600 23px var(--serif);margin:12px 0 8px}.week-card p{font-size:11px;line-height:1.65;color:#6e6258}
+.week-card small{margin-top:auto;padding-top:18px;font:700 7px var(--sans);letter-spacing:.13em;color:#8b5d40}
+.member-value-section{padding:115px max(24px,calc((100vw - var(--max))/2));background:#120c08;color:#fff}
+.member-value-head{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:end}
+.member-value-head h2{font:600 clamp(46px,6vw,82px)/.95 var(--serif);letter-spacing:-.04em;margin:12px 0}
+.member-value-head p{color:#9d8c80;line-height:1.75}
+.value-table{margin-top:40px;border:1px solid #412d22}
+.value-row{display:grid;grid-template-columns:1.4fr .7fr .8fr .8fr;border-top:1px solid #32231b;min-height:56px;align-items:center}
+.value-row:first-child{border-top:0;background:#1d130e}
+.value-row>div{padding:14px 16px;border-left:1px solid #32231b;font-size:10px;color:#a9998c}.value-row>div:first-child{border-left:0;color:#e2d3c6;font-weight:600}
+.value-row.head>div{font:700 8px var(--sans);letter-spacing:.13em;color:#c58f69}.value-yes{color:#e3b287!important}.value-no{color:#65594f!important}
+.member-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.member-proof article{border:1px solid #3c291f;background:#0d0906;padding:22px}.member-proof h3{font:600 21px var(--serif);margin:7px 0}.member-proof p{font-size:10px;color:#8e7f73;line-height:1.65}
+.member-grid article ul{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px}
+.member-grid article li{font-size:10px;color:#9f9085}.member-grid article li:before{content:'✓';margin-right:8px;color:#d49b70}
+.public-status{display:inline-flex;margin-top:14px;border:1px solid #614431;border-radius:99px;padding:7px 10px;font:700 7px var(--sans);letter-spacing:.12em;color:#a98f7c}
+@media(max-width:860px){.week-grid,.member-proof{grid-template-columns:1fr 1fr}.member-value-head{grid-template-columns:1fr;gap:12px}.value-row{grid-template-columns:1.2fr .6fr .7fr .7fr}.value-row>div{padding:12px 9px;font-size:8px}}
+@media(max-width:620px){.week-grid,.member-proof{grid-template-columns:1fr}.value-table{overflow-x:auto}.value-row{min-width:620px}.hero-value-strip{gap:5px}.hero-value-strip span{font-size:6px}}
+
 </style>
 </head>
 <body>
@@ -101,7 +128,7 @@
       <div class="hero-copy reveal">
         <div class="eyebrow"><span></span>A DIGITAL HOME FOR THE AFRICAN DIASPORA</div>
         <h1>Black life.<br><em>Connected.</em></h1>
-        <p>Find Black-owned businesses. Travel the diaspora. Explore our history. Get trusted help. Support our creators. Build what comes next.</p>
+        <p>One place to find Black-owned businesses, scholarships and grants, culturally relevant help, diaspora travel, history, events and practical resources — then save what matters to your own DSB dashboard.</p><div class="hero-value-strip"><span>BLACK-OWNED DISCOVERY</span><span>OPPORTUNITIES</span><span>FIND HELP</span><span>TRAVEL</span><span>HISTORY</span><span>RESOURCES</span></div>
         <form class="universal-search" id="universalSearch">
           <label for="siteSearch">What do you need today?</label>
           <div class="search-shell">
@@ -118,15 +145,30 @@
 
     <section class="mission reveal" id="mission">
       <p class="section-kicker">THE DSB PROMISE</p>
-      <h2>Not another feed.<br><em>A place to actually do something.</em></h2>
-      <p class="lead">Divine Shades of Brown is designed as a Black life utility platform — one clean place to discover, learn, support, connect, travel and find help.</p>
+      <h2>Not another feed.<br><em>A Black life utility system.</em></h2>
+      <p class="lead">DSB brings together the things people usually have to hunt across dozens of websites: businesses, opportunities, help, travel, history, community events and resources. Free visitors can explore. Members can save, organize, track, download and build a personal DSB library.</p>
       <div class="action-grid" id="actionGrid"></div>
+    </section>
+
+
+    <section class="week-section reveal" id="use-dsb">
+      <p class="section-kicker">WHAT CAN DSB DO FOR ME?</p>
+      <h2 style="font:600 clamp(44px,6vw,76px)/.96 var(--serif);letter-spacing:-.04em;margin:14px 0 18px">Use it for something<br><em>real this week.</em></h2>
+      <p>DSB is not asking people to pay just to read articles. The platform is being built around repeat-use tools that save time, organize information and help members act on what they find.</p>
+      <div class="week-grid">
+        <article class="week-card"><b>01</b><h3>Find a Black-owned business</h3><p>Search by category and place, save it to My DSB, and build a personal list of businesses worth returning to.</p><small>BLACK ATLAS · FREE TO EXPLORE</small></article>
+        <article class="week-card"><b>02</b><h3>Find an opportunity before it closes</h3><p>Scholarships, grants, jobs, fellowships, homebuyer programs and business funding organized around deadlines and eligibility.</p><small>OPPORTUNITIES · MEMBER WATCHLIST PLANNED</small></article>
+        <article class="week-card"><b>03</b><h3>Find help without a maze</h3><p>Start with the need — mental health, housing, legal, money, family, education and more — and go directly to reputable starting points.</p><small>FIND HELP · FREE</small></article>
+        <article class="week-card"><b>04</b><h3>Plan a diaspora trip with context</h3><p>Build trips around culture, Black history, local businesses, food, festivals and practical official travel information.</p><small>BROWN PASSPORT · MEMBER GUIDES</small></article>
+        <article class="week-card"><b>05</b><h3>Keep what matters</h3><p>Save businesses, articles, resources, trips and opportunities instead of searching for the same thing again next month.</p><small>MY DSB · MEMBER FEATURE</small></article>
+        <article class="week-card"><b>06</b><h3>Track where your dollars go</h3><p>Use Black Receipt to record intentional spending and build a personal picture of your economic support over time.</p><small>BLACK RECEIPT · MEMBER FEATURE</small></article>
+      </div>
     </section>
 
     <section class="atlas-section reveal" id="atlas">
       <div class="section-heading split-heading">
-        <div><p class="section-kicker">BLACK ATLAS — PREVIEW</p><h2>Find us.<br><em>Everywhere.</em></h2></div>
-        <p>A global directory designed for Black-owned businesses, organizations and cultural spaces. Build 3 includes a live sample explorer; the production map will connect to MapLibre + our verified directory.</p>
+        <div><p class="section-kicker">BLACK ATLAS</p><h2>Find us.<br><em>Everywhere.</em></h2></div>
+        <p>A global directory designed for Black-owned businesses, organizations and cultural spaces. Search the founding directory by category and location. As the directory grows, verified listings and member recommendations will make it more useful every month.</p>
       </div>
       <div class="atlas-shell">
         <div class="atlas-controls">
@@ -180,12 +222,12 @@
       <div class="travel-copy">
         <p class="section-kicker">TRAVEL BLACK</p>
         <h2>The world is bigger when you know <em>where to look.</em></h2>
-        <p>Culture-first destination guides with Black-owned stays, food, history, festivals, local creators and trusted travel links.</p>
+        <p>Culture-first destination guides with Black-owned stays, food, history, festivals, local creators and trusted travel links. Accra — Ghana’s capital on the Gulf of Guinea — is our first featured gateway into the Brown Passport experience.</p>
         <div class="travel-tags"><span>DIASPORA HISTORY</span><span>BLACK-OWNED STAYS</span><span>LOCAL GUIDES</span><span>FOOD</span><span>EVENTS</span></div>
         <button class="shine-btn" id="passportBtn">OPEN THE BROWN PASSPORT <span>↗</span></button>
         <div class="passport-panel" id="passportPanel">
           <div><b>Featured route</b><span>Accra → Cape Coast → Elmina</span></div>
-          <div><b>Build 1 preview</b><span>Destination cards, saved trips and travel filters are wired for the production data layer.</span></div>
+          <div><b>FOUNDING GUIDE</b><span>A culture-first route preview with saved trips, local Black-owned places and destination collections expanding during the founding rollout.</span></div>
         </div>
       </div>
     </section>
@@ -193,7 +235,7 @@
     <section class="help-section reveal" id="help">
       <div class="section-heading split-heading light">
         <div><p class="section-kicker">FIND HELP</p><h2>Start with what<br><em>you need.</em></h2></div>
-        <p>No maze of articles. Choose the need, then DSB points to vetted organizations, services, directories and official help.</p>
+        <p>No maze of articles. Choose the need — including mental health, housing, legal, money, education and family support — and DSB points to reputable organizations, directories and official help.</p>
       </div>
       <div class="help-layout">
         <div class="help-categories" id="helpCategories"></div>
@@ -211,7 +253,7 @@
 
     <section class="b2-band pulse-section reveal" id="pulse">
       <div class="b2-intro"><div><p class="section-kicker" style="color:#6d3d25">BLACK PULSE</p><h2 style="font:600 clamp(44px,6vw,82px)/.95 var(--serif);letter-spacing:-.04em;margin:14px 0">What's moving<br><em>right now.</em></h2></div><div>A moderated community board for Black cultural events, business expos, service projects, town halls, conferences, fundraisers and community action. User submissions are reviewed before publication.</div></div>
-      <div class="pulse-toolbar" id="pulseFilters"></div><div class="pulse-grid" id="pulseGrid"></div><div class="submit-panel"><p><strong>Know something the community should see?</strong><br>Submit it to DSB. Build 3 holds submissions locally as “pending review” until the database/moderation layer arrives.</p><button class="shine-btn" id="submitPulse">SUBMIT AN EVENT <span>+</span></button></div><div class="section-open"><button class="ghost-btn view-full-btn" data-route="pulse">OPEN BLACK PULSE</button></div>
+      <div class="pulse-toolbar" id="pulseFilters"></div><div class="pulse-grid" id="pulseGrid"></div><div class="submit-panel"><p><strong>Know something the community should see?</strong><br>Submit it to DSB. Submissions enter a review queue before publication so the community board stays useful and trustworthy.</p><button class="shine-btn" id="submitPulse">SUBMIT AN EVENT <span>+</span></button></div><div class="section-open"><button class="ghost-btn view-full-btn" data-route="pulse">OPEN BLACK PULSE</button></div>
     </section>
 
     <section class="b2-band journal-section reveal" id="journal">
@@ -225,7 +267,7 @@
         <h2>Give the next generation something they can <em>keep.</em></h2>
         <p>The Divine Shades of Brown journal becomes a living library: individual reflection pages, confidence exercises, goal-setting sheets, family-history prompts and complete member collections.</p>
         <div class="resource-buttons"><button class="shine-btn" id="downloadStarter">DOWNLOAD STARTER PAGES <span>↓</span></button><button class="ghost-btn" id="openBook">OPEN THE JOURNAL</button></div>
-        <p class="micro">Build 3 generates a free DSB starter worksheet directly in your browser.</p>
+        <p class="micro">A free starter worksheet is available now; full themed collections will live in the member Resource Vault.</p>
       </div>
       <div class="book-stage" id="bookStage">
         <div class="book" id="book">
@@ -252,15 +294,41 @@
       </div>
     </section>
 
+
+    <section class="member-value-section reveal" id="member-value">
+      <div class="member-value-head">
+        <div><p class="section-kicker">WHY BECOME A MEMBER?</p><h2>Free gets you in.<br><em>Membership makes it yours.</em></h2></div>
+        <p>The paid value is not “more pages.” It is a personal system: save what you find, build collections, use premium resource packs and travel guides, track intentional spending, receive selected member deals, and eventually get alerts around saved opportunities and deadlines.</p>
+      </div>
+      <div class="value-table">
+        <div class="value-row head"><div>FEATURE</div><div>FREE</div><div>$49/YEAR</div><div>$399 LIFETIME</div></div>
+        <div class="value-row"><div>Browse Black Atlas, Find Help, Journal & history</div><div class="value-yes">✓</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
+        <div class="value-row"><div>Free downloads & public resources</div><div class="value-yes">✓</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
+        <div class="value-row"><div>My DSB saved collections</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
+        <div class="value-row"><div>Black Receipt tracking & reports</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
+        <div class="value-row"><div>Premium Resource Vault collections</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
+        <div class="value-row"><div>Premium Brown Passport guides</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
+        <div class="value-row"><div>Selected member deals & coupons</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
+        <div class="value-row"><div>Opportunity watchlists / deadline alerts</div><div class="value-no">—</div><div>PLANNED</div><div>PLANNED</div></div>
+        <div class="value-row"><div>Annual renewal</div><div>—</div><div>YES</div><div class="value-yes">NEVER</div></div>
+      </div>
+      <div class="member-proof">
+        <article><small class="section-kicker">SAVE TIME</small><h3>Stop starting over.</h3><p>Keep the businesses, opportunities, resources, articles and trips you care about in one personal workspace.</p></article>
+        <article><small class="section-kicker">GET MORE VALUE</small><h3>Member-only practical content.</h3><p>Premium downloads, curated guides and member deals are designed to be usable — not filler added just to justify a paywall.</p></article>
+        <article><small class="section-kicker">BUILD A RECORD</small><h3>See your own activity.</h3><p>Black Receipt and saved collections turn DSB into an ongoing personal record instead of a website you visit once and forget.</p></article>
+      </div>
+      <span class="public-status">FOUNDING ROLLOUT · FEATURES MARKED “PLANNED” ARE NOT YET ACTIVE</span>
+    </section>
+
     <section class="membership-section reveal" id="membership">
       <div class="member-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
       <p class="section-kicker">MY DSB</p>
       <h2>Your corner of the <em>diaspora.</em></h2>
       <p>Save businesses, trips, resources, history collections and downloads. Track intentional spending. Unlock member guides and deals.</p>
       <div class="member-grid">
-        <article><small>FREE</small><h3>Explore</h3><strong>$0</strong><p>Browse core tools, history, directory previews and free resources.</p><button class="ghost-btn">START FREE</button></article>
-        <article class="featured-plan"><div class="plan-glint"></div><small>DSB MEMBER</small><h3>Belong</h3><strong>$49<em>/year</em></strong><p>Personal dashboard, saved collections, premium downloads, member guides and selected deals.</p><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04" target="_blank" rel="noopener" data-price-id="price_1UNxCuIuokIcVOLNee5zIqmh" data-plan="annual">JOIN ANNUAL — TEST CHECKOUT <span>↗</span></a></article>
-        <article><small>FOUNDING LIFETIME</small><h3>Build</h3><strong>$399</strong><p>One-time lifetime access when the founding membership officially opens.</p><a class="ghost-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime">FOUNDING LIFETIME — TEST CHECKOUT <span>↗</span></a></article>
+        <article><small>FREE</small><h3>Explore</h3><strong>$0</strong><p>Use DSB as a public discovery and resource platform.</p><ul><li>Black Atlas browsing</li><li>Find Help resources</li><li>DSB Journal + history</li><li>Free downloads</li></ul><button class="ghost-btn">START FREE</button></article>
+        <article class="featured-plan"><div class="plan-glint"></div><small>DSB MEMBER</small><h3>Belong</h3><strong>$49<em>/year</em></strong><p>Turn DSB into your personal Black-life utility dashboard.</p><ul><li>My DSB saved collections</li><li>Black Receipt tracking</li><li>Premium Resource Vault</li><li>Premium travel guides</li><li>Selected member deals</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04" target="_blank" rel="noopener" data-price-id="price_1UNxCuIuokIcVOLNee5zIqmh" data-plan="annual">TEST $49 ANNUAL CHECKOUT <span>↗</span></a></article>
+        <article><small>FOUNDING LIFETIME</small><h3>Build</h3><strong>$399</strong><p>The member experience without an annual renewal.</p><ul><li>All annual-member benefits</li><li>Lifetime member access</li><li>Founding member status</li><li>No yearly membership renewal</li></ul><a class="ghost-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime">TEST $399 LIFETIME CHECKOUT <span>↗</span></a></article>
       </div>
       <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for launch updates" required><button type="submit">I'M IN <span>↗</span></button></form>
       <div class="form-message" id="formMessage"></div>
@@ -271,8 +339,8 @@
   <footer>
     <div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><div><strong>DIVINE SHADES OF BROWN</strong><p>Black Life. Connected.</p></div></div>
     <div class="footer-links"><a href="#atlas">Black Atlas</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">Journal</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#help">Find Help</a><a href="#resources">Resources</a><a href="#membership">Membership</a></div>
-    <div class="footer-bottom"><span>© 2026 InAct Entertainment LLC</span><span>Build 3 · Permanent GitHub + My DSB</span><button data-scroll="#top">BACK TO TOP ↑</button></div>
-    <div class="footer-legal"><span style="font-size:8px;letter-spacing:.12em;color:#675d56">FOUNDING PREVIEW · POLICIES OPEN ON THIS PAGE</span><div class="legal-nav"><button class="legal-btn" data-legal="privacy">PRIVACY</button><button class="legal-btn" data-legal="terms">TERMS</button><button class="legal-btn" data-legal="disclaimer">DISCLAIMER</button><button class="legal-btn" data-legal="affiliate">AFFILIATE DISCLOSURE</button><button class="legal-btn" data-legal="accessibility">ACCESSIBILITY</button><button class="legal-btn" data-legal="community">COMMUNITY GUIDELINES</button></div></div>
+    <div class="footer-bottom"><span>© 2026 InAct Entertainment LLC</span><span>FOUNDING EDITION</span><button data-scroll="#top">BACK TO TOP ↑</button></div>
+    <div class="footer-legal"><span style="font-size:8px;letter-spacing:.12em;color:#675d56">FOUNDING EDITION · POLICIES OPEN ON THIS PAGE</span><div class="legal-nav"><button class="legal-btn" data-legal="privacy">PRIVACY</button><button class="legal-btn" data-legal="terms">TERMS</button><button class="legal-btn" data-legal="disclaimer">DISCLAIMER</button><button class="legal-btn" data-legal="affiliate">AFFILIATE DISCLOSURE</button><button class="legal-btn" data-legal="accessibility">ACCESSIBILITY</button><button class="legal-btn" data-legal="community">COMMUNITY GUIDELINES</button></div></div>
   </footer>
 
   <div class="route-layer" id="routeLayer" aria-hidden="true"><div class="route-header"><div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><div><strong>DIVINE SHADES OF BROWN</strong><p id="routeLabel">TOOL</p></div></div><button class="route-close" id="routeClose" aria-label="Close tool">×</button></div><div class="route-content" id="routeContent"></div></div>
@@ -282,7 +350,7 @@
       <button class="founder-close" id="founderClose" aria-label="Close">×</button>
       <div class="founder-kicker">DIVINE SHADES OF BROWN · FOUNDING ROLLOUT</div>
       <h2 id="founderPopupTitle">Founding access<br><em>is open.</em></h2>
-      <p>Join free now, explore the platform, and get first access to introductory member pricing while the founding rollout lasts.</p>
+      <p>Explore DSB free. If you want your own saved dashboard, Black Receipt, premium Resource Vault, premium travel guides and selected member deals, founding membership pricing is available during the rollout.</p>
       <form class="founder-email" id="founderPopupForm">
         <input type="email" id="founderPopupEmail" required autocomplete="email" placeholder="Enter your email">
         <button type="submit" class="shine-btn">JOIN FREE & EXPLORE <span>↗</span></button>
@@ -327,7 +395,7 @@ document.querySelector('#searchToggle').onclick=()=>{document.querySelector('.he
 
 const businesses=[
  {name:'Mahogany Books',cat:'Books',city:'Washington, DC',x:25,y:35,note:'Independent Black-owned bookstore'},
- {name:'Sample Accra Collective',cat:'Culture',city:'Accra, Ghana',x:50,y:52,note:'Production directory record placeholder'},
+ {name:'Sample Accra Collective',cat:'Culture',city:'Accra, Ghana',x:50,y:52,note:'Founding directory example'},
  {name:'Sample Kingston Kitchen',cat:'Food',city:'Kingston, Jamaica',x:32,y:50,note:'Production directory record placeholder'},
  {name:'Sample Lagos Studio',cat:'Creative',city:'Lagos, Nigeria',x:52,y:48,note:'Production directory record placeholder'},
  {name:'Sample London Market',cat:'Shop',city:'London, UK',x:48,y:28,note:'Production directory record placeholder'},
@@ -380,7 +448,7 @@ document.addEventListener('mouseout',e=>{if(e.clientY<=0&&!founderPopupShown&&wi
 
 document.querySelector('#shopPreview').onclick=()=>openModal(`<p class="section-kicker">SHOP BLACK · COMING LAYER</p><h3>DSB Marketplace Preview</h3><p>The production version will feature DSB journals and downloads, Examine the Past Black History products, plus curated Black-owned partners. We will separate DSB-owned products from affiliate partner products clearly.</p><div class="modal-list"><button onclick="document.querySelector('#resources').scrollIntoView({behavior:'smooth'});document.querySelector('#modal').classList.remove('open')">Open free DSB resources →</button><a href="https://www.etsy.com/" target="_blank" rel="noreferrer">External marketplace connection placeholder ↗</a></div>`);
 
-document.querySelectorAll('.member-grid button:not([data-checkout])').forEach(b=>b.onclick=()=>document.querySelector('#foundingEmail').focus());document.querySelector('#foundingForm').onsubmit=e=>{e.preventDefault();const email=document.querySelector('#foundingEmail').value.trim();localStorage.setItem('dsb-founding-email',email);document.querySelector('#formMessage').textContent=`Thanks — ${email} is on the founding list in this Build 3 preview. Supabase will make this account-based next.`;toast('Founding interest captured.');};
+document.querySelectorAll('.member-grid button:not([data-checkout])').forEach(b=>b.onclick=()=>document.querySelector('#foundingEmail').focus());document.querySelector('#foundingForm').onsubmit=e=>{e.preventDefault();const email=document.querySelector('#foundingEmail').value.trim();localStorage.setItem('dsb-founding-email',email);document.querySelector('#formMessage').textContent=`Thanks — ${email} is on the founding list in this founding preview. Supabase will make this account-based next.`;toast('Founding interest captured.');};
 
 
 /* BUILD 2 DATA + INTERACTIONS */
