@@ -57,6 +57,8 @@
 .founder-message{min-height:18px;margin-top:10px;color:#dfb28c;font-size:10px}
 @media(max-width:760px){.founder-shell{padding:26px 18px 22px}.founder-offers{grid-template-columns:1fr}.founder-offer{min-height:auto}.founder-email{grid-template-columns:1fr}.founder-email button{min-width:0}.founder-shell h2{font-size:45px}}
 
+
+.checkout-link{text-decoration:none;justify-content:center;align-items:center;gap:8px}.member-grid .checkout-link{width:100%;box-sizing:border-box}.founder-offer .checkout-link{width:100%;box-sizing:border-box;margin-top:16px}
 </style>
 </head>
 <body>
@@ -257,8 +259,8 @@
       <p>Save businesses, trips, resources, history collections and downloads. Track intentional spending. Unlock member guides and deals.</p>
       <div class="member-grid">
         <article><small>FREE</small><h3>Explore</h3><strong>$0</strong><p>Browse core tools, history, directory previews and free resources.</p><button class="ghost-btn">START FREE</button></article>
-        <article class="featured-plan"><div class="plan-glint"></div><small>DSB MEMBER</small><h3>Belong</h3><strong>$49<em>/year</em></strong><p>Personal dashboard, saved collections, premium downloads, member guides and selected deals.</p><button class="shine-btn">JOIN THE FOUNDING LIST</button></article>
-        <article><small>FOUNDING LIFETIME</small><h3>Build</h3><strong>$399</strong><p>One-time lifetime access when the founding membership officially opens.</p><button class="ghost-btn">RESERVE INTEREST</button></article>
+        <article class="featured-plan"><div class="plan-glint"></div><small>DSB MEMBER</small><h3>Belong</h3><strong>$49<em>/year</em></strong><p>Personal dashboard, saved collections, premium downloads, member guides and selected deals.</p><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04" target="_blank" rel="noopener" data-price-id="price_1UNxCuIuokIcVOLNee5zIqmh" data-plan="annual">JOIN ANNUAL — TEST CHECKOUT <span>↗</span></a></article>
+        <article><small>FOUNDING LIFETIME</small><h3>Build</h3><strong>$399</strong><p>One-time lifetime access when the founding membership officially opens.</p><a class="ghost-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime">FOUNDING LIFETIME — TEST CHECKOUT <span>↗</span></a></article>
       </div>
       <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for launch updates" required><button type="submit">I'M IN <span>↗</span></button></form>
       <div class="form-message" id="formMessage"></div>
@@ -287,8 +289,8 @@
       </form>
       <div class="founder-offers">
         <article class="founder-offer"><small>FREE EXPLORER</small><h3>Explore</h3><div class="founder-price">$0</div><ul><li>Browse core tools</li><li>Save favorites</li><li>Get founding updates</li></ul></article>
-        <article class="founder-offer"><small>ANNUAL MEMBER</small><h3>Belong</h3><div class="founder-price">$49 <em>/ year</em></div><ul><li>My DSB dashboard</li><li>Premium resources</li><li>Member deals</li></ul></article>
-        <article class="founder-offer best"><span class="tag">FOUNDING VALUE</span><small>FOUNDING LIFETIME</small><h3>Build</h3><div class="founder-price">$399 <em>one time</em></div><ul><li>Lifetime access</li><li>Founding status</li><li>Best long-term value</li></ul></article>
+        <article class="founder-offer"><small>ANNUAL MEMBER</small><h3>Belong</h3><div class="founder-price">$49 <em>/ year</em></div><ul><li>My DSB dashboard</li><li>Premium resources</li><li>Member deals</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04" target="_blank" rel="noopener" data-price-id="price_1UNxCuIuokIcVOLNee5zIqmh" data-plan="annual" style="margin-top:16px;display:inline-flex">TEST ANNUAL CHECKOUT <span>↗</span></a></article>
+        <article class="founder-offer best"><span class="tag">FOUNDING VALUE</span><small>FOUNDING LIFETIME</small><h3>Build</h3><div class="founder-price">$399 <em>one time</em></div><ul><li>Lifetime access</li><li>Founding status</li><li>Best long-term value</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime" style="margin-top:16px;display:inline-flex">TEST LIFETIME CHECKOUT <span>↗</span></a></article>
       </div>
       <div class="founder-note">LIMITED INTRODUCTORY PRICING DURING THE FOUNDING ROLLOUT.</div>
       <div class="founder-message" id="founderPopupMessage"></div>
@@ -298,6 +300,8 @@
   <div class="modal" id="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
   <div class="toast" id="toast"></div>
   <script>
+const DSB_STRIPE_TEST={annual:{priceId:'price_1UNxCuIuokIcVOLNee5zIqmh',paymentLink:'https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04'},lifetime:{priceId:'price_1UNxNNIuokIcVOLNQul0KBnu',paymentLink:'https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05'}};
+
 const actions=[
  {icon:'✦',title:'Black Atlas',desc:'Find Black-owned businesses, organizations and cultural spaces.',target:'#atlas'},
  {icon:'↗',title:'Opportunities',desc:'Scholarships, grants, careers, funding and programs that can move you forward.',target:'#opportunities'},
@@ -376,7 +380,7 @@ document.addEventListener('mouseout',e=>{if(e.clientY<=0&&!founderPopupShown&&wi
 
 document.querySelector('#shopPreview').onclick=()=>openModal(`<p class="section-kicker">SHOP BLACK · COMING LAYER</p><h3>DSB Marketplace Preview</h3><p>The production version will feature DSB journals and downloads, Examine the Past Black History products, plus curated Black-owned partners. We will separate DSB-owned products from affiliate partner products clearly.</p><div class="modal-list"><button onclick="document.querySelector('#resources').scrollIntoView({behavior:'smooth'});document.querySelector('#modal').classList.remove('open')">Open free DSB resources →</button><a href="https://www.etsy.com/" target="_blank" rel="noreferrer">External marketplace connection placeholder ↗</a></div>`);
 
-document.querySelectorAll('.member-grid button').forEach(b=>b.onclick=()=>document.querySelector('#foundingEmail').focus());document.querySelector('#foundingForm').onsubmit=e=>{e.preventDefault();const email=document.querySelector('#foundingEmail').value.trim();localStorage.setItem('dsb-founding-email',email);document.querySelector('#formMessage').textContent=`Thanks — ${email} is on the founding list in this Build 3 preview. Supabase will make this account-based next.`;toast('Founding interest captured.');};
+document.querySelectorAll('.member-grid button:not([data-checkout])').forEach(b=>b.onclick=()=>document.querySelector('#foundingEmail').focus());document.querySelector('#foundingForm').onsubmit=e=>{e.preventDefault();const email=document.querySelector('#foundingEmail').value.trim();localStorage.setItem('dsb-founding-email',email);document.querySelector('#formMessage').textContent=`Thanks — ${email} is on the founding list in this Build 3 preview. Supabase will make this account-based next.`;toast('Founding interest captured.');};
 
 
 /* BUILD 2 DATA + INTERACTIONS */
