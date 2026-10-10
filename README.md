@@ -166,3 +166,19 @@ Completed:
 - Updated Black Atlas scale references to BuyBlack.org's 2026 figures: 111K+ recognized businesses and 119 city guides.
 - Strengthened the DSB Journal homepage from 3 visible stories to 6, added reading-time/founding-issue metadata, hover polish, save controls and a copy-title action inside articles.
 - Revalidated JavaScript and document structure after the build; no Stripe test links remain.
+
+## Black Life Essentials expansion
+
+Completed:
+- Added Black Life Essentials as a searchable, filterable directory for farms/food systems, health/clinics, Black-founded schools, Black-owned/Black MDI banking institutions, and high-quality Black-owned/Black-founded stays.
+- Added 24+ curated essential-resource entries with contact details, addresses/coverage areas, official or authoritative source links, and transparent quality/verification notes.
+- Added regional farm examples including Deep Roots Farm, Asawana Farms, 804 Cattle Company, aGROWKulture, Backyard Basecamp/BLISS Meadows and Orun Field & Family Farm.
+- Added Black-owned medical/health examples including Concordis Medical, U-First Health and Wellness, Restore Wellness and MedSpa, and Emmaus Healthcare.
+- Added Black-founded school examples and a direct gateway to the Black Minds Matter national Black-Founded Schools Directory.
+- Added key African American-owned/Black MDI banking institutions including City First Bank, Citizens Trust Bank, GN Bank, Carver Federal Savings Bank, Industrial Bank and Commonwealth National Bank, plus direct links to BankBlackUSA and federal MDI verification resources.
+- Added high-quality lodging examples including Wellspring Manor & Spa, Salamander Middleburg, Urban Cowboy Denver and Acadia Wilderness Lodge.
+- Added Brown Passport: Unexpected America with six under-the-radar U.S. routes anchored by Black-owned, Black-founded or Black-investment-connected hospitality.
+- Reframed Brown Passport so it starts with U.S. Black travel and then extends to Africa, the Caribbean and the wider diaspora.
+- Expanded universal search to discover farms, clinics, banks, Black-founded schools, Black-owned stays and Unexpected America.
+- Ratings are shown only as current public snapshots where available; regulated/educational institutions are verified through official or authoritative sources rather than consumer star ratings alone.
+- Revalidated JavaScript and HTML structure; no Stripe test links remain.
