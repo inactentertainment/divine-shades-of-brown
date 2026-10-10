@@ -10,21 +10,21 @@
 :root{--bg:#090604;--panel:#15100c;--line:#4a3427;--cream:#f5ecdf;--muted:#aa998c;--copper:#c7865d;--gold:#efc49d;--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 15%,#5a2f1b55,transparent 35%),linear-gradient(145deg,#120b07,#050302 70%);color:var(--cream);font-family:var(--sans);min-height:100vh;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.035) 50%,transparent 58%);background-size:240% 100%;animation:shine 8s linear infinite}
-@keyframes shine{to{background-position:-240% 0}}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes float{50%{transform:translateY(-7px)}}@keyframes pulse{50%{box-shadow:0 0 0 9px #d79a6a18}}
-.wrap{width:min(1120px,92vw);margin:auto;padding:42px 0 70px}.top{display:flex;justify-content:space-between;gap:18px;align-items:center}.brand{font:700 13px var(--serif);letter-spacing:.13em}.brand span{display:block;color:var(--copper);font:700 8px var(--sans);letter-spacing:.3em;margin-top:4px}.status{border:1px solid #75513b;border-radius:99px;padding:7px 11px;font:700 8px var(--sans);letter-spacing:.12em;color:#e8bea0}
+@keyframes shine{to{background-position:-240% 0}}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes float{50%{transform:translateY(-7px)}}@keyframes pulse{50%{box-shadow:0 0 0 9px #d79a6a18}}@keyframes fall{to{transform:translateY(110vh) rotate(520deg);opacity:.08}}@keyframes sweep{0%{opacity:0;transform:scale(.72)}45%{opacity:1}100%{opacity:0;transform:scale(1.25)}}
+.wrap{width:min(1120px,92vw);margin:auto;padding:42px 0 70px}.top{display:flex;justify-content:space-between;gap:18px;align-items:center}.brand{font:700 13px var(--serif);letter-spacing:.13em}.brand-link{color:inherit;text-decoration:none}.brand-link:hover{opacity:.82}.brand span{display:block;color:var(--copper);font:700 8px var(--sans);letter-spacing:.3em;margin-top:4px}.status{border:1px solid #75513b;border-radius:99px;padding:7px 11px;font:700 8px var(--sans);letter-spacing:.12em;color:#e8bea0}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:70px 0 42px}.copy{animation:rise .8s ease both}.eyebrow{font:700 9px var(--sans);letter-spacing:.2em;color:var(--copper)}h1{font:600 clamp(56px,8vw,104px)/.9 var(--serif);letter-spacing:-.05em;margin:13px 0 20px}h1 em{color:var(--gold)}.lead{max-width:700px;color:#c1b2a6;font:16px/1.75 var(--sans)}.check{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:28px}.check div{border:1px solid var(--line);background:#130d09cc;padding:15px}.check b{display:block;font:600 17px var(--serif);margin-bottom:4px}.check span{font-size:11px;color:#9f8f83;line-height:1.5}
 .card{border:1px solid #8a5e40;background:linear-gradient(145deg,#26160d,#0d0805);padding:28px;box-shadow:0 30px 100px #0008;animation:rise .9s .08s ease both}.card .price{font:600 58px var(--serif);color:#efc39e}.card small{font:700 8px var(--sans);letter-spacing:.14em;color:#b89175}.card h2{font:600 31px/1.05 var(--serif);margin:10px 0}.card p{color:#9f8e81;font-size:12px;line-height:1.65}.paid{margin:18px 0;border-top:1px solid #4a3428;border-bottom:1px solid #4a3428;padding:13px 0;font:700 8px var(--sans);letter-spacing:.12em;color:#d9aa86}
 .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 17px;text-decoration:none;border:1px solid #75513b;color:#fff;font:700 9px var(--sans);letter-spacing:.1em}.btn.primary{border:0;background:linear-gradient(115deg,#6f3c24,#b97750,#6f3c24);animation:pulse 2.6s ease-in-out infinite}.section{padding:38px 0;border-top:1px solid #30231b}.section h3{font:600 34px var(--serif);margin:0 0 18px}.gifts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.gift{border:1px solid #433026;background:#100b08;padding:22px}.gift b{font:600 21px var(--serif);display:block}.gift p{font-size:11px;line-height:1.65;color:#927f73}.gift .placeholder{margin-top:14px;border:1px dashed #73513c;padding:12px;color:#b99c87;font-size:9px;letter-spacing:.08em}
 .note{margin-top:22px;color:#7f7066;font-size:10px;line-height:1.7}.float{animation:float 4s ease-in-out infinite}
-footer{padding-top:28px;border-top:1px solid #30231b;color:#776a60;font-size:9px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.founding-sweep{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(circle at 50% 45%,#f0c79d22,transparent 28%);animation:sweep 1.8s ease-out both}.confetti{position:fixed;top:-24px;width:6px;height:13px;z-index:0;opacity:.8;animation:fall linear forwards}footer{padding-top:28px;border-top:1px solid #30231b;color:#776a60;font-size:9px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:50px}.check,.gifts{grid-template-columns:1fr}.card{padding:22px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<main class="wrap">
+<div class="founding-sweep" aria-hidden="true"></div><main class="wrap">
   <div class="top">
-    <div class="brand">DIVINE SHADES OF BROWN<span>BLACK LIFE. CONNECTED.</span></div>
+    <a class="brand brand-link" href="/" aria-label="Return to Divine Shades of Brown home">DIVINE SHADES OF BROWN<span>BLACK LIFE. CONNECTED.</span></a>
     <div class="status">PAYMENT CONFIRMED · FOUNDING ACCESS</div>
   </div>
 
@@ -32,7 +32,7 @@ footer{padding-top:28px;border-top:1px solid #30231b;color:#776a60;font-size:9px
     <div class="copy">
       <div class="eyebrow">WELCOME TO THE FOUNDING CIRCLE</div>
       <h1>You’re in.<br><em>Start exploring.</em></h1>
-      <p class="lead">Thank you for purchasing Divine Shades of Brown Founding Access. Your one-time payment opens the premium starter experience — built to give you useful downloads, curated guides, richer cultural collections and a deeper way into DSB without a recurring membership bill.</p>
+      <p class="lead">Thank you for purchasing Divine Shades of Brown Founding Access. Your one-time payment opens the premium starter experience. You can now explore useful downloads, curated guides, richer cultural collections and a deeper way into DSB without a recurring membership bill.</p>
       <div class="check">
         <div><b>Premium Resource Vault Starter</b><span>Curated worksheets, field guides and practical downloads.</span></div>
         <div><b>Magazine + Archive Sampler</b><span>Founding digital issue access and selected archive content.</span></div>
@@ -65,5 +65,12 @@ footer{padding-top:28px;border-top:1px solid #30231b;color:#776a60;font-size:9px
 
   <footer><span>© 2026 InAct Entertainment LLC · Divine Shades of Brown</span><span>FOUNDING ACCESS · ONE-TIME PURCHASE</span></footer>
 </main>
+<script>
+try{localStorage.setItem('dsb-last-checkout','founding')}catch(e){}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const shades=['#4b2818','#714329','#9a6547','#c08a64','#e0b28c','#f2d8bd'];
+ for(let i=0;i<24;i++){const p=document.createElement('i');p.className='confetti';p.style.left=(Math.random()*100)+'vw';p.style.background=shades[Math.floor(Math.random()*shades.length)];p.style.animationDuration=(4.5+Math.random()*4)+'s';p.style.animationDelay=(Math.random()*1.5)+'s';document.body.appendChild(p)}
+}
+</script>
 </body>
 </html>
