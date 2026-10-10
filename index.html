@@ -241,6 +241,16 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
 .select-disclaimer{font-size:8px!important;color:#8b7a6d!important;margin-top:10px!important}
 .journal-meta-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.journal-meta-row span{border:1px solid #4a3327;border-radius:99px;padding:5px 7px;font:700 6px var(--sans);letter-spacing:.08em;color:#9b8170}.journal-card:hover{transform:translateY(-4px);border-color:#875638;box-shadow:0 20px 45px #0005}.article-tools{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 8px}.article-tools button{border:1px solid #604431;background:#160e0a;color:#d6b294;padding:9px 11px;font:700 7px var(--sans);letter-spacing:.09em;cursor:pointer}
 @media(max-width:980px){.select-grid{grid-template-columns:1fr 1fr}.select-standard{grid-template-columns:1fr 1fr}.select-head{grid-template-columns:1fr}}@media(max-width:620px){.select-grid,.select-standard,.select-foot{grid-template-columns:1fr}}
+
+/* BLACK LIFE ESSENTIALS + UNEXPECTED AMERICA */
+.essentials-section{padding:110px max(24px,calc((100vw - var(--max))/2));background:#0c0907;border-top:1px solid #332319}
+.essentials-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end}.essentials-head h2{font:600 clamp(48px,6vw,82px)/.94 var(--serif);letter-spacing:-.045em;margin:12px 0}.essentials-head p{color:#a69486;line-height:1.75;font-size:12px}
+.essentials-tools{display:grid;grid-template-columns:1fr auto;gap:10px;margin:30px 0 16px}.essentials-search{height:52px;border:1px solid #51382a;background:#130d09;color:#fff;padding:0 15px;font:12px var(--sans)}.essentials-filters{display:flex;gap:6px;flex-wrap:wrap}.essentials-filters button{border:1px solid #4b3528;background:#130d09;color:#a89486;border-radius:99px;padding:9px 11px;font:700 7px var(--sans);letter-spacing:.09em;cursor:pointer}.essentials-filters button.active{background:#9f6845;color:#fff;border-color:#9f6845}
+.essentials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.essential-card{border:1px solid #3d2b21;background:linear-gradient(145deg,#19110d,#0d0907);padding:21px;min-height:300px;display:flex;flex-direction:column}.essential-card:hover{transform:translateY(-4px);border-color:#87583c;box-shadow:0 20px 45px #0005}.essential-card small{font:700 7px var(--sans);letter-spacing:.12em;color:#bf8059}.essential-card h3{font:600 22px/1.1 var(--serif);margin:9px 0}.essential-card .where{font:700 8px var(--sans);letter-spacing:.08em;color:#8f7d70}.essential-card p{font-size:10px;line-height:1.6;color:#99887c}.essential-proof{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.essential-proof span{border:1px solid #473228;border-radius:99px;padding:5px 7px;font:700 6px var(--sans);letter-spacing:.07em;color:#b99a84}.essential-contact{margin-top:auto;border-top:1px solid #32241d;padding-top:11px;font-size:8px;line-height:1.7;color:#89786c}.essential-contact b{color:#d6b495}.essential-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.essential-actions a,.essential-actions button{border:1px solid #5a3c2c;background:none;color:#d9b08d;text-decoration:none;padding:8px 9px;font:700 7px var(--sans);letter-spacing:.08em;cursor:pointer}.essential-actions a:first-child{background:#6a3d27;color:#fff}
+.directory-gates{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:26px}.directory-gate{border:1px solid #423027;background:#120d0a;padding:16px}.directory-gate b{display:block;font:600 16px var(--serif);margin-bottom:5px}.directory-gate p{font-size:8px;line-height:1.55;color:#8f7e72}.directory-gate a{color:#d7a77d;text-decoration:none;font:700 7px var(--sans);letter-spacing:.08em}
+.unexpected-section{padding:110px max(24px,calc((100vw - var(--max))/2));background:#eee4d8;color:#1b130e}.unexpected-head{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:end}.unexpected-head h2{font:600 clamp(48px,6vw,82px)/.94 var(--serif);letter-spacing:-.045em;margin:12px 0}.unexpected-head p{font-size:12px;line-height:1.75;color:#6a5a4d}
+.unexpected-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}.unexpected-card{border:1px solid #c9b5a2;background:#fffaf4;padding:21px;min-height:320px;display:flex;flex-direction:column}.unexpected-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px #4b2b181c}.unexpected-card small{font:700 7px var(--sans);letter-spacing:.12em;color:#8d5534}.unexpected-card h3{font:600 25px/1.05 var(--serif);margin:8px 0}.unexpected-card .stay{font:700 8px var(--sans);letter-spacing:.09em;color:#674839}.unexpected-card p{font-size:10px;line-height:1.65;color:#6c5d52}.travel-plan{display:grid;gap:7px;margin:12px 0}.travel-plan div{border-top:1px solid #dfd1c4;padding-top:7px;font-size:8px;line-height:1.5;color:#6f6055}.travel-plan b{color:#3d271c}.unexpected-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.unexpected-actions a{border:1px solid #b4977f;color:#4b2c1d;text-decoration:none;padding:9px 10px;font:700 7px var(--sans);letter-spacing:.08em}.unexpected-actions a:first-child{background:#4a2a1b;color:#fff;border-color:#4a2a1b}
+@media(max-width:980px){.essentials-grid,.unexpected-grid{grid-template-columns:1fr 1fr}.directory-gates{grid-template-columns:1fr 1fr}.essentials-head,.unexpected-head{grid-template-columns:1fr}.essentials-tools{grid-template-columns:1fr}}@media(max-width:620px){.essentials-grid,.unexpected-grid,.directory-gates{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -281,7 +291,7 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
   </aside>
 <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
-    <a href="#atlas">Black Atlas</a><a href="#dsb-select">DSB Select</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">DSB Journal</a><a href="#help">Find Help</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#resources">Resources</a><a href="#shop">Shop</a><a href="#membership">Membership</a>
+    <a href="#atlas">Black Atlas</a><a href="#dsb-select">DSB Select</a><a href="#essentials">Black Life Essentials</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">DSB Journal</a><a href="#help">Find Help</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#resources">Resources</a><a href="#shop">Shop</a><a href="#membership">Membership</a>
     <div class="menu-note">Know us. Find us. Support us. Build us.</div>
   </aside>
 
@@ -392,6 +402,21 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
       <div class="select-foot"><div><p><strong>Own or love a business that belongs here?</strong> Send it for consideration. DSB reviews the business independently; submission does not guarantee inclusion.</p><p class="select-disclaimer">Public ratings are snapshots and can change. DSB Select is editorial curation, not a warranty or guarantee of any transaction.</p></div><button class="shine-btn" id="requestSelect">REQUEST DSB REVIEW ↗</button></div>
     </section>
 
+    <section class="essentials-section reveal" id="essentials">
+      <div class="essentials-head">
+        <div><p class="section-kicker">BLACK LIFE ESSENTIALS</p><h2>Not just where to shop.<br><em>Where we live.</em></h2></div>
+        <p>Black economic life is bigger than restaurants and retail. This directory brings farms, food systems, health practices, schools, banks, lodging and other institutions into the same searchable layer. Consumer-facing businesses follow the DSB quality standard; regulated or educational institutions are verified through authoritative directories and official sources instead of star ratings alone.</p>
+      </div>
+      <div class="essentials-tools"><input class="essentials-search" id="essentialsSearch" placeholder="Search farms, clinics, banks, schools, stays, cities..."><div class="essentials-filters" id="essentialsFilters"></div></div>
+      <div class="essentials-grid" id="essentialsGrid"></div>
+      <div class="directory-gates">
+        <article class="directory-gate"><b>Black Farms</b><p>Future Harvest maintains a regional list of Black-owned and operated farms across Maryland, Virginia, D.C. and nearby states.</p><a href="https://futureharvest.org/resources/resources-for-consumers/black-owned-and-operated-farms/" target="_blank" rel="noreferrer">OPEN FARM DIRECTORY ↗</a></article>
+        <article class="directory-gate"><b>Black-Founded Schools</b><p>Black Minds Matter maintains a searchable U.S. directory of schools founded by African Americans.</p><a href="https://www.blackmindsmatter.net/schools" target="_blank" rel="noreferrer">OPEN SCHOOL DIRECTORY ↗</a></article>
+        <article class="directory-gate"><b>Black Banks + Credit Unions</b><p>BankBlackUSA provides bank lists, comparison tools and maps; federal regulators provide current minority-depository records.</p><a href="https://bankblackusa.org/tools-resources/" target="_blank" rel="noreferrer">OPEN BANKBLACKUSA ↗</a></article>
+        <article class="directory-gate"><b>Federal Bank Verification</b><p>Use OCC and FDIC tools to confirm charter, insurance and current institution status before opening an account.</p><a href="https://www.occ.treas.gov/topics/consumers-and-communities/external-strategic/locations-list-view-minority.html" target="_blank" rel="noreferrer">OPEN OCC MDI LIST ↗</a></article>
+      </div>
+    </section>
+
     <section class="atlas-intelligence reveal" id="atlas-intelligence">
       <div class="atlas-intro-grid">
         <div><p class="section-kicker">BLACK ATLAS 3.0</p><h2>Not just where we are.<br><em>Where we need to own.</em></h2></div>
@@ -483,16 +508,16 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
 
     <section class="travel-section reveal" id="travel">
       <div class="travel-photo">
-        <div class="travel-overlay"><span>THE BROWN PASSPORT</span><strong>ACCRA</strong><small>GHANA · WEST AFRICA</small></div>
+        <div class="travel-overlay"><span>THE BROWN PASSPORT</span><strong>GO FARTHER</strong><small>BLACK AMERICA · AFRICA · THE DIASPORA</small></div>
       </div>
       <div class="travel-copy">
         <p class="section-kicker">TRAVEL BLACK</p>
         <h2>The world is bigger when you know <em>where to look.</em></h2>
-        <p>Culture-first destination guides with Black-owned stays, food, history, festivals, local creators and trusted travel links. Accra — Ghana’s capital on the Gulf of Guinea — is our first featured gateway into the Brown Passport experience.</p>
+        <p>The Brown Passport starts at home with U.S. destinations and Black-owned hospitality, then reaches outward to Africa, the Caribbean and the wider diaspora. Use it to find thoughtful stays, Black businesses, history, food, local culture and practical ways to move through a place with more context.</p>
         <div class="travel-tags"><span>DIASPORA HISTORY</span><span>BLACK-OWNED STAYS</span><span>LOCAL GUIDES</span><span>FOOD</span><span>EVENTS</span></div>
         <button class="shine-btn" id="passportBtn">OPEN THE BROWN PASSPORT <span>↗</span></button>
         <div class="passport-panel" id="passportPanel">
-          <div><b>Featured route</b><span>Accra → Cape Coast → Elmina</span></div>
+          <div><b>Featured routes</b><span>Unexpected America → Black-owned stays → Africa + wider diaspora</span></div>
           <div><b>BROWN PASSPORT STARTER COLLECTION</b><span>Culture-first previews for Accra, Dakar, Kingston and Salvador — history, food, Black-owned discovery, cultural context and practical travel links.</span>
             <div class="passport-destinations">
               <div class="passport-destination"><b>Accra, Ghana</b><span>West African history, contemporary culture, markets, food and Cape Coast/Elmina heritage routes.</span></div>
@@ -503,6 +528,14 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="unexpected-section reveal" id="unexpected-america">
+      <div class="unexpected-head">
+        <div><p class="section-kicker">THE BROWN PASSPORT · UNEXPECTED AMERICA</p><h2>Go where the story<br><em>doesn't expect us.</em></h2></div>
+        <p>These are U.S. trips beyond the obvious Black travel circuit, chosen because there is a credible Black-owned or Black-founded hospitality anchor, strong guest sentiment, or a meaningful Black investment connection. The goal is not simply to arrive; it is to know where to stay, how to move, and where Black ownership fits into the trip.</p>
+      </div>
+      <div class="unexpected-grid" id="unexpectedGrid"></div>
     </section>
 
     <section class="help-section reveal" id="help">
@@ -667,7 +700,7 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
 
   <footer>
     <div class="footer-brand"><img class="footer-logo" src="assets/dsb-logo.webp" alt="DSB monogram"><div><strong>DIVINE SHADES OF BROWN</strong><p>Black Life. Connected.</p></div></div>
-    <div class="footer-links"><a href="#atlas">Black Atlas</a><a href="#dsb-select">DSB Select</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">Journal</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#help">Find Help</a><a href="#resources">Resources</a><a href="#shop">Shop</a><a href="#membership">Membership</a></div>
+    <div class="footer-links"><a href="#atlas">Black Atlas</a><a href="#dsb-select">DSB Select</a><a href="#essentials">Essentials</a><a href="#unexpected-america">Unexpected America</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">Journal</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#help">Find Help</a><a href="#resources">Resources</a><a href="#shop">Shop</a><a href="#membership">Membership</a></div>
     <div class="footer-bottom"><span>© 2026 InAct Entertainment LLC</span><span>FOUNDING EDITION</span><button data-scroll="#top">BACK TO TOP ↑</button></div>
     <div class="footer-legal"><span style="font-size:8px;letter-spacing:.12em;color:#675d56">FOUNDING EDITION · ONE-TIME ACCESS MODEL · POLICIES OPEN ON THIS PAGE</span><div class="legal-nav"><button class="legal-btn" data-legal="privacy">PRIVACY</button><button class="legal-btn" data-legal="terms">TERMS</button><button class="legal-btn" data-legal="disclaimer">DISCLAIMER</button><button class="legal-btn" data-legal="affiliate">AFFILIATE DISCLOSURE</button><button class="legal-btn" data-legal="accessibility">ACCESSIBILITY</button><button class="legal-btn" data-legal="community">COMMUNITY GUIDELINES</button></div></div>
   </footer>
