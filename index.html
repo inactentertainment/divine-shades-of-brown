@@ -528,7 +528,7 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
       </div>
       <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for founding rollout updates" required><button type="submit">I'M IN <span>↗</span></button></form>
       <div class="form-message" id="formMessage"></div>
-      <div class="member-preview"><div><h3>My DSB works on this device while the platform stays backend-free.</h3><p>Saved items and Black Receipt entries remain browser-local in this phase. Premium access will be delivered as digital collections rather than pretending we have a cloud account system that we do not.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
+      <div class="member-preview"><div><h3>Choose your DSB access level.</h3><p>Public DSB remains free. Founding Access is a $49 one-time premium starter collection. Lifetime All-Access is a $399 one-time purchase that includes the full premium ecosystem and The Divine LifeBook. No recurring DSB membership fee.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
       <div class="ffp-entry"><button id="openFfpAccess">FAMILY · FRIENDS · PARTNERS ACCESS</button></div>
     </section>
 </main>
@@ -552,9 +552,9 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
         <p class="section-kicker">PRIVATE FOUNDING ACCESS</p>
         <h3>You've been invited into the Brown Circle.</h3>
         <p>Selected family, friends and founding partners can receive complimentary Lifetime All-Access while a limited number of private founding slots remain.</p>
-        <div class="ffp-codebox"><input id="ffpCode" autocomplete="off" placeholder="ENTER YOUR PRIVATE ACCESS CODE"><button id="ffpContinue">CONTINUE ↗</button></div>
-        <div class="ffp-status" id="ffpStatus"></div>
-        <div class="ffp-note"><b>How private access works:</b> the production version will use a Stripe promotion code attached to the $399 Lifetime checkout with a fixed redemption limit. That means the access code itself is not stored as a secret inside this public website. Stripe tracks redemptions and prevents use after the slot limit is reached.</div>
+        <div class="ffp-codebox"><button id="ffpContinue" style="width:100%;min-height:50px">CONTINUE TO PRIVATE LIFETIME CHECKOUT ↗</button></div>
+        <div class="ffp-status" id="ffpStatus">Use the private Brown Circle promotion code you were personally given when Stripe asks for a promotion code.</div>
+        <div class="ffp-note"><b>How Brown Circle access works:</b> the private code is validated by Stripe on the $399 Lifetime checkout and is limited to 20 total redemptions. The code itself is intentionally not stored or displayed in this public website.</div>
       </div>
     </div>
   </div>
@@ -884,11 +884,9 @@ document.getElementById('openFfpAccess').onclick=()=>{ffpModal.classList.add('op
 document.getElementById('ffpClose').onclick=()=>{ffpModal.classList.remove('open');ffpModal.setAttribute('aria-hidden','true')};
 ffpModal.addEventListener('click',e=>{if(e.target===ffpModal){ffpModal.classList.remove('open');ffpModal.setAttribute('aria-hidden','true')}});
 document.getElementById('ffpContinue').onclick=()=>{
- const code=document.getElementById('ffpCode').value.trim();
  const status=document.getElementById('ffpStatus');
- if(!code){status.textContent='Enter the private access code you were given.';return;}
- status.textContent='Private production access is redeemed through Stripe so the code and remaining slots cannot be exposed in this public page.';
- setTimeout(()=>{window.open('https://buy.stripe.com/eVqeVeaIq4XxcKhet17Re06','_blank','noopener')},600);
+ status.textContent='Opening the secure Lifetime checkout. Enter your private Brown Circle promotion code on Stripe.';
+ setTimeout(()=>{window.open(DSB_STRIPE_LIVE.lifetime.paymentLink,'_blank','noopener')},350);
 };
 function ffpCelebrate(){
  const wrap=document.getElementById('ffpCelebrate');wrap.innerHTML='';wrap.classList.add('show');
@@ -908,7 +906,21 @@ function hubRenderProfile(){const name=localStorage.getItem(HUB_NAME)||'';docume
 document.getElementById('hubSaveName').onclick=()=>{localStorage.setItem(HUB_NAME,document.getElementById('hubDisplayName').value.trim());hubRenderProfile();toast('Member profile saved on this device.')};
 function bindHubPhoto(){const inp=document.getElementById('hubPhotoInput');if(!inp)return;inp.onchange=e=>{const file=e.target.files[0];if(!file)return;if(file.size>1200000){toast('Choose a profile image under 1.2 MB for local storage.');return;}const r=new FileReader();r.onload=()=>{localStorage.setItem(HUB_PHOTO,r.result);hubRenderProfile();toast('Profile photo saved on this device.')};r.readAsDataURL(file)}}
 bindHubPhoto();
-/* For production: after a successful Stripe $0 Lifetime checkout, the confirmation/return page should set a signed entitlement or redirect into account setup. Until then, do not use a public JavaScript access code as real security. */
+/* Stripe return handling: configure Stripe to return with ?dsb_access=founding or ?dsb_access=lifetime&checkout=success once the public site URL is confirmed. This UI response is not a substitute for a server-side entitlement check. */
+(function handleDsbCheckoutReturn(){
+ const q=new URLSearchParams(location.search);
+ const access=q.get('dsb_access'),success=q.get('checkout')==='success';
+ if(!success||!access)return;
+ history.replaceState({},document.title,location.pathname+location.hash);
+ if(access==='lifetime'){
+   localStorage.setItem('dsb-last-checkout','lifetime');
+   setTimeout(()=>{ffpCelebrate();openMemberHub();toast('Welcome to DSB Lifetime All-Access.')},250);
+ }else if(access==='founding'){
+   localStorage.setItem('dsb-last-checkout','founding');
+   setTimeout(()=>{toast('Founding Access confirmed. Welcome to Divine Shades of Brown.');document.getElementById('membership')?.scrollIntoView({behavior:'smooth'})},250);
+ }
+})();
+/* Real premium authorization still requires verified payment/access data. Do not use public JavaScript as the security boundary. */
 
 
 /* BLACK ATLAS 2.0 TABS */
