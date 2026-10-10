@@ -167,6 +167,11 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
 @media(max-width:760px){.hub-access-strip,.lb-prompt-grid,.lb-score,.lb-form .lb-inline-3{grid-template-columns:1fr}.lifebook-nav{grid-template-columns:1fr 1fr}}
 
 
+/* BUILD 11 — BLACK ATLAS 3.0: ECONOMIC SELF-SUFFICIENCY MATRIX */
+.atlas3-wrap{margin-top:24px;border:1px solid #4a3226;background:#100b08}.atlas3-head{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:24px;border-bottom:1px solid #3b2920}.atlas3-head h3{font:600 34px var(--serif);margin:4px 0 8px}.atlas3-head p{font-size:10px;line-height:1.7;color:#9a887b}.atlas3-controls{display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start}.atlas3-controls button{border:1px solid #4e3528;background:#17100c;color:#9d897a;padding:8px 10px;font:700 7px var(--sans);letter-spacing:.1em;cursor:pointer}.atlas3-controls button.active{background:#ead1ba;color:#24150e;border-color:#ead1ba}.atlas3-grid{display:grid;grid-template-columns:320px 1fr;min-height:520px}.atlas3-list{border-right:1px solid #35251d;max-height:650px;overflow:auto}.atlas3-sector{width:100%;display:grid;grid-template-columns:36px 1fr auto;gap:10px;align-items:center;border:0;border-bottom:1px solid #302119;background:transparent;color:#fff;text-align:left;padding:14px;cursor:pointer}.atlas3-sector:hover,.atlas3-sector.active{background:#1b120d}.atlas3-sector .num{font:italic 22px var(--serif);color:#87583d}.atlas3-sector strong{display:block;font:600 14px var(--serif)}.atlas3-sector small{display:block;color:#78685e;font-size:7px;margin-top:3px}.atlas3-sector .signal{font:700 6px var(--sans);letter-spacing:.1em;border:1px solid #5b3c2c;padding:4px 6px;color:#c79069}.atlas3-detail{padding:28px}.atlas3-detail h3{font:600 34px var(--serif);margin:5px 0 10px}.atlas3-detail>p{color:#9b887b;font-size:10px;line-height:1.7}.atlas3-matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:20px}.atlas3-cell{border:1px solid #3c2a21;background:#15100d;padding:14px}.atlas3-cell small{display:block;font:700 7px var(--sans);letter-spacing:.11em;color:#ae7653;margin-bottom:7px}.atlas3-cell p,.atlas3-cell ul{font-size:9px;line-height:1.65;color:#9a877a;margin:0}.atlas3-cell ul{padding-left:16px}.atlas3-source{margin-top:16px;border-left:3px solid #a56b42;background:#18100c;padding:13px 15px;font-size:8px;line-height:1.6;color:#8f7c70}.atlas3-source a{color:#e2bea2;text-decoration:none}.atlas3-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:13px;color:#786a60;font-size:7px;letter-spacing:.08em}.atlas3-legend b{color:#d2a17d}
+@media(max-width:900px){.atlas3-head,.atlas3-grid{grid-template-columns:1fr}.atlas3-list{border-right:0;border-bottom:1px solid #35251d;max-height:320px}}@media(max-width:620px){.atlas3-matrix{grid-template-columns:1fr}.atlas3-detail{padding:20px}}
+
+
 /* BUILD 8 — BLACK ATLAS 2.0: NETWORKS / WHOLESALE / OWNERSHIP GAP */
 .atlas-intelligence{padding:105px max(24px,calc((100vw - var(--max))/2));background:#0c0806;color:#fff}
 .atlas-intro-grid{display:grid;grid-template-columns:1fr .95fr;gap:65px;align-items:end}.atlas-intro-grid h2{font:600 clamp(46px,6vw,82px)/.94 var(--serif);letter-spacing:-.04em;margin:12px 0}.atlas-intro-grid p{color:#9a887b;line-height:1.75}
@@ -308,13 +313,13 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
 
     <section class="atlas-intelligence reveal" id="atlas-intelligence">
       <div class="atlas-intro-grid">
-        <div><p class="section-kicker">BLACK ATLAS 2.0</p><h2>Not just where we are.<br><em>Where we need to own.</em></h2></div>
-        <p>Black Atlas is expanding from a consumer directory into an economic map: discover Black-owned businesses, inspect other major Black business networks, source from Black and African wholesalers, and identify essential industries where greater Black ownership would strengthen economic self-reliance.</p>
+        <div><p class="section-kicker">BLACK ATLAS 3.0</p><h2>Not just where we are.<br><em>Where we need to own.</em></h2></div>
+        <p>Black Atlas now combines discovery with economic strategy: find Black-owned businesses, inspect major Black business networks, source from Black and African suppliers, and explore where deeper ownership across essential supply chains could strengthen community economic resilience.</p>
       </div>
       <div class="atlas-tabs" id="atlasIntelTabs">
         <button class="active" data-atlas-panel="networks">BLACK BUSINESS NETWORKS</button>
         <button data-atlas-panel="wholesale">WHOLESALE + AFRICA SOURCING</button>
-        <button data-atlas-panel="gaps">OWNERSHIP OPPORTUNITY MAP</button>
+        <button data-atlas-panel="gaps">SELF-SUFFICIENCY MATRIX</button>
       </div>
 
       <div class="atlas-panel active" id="atlas-panel-networks">
@@ -344,8 +349,18 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
       </div>
 
       <div class="atlas-panel" id="atlas-panel-gaps">
-        <div class="atlas-principle"><b>Important:</b> This map does not claim that Black people own no businesses in these sectors. It asks a different question: if communities wanted stronger economic self-reliance tomorrow, which essential systems would require deeper ownership, production capacity, distribution and capital?</div>
-        <div class="gap-grid" style="margin-top:18px">
+        <div class="atlas-principle"><b>Important:</b> This is an opportunity-analysis tool, not a claim that Black-owned businesses are absent from these sectors. It asks where stronger ownership, production capacity, distribution, capital and supplier relationships could improve long-term economic resilience.</div>
+        <div class="atlas3-wrap">
+          <div class="atlas3-head">
+            <div><p class="section-kicker">ECONOMIC SELF-SUFFICIENCY MATRIX</p><h3>See the whole chain, not just the storefront.</h3><p>Select a sector to compare essential needs, existing ownership pathways, weak links, African/Black supplier routes, startup opportunities, likely capital intensity, skills or certifications, and potential partners.</p></div>
+            <div><div class="atlas3-controls" id="atlas3Filters"></div><div class="atlas3-legend"><span><b>LOWER</b> = easier entry point</span><span><b>MEDIUM</b> = meaningful capital/skills</span><span><b>HIGH</b> = infrastructure-heavy</span></div></div>
+          </div>
+          <div class="atlas3-grid">
+            <div class="atlas3-list" id="atlas3List"></div>
+            <div class="atlas3-detail" id="atlas3Detail"></div>
+          </div>
+        </div>
+        <div style="margin-top:28px"><p class="section-kicker">SECTOR OVERVIEW</p><div class="gap-grid" style="margin-top:18px">
           <article class="gap-card"><span class="gap-num">01</span><h3>Food + Agriculture</h3><p>Self-reliance requires control beyond restaurants: farms, processors, cold storage, grocery distribution, packaging and wholesale food networks.</p><ul><li>Commercial farms + cooperatives</li><li>Food processing</li><li>Wholesale distribution</li><li>Cold-chain logistics</li></ul><span class="gap-tag">BUILD THE SUPPLY CHAIN</span></article>
           <article class="gap-card"><span class="gap-num">02</span><h3>Housing + Building Materials</h3><p>Construction firms matter, but so do lumber, concrete, fixtures, prefabrication, property management and building-material distribution.</p><ul><li>Materials manufacturing</li><li>General contracting</li><li>Modular housing</li><li>Property infrastructure</li></ul><span class="gap-tag">OWN MORE THAN THE JOB SITE</span></article>
           <article class="gap-card"><span class="gap-num">03</span><h3>Energy + Power</h3><p>Future resilience depends on solar, batteries, electrical contracting, EV charging, microgrids and energy-service companies.</p><ul><li>Solar installation</li><li>Battery storage</li><li>EV charging</li><li>Microgrid services</li></ul><span class="gap-tag">POWER IS INFRASTRUCTURE</span></article>
@@ -357,6 +372,7 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
           <article class="gap-card"><span class="gap-num">09</span><h3>Water + Waste + Environmental Services</h3><p>Essential communities need sanitation, water treatment, recycling, hazardous-waste services and environmental engineering.</p><ul><li>Water systems</li><li>Waste hauling</li><li>Recycling</li><li>Environmental engineering</li></ul><span class="gap-tag">OWN ESSENTIAL SERVICES</span></article>
           <article class="gap-card"><span class="gap-num">10</span><h3>Media + Knowledge Infrastructure</h3><p>Stories matter, but so do publishing, distribution, archives, education technology, research databases and cultural intellectual property.</p><ul><li>Publishing</li><li>Education platforms</li><li>Archives + data</li><li>Film/music distribution</li></ul><span class="gap-tag">OWN THE RECORD</span></article>
         </div>
+      </div>
       </div>
     </section>
 
@@ -957,6 +973,45 @@ bindHubPhoto();
 })();
 /* Real premium authorization still requires verified payment/access data. Do not use public JavaScript as the security boundary. */
 
+
+/* BLACK ATLAS 3.0 — ECONOMIC SELF-SUFFICIENCY MATRIX */
+const atlas3Data=[
+ {sector:'Food + Agriculture',category:'Essentials',capital:'Medium',need:'Reliable access to food, farms, processing, storage and distribution.',existing:['Black farmers and cooperatives','Black-owned restaurants and food brands','Regional grocers and specialty markets'],gaps:['Cold storage','Large-scale processing','Wholesale grocery distribution','Packaging and logistics'],suppliers:['African food exporters and processors','Black-owned U.S. wholesale brands','Regional farm cooperatives'],startup:['Cold-chain brokerage','Shared commercial kitchens','Private-label food processing','Local food distribution'],skills:['Food safety / HACCP','USDA / state licensing','Logistics and procurement','Agribusiness finance'],partners:['USDA programs','SBA / CDFIs','Cooperative extensions','African trade marketplaces'],source:'USDA, SBA, Faire Black-owned wholesale, African trade networks already linked in Black Atlas.'},
+ {sector:'Housing + Building Materials',category:'Essentials',capital:'High',need:'Housing, construction capacity and ownership of the materials and systems behind development.',existing:['Black contractors','Developers and real-estate firms','Architecture and design practices'],gaps:['Building-material manufacturing','Lumber / fixtures distribution','Modular housing production','Large-scale property infrastructure'],suppliers:['African timber / stone / textile producers where compliant','Black-owned U.S. contractors and manufacturers'],startup:['Building-material distribution','Modular / prefab systems','Property maintenance networks','Construction procurement'],skills:['Contractor licensing','Project management','Supplier certification','Real-estate finance'],partners:['SBA','HUD programs','MBE certification networks','Community development finance'],source:'HUD, SBA and minority-business certification pathways; supplier claims should be verified individually.'},
+ {sector:'Energy + Power',category:'Infrastructure',capital:'High',need:'Reliable power, electrification and ownership in the transition to distributed energy.',existing:['Black electrical contractors','Solar installers','Energy consultants'],gaps:['Battery storage','EV charging networks','Microgrids','Energy equipment distribution'],suppliers:['African solar and energy firms','Black-owned electrical suppliers where available'],startup:['Solar maintenance','EV charger installation','Energy audits','Community microgrid services'],skills:['Electrical licensing','NABCEP or relevant solar credentials','Utility interconnection knowledge','Project finance'],partners:['DOE programs','SBA','Utilities','Community development organizations'],source:'Use official DOE, utility and certification sources before presenting specific incentives.'},
+ {sector:'Logistics + Freight',category:'Infrastructure',capital:'Medium',need:'Control over movement of goods from supplier to warehouse to customer.',existing:['Black-owned trucking firms','Courier and delivery companies','Freight brokers'],gaps:['Warehousing','3PL fulfillment','Cold chain','Port / import logistics'],suppliers:['African exporters seeking U.S. distribution','Black-owned brands needing fulfillment'],startup:['Freight brokerage','Micro-fulfillment','Shared warehousing','Import coordination'],skills:['FMCSA / broker authority as applicable','Warehouse systems','Customs / import knowledge','Supply-chain operations'],partners:['SBA','Trade.gov','Ports and freight associations','African trade networks'],source:'FMCSA, Trade.gov and Black Atlas sourcing networks.'},
+ {sector:'Finance + Insurance',category:'Capital',capital:'High',need:'Capital, risk protection, payments and long-term investment capacity.',existing:['Black-owned banks and credit unions','Black financial advisors','Black-led investment firms'],gaps:['Growth-stage lending','Commercial insurance capacity','Payments infrastructure','Institutional investment pools'],suppliers:['Black-owned financial institutions','African banks and fintech partners where regulated'],startup:['Bookkeeping / CFO services','Insurance brokerage','Financial education technology','B2B payments services'],skills:['State / federal licensing','Securities or insurance credentials','Compliance','Risk management'],partners:['FDIC / NCUA directories','CDFIs','SBA lenders','Black chambers and investor networks'],source:'Use FDIC, NCUA, CDFI Fund and state regulators for verification.'},
+ {sector:'Healthcare + Medical Supply',category:'Essentials',capital:'High',need:'Care delivery plus the supply, diagnostics, technology and distribution behind it.',existing:['Black physicians and clinics','Home-care businesses','Health-tech founders'],gaps:['Medical distribution','Diagnostics manufacturing','Pharmaceutical production','Durable medical equipment'],suppliers:['African medical manufacturers where approved','Black-owned U.S. medical suppliers'],startup:['Medical supply distribution','Home-care technology','Mobile diagnostics','Health administration services'],skills:['Healthcare licensing','FDA / state compliance where applicable','Procurement','HIPAA and security'],partners:['HHS / CMS resources','SBA','Hospital supplier diversity','Medical trade groups'],source:'Regulated fields require direct verification with HHS, FDA, CMS and state authorities.'},
+ {sector:'Technology + AI Infrastructure',category:'Future',capital:'Medium',need:'Ownership of software, data, cybersecurity, compute, automation and technical education.',existing:['Black software founders','Cybersecurity firms','EdTech and AI startups'],gaps:['Cloud / compute infrastructure','Data ownership','Enterprise AI platforms','Hardware manufacturing'],suppliers:['African software and engineering firms','Black-owned U.S. technology vendors'],startup:['AI workflow tools','Cybersecurity services','Data products','Technical training'],skills:['Cloud certifications','Cybersecurity credentials','Software engineering','AI governance and data privacy'],partners:['SBA','NIST resources','HBCUs','African tech ecosystems'],source:'NIST, SBA, HBCU innovation ecosystems and verified company directories.'},
+ {sector:'Manufacturing',category:'Production',capital:'High',need:'Capacity to make physical goods rather than only resell them.',existing:['Black consumer brands','Small manufacturers','Textile and beauty-product producers'],gaps:['Packaging','Industrial components','Electronics','Scaled contract manufacturing'],suppliers:['African textile / food / craft / industrial producers','Black-owned contract manufacturers'],startup:['Packaging production','Small-batch contract manufacturing','Textile production','Assembly and private label'],skills:['Quality systems','OSHA / safety','Lean manufacturing','Procurement and operations'],partners:['Manufacturing Extension Partnership','SBA','MBDA-type ecosystems where available','African trade platforms'],source:'NIST MEP, SBA and supplier networks; verify ownership and capacity before listing.'},
+ {sector:'Water + Waste + Environmental Services',category:'Infrastructure',capital:'High',need:'Water, sanitation, hauling, recycling and environmental engineering.',existing:['Black-owned hauling firms','Environmental consultants','Construction service firms'],gaps:['Water treatment','Recycling facilities','Hazardous-waste services','Environmental engineering scale'],suppliers:['Black-owned municipal contractors','African environmental technology firms where relevant'],startup:['Commercial recycling','Waste brokerage','Water testing','Environmental compliance services'],skills:['EPA / state requirements','CDL / hauling permits where needed','Environmental certifications','Municipal procurement'],partners:['EPA','Local procurement offices','SBA','Municipal supplier-diversity programs'],source:'EPA and state/local authorities should be the primary compliance references.'},
+ {sector:'Media + Knowledge Infrastructure',category:'Knowledge',capital:'Lower',need:'Ownership of publishing, archives, data, education platforms and cultural distribution.',existing:['Black publishers','Media companies','Educators and creators','Film / music studios'],gaps:['Distribution infrastructure','Searchable archives','Education technology','Rights and licensing systems'],suppliers:['Black authors and creators','African publishers and media houses'],startup:['Digital publishing','Archive platforms','Curriculum licensing','Creator distribution tools'],skills:['Copyright / licensing','Publishing operations','Digital product design','Metadata / archives'],partners:['Libraries','HBCUs','Black publishers','Cultural institutions'],source:'Library, publishing and copyright sources plus verified Black-owned media directories.'}
+];
+let atlas3Filter='All',atlas3Selected=0;
+function atlas3Render(){
+ const filters=['All','Essentials','Infrastructure','Capital','Future','Production','Knowledge'];
+ const fc=document.getElementById('atlas3Filters'),list=document.getElementById('atlas3List'),detail=document.getElementById('atlas3Detail');
+ if(!fc||!list||!detail)return;
+ fc.innerHTML=filters.map(x=>'<button class="'+(x===atlas3Filter?'active':'')+'" data-a3-filter="'+x+'">'+x.toUpperCase()+'</button>').join('');
+ fc.querySelectorAll('button').forEach(b=>b.onclick=()=>{atlas3Filter=b.dataset.a3Filter;atlas3Selected=0;atlas3Render()});
+ const items=atlas3Data.filter(x=>atlas3Filter==='All'||x.category===atlas3Filter);
+ if(!items.length){list.innerHTML='<div class="atlas-principle">No sectors in this view yet.</div>';detail.innerHTML='';return;}
+ atlas3Selected=Math.min(atlas3Selected,items.length-1);
+ list.innerHTML=items.map((x,i)=>'<button class="atlas3-sector '+(i===atlas3Selected?'active':'')+'" data-a3="'+i+'"><span class="num">'+String(i+1).padStart(2,'0')+'</span><span><strong>'+x.sector+'</strong><small>'+x.category+'</small></span><span class="signal">'+x.capital.toUpperCase()+'</span></button>').join('');
+ list.querySelectorAll('[data-a3]').forEach(b=>b.onclick=()=>{atlas3Selected=Number(b.dataset.a3);atlas3Render()});
+ const x=items[atlas3Selected];
+ const cell=(label,body)=>'<div class="atlas3-cell"><small>'+label+'</small>'+body+'</div>';
+ const ul=arr=>'<ul>'+arr.map(v=>'<li>'+v+'</li>').join('')+'</ul>';
+ detail.innerHTML='<p class="section-kicker">'+x.category+' · '+x.capital.toUpperCase()+' CAPITAL INTENSITY</p><h3>'+x.sector+'</h3><p>'+x.need+'</p><div class="atlas3-matrix">'+
+  cell('EXISTING BLACK OWNERSHIP PATHWAYS',ul(x.existing))+
+  cell('WEAK / UNDERDEVELOPED LINKS',ul(x.gaps))+
+  cell('BLACK / AFRICAN SUPPLIER ROUTES',ul(x.suppliers))+
+  cell('POSSIBLE STARTUP ENTRY POINTS',ul(x.startup))+
+  cell('SKILLS / CERTIFICATIONS TO RESEARCH',ul(x.skills))+
+  cell('POTENTIAL PARTNERS / CAPITAL PATHS',ul(x.partners))+
+  '</div><div class="atlas3-source"><b>RESEARCH NOTE:</b> '+x.source+' This matrix is directional and should be verified before any investment, regulatory, supplier or ownership claim.</div>';
+}
+atlas3Render();
 
 /* BLACK ATLAS 2.0 TABS */
 document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn.onclick=()=>{
