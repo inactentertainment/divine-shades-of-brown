@@ -83,3 +83,20 @@ Completed:
 - Added verification cautions so the matrix does not overstate ownership gaps or present regulatory/supplier claims as settled facts.
 - Cleaned duplicate trailing markup found during validation.
 - Revalidated JavaScript syntax and confirmed no Stripe test links remain.
+
+## Build 12 status
+
+Completed:
+- Expanded DSB Opportunities to 12 official-source entries, adding MBDA, CareerOneStop, Federal Student Aid and the CDFI Fund.
+- Refreshed Black Pulse with current/upcoming official-source events from NMAAHC and Black Enterprise and removed the stale Oct. 8 event set.
+- Expanded the DSB Journal from five to nine founding articles, adding Technology, Family, Money and Global Africa lanes.
+- Expanded Music of the Diaspora to 18 entries, adding Jazz, Funk, Reggae, House, Disco/Dance, Alternative/Rock and Caribbean lanes.
+- Upgraded Today in Black with dynamic current-date display and direct primary-source/archival pathways.
+- Expanded Find Help to 14 categories with Healthcare and Disability + Caregiving resources.
+- Expanded Brown Passport from a single Accra preview to a four-destination starter collection: Accra, Dakar, Kingston and Salvador.
+- Added a Resource Vault utility shelf with nine downloadable starter worksheets.
+- Added dedicated Divine Youth downloads for young girls, young boys and young adults.
+- Added family-history, Black Receipt, opportunity, travel, music-memory and legacy starter worksheets.
+- Expanded universal search to surface the new help and resource utilities.
+- Updated founding-list language to reflect the live $49 and $399 one-time pricing model.
+- Revalidated JavaScript and HTML structure; confirmed no Stripe test links remain.
