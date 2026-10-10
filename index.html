@@ -203,10 +203,35 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
 :focus-visible{outline:2px solid #e2ad82;outline-offset:3px}
 a,button,input,select,textarea{scroll-margin-top:110px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+
+/* CUSTOMER EXPERIENCE POLISH */
+input,select,textarea,button,a{transition:transform .18s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease,color .22s ease}
+input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shadow:0 0 0 3px #d79a7024,0 0 28px #d79a7018!important;outline:none}
+.search-shell:focus-within,.mini-search:focus-within{border-color:#d79a70!important;box-shadow:0 0 0 3px #d79a7020,0 12px 38px #0005}
+.chip:hover,.tool-chip:hover,.atlas-tabs button:hover,.history-tab:hover,.commerce-tabs button:hover,.resource-download-row button:hover,.hero-links button:hover{transform:translateY(-2px);box-shadow:0 9px 20px #0003}
+.chip:active,.tool-chip:active,.atlas-tabs button:active,.history-tab:active,.commerce-tabs button:active,.resource-download-row button:active,.hero-links button:active{transform:translateY(0) scale(.97)}
+.music-filter-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:13px 0}
+.music-filter-controls label{font:700 7px var(--sans);letter-spacing:.12em;color:#9f8b7c}
+.music-filter-controls select{width:100%;margin-top:6px;background:#17100c;border:1px solid #4e3528;color:#eee0d5;padding:9px;font:600 9px var(--sans)}
+.ie-mini{font-size:0;position:relative;background:linear-gradient(145deg,#1a0f0a,#58301d);box-shadow:inset 0 0 0 1px #dfad84,0 0 16px #a9633422}
+.ie-mini:after{content:'IE';font:700 8px Georgia,serif;letter-spacing:-.05em;color:#f0c7a7}
+.music-brand{color:#d6d0ca;text-transform:none}
+.atlas-engine{margin-top:18px;border:1px solid #4a3429;background:#100b08;padding:20px}
+.atlas-engine-head{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:end}
+.atlas-engine h3{font:600 30px var(--serif);margin:6px 0}.atlas-engine p{font-size:10px;line-height:1.65;color:#968478}
+.atlas-engine-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}.atlas-stat{border:1px solid #453026;background:#17100c;padding:14px}.atlas-stat strong{display:block;font:600 28px var(--serif);color:#ddb18e}.atlas-stat span{font:700 7px var(--sans);letter-spacing:.1em;color:#88766b}
+.atlas-deep-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.atlas-deep-actions a{border:1px solid #6a4937;color:#ead8ca;padding:10px 12px;text-decoration:none;font:700 8px var(--sans);letter-spacing:.09em}.atlas-deep-actions a:first-child{background:#75472d;border-color:#75472d}
+.atlas-city-guides{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}.atlas-city-guides button{border:1px solid #3e2b22;background:#0d0907;color:#ab998c;padding:7px 9px;font:700 7px var(--sans);letter-spacing:.08em;cursor:pointer}.atlas-city-guides button:hover{color:#fff;border-color:#9d6748;transform:translateY(-2px)}
+.atlas-result.deep-result{border-color:#77523c;background:linear-gradient(145deg,#21140d,#100b08)}.atlas-result.deep-result .deep-links{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.atlas-result.deep-result a{font-size:7px}
+.map-hub{position:absolute;border:1px solid #d29a72;background:#100b08;color:#fff;border-radius:99px;padding:5px 7px;font:700 6px var(--sans);letter-spacing:.06em;cursor:pointer;transform:translate(-50%,-50%);box-shadow:0 0 0 5px #d29a7210}.map-hub:hover{background:#d39a69;color:#1a0f09;z-index:4}
+.atlas-map-label{position:absolute;left:18px;top:16px;z-index:3;font:700 8px var(--sans);letter-spacing:.13em;color:#c99775}.map-legend{z-index:3}
+.diaspora-tunnel{position:fixed;inset:0;z-index:1900;background:radial-gradient(circle,#4f2a18,#090604 60%);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.25s}.diaspora-tunnel.active{opacity:1;pointer-events:auto}.diaspora-tunnel-core{position:relative;width:min(440px,78vw);aspect-ratio:1;display:grid;place-items:center}.diaspora-tunnel-core i{position:absolute;inset:12%;border:1px solid #dc9f7244;border-radius:50%;animation:tunnelRing .9s ease-out infinite}.diaspora-tunnel-core i:nth-child(2){inset:27%;animation-delay:.14s}.diaspora-tunnel-core i:nth-child(3){inset:40%;animation-delay:.28s}.diaspora-tunnel-core strong{font:600 clamp(28px,6vw,58px) var(--serif);text-align:center;letter-spacing:-.03em}.diaspora-tunnel-core span{display:block;font:700 8px var(--sans);letter-spacing:.24em;color:#cf936a;margin-top:8px}
+@keyframes tunnelRing{0%{transform:scale(.65);opacity:0}35%{opacity:1}100%{transform:scale(1.65);opacity:0}}
+@media(max-width:720px){.music-filter-controls,.atlas-engine-head,.atlas-engine-stats{grid-template-columns:1fr}.atlas-map{min-height:370px}.map-hub{font-size:5px;padding:4px 5px}}
 </style>
 </head>
 <body>
-  <div class="noise"></div>
+  <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
   <div class="announcement"><span>FOUNDING EDITION</span> Divine Shades of Brown — Black life, connected. <button data-scroll="#membership">Explore founding access</button></div>
 
   <header class="site-header" id="top">
@@ -224,7 +249,7 @@ a,button,input,select,textarea{scroll-margin-top:110px}
       <a href="#membership">Membership</a>
     </nav>
     <div class="header-actions">
-      <div class="header-tool" id="musicTool"><button class="header-tool-btn" id="musicToggle" aria-label="Open Music of the Diaspora"><span class="music-bars"><i></i><i></i><i></i></span><span class="tool-word">MUSIC</span></button></div>
+      <div class="header-tool" id="musicTool"><button class="header-tool-btn" id="musicToggle" aria-label="Open Sounds of the Black Diaspora"><span class="music-bars"><i></i><i></i><i></i></span><span class="tool-word">MUSIC</span></button></div>
       <button class="header-tool-btn" id="themeToggle" aria-label="Toggle lights"><span>◐</span><span class="theme-label"></span></button>
       <button class="icon-btn" id="searchToggle" aria-label="Open search">⌕</button>
       <button class="profile-btn" data-route="dashboard">MY DSB</button>
@@ -234,11 +259,10 @@ a,button,input,select,textarea{scroll-margin-top:110px}
 
   
   <aside class="music-panel" id="musicPanel" aria-hidden="true">
-    <div class="music-brand"><span class="ie-mini">IE</span> INACT ENTERTAINMENT PRESENTS</div>
-    <h3>Music of the Diaspora</h3>
-    <p>A living listening room tracing Black music across generations, continents and genres — including the places Black artists are too often edited out of the story.</p>
-    <div class="music-filter-row" id="musicEraFilters"></div>
-    <div class="music-filter-row" id="musicGenreFilters"></div>
+    <div class="music-brand"><span class="ie-mini">IE</span> InAct Entertainment Presents</div>
+    <h3>Sounds of the Black Diaspora</h3>
+    <p>A listening room tracing Black music across generations, continents and genres, including artists and traditions too often edited out of the wider story.</p>
+    <div class="music-filter-controls"><label>ERA<select id="musicEraFilters"></select></label><label>GENRE<select id="musicGenreFilters"></select></label></div>
     <div class="music-list" id="musicList"></div>
     <div class="music-note">YouTube selections open in an embedded player from their source channels. DSB does not host or redistribute the recordings.</div>
   </aside>
@@ -309,15 +333,16 @@ a,button,input,select,textarea{scroll-margin-top:110px}
     <section class="atlas-section reveal" id="atlas">
       <div class="section-heading split-heading">
         <div><p class="section-kicker">BLACK ATLAS</p><h2>Find us.<br><em>Everywhere.</em></h2></div>
-        <p>A global directory designed for Black-owned businesses, organizations and cultural spaces. Search the founding directory by category and location. As the directory grows, verified listings and member recommendations will make it more useful every month.</p>
+        <p>Start with DSB-curated Black-owned businesses and cultural spaces, then go deeper through large national directories when you need a city, service or category beyond the current DSB collection.</p>
       </div>
       <div class="atlas-shell">
         <div class="atlas-controls">
-          <div class="mini-search"><span>⌕</span><input id="atlasSearch" placeholder="Search city, category or business" /></div>
+          <div class="mini-search"><span>⌕</span><input id="atlasSearch" placeholder="Try “Chicago”, “Waldorf”, “food”, “books” or “Africa”" /></div>
           <div class="chip-row" id="atlasChips"></div>
           <div class="atlas-results" id="atlasResults"></div>
         </div>
-        <div class="atlas-map" id="atlasMap" aria-label="Interactive sample Black Atlas map">
+        <div class="atlas-map" id="atlasMap" aria-label="Interactive Black Atlas diaspora map">
+          <div class="atlas-map-label">EXPLORE BY PLACE</div>
           <svg class="world-lines" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
             <path d="M82 160 C160 78 268 74 336 126 C374 156 364 208 316 216 C272 224 248 252 226 305 C204 359 152 381 126 333 C105 294 124 244 94 224 C58 200 47 187 82 160Z"/>
             <path d="M415 102 C469 58 570 63 615 100 C661 139 636 171 600 184 C575 193 569 219 588 246 C609 278 600 327 566 365 C524 412 482 388 471 343 C462 307 439 282 426 244 C408 192 380 132 415 102Z"/>
@@ -326,11 +351,15 @@ a,button,input,select,textarea{scroll-margin-top:110px}
           </svg>
           <div class="map-grid"></div>
           <div id="mapPins"></div>
-          <div class="map-legend"><span class="pulse-dot"></span> Sample DSB locations</div>
+          <div class="map-legend"><span class="pulse-dot"></span> Tap a city or diaspora hub to search</div>
         </div>
       </div>
+      <div class="atlas-engine">
+        <div class="atlas-engine-head"><div><p class="section-kicker">DEEP DIRECTORY SEARCH</p><h3>When DSB does not have the listing yet, keep going.</h3><p>Black Atlas connects to established external discovery networks instead of pretending a small local dataset is complete. BuyBlack.org currently reports more than 110,000 Black-owned businesses and 100+ U.S. city guides; Support Black Owned lists thousands more across 50+ categories.</p></div><div class="atlas-engine-stats"><div class="atlas-stat"><strong>110K+</strong><span>BUYBLACK.ORG LISTINGS</span></div><div class="atlas-stat"><strong>100+</strong><span>U.S. CITY GUIDES</span></div></div></div>
+        <div class="atlas-deep-actions"><a href="https://www.buyblack.org/" target="_blank" rel="noreferrer">SEARCH BUYBLACK.ORG ↗</a><a href="https://www.supportblackowned.com/component/jbusinessdirectory/search" target="_blank" rel="noreferrer">SEARCH SUPPORT BLACK OWNED ↗</a></div>
+        <div class="atlas-city-guides" id="atlasCityGuides"></div>
+      </div>
       <div class="section-open"><button class="shine-btn view-full-btn" data-route="atlas">OPEN FULL BLACK ATLAS <span>↗</span></button></div>
-
     </section>
 
     <section class="atlas-intelligence reveal" id="atlas-intelligence">
