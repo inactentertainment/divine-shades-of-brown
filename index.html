@@ -160,6 +160,17 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
 .hub-profile-edit{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-top:16px}.hub-photo-upload{position:relative;width:110px;height:110px;border-radius:50%;border:1px dashed #76523d;display:grid;place-items:center;text-align:center;font-size:7px;letter-spacing:.08em;color:#8d796c;overflow:hidden}.hub-photo-upload input{position:absolute;inset:0;opacity:0;cursor:pointer}.hub-photo-upload img{width:100%;height:100%;object-fit:cover}
 @media(max-width:860px){.hub-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.hub-grid{grid-template-columns:1fr}.ffp-codebox{grid-template-columns:1fr}.ffp-codebox button{height:46px}.hub-profile-edit{grid-template-columns:1fr}}
 
+
+/* BUILD 8 — BLACK ATLAS 2.0: NETWORKS / WHOLESALE / OWNERSHIP GAP */
+.atlas-intelligence{padding:105px max(24px,calc((100vw - var(--max))/2));background:#0c0806;color:#fff}
+.atlas-intro-grid{display:grid;grid-template-columns:1fr .95fr;gap:65px;align-items:end}.atlas-intro-grid h2{font:600 clamp(46px,6vw,82px)/.94 var(--serif);letter-spacing:-.04em;margin:12px 0}.atlas-intro-grid p{color:#9a887b;line-height:1.75}
+.atlas-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:32px 0 22px}.atlas-tabs button{border:1px solid #4c3428;background:transparent;color:#9d897a;padding:9px 12px;font:700 7px var(--sans);letter-spacing:.11em;cursor:pointer}.atlas-tabs button.active{background:#ead1ba;color:#23150d;border-color:#ead1ba}
+.atlas-panel{display:none}.atlas-panel.active{display:block}
+.source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.source-card{border:1px solid #3b2a21;background:#14100d;padding:20px;min-height:220px;display:flex;flex-direction:column}.source-card .source-type{font:700 7px var(--sans);letter-spacing:.13em;color:#bf805b}.source-card h3{font:600 22px var(--serif);margin:9px 0}.source-card p{font-size:9px;line-height:1.65;color:#8d7c70}.source-card a{margin-top:auto;color:#e2c6b0;text-decoration:none;font:700 7px var(--sans);letter-spacing:.11em}.source-card small{display:block;margin-top:8px;color:#675950;font-size:7px;line-height:1.5}
+.gap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.gap-card{border:1px solid #3d2a20;background:linear-gradient(145deg,#17100c,#0b0806);padding:22px}.gap-card .gap-num{font:italic 42px var(--serif);color:#7f5034}.gap-card h3{font:600 23px var(--serif);margin:6px 0}.gap-card p{font-size:9px;line-height:1.65;color:#8f7d71}.gap-card ul{margin:13px 0 0;padding-left:16px;color:#aa9688;font-size:8px;line-height:1.7}.gap-tag{display:inline-block;margin-top:12px;border:1px solid #5a3b2c;padding:6px 8px;font:700 7px var(--sans);letter-spacing:.11em;color:#c58c67}
+.atlas-principle{margin-top:22px;border-left:3px solid #a76c47;background:#17100d;padding:18px 20px;color:#9d887a;font-size:9px;line-height:1.7}.atlas-principle b{color:#fff}
+@media(max-width:900px){.atlas-intro-grid{grid-template-columns:1fr}.source-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.source-grid,.gap-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -286,6 +297,61 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
         </div>
       </div>
       <div class="section-open"><button class="shine-btn view-full-btn" data-route="atlas">OPEN FULL BLACK ATLAS <span>↗</span></button></div>
+
+    </section>
+
+    <section class="atlas-intelligence reveal" id="atlas-intelligence">
+      <div class="atlas-intro-grid">
+        <div><p class="section-kicker">BLACK ATLAS 2.0</p><h2>Not just where we are.<br><em>Where we need to own.</em></h2></div>
+        <p>Black Atlas is expanding from a consumer directory into an economic map: discover Black-owned businesses, inspect other major Black business networks, source from Black and African wholesalers, and identify essential industries where greater Black ownership would strengthen economic self-reliance.</p>
+      </div>
+      <div class="atlas-tabs" id="atlasIntelTabs">
+        <button class="active" data-atlas-panel="networks">BLACK BUSINESS NETWORKS</button>
+        <button data-atlas-panel="wholesale">WHOLESALE + AFRICA SOURCING</button>
+        <button data-atlas-panel="gaps">OWNERSHIP OPPORTUNITY MAP</button>
+      </div>
+
+      <div class="atlas-panel active" id="atlas-panel-networks">
+        <div class="source-grid">
+          <article class="source-card"><span class="source-type">U.S. DIRECTORY + MARKETPLACE</span><h3>BuyBlack.org</h3><p>Large U.S. Black-owned business directory with city guides, marketplace functions and business discovery.</p><a href="https://www.buyblack.org/" target="_blank" rel="noreferrer">EXPLORE BUYBLACK.ORG ↗</a><small>Useful model: large-scale geolocation + marketplace + member discovery.</small></article>
+          <article class="source-card"><span class="source-type">U.S. VERIFIED DIRECTORY</span><h3>Support Black Owned</h3><p>Established directory with thousands of businesses, categories, offers, events and a verification process.</p><a href="https://www.supportblackowned.com/" target="_blank" rel="noreferrer">EXPLORE SUPPORT BLACK OWNED ↗</a><small>Useful model: verification, products/offers, events and business profiles.</small></article>
+          <article class="source-card"><span class="source-type">CURATED MARKETPLACE</span><h3>Official Black Wall Street</h3><p>Curated marketplace and discovery platform focused on Black-owned brands, products and services.</p><a href="https://obws.com/" target="_blank" rel="noreferrer">EXPLORE OBWS ↗</a><small>Useful model: curated shopping rather than raw listings.</small></article>
+          <article class="source-card"><span class="source-type">BUSINESS + CAPITAL EDITORIAL</span><h3>SHOPPE BLACK</h3><p>Profiles Black-owned companies, investors, industries and ownership strategies across the U.S. and internationally.</p><a href="https://shoppeblack.us/" target="_blank" rel="noreferrer">EXPLORE SHOPPE BLACK ↗</a><small>Useful model: sector intelligence — logistics, architecture, venture capital, airport retail and more.</small></article>
+          <article class="source-card"><span class="source-type">U.S. DIRECTORY</span><h3>Greenwood GreenBook</h3><p>Directory aimed at recirculating dollars through Black and Latino-owned businesses in America.</p><a href="https://greenbook.gogreenwood.com/" target="_blank" rel="noreferrer">EXPLORE GREENBOOK ↗</a><small>Useful model: hand-picked recommendations and community spending.</small></article>
+          <article class="source-card"><span class="source-type">CANADA / PROFESSIONAL DIRECTORY</span><h3>BBPA Black Business Directory</h3><p>Black Business and Professional Association directory connecting consumers with Black-owned companies and professionals.</p><a href="https://bbpa.org/black-business-directory/" target="_blank" rel="noreferrer">EXPLORE BBPA ↗</a><small>Useful model: professional-services and diaspora expansion beyond the U.S.</small></article>
+          <article class="source-card"><span class="source-type">GLOBAL DIRECTORY</span><h3>BlackDirectory.com</h3><p>Broad directory covering food, health, professional services, banks, shopping and other categories across multiple markets.</p><a href="https://www.blackdirectory.com/" target="_blank" rel="noreferrer">EXPLORE BLACK DIRECTORY ↗</a><small>Useful model: broad category coverage and international listings.</small></article>
+          <article class="source-card"><span class="source-type">VERIFICATION MODEL</span><h3>Mavari Black Atlas</h3><p>A newer directory emphasizing verification of claimed Black-owned businesses against public records.</p><a href="https://www.mavariatlas.com/" target="_blank" rel="noreferrer">EXPLORE MAVARI ATLAS ↗</a><small>Useful model: ownership-verification badges and business claims.</small></article>
+        </div>
+      </div>
+
+      <div class="atlas-panel" id="atlas-panel-wholesale">
+        <div class="source-grid">
+          <article class="source-card"><span class="source-type">BLACK-OWNED WHOLESALE DISCOVERY</span><h3>Faire — Black-Owned Brands</h3><p>Wholesale marketplace with a Black-owned brand filter covering home, food, beauty, apparel, books, stationery and more.</p><a href="https://www.faire.com/category/Black-Owned%20Businesses" target="_blank" rel="noreferrer">BROWSE BLACK-OWNED WHOLESALE ↗</a><small>Third-party marketplace; verify ownership and supplier terms individually.</small></article>
+          <article class="source-card"><span class="source-type">AFRICAN MARKETPLACE · RETAIL + SERVICES</span><h3>AfriMarket</h3><p>Africa-to-diaspora marketplace connecting products and services from African sellers with buyers in the U.S., U.K. and Canada.</p><a href="https://www.afrimarket.org/" target="_blank" rel="noreferrer">EXPLORE AFRIMARKET ↗</a><small>Categories include food, beauty, fashion, home, art, services and more.</small></article>
+          <article class="source-card"><span class="source-type">AFRICAN WHOLESALE B2B</span><h3>Yeafrica</h3><p>Wholesale platform focused on products manufactured or produced in Africa, with supplier sourcing and export logistics.</p><a href="https://www.yeafrica.com/" target="_blank" rel="noreferrer">EXPLORE YEAFRICA ↗</a><small>Useful for textiles, bulk goods and direct African sourcing.</small></article>
+          <article class="source-card"><span class="source-type">WEST AFRICA · OFFICIAL REGIONAL MARKETPLACE</span><h3>ECOWAS Trade Network Marketplace</h3><p>Official regional marketplace connecting West African MSMEs, buyers and investors under ECOWAS trade frameworks.</p><a href="https://ecotis.ecowas.int/ecotis/page2?langid=1&mid=4&pid=30" target="_blank" rel="noreferrer">EXPLORE ECOWAS MARKETPLACE ↗</a><small>Institutional source for West African cross-border business discovery.</small></article>
+          <article class="source-card"><span class="source-type">PAN-AFRICAN · B2B / B2G</span><h3>African Trade Exchange (ATEX)</h3><p>A UN ECA / Afreximbank / African Union-linked platform created to support B2B and B2G trade and pooled procurement across Africa.</p><a href="https://www.uneca.org/dite-for-africa/african-trade-exchange-%28atex%29" target="_blank" rel="noreferrer">EXPLORE ATEX ↗</a><small>Important institutional model for essential-commodity procurement and continental trade.</small></article>
+          <article class="source-card"><span class="source-type">AFRICAN TRADE FAIR / BUYER NETWORK</span><h3>IATF Virtual Community</h3><p>Buyer, exhibitor and supplier discovery tied to the Intra-African Trade Fair ecosystem.</p><a href="https://buyers.africa/" target="_blank" rel="noreferrer">EXPLORE BUYERS.AFRICA ↗</a><small>Useful for identifying African manufacturers, exhibitors, products and commercial contacts.</small></article>
+          <article class="source-card"><span class="source-type">AFRICA B2B DIRECTORY</span><h3>Africa B2B Club</h3><p>Long-running B2B directory connecting African buyers with global suppliers and business partners.</p><a href="https://directory.africa-business.com/" target="_blank" rel="noreferrer">EXPLORE AFRICA B2B CLUB ↗</a><small>Useful for supplier/buyer research; perform independent diligence before transactions.</small></article>
+          <article class="source-card"><span class="source-type">TRADE INFRASTRUCTURE</span><h3>AfCFTA Resources</h3><p>U.S. International Trade Administration resource center covering the African Continental Free Trade Area and business opportunities.</p><a href="https://www.trade.gov/african-continental-free-trade-area-afcfta-resources" target="_blank" rel="noreferrer">EXPLORE AfCFTA RESOURCES ↗</a><small>Use this to understand continental trade rules before importing or sourcing at scale.</small></article>
+        </div>
+      </div>
+
+      <div class="atlas-panel" id="atlas-panel-gaps">
+        <div class="atlas-principle"><b>Important:</b> This map does not claim that Black people own no businesses in these sectors. It asks a different question: if communities wanted stronger economic self-reliance tomorrow, which essential systems would require deeper ownership, production capacity, distribution and capital?</div>
+        <div class="gap-grid" style="margin-top:18px">
+          <article class="gap-card"><span class="gap-num">01</span><h3>Food + Agriculture</h3><p>Self-reliance requires control beyond restaurants: farms, processors, cold storage, grocery distribution, packaging and wholesale food networks.</p><ul><li>Commercial farms + cooperatives</li><li>Food processing</li><li>Wholesale distribution</li><li>Cold-chain logistics</li></ul><span class="gap-tag">BUILD THE SUPPLY CHAIN</span></article>
+          <article class="gap-card"><span class="gap-num">02</span><h3>Housing + Building Materials</h3><p>Construction firms matter, but so do lumber, concrete, fixtures, prefabrication, property management and building-material distribution.</p><ul><li>Materials manufacturing</li><li>General contracting</li><li>Modular housing</li><li>Property infrastructure</li></ul><span class="gap-tag">OWN MORE THAN THE JOB SITE</span></article>
+          <article class="gap-card"><span class="gap-num">03</span><h3>Energy + Power</h3><p>Future resilience depends on solar, batteries, electrical contracting, EV charging, microgrids and energy-service companies.</p><ul><li>Solar installation</li><li>Battery storage</li><li>EV charging</li><li>Microgrid services</li></ul><span class="gap-tag">POWER IS INFRASTRUCTURE</span></article>
+          <article class="gap-card"><span class="gap-num">04</span><h3>Logistics + Freight</h3><p>Ownership in trucking is only one piece. Warehousing, freight brokerage, ports, fulfillment and last-mile delivery control how goods move.</p><ul><li>Warehousing</li><li>Freight brokerage</li><li>3PL / fulfillment</li><li>Cold chain + ports</li></ul><span class="gap-tag">CONTROL MOVEMENT</span></article>
+          <article class="gap-card"><span class="gap-num">05</span><h3>Finance + Insurance</h3><p>Businesses cannot scale without capital. Banks, credit unions, funds, insurance, payments and investment infrastructure determine who can grow.</p><ul><li>Community banking</li><li>Business lending</li><li>Insurance</li><li>Venture + private capital</li></ul><span class="gap-tag">CAPITAL CONTROLS CAPACITY</span></article>
+          <article class="gap-card"><span class="gap-num">06</span><h3>Healthcare + Medical Supply</h3><p>Clinics are important, but resilience also means diagnostics, pharmacies, medical distribution, home care, health technology and manufacturing.</p><ul><li>Medical distribution</li><li>Diagnostics</li><li>Pharmacy + manufacturing</li><li>Digital health</li></ul><span class="gap-tag">OWN CARE + SUPPLY</span></article>
+          <article class="gap-card"><span class="gap-num">07</span><h3>Technology + AI Infrastructure</h3><p>Applications are only the surface. Long-term leverage comes from data, cybersecurity, cloud infrastructure, AI systems, hardware and technical education.</p><ul><li>AI platforms</li><li>Cybersecurity</li><li>Cloud + data centers</li><li>Hardware + robotics</li></ul><span class="gap-tag">BUILD THE DIGITAL LAYER</span></article>
+          <article class="gap-card"><span class="gap-num">08</span><h3>Manufacturing</h3><p>A self-sufficient economy must make things: packaging, textiles, household goods, industrial parts, electronics, tools and consumer products.</p><ul><li>Textiles + apparel production</li><li>Packaging</li><li>Industrial components</li><li>Consumer-goods factories</li></ul><span class="gap-tag">MAKE, DON'T ONLY RESELL</span></article>
+          <article class="gap-card"><span class="gap-num">09</span><h3>Water + Waste + Environmental Services</h3><p>Essential communities need sanitation, water treatment, recycling, hazardous-waste services and environmental engineering.</p><ul><li>Water systems</li><li>Waste hauling</li><li>Recycling</li><li>Environmental engineering</li></ul><span class="gap-tag">OWN ESSENTIAL SERVICES</span></article>
+          <article class="gap-card"><span class="gap-num">10</span><h3>Media + Knowledge Infrastructure</h3><p>Stories matter, but so do publishing, distribution, archives, education technology, research databases and cultural intellectual property.</p><ul><li>Publishing</li><li>Education platforms</li><li>Archives + data</li><li>Film/music distribution</li></ul><span class="gap-tag">OWN THE RECORD</span></article>
+        </div>
+      </div>
     </section>
 
     <section class="today-section reveal" id="history">
@@ -845,6 +911,14 @@ document.getElementById('hubSaveName').onclick=()=>{localStorage.setItem(HUB_NAM
 function bindHubPhoto(){const inp=document.getElementById('hubPhotoInput');if(!inp)return;inp.onchange=e=>{const file=e.target.files[0];if(!file)return;if(file.size>1200000){toast('Choose a profile image under 1.2 MB for local storage.');return;}const r=new FileReader();r.onload=()=>{localStorage.setItem(HUB_PHOTO,r.result);hubRenderProfile();toast('Profile photo saved on this device.')};r.readAsDataURL(file)}}
 bindHubPhoto();
 /* For production: after a successful Stripe $0 Lifetime checkout, the confirmation/return page should set a signed entitlement or redirect into account setup. Until then, do not use a public JavaScript access code as real security. */
+
+
+/* BLACK ATLAS 2.0 TABS */
+document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn.onclick=()=>{
+ const id=btn.dataset.atlasPanel;
+ document.querySelectorAll('#atlasIntelTabs button').forEach(b=>b.classList.toggle('active',b===btn));
+ document.querySelectorAll('.atlas-panel').forEach(p=>p.classList.toggle('active',p.id==='atlas-panel-'+id));
+});
 
 </script>
 </body>
