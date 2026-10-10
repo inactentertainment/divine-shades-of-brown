@@ -57,3 +57,16 @@ Still requires owner-side setup before launch:
 ## Security
 
 Never store Stripe secret keys, passwords, private API keys or private access codes in this repository.
+
+## Build 10 status
+
+Completed:
+- Upgraded the Lifetime member hub with clearer one-time access, billing and flagship LifeBook status.
+- Upgraded The Divine LifeBook to LifeBook 2.0.
+- Added a completion meter and life-stage prompts.
+- Added Life Plan goals with target dates, reasons and next actions.
+- Added Wellness check-ins for energy, stress, rest and reflections.
+- Added Money + Career tracking for savings, debt, investments, career moves, business goals, credentials and major purchases.
+- Preserved existing local LifeBook data with migration-safe defaults.
+- Kept browser-local storage and export/import backup behavior for the no-cost infrastructure phase.
+- Revalidated JavaScript syntax and confirmed no Stripe test links remain.
