@@ -1,1 +1,59 @@
-# divine-shades-of-brown
+# Divine Shades of Brown
+
+Divine Shades of Brown is an InAct Entertainment LLC platform connecting Black life, culture, history, business, travel, opportunity, resources, wellness and community.
+
+## Live payment links
+
+- Founding Access — $49 one-time: https://buy.stripe.com/14A6oI2bU3Tt11z1Gf7Re07
+- Lifetime All-Access — $399 one-time: https://buy.stripe.com/eVqeVeaIq4XxcKhet17Re06
+
+No recurring DSB membership fee.
+
+## Brown Circle
+
+- Private family / friends / partners access uses a Stripe promotion code on the $399 Lifetime checkout.
+- Discount: 100%
+- Maximum redemptions: 20
+- Duration: once
+- The private promotion code itself must not be stored in public GitHub source.
+
+## Access model
+
+### Public DSB — $0
+Core public tools, history, journal, opportunities, help and discovery.
+
+### Founding Access — $49 one-time
+Premium starter library, magazine/archive sampler, Resource Vault starter collection, Brown Passport starter pack, expanded music/history sampler, premium field guides and downloads.
+
+### Lifetime All-Access — $399 one-time
+Everything in Founding Access plus The Divine LifeBook, complete premium Resource Vault, full Brown Passport and Music of the Diaspora premium collections, full digital magazine archive, future standard digital releases while DSB operates, and founding lifetime recognition.
+
+## Build sequence
+
+- Build 9 — Payment + Access Completion
+- Build 10 — Member Experience + Divine LifeBook
+- Build 11 — Black Atlas 3.0
+- Build 12 — Content + Utility Expansion
+- Build 13 — Commerce + Affiliates
+- Build 14 — Master QA + Launch Readiness
+
+## Build 9 status
+
+Completed:
+- Live $49 and $399 Stripe links connected throughout the site.
+- Test Stripe links and test checkout wording removed.
+- Brown Circle entry sends invitees to the live $399 Lifetime checkout.
+- Public site does not expose the private Brown Circle promotion code.
+- Brown Circle messaging reflects the 20-redemption Stripe limit.
+- Site-side Stripe return handling prepared for future success redirects.
+- Membership copy now clearly distinguishes Public, Founding Access and Lifetime All-Access.
+
+Still requires owner-side setup before launch:
+- Confirm the public GitHub Pages URL.
+- Configure Stripe after-payment redirects once the final public URL is working.
+- Verify the private Brown Circle code at live checkout.
+- Run end-to-end live checkout QA before public promotion.
+
+## Security
+
+Never store Stripe secret keys, passwords, private API keys or private access codes in this repository.
