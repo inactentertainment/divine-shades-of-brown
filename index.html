@@ -882,7 +882,15 @@ function lbRenderAll(){
  document.getElementById('lbPromptGrid').innerHTML=(prompts[p.stage]||prompts['Adult']).map(x=>'<article class="lb-prompt-card"><small>'+lbEsc(p.stage)+'</small><h4>'+x[0]+'</h4><p>'+x[1]+'</p><button class="lb-btn soft" data-lb-jump="'+x[2]+'">OPEN</button></article>').join('');
  document.querySelectorAll('[data-lb-jump]').forEach(b=>b.onclick=()=>lbGo(b.dataset.lbJump));
  ['Name','Edition','Stage','Focus','About','Goals'].forEach(k=>{const el=document.getElementById('lb'+k);if(el)el.value=p[k.toLowerCase()]||''});
- const sets=[['lbJournalList',lbData.journal,x=>lbItem(x.title,x.date+' · '+x.cat,x.text)],['lbCalList',lbData.calendar,x=>lbItem(x.title,x.date+' · '+x.type,x.notes)],['lbFamilyList',lbData.family,x=>lbItem(x.name,x.relation+(x.place?' · '+x.place:''),x.story)],['lbPlaceList',lbData.places,x=>lbItem(x.name,x.status+(x.region?' · '+x.region:''),x.notes)],['lbWellnessList',lbData.wellness,x=>lbItem('Wellness Check-in',x.date+' · Energy '+x.energy+'/5 · Stress '+x.stress+'/5 · Rest '+x.rest+'/5',(x.support?'Supported me: '+x.support+'\n':'')+(x.need?'Needs attention: '+x.need:''))],['lbMoneyList',lbData.money,x=>lbItem(x.title,(x.type||'Goal')+(x.status?' · '+x.status:'')+(x.date?' · '+x.date:''),(x.amount?'Target: 
+ const sets=[
+  ['lbJournalList',lbData.journal,x=>lbItem(x.title,x.date+' · '+x.cat,x.text)],
+  ['lbCalList',lbData.calendar,x=>lbItem(x.title,x.date+' · '+x.type,x.notes)],
+  ['lbFamilyList',lbData.family,x=>lbItem(x.name,x.relation+(x.place?' · '+x.place:''),x.story)],
+  ['lbPlaceList',lbData.places,x=>lbItem(x.name,x.status+(x.region?' · '+x.region:''),x.notes)],
+  ['lbWellnessList',lbData.wellness,x=>lbItem('Wellness Check-in',x.date+' · Energy '+x.energy+'/5 · Stress '+x.stress+'/5 · Rest '+x.rest+'/5',(x.support?'Supported me: '+x.support+'\\n':'')+(x.need?'Needs attention: '+x.need:''))],
+  ['lbMoneyList',lbData.money,x=>lbItem(x.title,(x.type||'Goal')+(x.status?' · '+x.status:'')+(x.date?' · '+x.date:''),(x.amount?'Target: $'+x.amount+'\\n':'')+(x.notes||''))]
+ ];
+ document.getElementById('lbPlanList').innerHTML=lbData.plans.length?lbData.plans.slice().reverse().map(x=>'<article class="lb-goal"><small>'+lbEsc(x.area)+(x.date?' · '+lbEsc(x.date):'')+'</small><h4>'+lbEsc(x.goal)+'</h4><p>'+lbEsc(x.why||'')+'</p><div class="lb-goal-meta">NEXT: '+lbEsc(x.next||'Define the next action')+'</div></article>').join(''):'<div class="lb-empty">No Life Plan goals saved yet.</div>';
  sets.forEach(([id,arr,fn])=>document.getElementById(id).innerHTML=arr.length?arr.slice().reverse().map(fn).join(''):'<div class="lb-empty">Nothing saved here yet.</div>');
  const l=lbData.legacy||{};document.getElementById('lbLegacyValues').value=l.values||'';document.getElementById('lbLegacyLessons').value=l.lessons||'';document.getElementById('lbLegacyTraditions').value=l.traditions||'';document.getElementById('lbLegacyNext').value=l.next||'';
  lbRenderDocs();
