@@ -151,3 +151,18 @@ Completed after Build 14:
 - Removed remaining customer-visible internal roadmap language such as Build 12, live-data-phase language, infrastructure-phase language and future-build wording.
 - Rewrote visible copy for clearer grammar, punctuation, directives and customer-facing tone.
 - Revalidated JavaScript and document structure on the homepage and both welcome pages; no Stripe test links remain.
+
+## DSB Select curation build
+
+Completed:
+- Reframed the platform explicitly as Black America first, with strong connections to Africa, the Caribbean and the wider Black diaspora.
+- Added DSB Select inside Black Atlas as an editorially curated layer rather than an open listing dump.
+- Added public selection standards: 4.0+ rating baseline, meaningful review history, supportable Black ownership, current/active operations, and quality/reputation review.
+- Added 12 opening DSB Select businesses across Washington, Atlanta, Chicago, New York, Los Angeles and Houston, each with a public rating/review snapshot, official-site link and a short “Why DSB selected it” note.
+- Added category filters for Books, Coffee, Food, Retail and Arts.
+- Added Save-to-My-DSB behavior for Select listings.
+- Added a Request DSB Review form that opens a prefilled email for owner/customer recommendations; submission does not guarantee inclusion and there is no consideration fee.
+- Added customer-facing disclosure that ratings are snapshots and DSB Select is editorial curation, not a transaction guarantee.
+- Updated Black Atlas scale references to BuyBlack.org's 2026 figures: 111K+ recognized businesses and 119 city guides.
+- Strengthened the DSB Journal homepage from 3 visible stories to 6, added reading-time/founding-issue metadata, hover polish, save controls and a copy-title action inside articles.
+- Revalidated JavaScript and document structure after the build; no Stripe test links remain.
