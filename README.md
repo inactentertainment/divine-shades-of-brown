@@ -100,3 +100,19 @@ Completed:
 - Expanded universal search to surface the new help and resource utilities.
 - Updated founding-list language to reflect the live $49 and $399 one-time pricing model.
 - Revalidated JavaScript and HTML structure; confirmed no Stripe test links remain.
+
+## Build 13 status
+
+Completed:
+- Replaced the old shop preview with The DSB Curated Collection.
+- Added commerce categories: Wear, Live, Travel, Read, Give and Build.
+- Added DSB-owned offers for Founding Access, Lifetime All-Access, Resource Vault, Brown Passport and Black Receipt.
+- Added curated standard-link discovery cards for MahoganyBooks, Calabash Tea, BuyBlack.org, Official Black Wall Street, Support Black Owned, SHOPPE BLACK and Faire's Black-owned wholesale filter.
+- Standard third-party links are explicitly not represented as affiliate relationships.
+- Added a public affiliate/partner status framework so cards can later be upgraded to AFFILIATE / PARTNER only after approval and verification.
+- Added a partnership pipeline: Discover → Verify → Apply/Partner → Activate.
+- Strengthened the Affiliate Disclosure language to distinguish standard discovery links, affiliate links, sponsored placements and verified ownership labels.
+- Added Shop to navigation and universal search.
+- Added lightweight browser-local click counting for commerce links without adding paid analytics infrastructure.
+- Removed the old marketplace placeholder behavior.
+- Revalidated JavaScript/HTML structure and confirmed no Stripe test links remain.
