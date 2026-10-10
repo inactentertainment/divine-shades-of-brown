@@ -136,6 +136,30 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
 @media(max-width:900px){.lifebook-head,.lifebook-grid{grid-template-columns:1fr}.lifebook-body{grid-template-columns:1fr}.lifebook-nav{border-right:0;border-bottom:1px solid #302119;grid-template-columns:repeat(4,1fr)}.lifebook-nav button{text-align:center}.lb-stats{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.lifebook-features,.lb-form{grid-template-columns:1fr}.lb-full{grid-column:auto}.lifebook-nav{grid-template-columns:1fr 1fr}.lb-stats{grid-template-columns:1fr 1fr}.lifebook-content{padding:20px}}
 
+
+/* BUILD 7 — FAMILY / FRIENDS / PARTNERS ACCESS FUNNEL + MEMBER HUB */
+.ffp-entry{margin:22px auto 0;max-width:720px;border-top:1px solid #3d2a20;padding-top:16px;text-align:center}
+.ffp-entry button{border:0;background:transparent;color:#7f6d61;font:700 7px var(--sans);letter-spacing:.13em;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.ffp-entry button:hover{color:#c99570}
+.ffp-modal{position:fixed;inset:0;background:#050302ee;z-index:1800;display:none;overflow:auto}.ffp-modal.open{display:block}
+.ffp-shell{width:min(780px,94vw);margin:50px auto;background:#110b08;border:1px solid #65432f;box-shadow:0 35px 100px #000d;color:#fff}
+.ffp-top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid #34231b}
+.ffp-top strong{font:600 20px var(--serif)}.ffp-close{width:34px;height:34px;border:1px solid #4e3529;background:transparent;color:#fff;cursor:pointer}
+.ffp-body{padding:30px}.ffp-body h3{font:600 42px/.98 var(--serif);margin:8px 0 14px}.ffp-body>p{color:#9f8c7f;line-height:1.7}
+.ffp-codebox{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:24px}.ffp-codebox input{background:#1a110c;border:1px solid #51382b;color:#fff;padding:14px;outline:none;text-transform:uppercase;letter-spacing:.08em}.ffp-codebox button{border:0;background:linear-gradient(115deg,#5a321f,#a96c45,#5a321f);color:#fff;padding:0 18px;font:700 8px var(--sans);letter-spacing:.12em;cursor:pointer}
+.ffp-status{min-height:22px;margin-top:12px;color:#c89a78;font-size:9px}.ffp-note{margin-top:18px;padding:14px;border:1px solid #3d2b22;background:#0d0907;color:#827368;font-size:8px;line-height:1.6}
+.ffp-celebrate{position:fixed;inset:0;z-index:1900;pointer-events:none;display:none}.ffp-celebrate.show{display:block}.confetti-piece{position:absolute;top:-8vh;width:8px;height:14px;border-radius:3px;animation:ffpFall 2.3s linear forwards}
+@keyframes ffpFall{to{transform:translateY(115vh) rotate(760deg);opacity:.9}}
+.member-hub{position:fixed;inset:0;background:#080604;z-index:1750;display:none;overflow:auto;color:#fff}.member-hub.open{display:block}
+.hub-shell{width:min(1280px,96vw);margin:24px auto 50px}.hub-top{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid #34251c}
+.hub-ident{display:flex;align-items:center;gap:14px}.hub-avatar{width:56px;height:56px;border-radius:50%;border:1px solid #765039;background:#1a110c;overflow:hidden;display:grid;place-items:center;font:600 18px var(--serif)}.hub-avatar img{width:100%;height:100%;object-fit:cover}
+.hub-title strong{font:600 24px var(--serif)}.hub-title span{display:block;font-size:7px;letter-spacing:.13em;color:#9b806e;margin-top:3px}
+.hub-close{border:1px solid #4d3529;background:transparent;color:#fff;width:38px;height:38px;cursor:pointer}
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}.hub-card{border:1px solid #3a291f;background:linear-gradient(145deg,#17100c,#0c0806);padding:22px;min-height:190px;display:flex;flex-direction:column}.hub-card b{font:600 36px var(--serif);color:#b87750}.hub-card h3{font:600 21px var(--serif);margin:8px 0}.hub-card p{font-size:9px;line-height:1.6;color:#8e7b6f}.hub-card button,.hub-card a{margin-top:auto;align-self:flex-start;border:1px solid #63422f;background:transparent;color:#e6d2c2;padding:9px 11px;text-decoration:none;font:700 7px var(--sans);letter-spacing:.1em;cursor:pointer}
+.hub-welcome{margin-top:24px;padding:26px;border:1px solid #5b3c2c;background:linear-gradient(130deg,#23150e,#100a07)}.hub-welcome h2{font:600 clamp(38px,5vw,64px)/.96 var(--serif);margin:4px 0 12px}.hub-welcome p{color:#a28f82;max-width:850px;line-height:1.7}
+.hub-profile-edit{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-top:16px}.hub-photo-upload{position:relative;width:110px;height:110px;border-radius:50%;border:1px dashed #76523d;display:grid;place-items:center;text-align:center;font-size:7px;letter-spacing:.08em;color:#8d796c;overflow:hidden}.hub-photo-upload input{position:absolute;inset:0;opacity:0;cursor:pointer}.hub-photo-upload img{width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.hub-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.hub-grid{grid-template-columns:1fr}.ffp-codebox{grid-template-columns:1fr}.ffp-codebox button{height:46px}.hub-profile-edit{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -439,6 +463,7 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
       <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for founding rollout updates" required><button type="submit">I'M IN <span>↗</span></button></form>
       <div class="form-message" id="formMessage"></div>
       <div class="member-preview"><div><h3>My DSB works on this device while the platform stays backend-free.</h3><p>Saved items and Black Receipt entries remain browser-local in this phase. Premium access will be delivered as digital collections rather than pretending we have a cloud account system that we do not.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
+      <div class="ffp-entry"><button id="openFfpAccess">FAMILY · FRIENDS · PARTNERS ACCESS</button></div>
     </section>
 </main>
 
@@ -453,7 +478,52 @@ body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;borde
 
   
   
-  <div class="lifebook-modal" id="lifeBookModal" aria-hidden="true">
+  
+  <div class="ffp-modal" id="ffpModal" aria-hidden="true">
+    <div class="ffp-shell">
+      <div class="ffp-top"><strong>Family · Friends · Partners</strong><button class="ffp-close" id="ffpClose">×</button></div>
+      <div class="ffp-body">
+        <p class="section-kicker">PRIVATE FOUNDING ACCESS</p>
+        <h3>You've been invited into the Brown Circle.</h3>
+        <p>Selected family, friends and founding partners can receive complimentary Lifetime All-Access while a limited number of private founding slots remain.</p>
+        <div class="ffp-codebox"><input id="ffpCode" autocomplete="off" placeholder="ENTER YOUR PRIVATE ACCESS CODE"><button id="ffpContinue">CONTINUE ↗</button></div>
+        <div class="ffp-status" id="ffpStatus"></div>
+        <div class="ffp-note"><b>How private access works:</b> the production version will use a Stripe promotion code attached to the $399 Lifetime checkout with a fixed redemption limit. That means the access code itself is not stored as a secret inside this public website. Stripe tracks redemptions and prevents use after the slot limit is reached.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ffp-celebrate" id="ffpCelebrate" aria-hidden="true"></div>
+
+  <section class="member-hub" id="memberHub" aria-hidden="true">
+    <div class="hub-shell">
+      <div class="hub-top">
+        <div class="hub-ident"><div class="hub-avatar" id="hubAvatar">DSB</div><div class="hub-title"><strong id="hubName">Your Divine Shades of Brown</strong><span>LIFETIME ALL-ACCESS · FOUNDING CIRCLE</span></div></div>
+        <button class="hub-close" id="hubClose">×</button>
+      </div>
+      <div class="hub-welcome">
+        <p class="section-kicker">YOU'RE IN</p><h2>Your life. Your culture. Your DSB.</h2>
+        <p>This is the member home base: your LifeBook, magazine archive, Resource Vault, Brown Passport, music archive, Black Receipt, saved opportunities and the rest of the premium DSB ecosystem.</p>
+        <div class="hub-profile-edit">
+          <label class="hub-photo-upload" id="hubPhotoWrap"><span id="hubPhotoText">ADD PROFILE PHOTO</span><input type="file" id="hubPhotoInput" accept="image/*"></label>
+          <div><label style="font:700 7px var(--sans);letter-spacing:.1em;color:#9d8170">DISPLAY NAME</label><input id="hubDisplayName" style="display:block;width:min(420px,100%);margin-top:8px;background:#17100c;border:1px solid #4d3528;color:#fff;padding:12px;box-sizing:border-box"><button class="lb-btn" id="hubSaveName" style="margin-top:8px">SAVE PROFILE</button></div>
+        </div>
+      </div>
+      <div class="hub-grid">
+        <article class="hub-card"><b>01</b><h3>Divine LifeBook</h3><p>Your personalized journal, calendar, family tree, documents, places and legacy pages.</p><button id="hubLifeBook">OPEN LIFEBOOK</button></article>
+        <article class="hub-card"><b>02</b><h3>DSB Magazine</h3><p>Your digital issue library and future standard releases.</p><button data-scroll="#journal" class="hubScroll">ENTER MAGAZINE</button></article>
+        <article class="hub-card"><b>03</b><h3>Resource Vault</h3><p>Premium guides, journals, workbooks, youth resources and life-planning collections.</p><button data-scroll="#resources" class="hubScroll">OPEN VAULT</button></article>
+        <article class="hub-card"><b>04</b><h3>Brown Passport</h3><p>Culture-first travel, heritage routes, Black-owned places and premium trip collections.</p><button data-scroll="#travel" class="hubScroll">TRAVEL BLACK</button></article>
+        <article class="hub-card"><b>05</b><h3>Music of the Diaspora</h3><p>Explore Black music across eras, countries and genres from the 1920s forward.</p><button id="hubMusic">OPEN MUSIC</button></article>
+        <article class="hub-card"><b>06</b><h3>Black Receipt</h3><p>Track intentional spending with Black-owned businesses and build your personal record.</p><button data-route="dashboard" class="hubDashboard">OPEN TRACKER</button></article>
+        <article class="hub-card"><b>07</b><h3>Opportunity Watch</h3><p>Keep scholarships, grants, fellowships, careers and funding in one place.</p><button data-scroll="#opportunities" class="hubScroll">FIND OPPORTUNITIES</button></article>
+        <article class="hub-card"><b>08</b><h3>Black Atlas</h3><p>Find and save Black-owned businesses, spaces and creators across the diaspora.</p><button data-scroll="#atlas" class="hubScroll">OPEN ATLAS</button></article>
+        <article class="hub-card"><b>09</b><h3>Member Feedback</h3><p>Founding family and partners help shape DSB by reporting what works, what is confusing and what should come next.</p><a href="mailto:inactentertainment@gmail.com?subject=DSB%20Founding%20Member%20Feedback">SEND FEEDBACK</a></article>
+      </div>
+    </div>
+  </section>
+
+<div class="lifebook-modal" id="lifeBookModal" aria-hidden="true">
     <div class="lifebook-shell">
       <div class="lifebook-top"><div><small class="lifebook-badge">DIVINE SHADES OF BROWN</small><strong>The Divine LifeBook</strong></div><button class="lifebook-close" id="lifeBookClose" aria-label="Close">×</button></div>
       <div class="lifebook-body">
@@ -741,6 +811,40 @@ function lbOpenDB(){return new Promise((resolve,reject)=>{const req=indexedDB.op
 document.getElementById('lbAddDoc').onclick=async()=>{const file=document.getElementById('lbDocFile').files[0];if(!file)return toast('Choose a file first.');try{const db=await lbOpenDB(),tx=db.transaction('files','readwrite');tx.objectStore('files').put({id:Date.now().toString(),name:file.name,type:file.type,size:file.size,note:document.getElementById('lbDocNote').value.trim(),blob:file});tx.oncomplete=()=>{document.getElementById('lbDocFile').value='';document.getElementById('lbDocNote').value='';lbRenderDocs();toast('File saved in this browser.')}}catch(e){toast('Browser file storage is unavailable here.')}};
 async function lbRenderDocs(){const el=document.getElementById('lbDocList');if(!el)return;try{const db=await lbOpenDB(),tx=db.transaction('files','readonly'),req=tx.objectStore('files').getAll();req.onsuccess=()=>{const arr=req.result||[];el.innerHTML=arr.length?arr.map(x=>'<article class="lb-item"><small>LOCAL DOCUMENT · '+Math.round(x.size/1024)+' KB</small><h4>'+lbEsc(x.name)+'</h4><p>'+lbEsc(x.note||'Saved on this device')+'</p><button class="lb-btn soft" data-doc="'+x.id+'">OPEN</button></article>').join(''):'<div class="lb-empty">No documents stored in this browser yet.</div>';el.querySelectorAll('[data-doc]').forEach(b=>b.onclick=async()=>{const db2=await lbOpenDB(),rq=db2.transaction('files').objectStore('files').get(b.dataset.doc);rq.onsuccess=()=>{if(rq.result?.blob)window.open(URL.createObjectURL(rq.result.blob),'_blank')}})}}catch(e){el.innerHTML='<div class="lb-empty">Local document storage is unavailable in this browser.</div>'}}
 lbRenderAll();
+
+
+/* FAMILY / FRIENDS / PARTNERS PRIVATE ACCESS */
+const FFP_PREVIEW_KEY='dsb-ffp-preview-access';
+const ffpModal=document.getElementById('ffpModal'),memberHub=document.getElementById('memberHub');
+document.getElementById('openFfpAccess').onclick=()=>{ffpModal.classList.add('open');ffpModal.setAttribute('aria-hidden','false')};
+document.getElementById('ffpClose').onclick=()=>{ffpModal.classList.remove('open');ffpModal.setAttribute('aria-hidden','true')};
+ffpModal.addEventListener('click',e=>{if(e.target===ffpModal){ffpModal.classList.remove('open');ffpModal.setAttribute('aria-hidden','true')}});
+document.getElementById('ffpContinue').onclick=()=>{
+ const code=document.getElementById('ffpCode').value.trim();
+ const status=document.getElementById('ffpStatus');
+ if(!code){status.textContent='Enter the private access code you were given.';return;}
+ status.textContent='Private production access is redeemed through Stripe so the code and remaining slots cannot be exposed in this public page.';
+ setTimeout(()=>{window.open('https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05','_blank','noopener')},600);
+};
+function ffpCelebrate(){
+ const wrap=document.getElementById('ffpCelebrate');wrap.innerHTML='';wrap.classList.add('show');
+ const shades=['#2b160d','#4b2818','#6d3c25','#8b5638','#b47a55','#d1a27d','#edd5bd'];
+ for(let i=0;i<70;i++){const p=document.createElement('i');p.className='confetti-piece';p.style.left=(Math.random()*100)+'vw';p.style.background=shades[Math.floor(Math.random()*shades.length)];p.style.animationDelay=(Math.random()*.8)+'s';p.style.transform='rotate('+(Math.random()*360)+'deg)';wrap.appendChild(p)}
+ try{const ac=new (window.AudioContext||window.webkitAudioContext)();const g=ac.createGain();g.connect(ac.destination);g.gain.setValueAtTime(.0001,ac.currentTime);g.gain.exponentialRampToValueAtTime(.12,ac.currentTime+.04);g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+1.2);[174.61,220,261.63,329.63].forEach((freq,i)=>{const o=ac.createOscillator();o.type='sine';o.frequency.value=freq;o.connect(g);o.start(ac.currentTime+i*.12);o.stop(ac.currentTime+.65+i*.12)})}catch(e){}
+ setTimeout(()=>wrap.classList.remove('show'),3200);
+}
+function openMemberHub(){memberHub.classList.add('open');memberHub.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';hubRenderProfile()}
+document.getElementById('hubClose').onclick=()=>{memberHub.classList.remove('open');memberHub.setAttribute('aria-hidden','true');document.body.style.overflow=''};
+document.getElementById('hubLifeBook').onclick=()=>{memberHub.classList.remove('open');document.body.style.overflow='';setTimeout(()=>document.getElementById('openLifeBook').click(),50)};
+document.getElementById('hubMusic').onclick=()=>{memberHub.classList.remove('open');document.body.style.overflow='';setTimeout(()=>document.getElementById('musicToggle').click(),50)};
+document.querySelectorAll('.hubScroll').forEach(b=>b.onclick=()=>{const t=b.dataset.scroll;memberHub.classList.remove('open');document.body.style.overflow='';setTimeout(()=>document.querySelector(t)?.scrollIntoView({behavior:'smooth'}),50)});
+document.querySelectorAll('.hubDashboard').forEach(b=>b.onclick=()=>{memberHub.classList.remove('open');document.body.style.overflow='';setTimeout(()=>b.click(),0)});
+const HUB_NAME='dsb-hub-name',HUB_PHOTO='dsb-hub-photo';
+function hubRenderProfile(){const name=localStorage.getItem(HUB_NAME)||'';document.getElementById('hubDisplayName').value=name;document.getElementById('hubName').textContent=name?name+"'s Divine Shades of Brown":'Your Divine Shades of Brown';const photo=localStorage.getItem(HUB_PHOTO);const av=document.getElementById('hubAvatar'),wrap=document.getElementById('hubPhotoWrap');if(photo){av.innerHTML='<img src="'+photo+'" alt="">';wrap.innerHTML='<img src="'+photo+'" alt=""><input type="file" id="hubPhotoInput" accept="image/*">';bindHubPhoto()}else{av.textContent=name?name.slice(0,2).toUpperCase():'DSB';}}
+document.getElementById('hubSaveName').onclick=()=>{localStorage.setItem(HUB_NAME,document.getElementById('hubDisplayName').value.trim());hubRenderProfile();toast('Member profile saved on this device.')};
+function bindHubPhoto(){const inp=document.getElementById('hubPhotoInput');if(!inp)return;inp.onchange=e=>{const file=e.target.files[0];if(!file)return;if(file.size>1200000){toast('Choose a profile image under 1.2 MB for local storage.');return;}const r=new FileReader();r.onload=()=>{localStorage.setItem(HUB_PHOTO,r.result);hubRenderProfile();toast('Profile photo saved on this device.')};r.readAsDataURL(file)}}
+bindHubPhoto();
+/* For production: after a successful Stripe $0 Lifetime checkout, the confirmation/return page should set a signed entitlement or redirect into account setup. Until then, do not use a public JavaScript access code as real security. */
 
 </script>
 </body>
