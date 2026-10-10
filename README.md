@@ -133,3 +133,21 @@ Completed:
 - Confirmed no Stripe test links remain.
 
 Remaining launch blockers are external configuration / owner verification: GitHub Pages public deployment, Stripe success redirects, live checkout QA including Brown Circle, and real-device/browser testing.
+
+## Post-QA customer experience polish
+
+Completed after Build 14:
+- Added a celebratory transition and confetti treatment to the $49 Founding Access confirmation page.
+- Made the DSB brand on both welcome pages return to the homepage.
+- Reworked Sounds of the Black Diaspora with clean era and genre dropdowns instead of horizontal scrolling filters.
+- Added the InAct Entertainment Presents treatment to the music panel.
+- Added stronger hover, press and focus states across search fields, chips, tabs and action buttons.
+- Expanded Black Pulse with additional current October-November 2026 official-source events.
+- Upgraded Black Atlas into a two-level search experience: DSB-curated picks plus deep-directory handoff to BuyBlack.org and Support Black Owned.
+- Added 100+ city-guide discovery context and interactive city/diaspora hub buttons on the Atlas map.
+- Added a Black Diaspora tunnel transition and short synthesized whoosh when opening Black Atlas or Black Pulse.
+- Reworked the full Black Atlas route with search, saving and deep-directory pathways.
+- Reworked the full Black Pulse route to include official-source links.
+- Removed remaining customer-visible internal roadmap language such as Build 12, live-data-phase language, infrastructure-phase language and future-build wording.
+- Rewrote visible copy for clearer grammar, punctuation, directives and customer-facing tone.
+- Revalidated JavaScript and document structure on the homepage and both welcome pages; no Stripe test links remain.
