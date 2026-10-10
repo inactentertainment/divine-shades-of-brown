@@ -86,6 +86,40 @@
 @media(max-width:860px){.week-grid,.member-proof{grid-template-columns:1fr 1fr}.member-value-head{grid-template-columns:1fr;gap:12px}.value-row{grid-template-columns:1.2fr .6fr .7fr .7fr}.value-row>div{padding:12px 9px;font-size:8px}}
 @media(max-width:620px){.week-grid,.member-proof{grid-template-columns:1fr}.value-table{overflow-x:auto}.value-row{min-width:620px}.hero-value-strip{gap:5px}.hero-value-strip span{font-size:6px}}
 
+
+/* BUILD 5 — FOUR ROOMS / MUSIC ARCHIVE / LIGHTS / ONE-TIME ACCESS */
+:root{--dsb-bg:#080604;--dsb-panel:#120c08;--dsb-text:#f5eee7;--dsb-muted:#9d8d81;--dsb-line:#3d2a20}
+body{background:var(--dsb-bg);color:var(--dsb-text);transition:background .35s,color .35s}
+body[data-theme="light"]{--dsb-bg:#efe2d3;--dsb-panel:#f7efe5;--dsb-text:#25170f;--dsb-muted:#705f52;--dsb-line:#bda896;background:#efe2d3;color:#25170f}
+body[data-theme="light"] .site-header{background:rgba(239,226,211,.86);border-bottom-color:#bda896}
+body[data-theme="light"] .brand,body[data-theme="light"] .desktop-nav a,body[data-theme="light"] .icon-btn{color:#281a12}
+body[data-theme="light"] .mission,body[data-theme="light"] .resources-section,body[data-theme="light"] .membership-section,body[data-theme="light"] .member-value-section{background:#efe2d3;color:#281a12}
+body[data-theme="light"] .action-card,body[data-theme="light"] .member-grid article,body[data-theme="light"] .member-proof article{background:#f8f0e7;border-color:#c5ad9a;color:#281a12}
+body[data-theme="light"] .action-card p,body[data-theme="light"] .membership-section>p,body[data-theme="light"] .member-value-head p,body[data-theme="light"] .member-grid p,body[data-theme="light"] .member-grid article li{color:#746357}
+body[data-theme="light"] .resource-copy>p{color:#746357}
+body[data-theme="light"] footer{background:#eadac8;color:#281a12;border-color:#c5ad9a}
+.header-tool{position:relative}.header-tool-btn{height:34px;min-width:38px;border:1px solid #4b3528;background:#120c08cc;color:#e8d7c8;display:flex;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0 9px;font:700 8px var(--sans);letter-spacing:.08em}
+body[data-theme="light"] .header-tool-btn{background:#f7efe5;color:#2b1b13;border-color:#bda896}
+.music-bars{display:flex;gap:2px;height:13px;align-items:flex-end}.music-bars i{display:block;width:2px;background:#d49a70;height:5px;animation:barBounce 1.2s ease-in-out infinite}.music-bars i:nth-child(2){height:11px;animation-delay:.15s}.music-bars i:nth-child(3){height:7px;animation-delay:.3s}
+.music-panel.open~*{}.header-tool.music-on .music-bars i{background:#ffd0a5;box-shadow:0 0 8px #d9874e}.header-tool:not(.music-on) .music-bars i{animation-play-state:paused}
+@keyframes barBounce{50%{height:13px}}
+.music-panel{position:fixed;right:20px;top:72px;width:min(430px,calc(100vw - 28px));max-height:78vh;overflow:auto;background:#100b08;border:1px solid #65432f;box-shadow:0 30px 90px #000c;z-index:1200;padding:22px;display:none}
+.music-panel.open{display:block}.music-panel h3{font:600 30px var(--serif);margin:5px 0}.music-panel>p{font-size:10px;color:#9c8a7d;line-height:1.6}.music-brand{display:flex;align-items:center;gap:8px;font:700 8px var(--sans);letter-spacing:.15em;color:#bd815a}.ie-mini{width:24px;height:24px;border:1px solid #af7049;border-radius:50%;display:grid;place-items:center;font:700 8px var(--sans)}
+.music-filter-row{display:flex;gap:5px;overflow:auto;padding:12px 0}.music-filter-row button{white-space:nowrap;border:1px solid #50372a;background:transparent;color:#a9988c;padding:7px 9px;font:700 7px var(--sans);letter-spacing:.1em;cursor:pointer}.music-filter-row button.active{background:#ead2bd;color:#23150d;border-color:#ead2bd}
+.music-list{display:grid;gap:7px}.music-item{border:1px solid #32231b;padding:12px;background:#17100c;display:grid;grid-template-columns:48px 1fr auto;gap:11px;align-items:center}.music-era{font:600 18px var(--serif);color:#d19b72}.music-item h4{font:600 13px var(--serif);margin:0 0 3px}.music-item p{margin:0;color:#827267;font-size:8px;line-height:1.5}.music-play{border:0;background:#6e4128;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer}
+.music-note{margin-top:12px;padding-top:12px;border-top:1px solid #302219;font-size:8px;color:#72645b;line-height:1.5}
+.four-rooms{padding:115px max(24px,calc((100vw - var(--max))/2));background:#120c08;color:#fff}
+.four-head{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:end}.four-head h2{font:600 clamp(48px,6vw,84px)/.93 var(--serif);letter-spacing:-.04em;margin:12px 0}.four-head p{color:#9c8b80;line-height:1.75}
+.four-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:42px}.room-card{border:1px solid #3c291f;background:linear-gradient(145deg,#1a110c,#0d0906);padding:25px;min-height:300px;display:flex;flex-direction:column;position:relative;overflow:hidden}.room-card:before{content:'';position:absolute;width:160px;height:160px;border:1px solid #ffffff0b;border-radius:50%;right:-70px;top:-55px}.room-card b{font:italic 58px var(--serif);color:#714830}.room-card h3{font:600 27px var(--serif);margin:8px 0}.room-card p{font-size:10px;line-height:1.65;color:#8f7f73}.room-card ul{list-style:none;padding:0;margin:auto 0 0;display:grid;gap:6px}.room-card li{font-size:8px;letter-spacing:.04em;color:#c7ad98}
+.editorial-upgrade{padding:110px max(24px,calc((100vw - var(--max))/2));background:#e8d9c8;color:#1e140e}.editorial-upgrade h2{font:600 clamp(46px,6vw,78px)/.95 var(--serif);letter-spacing:-.04em;margin:12px 0 30px}
+.ed-grid{display:grid;grid-template-columns:1.25fr .75fr .75fr;grid-template-rows:auto auto;gap:12px}.ed-card{background:#f7efe6;border:1px solid #c5b09e;padding:25px;min-height:220px;display:flex;flex-direction:column}.ed-card.lead{grid-row:span 2;min-height:455px;background:#21140d;color:#fff;border-color:#21140d}.ed-card small{font:700 7px var(--sans);letter-spacing:.14em;color:#a56845}.ed-card h3{font:600 27px/1.05 var(--serif);margin:12px 0}.ed-card.lead h3{font-size:43px}.ed-card p{font-size:10px;line-height:1.7;color:#736459}.ed-card.lead p{color:#b8a496}.ed-card a{margin-top:auto;color:inherit;font:700 8px var(--sans);letter-spacing:.11em;text-decoration:none}
+.access-tunnel{margin-top:35px;border:1px solid #50372b;background:#0d0907;display:grid;grid-template-columns:1fr 1fr;gap:1px}.access-tunnel>article{padding:26px;background:#120c09}.access-tunnel h3{font:600 28px var(--serif);margin:8px 0}.access-tunnel p{font-size:10px;line-height:1.65;color:#8f7f74}.access-tunnel ul{padding-left:16px;color:#a49387;font-size:9px;line-height:1.8}.access-tunnel .premium{background:linear-gradient(145deg,#28160d,#110b07);box-shadow:inset 0 0 0 1px #8c5937}
+.access-label{display:inline-block;border:1px solid #6e4933;padding:6px 8px;font:700 7px var(--sans);letter-spacing:.13em;color:#c28b67}.one-time-note{font:700 8px var(--sans);letter-spacing:.12em;color:#d59b72;margin-top:12px}
+.theme-label{font-size:0}.theme-label:after{content:'LIGHTS OFF';font:700 7px var(--sans);letter-spacing:.08em}.theme-light .theme-label:after{content:'LIGHTS ON'}
+.video-shell{aspect-ratio:16/9;background:#000;margin-top:15px}.video-shell iframe{width:100%;height:100%;border:0}
+@media(max-width:1000px){.four-grid{grid-template-columns:1fr 1fr}.ed-grid{grid-template-columns:1fr 1fr}.ed-card.lead{grid-column:span 2;grid-row:auto}.four-head{grid-template-columns:1fr}.access-tunnel{grid-template-columns:1fr}}
+@media(max-width:620px){.four-grid,.ed-grid{grid-template-columns:1fr}.ed-card.lead{grid-column:auto}.music-panel{right:14px;top:64px}.music-item{grid-template-columns:42px 1fr auto}.header-tool-btn .tool-word{display:none}}
+
 </style>
 </head>
 <body>
@@ -106,13 +140,25 @@
       <a href="#membership">Membership</a>
     </nav>
     <div class="header-actions">
+      <div class="header-tool" id="musicTool"><button class="header-tool-btn" id="musicToggle" aria-label="Open Music of the Diaspora"><span class="music-bars"><i></i><i></i><i></i></span><span class="tool-word">MUSIC</span></button></div>
+      <button class="header-tool-btn" id="themeToggle" aria-label="Toggle lights"><span>◐</span><span class="theme-label"></span></button>
       <button class="icon-btn" id="searchToggle" aria-label="Open search">⌕</button>
       <button class="profile-btn" data-route="dashboard">MY DSB</button>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
     </div>
   </header>
 
-  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  
+  <aside class="music-panel" id="musicPanel" aria-hidden="true">
+    <div class="music-brand"><span class="ie-mini">IE</span> INACT ENTERTAINMENT PRESENTS</div>
+    <h3>Music of the Diaspora</h3>
+    <p>A living listening room tracing Black music across generations, continents and genres — including the places Black artists are too often edited out of the story.</p>
+    <div class="music-filter-row" id="musicEraFilters"></div>
+    <div class="music-filter-row" id="musicGenreFilters"></div>
+    <div class="music-list" id="musicList"></div>
+    <div class="music-note">YouTube selections open in an embedded player from their source channels. DSB does not host or redistribute the recordings.</div>
+  </aside>
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
     <a href="#atlas">Black Atlas</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">DSB Journal</a><a href="#help">Find Help</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#resources">Resources</a><a href="#membership">Membership</a>
     <div class="menu-note">Know us. Find us. Support us. Build us.</div>
@@ -146,12 +192,23 @@
     <section class="mission reveal" id="mission">
       <p class="section-kicker">THE DSB PROMISE</p>
       <h2>Not another feed.<br><em>A Black life utility system.</em></h2>
-      <p class="lead">DSB brings together the things people usually have to hunt across dozens of websites: businesses, opportunities, help, travel, history, community events and resources. Free visitors can explore. Members can save, organize, track, download and build a personal DSB library.</p>
+      <p class="lead">DSB brings together the things people usually have to hunt across dozens of websites: businesses, opportunities, help, travel, history, community events and resources. The public platform stays free to explore. One-time premium access opens curated digital collections without requiring a recurring membership.</p>
       <div class="action-grid" id="actionGrid"></div>
     </section>
 
 
-    <section class="week-section reveal" id="use-dsb">
+    
+    <section class="four-rooms reveal" id="ecosystem">
+      <div class="four-head"><div><p class="section-kicker">ONE PLATFORM · FOUR ROOMS</p><h2>Come for one thing.<br><em>Discover the whole world.</em></h2></div><p>DSB combines the strongest habits of Black media, history, commerce and community sites without turning the homepage into a wall of noise. Every major feature lives inside one of four clear rooms.</p></div>
+      <div class="four-grid">
+        <article class="room-card"><b>01</b><h3>Read</h3><p>The editorial core: Black life, culture, money, wellness, global diaspora, technology and AI — reported and explained with context.</p><ul><li>DSB JOURNAL</li><li>FEATURED ESSAYS</li><li>DIASPORA FEED</li><li>VIDEO + MAGAZINE</li></ul></article>
+        <article class="room-card"><b>02</b><h3>Learn</h3><p>A beautiful knowledge library connecting African origins, global Black history, people, places, music, documents, books and timelines.</p><ul><li>TODAY IN BLACK</li><li>HISTORY EXPLORER</li><li>LIBRARY LOUNGE</li><li>MUSIC TIMELINE</li></ul></article>
+        <article class="room-card"><b>03</b><h3>Support</h3><p>Turn pride into economic action through Black-owned discovery, spending records, products, creators and practical opportunities.</p><ul><li>BLACK ATLAS</li><li>BLACK RECEIPT</li><li>CREATOR MARKETPLACE</li><li>OPPORTUNITIES</li></ul></article>
+        <article class="room-card"><b>04</b><h3>Connect</h3><p>What is happening now: events, travel, resources, help and community pathways designed to move people from information to action.</p><ul><li>BLACK PULSE</li><li>BROWN PASSPORT</li><li>FIND HELP</li><li>RESOURCE VAULT</li></ul></article>
+      </div>
+    </section>
+
+<section class="week-section reveal" id="use-dsb">
       <p class="section-kicker">WHAT CAN DSB DO FOR ME?</p>
       <h2 style="font:600 clamp(44px,6vw,76px)/.96 var(--serif);letter-spacing:-.04em;margin:14px 0 18px">Use it for something<br><em>real this week.</em></h2>
       <p>DSB is not asking people to pay just to read articles. The platform is being built around repeat-use tools that save time, organize information and help members act on what they find.</p>
@@ -256,7 +313,20 @@
       <div class="pulse-toolbar" id="pulseFilters"></div><div class="pulse-grid" id="pulseGrid"></div><div class="submit-panel"><p><strong>Know something the community should see?</strong><br>Submit it to DSB. Submissions enter a review queue before publication so the community board stays useful and trustworthy.</p><button class="shine-btn" id="submitPulse">SUBMIT AN EVENT <span>+</span></button></div><div class="section-open"><button class="ghost-btn view-full-btn" data-route="pulse">OPEN BLACK PULSE</button></div>
     </section>
 
-    <section class="b2-band journal-section reveal" id="journal">
+    
+    <section class="editorial-upgrade reveal" id="editorial-desk">
+      <p class="section-kicker">THE EDITORIAL DESK</p>
+      <h2>From African origins<br>to an AI-powered future.</h2>
+      <div class="ed-grid">
+        <article class="ed-card lead"><small>DSB COVER STORY · FUTURE</small><h3>Black people should not merely live in the AI future. We should help design it.</h3><p>DSB’s future-facing editorial lane will track artificial intelligence, digital ownership, education, entrepreneurship, creative technology and the people building new systems across Africa and the diaspora.</p><a href="#journal">ENTER TECHNOLOGY + FUTURE →</a></article>
+        <article class="ed-card"><small>HISTORY · ORIGINS</small><h3>Humanity’s African origins belong in the same conversation as tomorrow.</h3><p>History should connect ancient societies, migration, invention and the global diaspora to the world we are building now.</p><a href="#history">EXPLORE HISTORY →</a></article>
+        <article class="ed-card"><small>MONEY · POWER</small><h3>Discovery is part of economic infrastructure.</h3><p>Black Atlas, opportunity discovery and Black Receipt turn economic support into repeatable habits.</p><a href="#atlas">SUPPORT BLACK →</a></article>
+        <article class="ed-card"><small>BOOKS · IDEAS</small><h3>The Library Lounge</h3><p>Curated Black authors, essential reading, reviews, author profiles and video conversations will become a searchable cultural shelf.</p><a href="#resources">OPEN THE LIBRARY →</a></article>
+        <article class="ed-card"><small>MUSIC · CULTURE</small><h3>Hear the history.</h3><p>Use the new music control at the top of the page to move from early blues and gospel through soul, country, rock, Afrobeat and modern global sounds.</p><a href="#top">OPEN MUSIC ↑</a></article>
+      </div>
+    </section>
+
+<section class="b2-band journal-section reveal" id="journal">
       <div class="b2-intro"><div><p class="section-kicker">THE DSB JOURNAL</p><h2 style="font:600 clamp(44px,6vw,82px)/.95 var(--serif);letter-spacing:-.04em;margin:14px 0">Information with<br><em>somewhere to go.</em></h2></div><div>The publishing side of Divine Shades of Brown: Black life, money, business, health, history, travel, culture, education, technology and the global diaspora — connected back to useful DSB tools.</div></div>
       <div class="journal-toolbar" id="journalFilters"></div><div class="journal-grid" id="journalGrid"></div><div class="section-open"><button class="shine-btn view-full-btn" data-route="journal">ENTER THE DSB JOURNAL <span>↗</span></button></div>
     </section>
@@ -295,80 +365,108 @@
     </section>
 
 
+    
     <section class="member-value-section reveal" id="member-value">
       <div class="member-value-head">
-        <div><p class="section-kicker">WHY BECOME A MEMBER?</p><h2>Free gets you in.<br><em>Membership makes it yours.</em></h2></div>
-        <p>The paid value is not “more pages.” It is a personal system: save what you find, build collections, use premium resource packs and travel guides, track intentional spending, receive selected member deals, and eventually get alerts around saved opportunities and deadlines.</p>
+        <div><p class="section-kicker">THE DSB ACCESS LADDER</p><h2>Free is useful.<br><em>Paid should feel powerful.</em></h2></div>
+        <p>DSB is moving away from recurring subscriptions. The founding model is simple: use the public platform free, make one affordable one-time purchase for the premium starter experience, or become a Lifetime All-Access member and open the complete premium digital ecosystem.</p>
       </div>
-      <div class="value-table">
-        <div class="value-row head"><div>FEATURE</div><div>FREE</div><div>$49/YEAR</div><div>$399 LIFETIME</div></div>
-        <div class="value-row"><div>Browse Black Atlas, Find Help, Journal & history</div><div class="value-yes">✓</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
-        <div class="value-row"><div>Free downloads & public resources</div><div class="value-yes">✓</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
-        <div class="value-row"><div>My DSB saved collections</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
-        <div class="value-row"><div>Black Receipt tracking & reports</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
-        <div class="value-row"><div>Premium Resource Vault collections</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
-        <div class="value-row"><div>Premium Brown Passport guides</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
-        <div class="value-row"><div>Selected member deals & coupons</div><div class="value-no">—</div><div class="value-yes">✓</div><div class="value-yes">✓</div></div>
-        <div class="value-row"><div>Opportunity watchlists / deadline alerts</div><div class="value-no">—</div><div>PLANNED</div><div>PLANNED</div></div>
-        <div class="value-row"><div>Annual renewal</div><div>—</div><div>YES</div><div class="value-yes">NEVER</div></div>
+      <div class="access-tunnel">
+        <article><span class="access-label">$49 · ONE TIME</span><h3>Founding Access Pass</h3><p>The friendly front door into premium DSB — useful enough to stand on its own, while showing what the full lifetime library can become.</p><ul><li>Founding digital magazine issue + archive sampler</li><li>Premium starter Resource Vault collection</li><li>Brown Passport starter city/heritage guide pack</li><li>Music of the Diaspora expanded timeline sampler</li><li>Curated Black business + opportunity field guides</li><li>Premium downloadable journal/workbook bundle</li><li>Founding Access offers on selected DSB products</li></ul><div class="one-time-note">PAY ONCE · NO RENEWAL</div></article>
+        <article class="premium"><span class="access-label">$399 · LIFETIME</span><h3>Lifetime All-Access</h3><p>The complete DSB digital library for people who want the archive, future standard releases and the deepest version of the platform.</p><ul><li>Everything in Founding Access</li><li>Full digital DSB Magazine archive</li><li>All standard future digital magazine issues while DSB operates</li><li>Complete premium Resource Vault</li><li>Full Brown Passport premium guide library</li><li>Full Music of the Diaspora premium archive</li><li>Premium history, reading and culture collections</li><li>Lifetime access to standard premium digital releases</li><li>Founding Lifetime recognition</li></ul><div class="one-time-note">ONE PAYMENT · NO ANNUAL FEE</div></article>
       </div>
-      <div class="member-proof">
-        <article><small class="section-kicker">SAVE TIME</small><h3>Stop starting over.</h3><p>Keep the businesses, opportunities, resources, articles and trips you care about in one personal workspace.</p></article>
-        <article><small class="section-kicker">GET MORE VALUE</small><h3>Member-only practical content.</h3><p>Premium downloads, curated guides and member deals are designed to be usable — not filler added just to justify a paywall.</p></article>
-        <article><small class="section-kicker">BUILD A RECORD</small><h3>See your own activity.</h3><p>Black Receipt and saved collections turn DSB into an ongoing personal record instead of a website you visit once and forget.</p></article>
-      </div>
-      <span class="public-status">FOUNDING ROLLOUT · FEATURES MARKED “PLANNED” ARE NOT YET ACTIVE</span>
+      <span class="public-status">PUBLIC DSB REMAINS FREE · ESSENTIAL HELP RESOURCES ARE NEVER PAYWALLED</span>
     </section>
+
 
     <section class="membership-section reveal" id="membership">
       <div class="member-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
-      <p class="section-kicker">MY DSB</p>
-      <h2>Your corner of the <em>diaspora.</em></h2>
-      <p>Save businesses, trips, resources, history collections and downloads. Track intentional spending. Unlock member guides and deals.</p>
+      <p class="section-kicker">CHOOSE YOUR DSB EXPERIENCE</p>
+      <h2>Start free. Step deeper<br><em>when it earns your trust.</em></h2>
+      <p>No recurring membership is required. The public platform stays useful; the paid levels unlock curated premium digital collections.</p>
       <div class="member-grid">
-        <article><small>FREE</small><h3>Explore</h3><strong>$0</strong><p>Use DSB as a public discovery and resource platform.</p><ul><li>Black Atlas browsing</li><li>Find Help resources</li><li>DSB Journal + history</li><li>Free downloads</li></ul><button class="ghost-btn">START FREE</button></article>
-        <article class="featured-plan"><div class="plan-glint"></div><small>DSB MEMBER</small><h3>Belong</h3><strong>$49<em>/year</em></strong><p>Turn DSB into your personal Black-life utility dashboard.</p><ul><li>My DSB saved collections</li><li>Black Receipt tracking</li><li>Premium Resource Vault</li><li>Premium travel guides</li><li>Selected member deals</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04" target="_blank" rel="noopener" data-price-id="price_1UNxCuIuokIcVOLNee5zIqmh" data-plan="annual">TEST $49 ANNUAL CHECKOUT <span>↗</span></a></article>
-        <article><small>FOUNDING LIFETIME</small><h3>Build</h3><strong>$399</strong><p>The member experience without an annual renewal.</p><ul><li>All annual-member benefits</li><li>Lifetime member access</li><li>Founding member status</li><li>No yearly membership renewal</li></ul><a class="ghost-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime">TEST $399 LIFETIME CHECKOUT <span>↗</span></a></article>
+        <article><small>PUBLIC DSB</small><h3>Explore</h3><strong>$0</strong><p>Use the public discovery, knowledge and community platform.</p><ul><li>Black Atlas</li><li>Opportunity Finder</li><li>Find Help</li><li>Public Journal + history</li><li>Black Pulse + travel previews</li><li>Free downloads</li></ul><button class="ghost-btn" data-scroll="#ecosystem">EXPLORE DSB</button></article>
+        <article class="featured-plan"><div class="plan-glint"></div><small>FOUNDING ACCESS</small><h3>Enter</h3><strong>$49<em> once</em></strong><p>A premium starter collection designed to deliver immediate value without another bill.</p><ul><li>Digital magazine + archive sampler</li><li>Premium resource starter bundle</li><li>Brown Passport starter pack</li><li>Music/history expanded sampler</li><li>Premium field guides + downloads</li></ul><button class="shine-btn" id="founding49Interest">PREPARE $49 ACCESS <span>↗</span></button><small style="margin-top:10px;color:#806f64">New one-time Stripe link required; old annual checkout retired.</small></article>
+        <article><small>LIFETIME ALL-ACCESS</small><h3>Build</h3><strong>$399</strong><p>The complete premium DSB digital ecosystem with no annual renewal.</p><ul><li>Everything in Founding Access</li><li>Full DSB Magazine archive</li><li>Standard future digital issues</li><li>Complete premium Resource Vault</li><li>Full premium travel + music archives</li><li>Founding Lifetime recognition</li></ul><a class="ghost-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime">TEST $399 LIFETIME CHECKOUT <span>↗</span></a></article>
       </div>
-      <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for launch updates" required><button type="submit">I'M IN <span>↗</span></button></form>
+      <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for founding rollout updates" required><button type="submit">I'M IN <span>↗</span></button></form>
       <div class="form-message" id="formMessage"></div>
-      <div class="member-preview"><div><h3>My DSB now works like a personal utility space.</h3><p>Save useful items and test the Black Receipt tracker in Build 3.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
+      <div class="member-preview"><div><h3>My DSB works on this device while the platform stays backend-free.</h3><p>Saved items and Black Receipt entries remain browser-local in this phase. Premium access will be delivered as digital collections rather than pretending we have a cloud account system that we do not.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
     </section>
-  </main>
+</main>
 
   <footer>
     <div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><div><strong>DIVINE SHADES OF BROWN</strong><p>Black Life. Connected.</p></div></div>
     <div class="footer-links"><a href="#atlas">Black Atlas</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">Journal</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#help">Find Help</a><a href="#resources">Resources</a><a href="#membership">Membership</a></div>
     <div class="footer-bottom"><span>© 2026 InAct Entertainment LLC</span><span>FOUNDING EDITION</span><button data-scroll="#top">BACK TO TOP ↑</button></div>
-    <div class="footer-legal"><span style="font-size:8px;letter-spacing:.12em;color:#675d56">FOUNDING EDITION · POLICIES OPEN ON THIS PAGE</span><div class="legal-nav"><button class="legal-btn" data-legal="privacy">PRIVACY</button><button class="legal-btn" data-legal="terms">TERMS</button><button class="legal-btn" data-legal="disclaimer">DISCLAIMER</button><button class="legal-btn" data-legal="affiliate">AFFILIATE DISCLOSURE</button><button class="legal-btn" data-legal="accessibility">ACCESSIBILITY</button><button class="legal-btn" data-legal="community">COMMUNITY GUIDELINES</button></div></div>
+    <div class="footer-legal"><span style="font-size:8px;letter-spacing:.12em;color:#675d56">FOUNDING EDITION · ONE-TIME ACCESS MODEL · POLICIES OPEN ON THIS PAGE</span><div class="legal-nav"><button class="legal-btn" data-legal="privacy">PRIVACY</button><button class="legal-btn" data-legal="terms">TERMS</button><button class="legal-btn" data-legal="disclaimer">DISCLAIMER</button><button class="legal-btn" data-legal="affiliate">AFFILIATE DISCLOSURE</button><button class="legal-btn" data-legal="accessibility">ACCESSIBILITY</button><button class="legal-btn" data-legal="community">COMMUNITY GUIDELINES</button></div></div>
   </footer>
 
   <div class="route-layer" id="routeLayer" aria-hidden="true"><div class="route-header"><div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i></span><div><strong>DIVINE SHADES OF BROWN</strong><p id="routeLabel">TOOL</p></div></div><button class="route-close" id="routeClose" aria-label="Close tool">×</button></div><div class="route-content" id="routeContent"></div></div>
 
+  
   <div class="founder-popup" id="founderPopup" aria-hidden="true">
     <div class="founder-shell" role="dialog" aria-modal="true" aria-labelledby="founderPopupTitle">
       <button class="founder-close" id="founderClose" aria-label="Close">×</button>
       <div class="founder-kicker">DIVINE SHADES OF BROWN · FOUNDING ROLLOUT</div>
-      <h2 id="founderPopupTitle">Founding access<br><em>is open.</em></h2>
-      <p>Explore DSB free. If you want your own saved dashboard, Black Receipt, premium Resource Vault, premium travel guides and selected member deals, founding membership pricing is available during the rollout.</p>
+      <h2 id="founderPopupTitle">Explore free.<br><em>Go deeper once.</em></h2>
+      <p>DSB’s founding model is moving to one-time access: a $49 premium starter pass or $399 Lifetime All-Access. No annual DSB membership fee.</p>
       <form class="founder-email" id="founderPopupForm">
         <input type="email" id="founderPopupEmail" required autocomplete="email" placeholder="Enter your email">
-        <button type="submit" class="shine-btn">JOIN FREE & EXPLORE <span>↗</span></button>
+        <button type="submit" class="shine-btn">JOIN THE FOUNDING LIST <span>↗</span></button>
       </form>
       <div class="founder-offers">
-        <article class="founder-offer"><small>FREE EXPLORER</small><h3>Explore</h3><div class="founder-price">$0</div><ul><li>Browse core tools</li><li>Save favorites</li><li>Get founding updates</li></ul></article>
-        <article class="founder-offer"><small>ANNUAL MEMBER</small><h3>Belong</h3><div class="founder-price">$49 <em>/ year</em></div><ul><li>My DSB dashboard</li><li>Premium resources</li><li>Member deals</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04" target="_blank" rel="noopener" data-price-id="price_1UNxCuIuokIcVOLNee5zIqmh" data-plan="annual" style="margin-top:16px;display:inline-flex">TEST ANNUAL CHECKOUT <span>↗</span></a></article>
-        <article class="founder-offer best"><span class="tag">FOUNDING VALUE</span><small>FOUNDING LIFETIME</small><h3>Build</h3><div class="founder-price">$399 <em>one time</em></div><ul><li>Lifetime access</li><li>Founding status</li><li>Best long-term value</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime" style="margin-top:16px;display:inline-flex">TEST LIFETIME CHECKOUT <span>↗</span></a></article>
+        <article class="founder-offer"><small>PUBLIC DSB</small><h3>Explore</h3><div class="founder-price">$0</div><ul><li>Core tools</li><li>Public history + journal</li><li>Help + opportunities</li></ul></article>
+        <article class="founder-offer"><small>FOUNDING ACCESS</small><h3>Enter</h3><div class="founder-price">$49 <em>one time</em></div><ul><li>Premium starter library</li><li>Magazine + guide sampler</li><li>Premium downloads</li></ul><button class="shine-btn" id="popup49Interest" style="margin-top:16px">ONE-TIME LINK COMING</button></article>
+        <article class="founder-offer best"><span class="tag">ALL-ACCESS</span><small>FOUNDING LIFETIME</small><h3>Build</h3><div class="founder-price">$399 <em>one time</em></div><ul><li>Complete premium library</li><li>Future standard digital releases</li><li>No annual renewal</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05" target="_blank" rel="noopener" data-price-id="price_1UNxNNIuokIcVOLNQul0KBnu" data-plan="lifetime" style="margin-top:16px;display:inline-flex">TEST LIFETIME CHECKOUT <span>↗</span></a></article>
       </div>
-      <div class="founder-note">LIMITED INTRODUCTORY PRICING DURING THE FOUNDING ROLLOUT.</div>
+      <div class="founder-note">ONE-TIME FOUNDING ACCESS · NO RECURRING DSB MEMBERSHIP FEE</div>
       <div class="founder-message" id="founderPopupMessage"></div>
     </div>
   </div>
 
-  <div class="modal" id="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
   <div class="toast" id="toast"></div>
   <script>
-const DSB_STRIPE_TEST={annual:{priceId:'price_1UNxCuIuokIcVOLNee5zIqmh',paymentLink:'https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04'},lifetime:{priceId:'price_1UNxNNIuokIcVOLNQul0KBnu',paymentLink:'https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05'}};
+const DSB_STRIPE_TEST={retiredAnnual:{priceId:'price_1UNxCuIuokIcVOLNee5zIqmh',paymentLink:'https://buy.stripe.com/test_00wfZi00n4TX8RF6fne3e04',status:'RETIRED — recurring annual model replaced by one-time $49 Founding Access'},lifetime:{priceId:'price_1UNxNNIuokIcVOLNQul0KBnu',paymentLink:'https://buy.stripe.com/test_dRmdRaaF11HL2th1Z7e3e05',status:'ACTIVE TEST'}};
+
+const dsbMusic=[
+ {era:'1920s–30s',genre:'Blues',artist:'Bessie Smith',title:'Early blues spotlight',note:'Explore the era when recorded blues carried Black voices into a new mass medium.',search:'https://www.youtube.com/results?search_query=Bessie+Smith+St+Louis+Blues+1929'},
+ {era:'1940s–50s',genre:'Gospel / Rock',artist:'Sister Rosetta Tharpe',title:"Didn't It Rain?",note:'A foundational electric-guitar voice whose gospel performances helped shape rock and roll.',video:'Y9a49oFalZE'},
+ {era:'1950s–60s',genre:'Rock',artist:'Chuck Berry',title:'Rock & roll foundation',note:'Explore the guitar language, songwriting and performance that helped define rock and roll.',search:'https://www.youtube.com/results?search_query=Chuck+Berry+Johnny+B+Goode+official'},
+ {era:'1960s–70s',genre:'Soul',artist:'Aretha Franklin',title:'Respect',note:'Soul, gospel power and a recording that became inseparable from cultural change.',video:'JzqGZjFnYnA'},
+ {era:'1970s',genre:'Country',artist:'Charley Pride',title:"Kiss an Angel Good Mornin'",note:'A reminder that Black artists belong in country music history, too.',video:'rouSFhnQapE'},
+ {era:'1970s',genre:'Afrobeat',artist:'Fela Kuti',title:'Water No Get Enemy',note:'Afrobeat as music, political language and a global rhythmic system.',video:'kisTH3SFegc'},
+ {era:'1980s–90s',genre:'Hip-Hop',artist:'Hip-Hop Foundations',title:'From parks to global culture',note:'DJing, MCing, dance, visual art and production move from local innovation to global language.',search:'https://www.youtube.com/results?search_query=hip+hop+history+Grandmaster+Flash+official'},
+ {era:'1990s–2000s',genre:'R&B',artist:'R&B Generations',title:'Voice, production and crossover',note:'Explore the singers, writers and producers who reshaped modern popular music.',search:'https://www.youtube.com/results?search_query=90s+R%26B+Black+artists+official'},
+ {era:'2000s–Now',genre:'Afrobeats',artist:'Global Africa',title:'A new global center of gravity',note:'Contemporary African pop moves across Lagos, Accra, London, the Caribbean and the Americas.',search:'https://www.youtube.com/results?search_query=Afrobeats+official+artists'},
+ {era:'All Eras',genre:'Classical',artist:'Black Classical Voices',title:'Opera, composition and concert music',note:'A lane for Black composers, conductors, instrumentalists and operatic voices too often left outside popular histories.',search:'https://www.youtube.com/results?search_query=Leontyne+Price+official+performance'}
+];
+let musicEra='All',musicGenre='All';
+function openMusicVideo(item){
+ if(item.video){openModal('<div class="legal-copy"><p class="section-kicker">MUSIC OF THE DIASPORA · '+item.era+'</p><h3>'+item.artist+' — '+item.title+'</h3><p>'+item.note+'</p><div class="video-shell"><iframe src="https://www.youtube.com/embed/'+item.video+'?rel=0" title="'+item.artist+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>');}
+ else if(item.search){window.open(item.search,'_blank','noopener');}
+}
+function renderMusic(){
+ const eras=['All',...new Set(dsbMusic.map(x=>x.era))],genres=['All',...new Set(dsbMusic.map(x=>x.genre))];
+ const ef=document.getElementById('musicEraFilters'),gf=document.getElementById('musicGenreFilters'),list=document.getElementById('musicList');
+ ef.innerHTML=eras.map(x=>'<button class="'+(x===musicEra?'active':'')+'" data-era="'+x+'">'+x+'</button>').join('');
+ gf.innerHTML=genres.map(x=>'<button class="'+(x===musicGenre?'active':'')+'" data-genre="'+x+'">'+x+'</button>').join('');
+ ef.querySelectorAll('button').forEach(b=>b.onclick=()=>{musicEra=b.dataset.era;renderMusic()});
+ gf.querySelectorAll('button').forEach(b=>b.onclick=()=>{musicGenre=b.dataset.genre;renderMusic()});
+ const items=dsbMusic.filter(x=>(musicEra==='All'||x.era===musicEra)&&(musicGenre==='All'||x.genre===musicGenre));
+ list.innerHTML=items.map((x,i)=>'<article class="music-item"><div class="music-era">'+x.era.replace(/s|–.*$/g,'')+'</div><div><h4>'+x.artist+' · '+x.genre+'</h4><p>'+x.title+' — '+x.note+'</p></div><button class="music-play" data-music="'+dsbMusic.indexOf(x)+'" aria-label="Play or explore">▶</button></article>').join('');
+ list.querySelectorAll('[data-music]').forEach(b=>b.onclick=()=>openMusicVideo(dsbMusic[Number(b.dataset.music)]));
+}
+renderMusic();
+const musicPanel=document.getElementById('musicPanel'),musicTool=document.getElementById('musicTool');
+document.getElementById('musicToggle').onclick=()=>{const on=!musicPanel.classList.contains('open');musicPanel.classList.toggle('open',on);musicPanel.setAttribute('aria-hidden',String(!on));musicTool.classList.toggle('music-on',on);};
+document.addEventListener('click',e=>{if(musicPanel.classList.contains('open')&&!musicPanel.contains(e.target)&&!musicTool.contains(e.target)){musicPanel.classList.remove('open');musicTool.classList.remove('music-on');musicPanel.setAttribute('aria-hidden','true');}});
+const themeToggle=document.getElementById('themeToggle');
+function setTheme(t){document.body.dataset.theme=t;document.body.classList.toggle('theme-light',t==='light');localStorage.setItem('dsb-theme',t);}
+setTheme(localStorage.getItem('dsb-theme')||'dark');
+themeToggle.onclick=()=>setTheme(document.body.dataset.theme==='light'?'dark':'light');
+
 
 const actions=[
  {icon:'✦',title:'Black Atlas',desc:'Find Black-owned businesses, organizations and cultural spaces.',target:'#atlas'},
@@ -523,6 +621,10 @@ const menu=document.querySelector('#mobileMenu');document.querySelector('#menuBt
 
 function toast(msg){const t=document.querySelector('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.classList.remove('show'),2600)}
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+
+document.getElementById('founding49Interest')?.addEventListener('click',()=>openModal('<div class="legal-copy"><p class="section-kicker">FOUNDING ACCESS · $49 ONE TIME</p><h3>The new one-time checkout is being prepared.</h3><p>The previous $49 Stripe price was recurring and has been retired from the DSB interface. Once the replacement one-time Stripe Payment Link is created, this button will go directly to checkout.</p><p>Planned founding bundle: digital magazine + archive sampler, premium Resource Vault starter collection, Brown Passport starter pack, music/history timeline sampler and premium field guides.</p></div>'));
+document.getElementById('popup49Interest')?.addEventListener('click',()=>{closeFounderPopup();setTimeout(()=>document.getElementById('membership')?.scrollIntoView({behavior:'smooth'}),150);});
 
 </script>
 </body>
