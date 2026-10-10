@@ -116,3 +116,20 @@ Completed:
 - Added lightweight browser-local click counting for commerce links without adding paid analytics infrastructure.
 - Removed the old marketplace placeholder behavior.
 - Revalidated JavaScript/HTML structure and confirmed no Stripe test links remain.
+
+## Build 14 status
+
+Completed:
+- Ran master structural and JavaScript QA on the single-file site.
+- Added focus-visible and reduced-motion accessibility support.
+- Replaced stale Build 3 / Supabase / “payments not live” customer-facing language.
+- Changed the top banner from Founding Preview to Founding Edition.
+- Updated founding pricing language to the live $49 and $399 one-time model.
+- Made Black Pulse submissions functional without a paid backend by opening a prefilled moderation email instead of pretending the site had a live submission database.
+- Made founding-list forms truthful: they now open a prefilled email request instead of claiming automatic server enrollment.
+- Added launch metadata for search/social sharing.
+- Updated legal and downloadable-resource labels from Founding Preview to Founding Edition and refreshed legal effective date to October 10, 2026.
+- Added docs/QA.md with the master QA results, owner-side launch blockers, Stripe return patterns, live-payment test checklist and device/browser QA list.
+- Confirmed no Stripe test links remain.
+
+Remaining launch blockers are external configuration / owner verification: GitHub Pages public deployment, Stripe success redirects, live checkout QA including Brown Circle, and real-device/browser testing.
