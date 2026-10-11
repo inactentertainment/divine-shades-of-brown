@@ -1,0 +1,391 @@
+{
+  "checks": [
+    {
+      "country": "Japan",
+      "videoId": "xC4kq2LorMI",
+      "watchUrl": "https://www.youtube.com/watch?v=xC4kq2LorMI",
+      "title": "JAPAN Travel Vlog | Shibuya Nights, Disney Sea, Ninja Class & more",
+      "channel": "Princess Uche",
+      "channelId": "UC57LNCViDEbGum65rIS7pbg",
+      "durationSeconds": 3203,
+      "viewCount": 248232,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "JAPAN Travel Vlog | Shibuya Nights, Disney Sea, Ninja Class & more",
+      "channelUrl": "https://www.youtube.com/@Cessuche",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/xC4kq2LorMI/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:42:55.673328+00:00"
+    },
+    {
+      "country": "Ghana",
+      "videoId": "_8m4DuHQVz0",
+      "watchUrl": "https://www.youtube.com/watch?v=_8m4DuHQVz0",
+      "title": "Accra Ghana IS NOT WHAT YOU THINK! Whats inside?",
+      "channel": "Tayo Aina",
+      "channelId": "UC8p_y3iHPe-n3zRfXK2czWA",
+      "durationSeconds": 769,
+      "viewCount": 529997,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "Accra Ghana IS NOT WHAT YOU THINK! Whats inside?",
+      "channelUrl": "https://www.youtube.com/@TayoAinaFilms",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/_8m4DuHQVz0/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:42:55.806130+00:00"
+    },
+    {
+      "country": "Iceland",
+      "videoId": "etK18Ey_824",
+      "watchUrl": "https://www.youtube.com/watch?v=etK18Ey_824",
+      "title": "Icelandic Hidden Gem Behind Skógafoss Waterfall",
+      "channel": "All Things Iceland",
+      "channelId": "UCacXXvaNHJQhMYU7f77OrBA",
+      "durationSeconds": 485,
+      "viewCount": 14679,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "Icelandic Hidden Gem Behind Skógafoss Waterfall",
+      "channelUrl": "https://www.youtube.com/@AllThingsIceland",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/etK18Ey_824/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:42:55.724866+00:00"
+    },
+    {
+      "country": "Brazil",
+      "videoId": "LC-acf2hFyY",
+      "watchUrl": "https://www.youtube.com/watch?v=LC-acf2hFyY",
+      "title": "The Black Side Of Brazil - Salvador Bahia",
+      "channel": "ACE",
+      "channelId": "UCW5NNtTSY5z5mENZ8dt-RCw",
+      "durationSeconds": 3819,
+      "viewCount": 482525,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "The Black Side Of Brazil - Salvador Bahia",
+      "channelUrl": "https://www.youtube.com/@ACEDTVL",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/LC-acf2hFyY/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:42:55.629663+00:00"
+    },
+    {
+      "country": "Morocco",
+      "videoId": "0zwdw8TjPBg",
+      "watchUrl": "https://www.youtube.com/watch?v=0zwdw8TjPBg",
+      "title": "🇲🇦 MARRAKECH PART 2: What it's like travelling to Marrakech as a black woman.",
+      "channel": "Raven Navera",
+      "channelId": "UC35mhg24xG43aEsK2B3tj9w",
+      "durationSeconds": 1125,
+      "viewCount": 20545,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "🇲🇦 MARRAKECH PART 2: What it's like travelling to Marrakech as a black woman.",
+      "channelUrl": "https://www.youtube.com/@RavenNavera",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/0zwdw8TjPBg/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:42:55.668695+00:00"
+    },
+    {
+      "country": "South Africa",
+      "videoId": "0gDXRJKZgoU",
+      "watchUrl": "https://www.youtube.com/watch?v=0gDXRJKZgoU",
+      "title": "Best Place To Visit Johannesburg?/South Africa Vlog!",
+      "channel": "Miss Trudy",
+      "channelId": "UCoxvnjTutXQ8jQPP9MAXfYw",
+      "durationSeconds": 747,
+      "viewCount": 62685,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "Best Place To Visit Johannesburg?/South Africa Vlog!",
+      "channelUrl": "https://www.youtube.com/@misstrudyy",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/0gDXRJKZgoU/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:42:55.730549+00:00"
+    },
+    {
+      "country": "Switzerland",
+      "videoId": "Daa0BM2W4sY",
+      "watchUrl": "https://www.youtube.com/watch?v=Daa0BM2W4sY",
+      "title": "Switzerland Is Too Much ! A Day in Bern",
+      "channel": "AFRICAN TIGRESS",
+      "channelId": "UCrjAjfD8kMLumT6foL7zNzQ",
+      "durationSeconds": 1647,
+      "viewCount": 27227,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "Switzerland Is Too Much ! A Day in Bern",
+      "channelUrl": "https://www.youtube.com/@AFRICANTIGRESS",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/Daa0BM2W4sY/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:43:07.223342+00:00"
+    },
+    {
+      "country": "Indonesia",
+      "videoId": "ibYusnvd4_4",
+      "watchUrl": "https://www.youtube.com/watch?v=ibYusnvd4_4",
+      "title": "Bali Luxury Travel Guide | PassportHeavy.com",
+      "channel": "PassportHeavy",
+      "channelId": "UCF71yDQwxfw0QcYb2JnkB5Q",
+      "durationSeconds": 911,
+      "viewCount": 177067,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "Bali Luxury Travel Guide | PassportHeavy.com",
+      "channelUrl": "https://www.youtube.com/@PassportHeavy",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/ibYusnvd4_4/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:43:07.236876+00:00"
+    },
+    {
+      "country": "Egypt",
+      "videoId": "M7SLOZfgY7A",
+      "watchUrl": "https://www.youtube.com/watch?v=M7SLOZfgY7A",
+      "title": "12 EGYPT Travel Tips that NO ONE Will Tell YOU!",
+      "channel": "Chews to Explore",
+      "channelId": "UC3FVa3GIGSPxXbcJpA5ukIQ",
+      "durationSeconds": 1172,
+      "viewCount": 181195,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "12 EGYPT Travel Tips that NO ONE Will Tell YOU!",
+      "channelUrl": "https://www.youtube.com/@ChewsToExplore",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/M7SLOZfgY7A/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:43:07.133201+00:00"
+    },
+    {
+      "country": "New Zealand",
+      "videoId": "BEl4mXuShHk",
+      "watchUrl": "https://www.youtube.com/watch?v=BEl4mXuShHk",
+      "title": "Vlog: TRAVEL IN NEW ZEALAND pt2🛍️👗☀️black girl NZ, things to do in Auckland😍| South African/Zambian",
+      "channel": "Tasha Kayys",
+      "channelId": "UCHPc6BtH0tVmJLf9c_aKGzg",
+      "durationSeconds": 897,
+      "viewCount": 594,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "Vlog: TRAVEL IN NEW ZEALAND pt2🛍️👗☀️black girl NZ, things to do in Auckland😍| South African/Zambian",
+      "channelUrl": "https://www.youtube.com/@natasha.kafumbe",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/BEl4mXuShHk/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:47:07.244733+00:00"
+    },
+    {
+      "country": "Jamaica",
+      "videoId": "ZH-ZaXJzrTI",
+      "watchUrl": "https://www.youtube.com/watch?v=ZH-ZaXJzrTI",
+      "title": "The Jamaica They Don’t Show You: We Ate Like REAL Jamaicans",
+      "channel": "Kemoy Martin",
+      "channelId": "UCM4qS-YaT5Eg7WoGswaKyQQ",
+      "durationSeconds": 1921,
+      "viewCount": 24993,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "The Jamaica They Don’t Show You: We Ate Like REAL Jamaicans",
+      "channelUrl": "https://www.youtube.com/@kemoy_martin",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/ZH-ZaXJzrTI/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:47:07.207898+00:00"
+    },
+    {
+      "country": "São Tomé & Príncipe",
+      "videoId": "1XPdXAnwB7c",
+      "watchUrl": "https://www.youtube.com/watch?v=1XPdXAnwB7c",
+      "title": "I Visited the African Country You've Never Heard Of 🇸🇹 (São Tomé & Príncipe)",
+      "channel": "WODE MAYA",
+      "channelId": "UClwrpH_Np9zk8uMwnMwu8Nw",
+      "durationSeconds": 3895,
+      "viewCount": 1363301,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0M="
+      },
+      "private": false,
+      "oembedTitle": "I Visited the African Country You've Never Heard Of 🇸🇹 (São Tomé & Príncipe)",
+      "channelUrl": "https://www.youtube.com/@WODEMAYA",
+      "oembedVerified": true,
+      "thumbnail": "https://img.youtube.com/vi/1XPdXAnwB7c/hqdefault.jpg",
+      "thumbnailContentType": "image/jpeg",
+      "checkedAt": "2026-10-11T19:43:07.130905+00:00"
+    }
+  ],
+  "creatorEvidence": [
+    {
+      "creator": "Princess Uche",
+      "creatorEvidenceUrl": "https://www.youtube.com/@Cessuche/about",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Tayo Aina",
+      "creatorEvidenceUrl": "https://www.tayoaina.com/",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Jewells Chambers",
+      "creatorEvidenceUrl": "https://allthingsiceland.com/moving-adjusting-to-living-in-iceland-my-personal-experience-ep-34/",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Ace",
+      "creatorEvidenceUrl": "https://travelnoire.com/here-are-the-black-travelers-inspiring-travel-to-south-america",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Raven Navera",
+      "creatorEvidenceUrl": "https://www.youtube.com/watch?v=0zwdw8TjPBg",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Miss Trudy",
+      "creatorEvidenceUrl": "https://www.youtube.com/@misstrudyy/about",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "African Tigress",
+      "creatorEvidenceUrl": "https://www.youtube.com/@AFRICANTIGRESS/about",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Jubril Agoro",
+      "creatorEvidenceUrl": "https://www.linkedin.com/in/jubril-agoro-422658218",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "The Chews",
+      "creatorEvidenceUrl": "https://creators.matadornetwork.com/profile/z0l754q8/",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Tasha Kayys",
+      "creatorEvidenceUrl": "https://www.youtube.com/watch?v=BEl4mXuShHk",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Kemoy Martin",
+      "creatorEvidenceUrl": "https://voyagebaltimore.com/interview/hidden-gems-meet-kemoy-martin-of-limitless-enterprises/",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    },
+    {
+      "creator": "Wode Maya",
+      "creatorEvidenceUrl": "https://wodemaya.me/about/",
+      "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited"
+    }
+  ],
+  "limitations": "Watch-page public status, playableInEmbed, oEmbed titles/channels and thumbnail content types checked. No download, rehosting, stream retrieval or restriction bypass. Complete audiovisual playback and worldwide availability are separate from these metadata checks."
+}
