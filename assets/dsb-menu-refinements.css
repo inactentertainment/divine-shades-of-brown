@@ -48,3 +48,9 @@ body[data-theme=light] .reaction-options button[aria-pressed=true]{background:#d
 @keyframes dsb-gold-sweep{0%,25%{left:-60%}60%,100%{left:140%}}
 @media(max-width:600px){.menu-personalization{padding:18px 16px;gap:10px}.menu-personalization h2{font-size:25px}.shade-options{gap:8px}.shade-options button{width:44px;height:44px;font-size:24px}.mobile-menu .menu-membership{font-size:34px}.dsb-reactions{padding:18px}.reaction-options{gap:8px}.reaction-options button{font-size:13px;padding:8px 10px}}
 @media(prefers-reduced-motion:reduce){.mobile-menu .menu-membership,#membership .member-grid .membership-action,#membership .art-membership .dsb-silver,.shade-options button{transition:none;transform:none!important}.mobile-menu .menu-membership::after,#membership .member-grid .membership-action::after,#membership .art-membership .dsb-silver::after{animation:none;display:none}}
+
+/* Image-free dark cards keep their cream type even inside a light membership page. */
+#membership .member-grid article:nth-child(3) :is(h3,strong,em,p,li,small,.membership-includes){color:#eedfce!important}
+#membership .member-grid article.featured-plan :is(h3,strong,em,p,li,small,.membership-includes){color:#fff1e1!important}
+#membership .art-membership{background:linear-gradient(115deg,#261810,#402619)!important;color:#f6e7d4}
+#membership .art-membership :is(h3,strong,p,li,small){color:#f6e7d4!important}
