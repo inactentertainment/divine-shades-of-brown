@@ -16,3 +16,9 @@ body[data-theme=light] .mobile-menu .menu-description{color:#553924}body[data-th
 body[data-theme=light] .mobile-menu .menu-membership{color:#fff2dd}body[data-theme=light] .mobile-menu .menu-membership small{color:#fff2dd}
 
 .mobile-menu .menu-membership>span:first-child{font:inherit}.mobile-menu .menu-membership>span:last-child{font-size:26px}
+/* Dark panels retain cream text when the surrounding page switches to light. */
+.route-layer,.modal-card,.lifebook-modal{color:#f4e4d1}
+body[data-theme=light] :is(.essentials-section,.today-section,.opportunities-section,.journal-section){color:#f4e4d1}
+.modal-card .legal-copy h3,.modal-card .legal-copy h4{color:#f4e4d1}
+.modal-card.reader-light .legal-copy h3,.modal-card.reader-light .legal-copy h4{color:#342219!important}
+.mobile-menu .menu-close{position:fixed}

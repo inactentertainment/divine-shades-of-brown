@@ -297,7 +297,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 .four-head>*,.utility-head>*,.commerce-head>*,.essentials-head>*,.route-hero>*{min-width:0;overflow-wrap:anywhere}
 @media(max-width:900px){.split-heading{grid-template-columns:1fr;gap:16px}.split-heading h2{font-size:clamp(34px,7vw,56px)}}
 </style><link rel="stylesheet" href="assets/dsb-jukebox.css?v=2">
-<link rel="stylesheet" href="assets/dsb-navigation.css?v=2" />
+<link rel="stylesheet" href="assets/dsb-navigation.css?v=3" />
 </head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
@@ -755,7 +755,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
     <div class="footer-legal"><span style="font-size:8px;letter-spacing:.12em;color:#675d56">FOUNDING EDITION · ONE-TIME ACCESS MODEL · POLICIES OPEN ON THIS PAGE</span><div class="legal-nav"><button class="legal-btn" data-legal="privacy">PRIVACY</button><button class="legal-btn" data-legal="terms">TERMS</button><button class="legal-btn" data-legal="disclaimer">DISCLAIMER</button><button class="legal-btn" data-legal="affiliate">AFFILIATE DISCLOSURE</button><button class="legal-btn" data-legal="accessibility">ACCESSIBILITY</button><button class="legal-btn" data-legal="community">COMMUNITY GUIDELINES</button></div></div>
   </footer>
 
-  <div class="route-layer" id="routeLayer" aria-hidden="true"><div class="route-header"><div class="footer-brand"><img class="route-logo" src="assets/dsb-logo.webp" alt="DSB monogram"><div><strong>DIVINE SHADES OF BROWN</strong><p id="routeLabel">TOOL</p></div></div><button class="route-close" id="routeClose" aria-label="Close tool">×</button></div><div class="route-content" id="routeContent"></div></div>
+  <div class="route-layer" id="routeLayer" role="dialog" aria-modal="true" aria-labelledby="routeLabel" aria-hidden="true"><div class="route-header"><div class="footer-brand"><img class="route-logo" src="assets/dsb-logo.webp" alt="DSB monogram"><div><strong>DIVINE SHADES OF BROWN</strong><p id="routeLabel">TOOL</p></div></div><button class="route-close" id="routeClose" aria-label="Close tool">×</button></div><div class="route-content" id="routeContent"></div></div>
 
   
   
@@ -1478,6 +1478,6 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 })();
 </script>
 <script src="assets/dsb-jukebox.js?v=2"></script>
-<script src="assets/dsb-navigation.js?v=2"></script>
+<script src="assets/dsb-navigation.js?v=3"></script>
 </body>
 </html>

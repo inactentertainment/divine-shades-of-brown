@@ -71,4 +71,5 @@
   tone.onchange=()=>{choice=tone.value;try{localStorage.setItem(key,choice);}catch{}applyTone();};applyTone();
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open')){e.preventDefault();e.stopImmediatePropagation();closeModal();}},true);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('open')&&(routeLayer.classList.contains('open')||lbModal.classList.contains('open'))&&!menu.classList.contains('open'))closeRoute();});
+  if(location.hash.startsWith('#/'))openRoute(location.hash.slice(2),false);
 })();
