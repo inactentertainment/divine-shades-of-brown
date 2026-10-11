@@ -1,0 +1,20 @@
+{
+  "name": "Divine Shades of Brown",
+  "short_name": "DSB",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#25170f",
+  "theme_color": "#754729",
+  "icons": [
+    {
+      "src": "assets/dsb-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/dsb-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
