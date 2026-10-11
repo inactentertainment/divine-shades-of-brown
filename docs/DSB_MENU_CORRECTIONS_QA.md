@@ -19,6 +19,9 @@ New JavaScript parsed successfully. All existing Stripe URLs matched the baselin
 - index.html
 - assets/dsb-menu-refinements.css
 - assets/dsb-menu-refinements.js
+- assets/dsb-navigation.js
+- assets/dsb-passport-art.webp
+- qa/viewport.html
 - docs/DSB_PROJECT_DECISIONS.md
 - docs/DSB_MENU_CORRECTIONS_QA.md
 
@@ -27,3 +30,19 @@ New JavaScript parsed successfully. All existing Stripe URLs matched the baselin
 Replaced only the Go Farther photographic background with the supplied abstract artwork. The main homepage artwork remains unchanged. Passport overlapping text came from an accordion grid with two direct children but one animated row, plus overly broad nested div styling. A single content wrapper now keeps both introductions in normal flow, with explicit readable line heights and separate destination cards. Closed Passport content is inert and labeled hidden; opening it restores its controls.
 
 The five shades are Light, Medium light, Medium, Medium dark and Dark. Old neutral/invalid preferences fall back to Medium. All trial gestures inherit a valid modifier; Love this uses a brown heart.
+
+## Live verification
+
+Verified the deployed site in the cloud browser, with a desktop viewport and responsive 360 px / 390 px phone frames. These are browser viewport checks, not physical-device tests. GitHub Pages deployment for application commit e53748c3fab61970a85a1a89125924e1fdd38b7d completed successfully.
+
+- Exercised all five shade buttons: the hand preview matched each modifier. No neutral choice remains.
+- The bottom menu Membership button navigates to the membership page. Its label is only Membership; computed gold styling and script font were confirmed.
+- Three desktop membership actions have matching top positions and 64 px heights. Gold labels and warm card progression were visually checked. The lifetime button is readable at 360 px; the four action controls were checked at 390 px. No horizontal document overflow was found.
+- Verified cream text on the dark Build/art cards in light mode.
+- Brown-heart reaction selection worked. Refresh cleared the trial reaction and retained the selected Dark shade.
+- Passport introductions have normal flow: 22 px between the introductory blocks and 18 px before the destination grid on the phone frame.
+- Confirmed the Go Farther background uses dsb-passport-art.webp.
+- A Ghana Travel Experiences button opened the Accra selection. Closing the player returned to the still-open Passport panel.
+- Existing checkout links and prices were preserved; no purchase or paid-entitlement test was performed in this visual correction. Durable member reaction saving is not implemented.
+
+Screenshots: dsb-menu-corrected-20261011.jpg and dsb-pricing-corrected-20261011.jpg.
