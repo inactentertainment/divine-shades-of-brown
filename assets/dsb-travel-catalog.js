@@ -28,7 +28,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://www.youtube.com/@Cessuche/about",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Ghana",
@@ -59,7 +59,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://www.tayoaina.com/",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Iceland",
@@ -89,7 +89,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://allthingsiceland.com/moving-adjusting-to-living-in-iceland-my-personal-experience-ep-34/",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Brazil",
@@ -120,7 +120,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://travelnoire.com/here-are-the-black-travelers-inspiring-travel-to-south-america",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Morocco",
@@ -151,7 +151,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://www.youtube.com/watch?v=0zwdw8TjPBg",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "South Africa",
@@ -182,7 +182,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://www.youtube.com/@misstrudyy/about",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Switzerland",
@@ -212,7 +212,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://www.youtube.com/@AFRICANTIGRESS/about",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Indonesia",
@@ -243,7 +243,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://www.linkedin.com/in/jubril-agoro-422658218",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Egypt",
@@ -274,7 +274,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://creators.matadornetwork.com/profile/z0l754q8/",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "New Zealand",
@@ -304,7 +304,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://www.youtube.com/watch?v=BEl4mXuShHk",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "Jamaica",
@@ -335,7 +335,7 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://voyagebaltimore.com/interview/hidden-gems-meet-kemoy-martin-of-limitless-enterprises/",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   },
   {
     "country": "São Tomé & Príncipe",
@@ -366,6 +366,6 @@ window.DSB_TRAVEL_CATALOG = [
     "embeddingStatus": "permitted",
     "creatorEvidenceUrl": "https://wodemaya.me/about/",
     "originalUploadStatus": "Creator channel matched to on-location video and public biography; underlying rights not independently audited",
-    "playbackStatus": "Not yet browser-tested"
+    "playbackStatus": "Official iframe initialized; complete audiovisual playback unverified"
   }
 ];
