@@ -30,3 +30,9 @@ The user clarified $399, never $3.99. Removed the separate art offer and include
 ## Painted Black Atlas build
 
 Replace only the Atlas SVG with the supplied world painting. Approximate city positions follow the art, not a navigational projection. Expand the map to the full Atlas shell width with pan, zoom, pinch support, progressive labels, city selector and expanded view. Preserve existing directory controls and lists. DSB Select's 4.0+ standard remains; previously recorded ratings are explicitly not represented as newly verified. Cities without reviewed selections lead into directory discovery. Repair the dark Deep Directory Search title by keeping cream contrast on its dark panel in both themes.
+
+## Full reading pages and blog community
+
+Article and main section destinations should appear as full content pages using the actual shared header and footer, not large overlays. Keep small functional dialogs for settings, media and forms. The slim bronze/gold reader offers lights, three text sizes, top, browser speech, pause/resume, stop, voice/rate/follow settings and paragraph highlighting; it clears before the shared footer. Articles remain free. The digital magazine is distinct and currently in development.
+
+The available free Supabase organization ie has only Basketball Brilliance and Cannabis Basics. No DSB database was found. Do not attach DSB community records to those apps without choosing the infrastructure arrangement first. Public comment activation needs verified-email auth, moderation and RLS testing. This build therefore keeps shared comments disabled, provides honestly labeled private drafts/reactions, and prepares isolated DSB tables and the client connection. No paid memberships, email claims, or public posts are simulated. Animated DSB text reactions are original; no third-party GIF bank is represented as licensed or connected.
