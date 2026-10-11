@@ -53,6 +53,7 @@ create policy dsb_submit_report on public.dsb_blog_reports for insert to authent
 create function public.dsb_comment_checks() returns trigger language plpgsql security invoker set search_path='' as $$
 begin
  if new.user_id is distinct from auth.uid() then raise exception 'Invalid author'; end if;
+ perform pg_catalog.pg_advisory_xact_lock(pg_catalog.hashtextextended(auth.uid()::text,0));
  if new.parent_id is not null and not exists(select 1 from public.dsb_blog_comments c where c.id=new.parent_id and c.post_id=new.post_id and c.status='approved') then raise exception 'Reply must reference a published comment on this article'; end if;
  if (select count(*) from public.dsb_blog_comments c where c.user_id=auth.uid() and c.created_at>now()-interval '1 minute')>=3 then raise exception 'Please wait before submitting another comment'; end if;
  new.created_at=now();return new;

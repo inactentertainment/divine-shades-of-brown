@@ -9,7 +9,7 @@
  if(!['small','medium','large'].includes(size))size='small';
  if(![.75,1,1.25,1.5,1.75].includes(rate))rate=1;
  const escape=lbEsc;
- function stop(){generation++;active=false;paused=false;synth?.cancel();paragraphs.forEach(p=>p.classList.remove('dsb-speaking'));if(dock){dock.querySelector('[data-reading-pause]').disabled=true;dock.querySelector('[data-reading-pause]').textContent='Ⅱ';dock.querySelector('[data-reading-status]').textContent='Ready';}}
+ function stop(){generation++;active=false;paused=false;synth?.cancel();paragraphs.forEach(p=>p.classList.remove('dsb-speaking'));if(dock){dock.querySelector('[data-reading-pause]').disabled=true;dock.querySelector('[data-reading-pause]').textContent='Ⅱ';dock.querySelector('[data-reading-pause]').setAttribute('aria-label','Pause reading');dock.querySelector('[data-reading-status]').textContent='Ready';}}
  window.dsbReaderStop=stop;
  function destroy(){stop();dock?.remove();dock=null;root=null;paragraphs=[];}
  function position(){if(!dock)return;if(document.querySelector('#modal.open,#lbModal.open,#musicPanel.open,dialog[open]')){dock.hidden=true;return;}const overlap=Math.max(0,innerHeight-footer.getBoundingClientRect().top);dock.style.bottom=overlap+'px';dock.hidden=overlap>innerHeight-60;}
