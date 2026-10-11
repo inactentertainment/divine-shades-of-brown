@@ -287,7 +287,13 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 @media(max-width:680px){.menu-groups{grid-template-columns:1fr;gap:20px}.mobile-menu a{padding:9px 0;font-size:19px}.music-panel{top:78px;max-height:calc(100dvh - 92px)}.hero h1{line-height:.98;font-size:clamp(46px,13vw,64px)}.hero{min-height:760px}.journal-card.featured h3{font-size:32px}.route-hero h2{line-height:1.08;font-size:42px}.dsb-reader{gap:4px}.dsb-reader button{font-size:11px;padding:6px}.header-actions{gap:5px}.site-header{padding-left:14px;padding-right:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
-</head>
+<style>
+.split-heading{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.split-heading>*{min-width:0}.split-heading h2{overflow-wrap:anywhere;font-size:clamp(38px,4.4vw,64px);line-height:1.12}
+.four-head,.utility-head,.commerce-head,.essentials-head,.route-hero{min-width:0}
+.four-head>*,.utility-head>*,.commerce-head>*,.essentials-head>*,.route-hero>*{min-width:0;overflow-wrap:anywhere}
+@media(max-width:900px){.split-heading{grid-template-columns:1fr;gap:16px}.split-heading h2{font-size:clamp(34px,7vw,56px)}}
+</style></head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
   <div class="announcement"><span>FOUNDING EDITION</span> Divine Shades of Brown — Black life, connected. <button data-scroll="#membership">Explore founding access</button></div>
