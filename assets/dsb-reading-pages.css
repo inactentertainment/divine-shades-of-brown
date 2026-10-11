@@ -60,3 +60,6 @@ body[data-theme=light] .dsb-community :is(input,textarea){background:#fff2df;col
 body[data-theme=light] .dsb-step-up a{color:#704222}
 @media(max-width:600px){body.dsb-page-mode .route-content{padding:30px 20px 80px}.dsb-reader-controls{padding:4px 6px;gap:4px}.dsb-reader-controls button{font-size:12px;padding:5px 7px}.dsb-reader-live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.dsb-reader-controls .reader-spacer{flex:.3}.dsb-community{padding:18px}.dsb-article-deck{font-size:20px}.dsb-reading-settings{padding:16px}}
 @media(prefers-reduced-motion:reduce){.dsb-sticker,.dsb-reader-controls button{animation:none;transition:none;transform:none!important}}
+
+.dsb-reader-controls button::after{content:'';position:absolute;inset:-50% auto -50% -60%;width:35%;background:linear-gradient(90deg,transparent,#fff0c985,transparent);transform:skewX(-25deg);pointer-events:none;animation:dsb-gold-sweep 6s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.dsb-reader-controls button::after{display:none}}

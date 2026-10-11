@@ -12,7 +12,7 @@
  function stop(){generation++;active=false;paused=false;synth?.cancel();paragraphs.forEach(p=>p.classList.remove('dsb-speaking'));if(dock){dock.querySelector('[data-reading-pause]').disabled=true;dock.querySelector('[data-reading-pause]').textContent='Ⅱ';dock.querySelector('[data-reading-status]').textContent='Ready';}}
  window.dsbReaderStop=stop;
  function destroy(){stop();dock?.remove();dock=null;root=null;paragraphs=[];}
- function position(){if(!dock)return;const overlap=Math.max(0,innerHeight-footer.getBoundingClientRect().top);dock.style.bottom=overlap+'px';dock.hidden=overlap>innerHeight-60;}
+ function position(){if(!dock)return;if(document.querySelector('#modal.open,#lbModal.open,#musicPanel.open,dialog[open]')){dock.hidden=true;return;}const overlap=Math.max(0,innerHeight-footer.getBoundingClientRect().top);dock.style.bottom=overlap+'px';dock.hidden=overlap>innerHeight-60;}
  function fullPage(){document.body.classList.add('dsb-page-mode');footer.before(page);page.setAttribute('role','region');page.removeAttribute('aria-modal');document.body.style.overflow='';page.scrollTop=0;content.scrollTop=0;window.scrollTo({top:0,behavior:'instant'});page.querySelectorAll('.dsb-page-back').forEach(e=>e.remove());const a=document.createElement('a');a.className='dsb-page-back';a.href='#top';a.textContent='← Home';content.prepend(a);}
  function speak(index){
   if(!synth||index>=paragraphs.length){stop();return;}
@@ -49,7 +49,7 @@
   if(!synth){dock.querySelectorAll('[data-reading-start],[data-reading-pause],[data-reading-stop],[data-reading-voice],[data-reading-speed],[data-reading-here]').forEach(b=>b.disabled=true);dock.querySelector('[data-reading-status]').textContent='Read aloud unavailable';}
   position();
  }
- synth?.addEventListener('voiceschanged',voices);window.addEventListener('scroll',position,{passive:true});window.addEventListener('resize',position);
+ document.getElementById('musicToggle').addEventListener('click',stop);for(const el of document.querySelectorAll('#modal,#lbModal,#musicPanel'))new MutationObserver(position).observe(el,{attributes:true,attributeFilter:['class']});synth?.addEventListener('voiceschanged',voices);window.addEventListener('scroll',position,{passive:true});window.addEventListener('resize',position);
  new MutationObserver(()=>{if(dock)dock.querySelector('[data-reading-light]').textContent=document.body.dataset.theme==='light'?'Lights off':'Lights on';}).observe(document.body,{attributes:true,attributeFilter:['data-theme']});
  function stepUp(parent){const aside=document.createElement('aside');aside.className='dsb-step-up';aside.innerHTML='<p>Keep exploring for free. Membership adds curated magazine collections, downloads, and deeper DSB resources.</p><a href="#/membership">Compare membership benefits →</a>';parent.append(aside);}
  function conversation(parent,story){
@@ -83,7 +83,10 @@
  }
  openArticle=id=>article(id);
  openRoute=function(raw,push=true){
-  const [name,id]=String(raw).split('/');if(name==='journal'&&id){article(id,push);return;}destroy();
+  const [name,id]=String(raw).split('/');if(name==='journal'&&id){article(id,push);return;}destroy();content.removeAttribute('data-reading-content');
+  if(name==='document'&&legalDocs[id]){
+   const doc=legalDocs[id];oldOpen('journal',false);content.removeAttribute('data-reading-content');content.innerHTML='<article class="dsb-article-page"><h1>'+escape(doc.title)+'</h1><div data-reading-content>'+doc.body+'</div></article>';fullPage();installReading(content.querySelector('[data-reading-content]'));if(push)history.pushState({document:id},'',location.pathname+location.search+'#/document/'+id);return;
+  }
   if(name==='magazine'){
    oldOpen('journal',false);content.innerHTML='<article class="dsb-article-page"><p class="section-kicker">DSB DIGITAL MAGAZINE</p><h1>A collection worth keeping.</h1><div data-reading-content><p>The DSB digital magazine is a curated publication separate from our free articles and ideas.</p><h4>Magazine collections</h4><p>Belong includes the approved magazine starter collection and archive sampler. Build includes the full archive and standard future digital issues, alongside curated art collections.</p><p>The magazine collection is in development. Published issues and their permitted uses will be identified before delivery.</p><p>Explore our free articles while the magazine takes shape.</p></div><a class="dsb-page-back" href="#/journal">Read free articles</a></article>';fullPage();stepUp(content.querySelector('article'));installReading(content.querySelector('[data-reading-content]'));if(push)history.pushState({route:name},'',location.pathname+location.search+'#/magazine');return;
   }
@@ -91,7 +94,7 @@
  };
  closeRoute=function(push=true){destroy();content.removeAttribute('data-reading-content');document.body.classList.remove('dsb-page-mode');oldClose(push);};
  document.getElementById('routeClose').onclick=()=>closeRoute();
- document.addEventListener('click',e=>{const a=e.target.closest('a');if(a?.getAttribute('href')==='#/magazine'){e.preventDefault();openRoute('magazine');}else if(a?.getAttribute('href')==='#top'&&document.body.classList.contains('dsb-page-mode'))closeRoute(false);},true);
+ document.addEventListener('click',e=>{const legal=e.target.closest('[data-legal]');if(legal){e.preventDefault();e.stopImmediatePropagation();openRoute('document/'+legal.dataset.legal);return;}const a=e.target.closest('a');if(a?.getAttribute('href')==='#/magazine'){e.preventDefault();openRoute('magazine');}else if(a?.getAttribute('href')==='#top'&&document.body.classList.contains('dsb-page-mode'))closeRoute(false);},true);
  // Replace timed/exit membership advertising with contextual invitations.
  openFounderPopup=()=>{};founderPopup.classList.remove('open');founderPopup.setAttribute('aria-hidden','true');
  const returnStory=new URLSearchParams(location.search).get('community_story');if(returnStory&&window.DSB_COMMUNITY_CONFIG?.enabled)article(returnStory,false);else if(location.hash.startsWith('#/'))openRoute(location.hash.slice(2),false);

@@ -301,7 +301,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 <link rel="stylesheet" href="assets/dsb-horizon.css?v=1">
 <link rel="stylesheet" href="assets/dsb-menu-refinements.css?v=5">
 <link rel="stylesheet" href="assets/dsb-atlas-art.css?v=2">
-<link rel="stylesheet" href="assets/dsb-reading-pages.css?v=1">
+<link rel="stylesheet" href="assets/dsb-reading-pages.css?v=2">
 </head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
@@ -1434,7 +1434,7 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
   const menu = document.getElementById('mobileMenu');
   const opener = document.getElementById('menuBtn');
   menu.setAttribute('role','dialog');menu.setAttribute('aria-modal','true');menu.setAttribute('aria-label','Explore Divine Shades of Brown');
-  function closeMenu(){menu.classList.remove('open');menu.setAttribute('aria-hidden','true');opener.setAttribute('aria-expanded','false');document.body.style.overflow=document.getElementById('routeLayer')?.classList.contains('open')?'hidden':'';opener.focus()}
+  function closeMenu(){menu.classList.remove('open');menu.setAttribute('aria-hidden','true');opener.setAttribute('aria-expanded','false');document.body.style.overflow=document.getElementById('routeLayer')?.classList.contains('open')&&!document.body.classList.contains('dsb-page-mode')?'hidden':'';opener.focus()}
   opener.setAttribute('aria-controls','mobileMenu');opener.setAttribute('aria-expanded','false');
   opener.onclick=()=>{menu.classList.add('open');menu.setAttribute('aria-hidden','false');opener.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';document.getElementById('menuClose').focus()};
   document.getElementById('menuClose').onclick=closeMenu;
@@ -1459,6 +1459,6 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 <script src="assets/dsb-atlas-art.js?v=3"></script>
 <script src="assets/dsb-community-config.js?v=1"></script>
 <script src="assets/dsb-community.js?v=1"></script>
-<script src="assets/dsb-reading-pages.js?v=1"></script>
+<script src="assets/dsb-reading-pages.js?v=2"></script>
 </body>
 </html>
