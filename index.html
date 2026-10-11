@@ -557,7 +557,9 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
         <button class="history-tab" data-history="documents"><span>04</span>DOCUMENTS</button>
         <div class="history-preview" id="historyPreview"></div>
       </div>
-    </sec    <section class="horizon-showcase reveal" id="beyond-horizon">
+    </section>
+
+    <section class="horizon-showcase reveal" id="beyond-horizon">
       <p class="section-kicker">A DIVINE SHADES OF BROWN TRAVEL EXPERIENCE</p>
       <h2>BEYOND THE<br>BROWN HORIZON</h2>
       <p><strong>See the World Through Our Eyes.</strong><br>Extraordinary destinations, explored by exceptional Black travelers.</p>
@@ -566,8 +568,6 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
       <div class="horizon-featured" id="horizonFeatured"></div>
       <p>Keep exploring with Black Atlas and The Brown Passport: find cultural context, thoughtful stays and Black-owned discovery alongside the journey.</p>
     </section>
-tion>
-
     <section class="travel-section reveal" id="travel">
       <div class="travel-photo">
         <div class="travel-overlay"><span>THE BROWN PASSPORT</span><strong>GO FARTHER</strong><small>BLACK AMERICA · AFRICA · THE DIASPORA</small></div>
@@ -748,7 +748,8 @@ tion>
       <p class="section-kicker">CHOOSE YOUR DSB EXPERIENCE</p>
       <h2>Start free. Step deeper<br><em>when it earns your trust.</em></h2>
       <p>No recurring membership is required. The public platform stays useful; the paid levels unlock curated premium digital collections.</p>
-      <div class="member-        <article><small>PUBLIC DSB</small><h3>Explore</h3><strong>$0</strong><p>Use the public discovery, knowledge and community platform.</p><ul><li>Black Atlas</li><li>Opportunity Finder</li><li>Find Help</li><li>Public Journal + history</li><li>Black Pulse + Brown Passport</li><li>Free downloads</li></ul><a class="ghost-btn" href="#/atlas">EXPLORE DSB</a></article>
+      <div class="member-grid">
+        <article><small>PUBLIC DSB</small><h3>Explore</h3><strong>$0</strong><p>Use the public discovery, knowledge and community platform.</p><ul><li>Black Atlas</li><li>Opportunity Finder</li><li>Find Help</li><li>Public Journal + history</li><li>Black Pulse + Brown Passport</li><li>Free downloads</li></ul><a class="ghost-btn" href="#/atlas">EXPLORE DSB</a></article>
         <article class="featured-plan"><div class="plan-glint"></div><small>FOUNDING ACCESS</small><h3>Belong</h3><strong>$49<em> once</em></strong><p>A premium starter collection without another bill.</p><p class="membership-includes">Everything in Explore, plus…</p><ul><li>Digital magazine + archive sampler</li><li>Premium resource starter bundle</li><li>Brown Passport starter pack</li><li>Music/history expanded sampler</li><li>Premium field guides + downloads</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/14A6oI2bU3Tt11z1Gf7Re07" target="_blank" rel="noopener" data-plan="founding" style="display:inline-flex;align-items:center;text-decoration:none">GET $49 FOUNDING ACCESS <span>↗</span></a><small style="margin-top:10px;color:#806f64">One-time payment · No recurring subscription.</small></article>
         <article><small>LIFETIME ALL-ACCESS</small><h3>Build</h3><strong>$399</strong><p>The complete premium DSB digital ecosystem with no annual renewal.</p><p class="membership-includes">Everything in Belong, plus…</p><ul><li>Full DSB Magazine archive</li><li>Standard future digital issues</li><li>The Divine LifeBook — full personalized legacy journal</li><li>Complete premium Resource Vault</li><li>Full premium travel + music archives</li><li>Founding Lifetime recognition</li></ul><a class="ghost-btn checkout-link" href="https://buy.stripe.com/eVqeVeaIq4XxcKhet17Re06" target="_blank" rel="noopener" data-plan="lifetime">GET LIFETIME ALL-ACCESS <span>↗</span></a></article>
       </div>
@@ -757,7 +758,6 @@ tion>
         <div><ul><li>An evolving collection of curated art in the many shades of brown.</li><li>Planned monthly art packages to collect and print.</li><li>A curated digital magazine celebrating Black art, culture and ideas.</li></ul><p>This collection is in development. Each release will include its permitted uses; commercial use and resale terms have not been announced.</p><a class="dsb-silver" href="#foundingEmail">Get launch updates</a></div>
       </article>
       <p class="membership-rollout-note">Premium collections are rolling out. Available releases and their usage terms will be identified before delivery. Lifetime access covers standard premium digital releases while DSB operates.</p>
-</div>
       <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for founding rollout updates" required><button type="submit">I'M IN <span>↗</span></button></form>
       <div class="form-message" id="formMessage"></div>
       <div class="member-preview"><div><h3>Choose your DSB access level.</h3><p>Public DSB remains free. Founding Access is a $49 one-time premium starter collection. Lifetime All-Access is a $399 one-time purchase that includes the full premium ecosystem and The Divine LifeBook. No recurring DSB membership fee.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
@@ -1494,10 +1494,10 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
   document.getElementById('musicClose').onclick=()=>{const music=document.getElementById('musicPanel');music.classList.remove('open');music.setAttribute('aria-hidden','true');document.getElementById('musicTool').classList.remove('music-on')};
 })();
 </script>
-<script src="assets/dsb-motivation.js?v=2"></s<script src="assets/dsb-jukebox.js?v=horizon1"></script>
+<script src="assets/dsb-motivation.js?v=2"></script>
+<script src="assets/dsb-jukebox.js?v=horizon1"></script>
 <script src="assets/dsb-navigation.js?v=horizon1"></script>
 <script src="assets/dsb-travel-catalog.js?v=1"></script>
 <script src="assets/dsb-horizon.js?v=1"></script>
-cript>
 </body>
 </html>
