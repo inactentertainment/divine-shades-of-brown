@@ -30,6 +30,10 @@
     }
     if(name==='journal'){renderBlog();show();activate(name,push);headingFocus();if(article)openArticle(article);return;}
     baseOpen(name,false);activate(name,push);
+    if(name==='atlas'){
+      const map=document.getElementById('atlasMap'),grid=document.getElementById('atlasRouteGrid');
+      if(map&&grid){const marker=document.createComment('DSB Atlas map home');map.before(marker);parked.push([map,marker]);grid.before(map);}
+    }
     if(name==='dashboard'){
       const nav=document.createElement('div');nav.className='route-tools';nav.innerHTML='<a class="shine-btn" href="#/lifebook">LifeBook & personal journal →</a><a class="shine-btn" href="#/calendar">My calendar →</a><a class="text-link" href="#/journal">Browse articles →</a>';
       routeContent.querySelector('.dashboard-grid')?.before(nav);

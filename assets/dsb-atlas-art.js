@@ -50,6 +50,7 @@ const DSB_ATLAS_RECORDED_PICKS=[
   if(center){scale=Math.max(scale,fit*3);tx=viewport.clientWidth/2-c.x/100*1536*scale;ty=viewport.clientHeight/2-c.y/100*865*scale;}
   layout();const input=document.getElementById('atlasSearch');input.value=c.name;
   document.querySelector('#atlasChips [data-cat="All"]')?.click();input.dispatchEvent(new Event('input',{bubbles:true}));
+  const routeSearch=document.getElementById('atlasRouteSearch');if(routeSearch){routeSearch.value=c.name;routeSearch.dispatchEvent(new Event('input',{bubbles:true}));}
   selection.replaceChildren();text('h4',`${c.name} · ${c.country}`,selection);
   const matching=picks.filter(b=>b.city.startsWith(c.name+',')&&b.rating>=4);
   text('p',matching.length?'Explore these existing DSB selections, then browse the directory results below.':'Explore the directory results below. DSB has not yet reviewed a rated shortlist for this city.',selection);
