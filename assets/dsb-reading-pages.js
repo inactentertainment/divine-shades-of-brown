@@ -79,7 +79,7 @@
   content.append(article);fullPage();article.querySelector('[data-story-save]').onclick=e=>{toggleSaved(story.id,story.title);e.target.textContent=getSaved().some(s=>s.id===id)?'Saved':'Save article';};
   article.querySelector('[data-story-copy]').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('Article link copied.')}catch{toast('Copy the address from your browser.')}};
   stepUp(article);conversation(article,story);installReading(article.querySelector('[data-reading-content]'));
-  if(push)history.pushState({article:id},'',location.pathname+location.search+'#/journal/'+id);const h=article.querySelector('h1');h.tabIndex=-1;h.focus({preventScroll:true});
+  if(push)history.pushState({article:id},'',location.pathname+location.search+'#/journal/'+id);else history.replaceState({article:id},'',location.pathname+location.search+'#/journal/'+id);const h=article.querySelector('h1');h.tabIndex=-1;h.focus({preventScroll:true});
  }
  openArticle=id=>article(id);
  openRoute=function(raw,push=true){
