@@ -297,7 +297,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 .four-head>*,.utility-head>*,.commerce-head>*,.essentials-head>*,.route-hero>*{min-width:0;overflow-wrap:anywhere}
 @media(max-width:900px){.split-heading{grid-template-columns:1fr;gap:16px}.split-heading h2{font-size:clamp(34px,7vw,56px)}}
 </style><link rel="stylesheet" href="assets/dsb-jukebox.css?v=2">
-<link rel="stylesheet" href="assets/dsb-navigation.css?v=1" />
+<link rel="stylesheet" href="assets/dsb-navigation.css?v=2" />
 </head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
@@ -428,7 +428,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
         </div>
       </div>
       <div class="atlas-engine">
-        <div class="atlas-engine-head"><div><p class="section-kicker">DEEP DIRECTORY SEARCH</p><h3>When DSB does not have the listing yet, keep going.</h3><p>Black Atlas connects to established external discovery networks instead of pretending a small local dataset is complete. BuyBlack.org currently reports more than 110,000 Black-owned businesses and 100+ U.S. city guides; Support Black Owned lists thousands more across 50+ categories.</p></div><div class="atlas-engine-stats"><div class="atlas-stat"><strong>111K+</strong><span>RECOGNIZED BUSINESSES</span></div><div class="atlas-stat"><strong>119</strong><span>U.S. CITY GUIDES</span></div></div></div>
+        <div class="atlas-engine-head"><div><p class="section-kicker">DEEP DIRECTORY SEARCH</p><h3>When DSB does not have the listing yet, keep going.</h3><p>Explore DSB’s starting picks, then use national directories for more places and categories. Choose businesses with care: look for clear promises, reliable service, and a fair response when something goes wrong.</p></div><div class="atlas-engine-stats"><div class="atlas-stat"><strong>Discover</strong><span>BLACK-OWNED BUSINESSES</span></div><div class="atlas-stat"><strong>Explore</strong><span>MORE CITIES & CATEGORIES</span></div></div></div>
         <div class="atlas-deep-actions"><a href="https://www.buyblack.org/" target="_blank" rel="noreferrer">SEARCH BUYBLACK.ORG ↗</a><a href="https://www.supportblackowned.com/component/jbusinessdirectory/search" target="_blank" rel="noreferrer">SEARCH SUPPORT BLACK OWNED ↗</a></div>
         <div class="atlas-city-guides" id="atlasCityGuides"></div>
       </div>
@@ -1145,7 +1145,7 @@ const commerceItems=[
  {id:'shoppeblack',cat:'Build',type:'BUSINESS DISCOVERY',name:'SHOPPE BLACK',desc:'Editorial and discovery platform profiling Black-owned businesses, investors, industries and ownership strategies.',status:'STANDARD LINK',url:'https://shoppeblack.us/',cta:'EXPLORE PLATFORM'},
  {id:'faire',cat:'Live',type:'WHOLESALE DISCOVERY',name:'Faire — Black-Owned Brand Filter',desc:'Wholesale marketplace filter that can help retailers discover Black-owned brands across home, beauty, food, apparel and more.',status:'STANDARD LINK',url:'https://www.faire.com/category/Black-Owned%20Businesses',cta:'BROWSE WHOLESALE'},
  {id:'brown-passport',cat:'Travel',type:'DSB ORIGINAL',name:'Brown Passport Starter Collection',desc:'DSB culture-first trip planning for Accra, Dakar, Kingston and Salvador, with additional premium guides included in eligible access.',status:'LIVE',target:'#travel',cta:'OPEN BROWN PASSPORT',dsb:true},
- {id:'black-receipt',cat:'Give',type:'DSB UTILITY',name:'Black Receipt',desc:'Track intentional spending with Black-owned businesses and turn support into a visible habit over time.',status:'LIVE',target:'#membership',cta:'OPEN MY DSB',dsb:true}
+ {id:'black-receipt',cat:'Give',type:'DSB UTILITY',name:'Black Receipt',desc:'Track intentional spending with Black-owned businesses and turn support into a visible habit over time.',status:'LIVE',target:'#dashboard',cta:'OPEN MY DSB',dsb:true}
 ];
 let commerceCat='All';
 function renderCommerce(){
@@ -1478,6 +1478,6 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 })();
 </script>
 <script src="assets/dsb-jukebox.js?v=2"></script>
-<script src="assets/dsb-navigation.js?v=1"></script>
+<script src="assets/dsb-navigation.js?v=2"></script>
 </body>
 </html>

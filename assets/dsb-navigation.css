@@ -14,3 +14,5 @@ body[data-theme=light] .mobile-menu .menu-description{color:#553924}body[data-th
 @media(prefers-reduced-motion:reduce){.menu-membership:before{animation:none!important}.route-layer{transition:none}}
 
 body[data-theme=light] .mobile-menu .menu-membership{color:#fff2dd}body[data-theme=light] .mobile-menu .menu-membership small{color:#fff2dd}
+
+.mobile-menu .menu-membership>span:first-child{font:inherit}.mobile-menu .menu-membership>span:last-child{font-size:26px}
