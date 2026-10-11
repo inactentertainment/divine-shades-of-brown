@@ -13,7 +13,7 @@
  window.dsbReaderStop=stop;
  function destroy(){stop();dock?.remove();dock=null;root=null;paragraphs=[];}
  function position(){if(!dock)return;if(document.querySelector('#modal.open,#lbModal.open,#musicPanel.open,dialog[open]')){dock.hidden=true;return;}const overlap=Math.max(0,innerHeight-footer.getBoundingClientRect().top);dock.style.bottom=overlap+'px';dock.hidden=overlap>innerHeight-60;}
- function fullPage(){document.body.classList.add('dsb-page-mode');footer.before(page);page.setAttribute('role','region');page.removeAttribute('aria-modal');document.body.style.overflow='';page.scrollTop=0;content.scrollTop=0;window.scrollTo({top:0,behavior:'instant'});page.querySelectorAll('.dsb-page-back').forEach(e=>e.remove());const a=document.createElement('a');a.className='dsb-page-back';a.href='#top';a.textContent='← Home';content.prepend(a);}
+ function fullPage(){document.body.classList.add('dsb-page-mode');footer.before(page);page.setAttribute('role','region');page.removeAttribute('aria-modal');document.body.style.overflow='';page.scrollTop=0;content.scrollTop=0;window.scrollTo({top:0,behavior:'instant'});content.querySelectorAll(':scope > .dsb-page-back').forEach(e=>e.remove());const a=document.createElement('a');a.className='dsb-page-back';a.href='#top';a.textContent='← Home';content.prepend(a);}
  function speak(index){
   if(!synth||index>=paragraphs.length){stop();return;}
   current=index;paragraphs.forEach(p=>p.classList.remove('dsb-speaking'));const p=paragraphs[index];p.classList.add('dsb-speaking');
