@@ -71,6 +71,7 @@ const DSB_ATLAS_RECORDED_PICKS=[
  const expand=map.querySelector('[data-map-action="expand"]');
  function toggleExpand(){expanded=!expanded;map.classList.toggle('is-expanded',expanded);expand.textContent=expanded?'Close map':'Expand map';expand.setAttribute('aria-expanded',String(expanded));reset();if(expanded)viewport.focus();else expand.focus();}
  expand.onclick=toggleExpand;
+ document.addEventListener('keydown',e=>{if(expanded&&e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();toggleExpand();}},true);
  viewport.addEventListener('keydown',e=>{if(e.target!==viewport)return;const keys=['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','=','-','0','Escape'];if(!keys.includes(e.key))return;e.preventDefault();if(e.key==='Escape'){if(expanded)toggleExpand();return}if(e.key==='+'||e.key==='=')zoom(scale*1.4);else if(e.key==='-')zoom(scale/1.4);else if(e.key==='0')reset();else{tx+=e.key==='ArrowLeft'?70:e.key==='ArrowRight'?-70:0;ty+=e.key==='ArrowUp'?70:e.key==='ArrowDown'?-70:0;layout();}});
  viewport.addEventListener('wheel',e=>{if(!e.ctrlKey&&!expanded)return;e.preventDefault();const r=viewport.getBoundingClientRect();zoom(scale*Math.exp(-e.deltaY*.002),e.clientX-r.left,e.clientY-r.top)},{passive:false});
  function beginGesture(){const ps=[...pointers.values()];gesture={tx,ty,scale,points:ps.map(p=>({...p}))};}
