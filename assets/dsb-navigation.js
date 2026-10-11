@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const baseOpen = openRoute, baseClose = closeRoute;
-  const sections = {'dsb-select':['dsb-select'],essentials:['essentials'],history:['history'],travel:['beyond-horizon','travel','unexpected-america'],resources:['resources','resource-vault'],'resource-vault':['resource-vault'],shop:['shop'],membership:['member-value','membership'],'unexpected-america':['unexpected-america']};
+  const sections = {'dsb-select':['dsb-select'],essentials:['essentials'],history:['history'],travel:['beyond-horizon','travel','unexpected-america'],resources:['resources','resource-vault'],'resource-vault':['resource-vault'],shop:['shop'],membership:['membership','member-value'],'unexpected-america':['unexpected-america']};
   const labels = {'dsb-select':'DSB SELECT',essentials:'BLACK LIFE ESSENTIALS',history:'HISTORY',travel:'TRAVEL',resources:'RESOURCES & VAULT','resource-vault':'RESOURCE VAULT',shop:'SHOP',membership:'MEMBERSHIP','unexpected-america':'UNEXPECTED AMERICA'};
   const supported = new Set(['atlas','opportunities','pulse','journal','help','dashboard',...Object.keys(sections),'lifebook','calendar']);
   let parked = [], originScroll=0, active='';
@@ -15,7 +15,7 @@
   function headingFocus(){const h=routeContent.querySelector('h2,h3');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}}
   openRoute = function(raw,push=true){
     const [name,article]=String(raw).split('/');
-    if(name==='membership'&&document.getElementById('musicPanel')?.classList.contains('open'))document.getElementById('musicClose')?.click();
+    if(name==='membership'){if(document.getElementById('musicPanel')?.classList.contains('open'))document.getElementById('musicClose')?.click();const popup=document.getElementById('founderPopup');popup?.classList.remove('open');popup?.setAttribute('aria-hidden','true');}
     if(name==='entertainment'){location.href='entertainment.html';return;}
     if(!supported.has(name))return;
     if(!active)originScroll=window.scrollY;
