@@ -252,6 +252,41 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
 .unexpected-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}.unexpected-card{border:1px solid #c9b5a2;background:#fffaf4;padding:21px;min-height:320px;display:flex;flex-direction:column}.unexpected-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px #4b2b181c}.unexpected-card small{font:700 7px var(--sans);letter-spacing:.12em;color:#8d5534}.unexpected-card h3{font:600 25px/1.05 var(--serif);margin:8px 0}.unexpected-card .stay{font:700 8px var(--sans);letter-spacing:.09em;color:#674839}.unexpected-card p{font-size:10px;line-height:1.65;color:#6c5d52}.travel-plan{display:grid;gap:7px;margin:12px 0}.travel-plan div{border-top:1px solid #dfd1c4;padding-top:7px;font-size:8px;line-height:1.5;color:#6f6055}.travel-plan b{color:#3d271c}.unexpected-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.unexpected-actions a{border:1px solid #b4977f;color:#4b2c1d;text-decoration:none;padding:9px 10px;font:700 7px var(--sans);letter-spacing:.08em}.unexpected-actions a:first-child{background:#4a2a1b;color:#fff;border-color:#4a2a1b}
 @media(max-width:980px){.essentials-grid,.unexpected-grid{grid-template-columns:1fr 1fr}.directory-gates{grid-template-columns:1fr 1fr}.essentials-head,.unexpected-head{grid-template-columns:1fr}.essentials-tools{grid-template-columns:1fr}}@media(max-width:620px){.essentials-grid,.unexpected-grid,.directory-gates{grid-template-columns:1fr}}
 </style>
+<style>
+/* October repair: content flow, visible sections and coordinated overlays */
+:root{--sans:Georgia,'Times New Roman',serif}
+body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
+.reveal{opacity:1;transform:none}.reveal.visible{animation:dsbReveal .5s ease-out}
+@keyframes dsbReveal{from{transform:translateY(10px)}to{transform:none}}
+.journal-card{display:flex;flex-direction:column;overflow:visible;gap:8px}
+.journal-card .text-link{position:static;align-self:flex-start;margin-top:auto;padding-top:16px}
+.journal-card h3,.journal-card.featured h3{line-height:1.18;overflow-wrap:anywhere}
+.journal-card p{margin-bottom:8px}
+.journal-meta-row{margin-bottom:10px}
+.route-card,.utility-card,.commerce-card,.ed-card{min-width:0;overflow-wrap:anywhere}
+.route-card .text-link{display:inline-block;margin-top:14px;line-height:1.5}
+.hero-copy>p,.legal-copy p{overflow-wrap:anywhere}
+.modal{z-index:2000}.modal-card{padding-top:64px}
+.video-shell iframe{display:block;aspect-ratio:16/9}
+.music-panel{top:90px;max-height:calc(100dvh - 110px);color:#f3e3cc}
+.music-filter-controls select,.music-filter-controls option{background:#28180f;color:#f3e3cc;font-family:Georgia,serif;color-scheme:dark}
+.music-panel .music-close{position:absolute;top:10px;right:10px;border:1px solid #79533a;border-radius:50%;background:#28180f;color:#f3e3cc;width:32px;height:32px;font-size:22px}
+.menu-btn{display:flex;flex-shrink:0}
+.mobile-menu{inset:0;width:100%;z-index:2100;background:linear-gradient(135deg,#29180f,#120c08);padding:85px max(24px,calc((100vw - 1000px)/2)) 30px;overflow:auto;transform:translateY(-105%);visibility:hidden;pointer-events:none;gap:16px}
+.mobile-menu.open{transform:none;visibility:visible;pointer-events:auto}
+.menu-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.menu-group h2{font:normal 15px Georgia,serif;color:#caa582;letter-spacing:.08em;margin:0 0 16px}
+.mobile-menu a{display:flex;align-items:center;gap:12px;font:normal clamp(17px,2vw,23px)/1.35 Georgia,serif;padding:12px 0;border-bottom:1px solid #6e4a313b}
+.menu-symbol{font-size:18px;width:24px;text-align:center;color:#d5af8b}
+.menu-note{font-size:12px;line-height:1.5;color:#c4ab95;margin-top:24px}
+.dsb-reader{position:sticky;bottom:0;z-index:3;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:5px;padding:7px;background:#28180ff2;border-top:1px solid #826046;color:#f3e3cc}
+.dsb-reader button,.dsb-reader select{background:#382418;color:#f3e3cc;border:1px solid #826046;padding:6px 8px;font:12px Georgia,serif;border-radius:4px}
+.dsb-reader-status{font-size:11px;min-width:45px}
+.dsb-speaking{background:#b88b4c26;outline:1px solid #cfa568;border-radius:4px;box-shadow:0 0 15px #cfa56818}
+.modal-card.reader-light{background:#f1e5d5;color:#342219}.reader-light .legal-copy p,.reader-light .legal-copy h3{color:#342219!important}
+@media(max-width:680px){.menu-groups{grid-template-columns:1fr;gap:20px}.mobile-menu a{padding:9px 0;font-size:19px}.music-panel{top:78px;max-height:calc(100dvh - 92px)}.hero h1{line-height:.98;font-size:clamp(46px,13vw,64px)}.hero{min-height:760px}.journal-card.featured h3{font-size:32px}.route-hero h2{line-height:1.08;font-size:42px}.dsb-reader{gap:4px}.dsb-reader button{font-size:11px;padding:6px}.header-actions{gap:5px}.site-header{padding-left:14px;padding-right:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
@@ -281,7 +316,7 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
   </header>
 
   
-  <aside class="music-panel" id="musicPanel" aria-hidden="true">
+  <aside class="music-panel" id="musicPanel" aria-hidden="true"><button class="music-close" id="musicClose" aria-label="Close music">×</button>
     <div class="music-brand"><span class="ie-mini">IE</span> InAct Entertainment Presents</div>
     <h3>Sounds of the Black Diaspora</h3>
     <p>A listening room tracing Black music across generations, continents and genres, including artists and traditions too often edited out of the wider story.</p>
@@ -291,9 +326,7 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
   </aside>
 <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
-    <a href="#atlas">Black Atlas</a><a href="#dsb-select">DSB Select</a><a href="#essentials">Black Life Essentials</a><a href="#opportunities">Opportunities</a><a href="#pulse">Black Pulse</a><a href="#journal">DSB Journal</a><a href="#help">Find Help</a><a href="#history">History</a><a href="#travel">Travel</a><a href="#resources">Resources</a><a href="#shop">Shop</a><a href="#membership">Membership</a>
-    <div class="menu-note">Know us. Find us. Support us. Build us.</div>
-  </aside>
+<div class="menu-groups"><section class="menu-group"><h2>Discover</h2><a href="#atlas"><span class="menu-symbol" aria-hidden="true">⌖</span>Black Atlas</a><a href="#dsb-select"><span class="menu-symbol" aria-hidden="true">◇</span>DSB Select</a><a href="#essentials"><span class="menu-symbol" aria-hidden="true">⌂</span>Black Life Essentials</a><a href="#opportunities"><span class="menu-symbol" aria-hidden="true">↗</span>Opportunities</a></section><section class="menu-group"><h2>Read and Learn</h2><a href="#journal"><span class="menu-symbol" aria-hidden="true">▤</span>DSB Journal</a><a href="#history"><span class="menu-symbol" aria-hidden="true">◷</span>History</a><a href="#travel"><span class="menu-symbol" aria-hidden="true">◎</span>Travel</a><a href="#resources"><span class="menu-symbol" aria-hidden="true">▧</span>Resources</a></section><section class="menu-group"><h2>Connect and Build</h2><a href="#pulse"><span class="menu-symbol" aria-hidden="true">◉</span>Black Pulse</a><a href="#help"><span class="menu-symbol" aria-hidden="true">+</span>Find Help</a><a href="#shop"><span class="menu-symbol" aria-hidden="true">▣</span>Shop</a><a href="#membership"><span class="menu-symbol" aria-hidden="true">◌</span>Membership</a></section></div><div class="menu-note">Explore free resources, save discoveries on this device, or compare one-time membership options.</div>  </aside>
 
   <main>
     <section class="hero">
@@ -688,7 +721,7 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
       <p>No recurring membership is required. The public platform stays useful; the paid levels unlock curated premium digital collections.</p>
       <div class="member-grid">
         <article><small>PUBLIC DSB</small><h3>Explore</h3><strong>$0</strong><p>Use the public discovery, knowledge and community platform.</p><ul><li>Black Atlas</li><li>Opportunity Finder</li><li>Find Help</li><li>Public Journal + history</li><li>Black Pulse + Brown Passport</li><li>Free downloads</li></ul><button class="ghost-btn" data-scroll="#ecosystem">EXPLORE DSB</button></article>
-        <article class="featured-plan"><div class="plan-glint"></div><small>FOUNDING ACCESS</small><h3>Enter</h3><strong>$49<em> once</em></strong><p>A premium starter collection designed to deliver immediate value without another bill.</p><ul><li>Digital magazine + archive sampler</li><li>Premium resource starter bundle</li><li>Brown Passport starter pack</li><li>Music/history expanded sampler</li><li>Premium field guides + downloads</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/14A6oI2bU3Tt11z1Gf7Re07" target="_blank" rel="noopener" data-plan="founding" style="display:inline-flex;align-items:center;text-decoration:none">GET $49 FOUNDING ACCESS <span>↗</span></a><small style="margin-top:10px;color:#806f64">One-time payment · No recurring subscription.</small></article>
+        <article class="featured-plan"><div class="plan-glint"></div><small>FOUNDING ACCESS</small><h3>Belong</h3><strong>$49<em> once</em></strong><p>A premium starter collection designed to deliver immediate value without another bill.</p><ul><li>Digital magazine + archive sampler</li><li>Premium resource starter bundle</li><li>Brown Passport starter pack</li><li>Music/history expanded sampler</li><li>Premium field guides + downloads</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/14A6oI2bU3Tt11z1Gf7Re07" target="_blank" rel="noopener" data-plan="founding" style="display:inline-flex;align-items:center;text-decoration:none">GET $49 FOUNDING ACCESS <span>↗</span></a><small style="margin-top:10px;color:#806f64">One-time payment · No recurring subscription.</small></article>
         <article><small>LIFETIME ALL-ACCESS</small><h3>Build</h3><strong>$399</strong><p>The complete premium DSB digital ecosystem with no annual renewal.</p><ul><li>Everything in Founding Access</li><li>Full DSB Magazine archive</li><li>Standard future digital issues</li><li>The Divine LifeBook — full personalized legacy journal</li><li>Complete premium Resource Vault</li><li>Full premium travel + music archives</li><li>Founding Lifetime recognition</li></ul><a class="ghost-btn checkout-link" href="https://buy.stripe.com/eVqeVeaIq4XxcKhet17Re06" target="_blank" rel="noopener" data-plan="lifetime">GET LIFETIME ALL-ACCESS <span>↗</span></a></article>
       </div>
       <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for founding rollout updates" required><button type="submit">I'M IN <span>↗</span></button></form>
@@ -800,7 +833,7 @@ input:focus,select:focus,textarea:focus{border-color:#d79a70!important;box-shado
       </form>
       <div class="founder-offers">
         <article class="founder-offer"><small>PUBLIC DSB</small><h3>Explore</h3><div class="founder-price">$0</div><ul><li>Core tools</li><li>Public history + journal</li><li>Help + opportunities</li></ul></article>
-        <article class="founder-offer"><small>FOUNDING ACCESS</small><h3>Enter</h3><div class="founder-price">$49 <em>one time</em></div><ul><li>Premium starter library</li><li>Magazine + guide sampler</li><li>Premium downloads</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/14A6oI2bU3Tt11z1Gf7Re07" target="_blank" rel="noopener" data-plan="founding" style="margin-top:16px;display:inline-flex;text-decoration:none">GET FOUNDING ACCESS <span>↗</span></a></article>
+        <article class="founder-offer"><small>FOUNDING ACCESS</small><h3>Belong</h3><div class="founder-price">$49 <em>one time</em></div><ul><li>Premium starter library</li><li>Magazine + guide sampler</li><li>Premium downloads</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/14A6oI2bU3Tt11z1Gf7Re07" target="_blank" rel="noopener" data-plan="founding" style="margin-top:16px;display:inline-flex;text-decoration:none">GET FOUNDING ACCESS <span>↗</span></a></article>
         <article class="founder-offer best"><span class="tag">ALL-ACCESS</span><small>FOUNDING LIFETIME</small><h3>Build</h3><div class="founder-price">$399 <em>one time</em></div><ul><li>The Divine LifeBook personalized legacy journal</li><li>Complete premium library</li><li>Future standard digital releases</li><li>No annual renewal</li></ul><a class="shine-btn checkout-link" href="https://buy.stripe.com/eVqeVeaIq4XxcKhet17Re06" target="_blank" rel="noopener" data-plan="lifetime" style="margin-top:16px;display:inline-flex">GET LIFETIME ALL-ACCESS <span>↗</span></a></article>
       </div>
       <div class="founder-note">ONE-TIME FOUNDING ACCESS · NO RECURRING DSB MEMBERSHIP FEE</div>
@@ -835,7 +868,7 @@ const dsbMusic=[
 ];
 let musicEra='All',musicGenre='All';
 function openMusicVideo(item){
- if(item.video){openModal('<div class="legal-copy"><p class="section-kicker">SOUNDS OF THE BLACK DIASPORA · '+item.era+'</p><h3>'+item.artist+' — '+item.title+'</h3><p>'+item.note+'</p><div class="video-shell"><iframe src="https://www.youtube.com/embed/'+item.video+'?rel=0" title="'+item.artist+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>');}
+ if(item.video){musicPanel.classList.remove('open');musicPanel.setAttribute('aria-hidden','true');musicTool.classList.remove('music-on');openModal('<div class="legal-copy"><p class="section-kicker">SOUNDS OF THE BLACK DIASPORA · '+item.era+'</p><h3>'+item.artist+' — '+item.title+'</h3><p>'+item.note+'</p><div class="video-shell"><iframe src="https://www.youtube.com/embed/'+item.video+'?rel=0" title="'+item.artist+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>');}
  else if(item.search){window.open(item.search,'_blank','noopener');}
 }
 function renderMusic(){
@@ -1080,7 +1113,7 @@ function downloadDsbWorksheet(type){const text=worksheetText(type),blob=new Blob
 document.querySelectorAll('[data-youth-download]').forEach(b=>b.onclick=()=>downloadDsbWorksheet(b.dataset.youthDownload));
 renderUtility();
 
-const modal=document.querySelector('#modal'),modalContent=document.querySelector('#modalContent');function openModal(html){modalContent.innerHTML=html;modal.classList.add('open');modal.setAttribute('aria-hidden','false')}function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true')}document.querySelector('#modalClose').onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const modal=document.querySelector('#modal'),modalContent=document.querySelector('#modalContent');function openModal(html){window.dsbReaderStop?.();modalContent.innerHTML=html;modal.classList.add('open');modal.setAttribute('aria-hidden','false')}function closeModal(){window.dsbReaderStop?.();modal.classList.remove('open');modal.setAttribute('aria-hidden','true');modalContent.innerHTML='';document.querySelector('.modal-card').classList.remove('reader-light')}document.querySelector('#modalClose').onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 const founderPopup=document.getElementById('founderPopup');
 const founderPopupKey='dsb-founding-popup-dismissed';
 const founderSignupKey='dsb-founding-email';
@@ -1225,7 +1258,7 @@ searchIndex.push(['DSB Select','Curated top-rated Black-owned businesses','#dsb-
 const menu=document.querySelector('#mobileMenu');document.querySelector('#menuBtn').onclick=()=>{menu.classList.add('open');menu.setAttribute('aria-hidden','false')};document.querySelector('#menuClose').onclick=()=>{menu.classList.remove('open');menu.setAttribute('aria-hidden','true')};menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.classList.remove('open');menu.setAttribute('aria-hidden','true')});
 
 function toast(msg){const t=document.querySelector('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.classList.remove('show'),2600)}
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:0,rootMargin:'0px 0px 120px 0px'});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 
 
@@ -1330,10 +1363,10 @@ bindHubPhoto();
  history.replaceState({},document.title,location.pathname+location.hash);
  if(access==='lifetime'){
    localStorage.setItem('dsb-last-checkout','lifetime');
-   setTimeout(()=>{ffpCelebrate();openMemberHub();toast('Welcome to DSB Lifetime All-Access.')},250);
+   setTimeout(()=>{ffpCelebrate();openMemberHub();toast('Checkout returned. Lifetime access still requires payment verification.')},250);
  }else if(access==='founding'){
    localStorage.setItem('dsb-last-checkout','founding');
-   setTimeout(()=>{toast('Founding Access confirmed. Welcome to Divine Shades of Brown.');document.getElementById('membership')?.scrollIntoView({behavior:'smooth'})},250);
+   setTimeout(()=>{toast('Checkout returned. Membership access still requires payment verification.');document.getElementById('membership')?.scrollIntoView({behavior:'smooth'})},250);
  }
 })();
 /* Real premium authorization still requires verified payment/access data. Do not use public JavaScript as the security boundary. */
@@ -1385,6 +1418,66 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
  document.querySelectorAll('.atlas-panel').forEach(p=>p.classList.toggle('active',p.id==='atlas-panel-'+id));
 });
 
+</script>
+<script>/* Reading controls for article/document dialogs. No checkout or game controls. */
+(() => {
+  const panel = document.getElementById('modalContent');
+  const card = panel.closest('.modal-card');
+  const synth = window.speechSynthesis;
+  let generation = 0, current = 0, paragraphs = [], active = false;
+  function clearHighlight() { paragraphs.forEach(p => p.classList.remove('dsb-speaking')); }
+  function stop() { generation++; active = false; if (synth) synth.cancel(); clearHighlight(); const status = card.querySelector('.dsb-reader-status'); if (status) status.textContent = 'Ready'; }
+  window.dsbReaderStop = stop;
+  function speak(index) {
+    if (!synth || index >= paragraphs.length) { stop(); return; }
+    current = index; clearHighlight();
+    const p = paragraphs[index]; p.classList.add('dsb-speaking');
+    p.scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    const token = generation;
+    const utterance = new SpeechSynthesisUtterance(p.textContent);
+    utterance.rate = Number(card.querySelector('[data-reader-speed]').value);
+    utterance.onend = () => { if (token === generation && active) speak(index + 1); };
+    utterance.onerror = () => { if (token === generation) stop(); };
+    const status = card.querySelector('.dsb-reader-status');
+    status.textContent = (index + 1) + '/' + paragraphs.length;
+    synth.speak(utterance);
+  }
+  function install() {
+    card.querySelector('.dsb-reader')?.remove();
+    const content = panel.querySelector('.legal-copy');
+    if (!content || panel.querySelector('form,iframe,input')) return;
+    paragraphs = [...content.querySelectorAll('p')].filter(p => !p.classList.contains('section-kicker') && p.textContent.trim());
+    if (!paragraphs.length) return;
+    const bar = document.createElement('nav');bar.className='dsb-reader';bar.setAttribute('aria-label','Article reading controls');
+    bar.innerHTML='<button data-reader-lights>Lights On</button><button data-reader-start>Read Aloud</button><button data-reader-pause>Pause</button><button data-reader-resume>Resume</button><button data-reader-stop>Stop</button><select data-reader-speed aria-label="Reading speed"><option value=".8">0.8×</option><option value="1" selected>1×</option><option value="1.2">1.2×</option><option value="1.5">1.5×</option></select><span class="dsb-reader-status" role="status">Ready</span>';
+    card.append(bar);
+    bar.querySelector('[data-reader-lights]').onclick = e => { const on=card.classList.toggle('reader-light');e.target.textContent=on?'Lights Off':'Lights On'; };
+    if (!synth) { bar.querySelectorAll('button:not([data-reader-lights]),select').forEach(x=>x.disabled=true);bar.querySelector('[role=status]').textContent='Read aloud unavailable';return; }
+    bar.querySelector('[data-reader-start]').onclick=()=>{stop();active=true;speak(0)};
+    bar.querySelector('[data-reader-pause]').onclick=()=>{if(active){synth.pause();bar.querySelector('[role=status]').textContent='Paused'}};
+    bar.querySelector('[data-reader-resume]').onclick=()=>{if(active){synth.resume();bar.querySelector('[role=status]').textContent=(current+1)+'/'+paragraphs.length}};
+    bar.querySelector('[data-reader-stop]').onclick=stop;
+    bar.querySelector('[data-reader-speed]').onchange=()=>{if(active){const index=current;stop();active=true;speak(index)}};
+  }
+  new MutationObserver(install).observe(panel,{childList:true});
+  const menu = document.getElementById('mobileMenu');
+  const opener = document.getElementById('menuBtn');
+  menu.setAttribute('role','dialog');menu.setAttribute('aria-modal','true');menu.setAttribute('aria-label','Explore Divine Shades of Brown');
+  function closeMenu(){menu.classList.remove('open');menu.setAttribute('aria-hidden','true');opener.setAttribute('aria-expanded','false');document.body.style.overflow=document.getElementById('routeLayer')?.classList.contains('open')?'hidden':'';opener.focus()}
+  opener.setAttribute('aria-controls','mobileMenu');opener.setAttribute('aria-expanded','false');
+  opener.onclick=()=>{menu.classList.add('open');menu.setAttribute('aria-hidden','false');opener.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';document.getElementById('menuClose').focus()};
+  document.getElementById('menuClose').onclick=closeMenu;
+  menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{if(document.getElementById('routeLayer')?.classList.contains('open'))closeRoute();closeMenu()});
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){if(menu.classList.contains('open'))closeMenu();document.getElementById('musicClose').click()}
+    if(e.key==='Tab' && menu.classList.contains('open')){
+      const items=[...menu.querySelectorAll('a,button')],first=items[0],last=items[items.length-1];
+      if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus()}
+      else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus()}
+    }
+  });
+  document.getElementById('musicClose').onclick=()=>{const music=document.getElementById('musicPanel');music.classList.remove('open');music.setAttribute('aria-hidden','true');document.getElementById('musicTool').classList.remove('music-on')};
+})();
 </script>
 </body>
 </html>
