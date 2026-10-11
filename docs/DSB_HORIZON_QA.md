@@ -41,7 +41,7 @@ A shared expandable catalog powers the showcase, native modal, contextual contro
 | Escape and focus | Modal closes and returns focus to launching Travel Experiences button; underlying travel route preserved. |
 | Destination return | Ghana link closes player and opens/focuses actual Accra Passport preview; Salvador contextual launch and Escape also checked. |
 | Travel menu route | Opens Beyond the Brown Horizon, original Passport and Unexpected America sections; menu closes. |
-| Contextual launch sample | Passport travel copy, Unexpected America heading and a lodging card opened modal; Passport destination launch also checked. |
+| Contextual launch sample | All 23 visible travel-route launch controls and all four Essentials lodging controls opened the shared modal and returned to their context. Destination-specific launches selected the correct record; generic lodging launches remained clearly labeled as the global collection. |
 | Catalog filtering | Iceland search produces its single destination. |
 | Jukebox regression | Existing 12 Voices of Greatness records remain. Les Brown player initialized; travel playback removed it; close removed travel iframe. Membership button opens correct route and hides main jukebox. |
 | Existing Music/Meditation | Source and collection records preserved. Music genre and History controls and the Meditation recordings list opened successfully in the live browser; full playback not re-tested in this build. |
@@ -66,6 +66,8 @@ No claim of global highest view count or independent copyright clearance is made
 | Auckland, New Zealand | Tasha Kayys / Tasha Kayys | Vlog: TRAVEL IN NEW ZEALAND pt2🛍️👗☀️black girl NZ, things to do in Auckland😍\| South African/Zambian | 14:57 | 594 | https://www.youtube.com/watch?v=BEl4mXuShHk | Permitted; full playback unverified |
 | Jamaica | Kemoy Martin / Kemoy Martin | The Jamaica They Don’t Show You: We Ate Like REAL Jamaicans | 32:01 | 24,993 | https://www.youtube.com/watch?v=ZH-ZaXJzrTI | Permitted; full playback unverified |
 | São Tomé & Príncipe | Wode Maya / WODE MAYA | I Visited the African Country You've Never Heard Of 🇸🇹 (São Tomé & Príncipe) | 64:55 | 1,363,301 | https://www.youtube.com/watch?v=1XPdXAnwB7c | Permitted; full playback unverified |
+
+Final QA found that the original Brown Passport article title did not match the travel keyword rule. The rule now includes Passport, without changing article content.
 
 ## Files changed
 
