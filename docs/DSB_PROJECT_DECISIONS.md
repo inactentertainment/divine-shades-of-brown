@@ -26,3 +26,7 @@
 ## Price clarification and compact menu
 
 The user clarified $399, never $3.99. Removed the separate art offer and included curated art in both Build benefit summaries. Core $0 / $49 / $399 prices and checkout links remain unchanged. The five shade choices now occupy a compact row with only the label Your shade, and an accessible selection announcement. No emoji promotional copy or trial experience panels remain.
+
+## Painted Black Atlas build
+
+Replace only the Atlas SVG with the supplied world painting. Approximate city positions follow the art, not a navigational projection. Expand the map to the full Atlas shell width with pan, zoom, pinch support, progressive labels, city selector and expanded view. Preserve existing directory controls and lists. DSB Select's 4.0+ standard remains; previously recorded ratings are explicitly not represented as newly verified. Cities without reviewed selections lead into directory discovery. Repair the dark Deep Directory Search title by keeping cream contrast on its dark panel in both themes.

@@ -300,6 +300,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 <link rel="stylesheet" href="assets/dsb-navigation.css?v=3" />
 <link rel="stylesheet" href="assets/dsb-horizon.css?v=1">
 <link rel="stylesheet" href="assets/dsb-menu-refinements.css?v=5">
+<link rel="stylesheet" href="assets/dsb-atlas-art.css?v=1">
 </head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
@@ -418,17 +419,11 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
           <div class="chip-row" id="atlasChips"></div>
           <div class="atlas-results" id="atlasResults"></div>
         </div>
-        <div class="atlas-map" id="atlasMap" aria-label="Interactive Black Atlas diaspora map">
-          <div class="atlas-map-label">EXPLORE BY PLACE</div>
-          <svg class="world-lines" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M82 160 C160 78 268 74 336 126 C374 156 364 208 316 216 C272 224 248 252 226 305 C204 359 152 381 126 333 C105 294 124 244 94 224 C58 200 47 187 82 160Z"/>
-            <path d="M415 102 C469 58 570 63 615 100 C661 139 636 171 600 184 C575 193 569 219 588 246 C609 278 600 327 566 365 C524 412 482 388 471 343 C462 307 439 282 426 244 C408 192 380 132 415 102Z"/>
-            <path d="M633 105 C700 71 817 91 884 143 C919 170 896 201 854 197 C816 193 796 221 811 246 C828 274 809 307 773 298 C736 289 727 265 696 263 C663 261 647 235 658 211 C671 183 615 152 633 105Z"/>
-            <path d="M805 338 C842 315 904 329 927 358 C944 379 920 411 888 414 C845 418 801 382 805 338Z"/>
-          </svg>
-          <div class="map-grid"></div>
-          <div id="mapPins"></div>
-          <div class="map-legend"><span class="pulse-dot"></span> Tap a city or diaspora hub to search</div>
+        <div class="atlas-map" id="atlasMap" aria-label="Interactive Black Atlas painted world map">
+          <div class="atlas-art-toolbar"><h3>Explore by place</h3><select class="atlas-city-select" aria-label="Find a city on the map"><option value="">Find a city</option></select><button type="button" data-map-action="in" aria-label="Zoom in">+</button><button type="button" data-map-action="out" aria-label="Zoom out">−</button><button type="button" data-map-action="reset">World view</button><button type="button" data-map-action="expand" aria-expanded="false">Expand map</button></div>
+          <div class="atlas-art-viewport" tabindex="0" role="region" aria-label="Painted world map. Drag to move; pinch or use zoom buttons. Keyboard arrows pan, plus and minus zoom, zero resets."><div class="atlas-art-plane"><img src="assets/dsb-atlas-world.webp" alt="Abstract painted world map in bronze, gold and brown" draggable="false" width="1536" height="865"></div><div class="atlas-city-layer"></div></div>
+          <div class="atlas-art-caption"><p>Drag to explore · Pinch or + to zoom · More cities appear as you move closer.</p><p class="atlas-map-status" role="status" aria-live="polite"></p></div>
+          <div class="atlas-city-selection" hidden aria-live="polite"></div><div id="mapPins" hidden data-art-map="true"></div>
         </div>
       </div>
       <div class="atlas-engine">
@@ -959,7 +954,7 @@ function renderAtlas(){
  const list=businesses.filter(b=>(activeCat==='All'||b.cat===activeCat)&&(b.name+' '+b.city+' '+b.cat).toLowerCase().includes(q));
  results.innerHTML=list.map(b=>'<div class="atlas-result" data-name="'+b.name+'"><small>'+b.cat.toUpperCase()+' · '+b.city.toUpperCase()+'</small><h4>'+b.name+'</h4><p>'+b.note+'</p><a class="text-link" href="'+b.url+'" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">OFFICIAL SITE ↗</a></div>').join('')+(q&&!list.length?atlasDeepCard(document.querySelector('#atlasSearch').value.trim()):'');
  if(!q&&!list.length)results.innerHTML=atlasDeepCard('Black-owned businesses');
- pins.innerHTML=atlasHubs.map(h=>'<button class="map-hub" aria-label="Search '+h.name+'" data-hub="'+h.name+'" style="left:'+h.x+'%;top:'+h.y+'%">'+h.name+'</button>').join('');
+ if(!pins.dataset.artMap) pins.innerHTML=atlasHubs.map(h=>'<button class="map-hub" aria-label="Search '+h.name+'" data-hub="'+h.name+'" style="left:'+h.x+'%;top:'+h.y+'%">'+h.name+'</button>').join('');
  document.querySelectorAll('.atlas-result[data-name]').forEach(el=>el.onclick=()=>{const b=businesses.find(x=>x.name===el.dataset.name);if(b)toast(b.name+' · '+b.city)});
  document.querySelectorAll('.map-hub').forEach(el=>el.onclick=()=>{const input=document.getElementById('atlasSearch');input.value=el.dataset.hub;activeCat='All';chips.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.cat==='All'));renderAtlas();
 const dsbSelectBusinesses=[
@@ -1499,5 +1494,6 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 <script src="assets/dsb-travel-catalog.js?v=1"></script>
 <script src="assets/dsb-horizon.js?v=2"></script>
 <script src="assets/dsb-menu-refinements.js?v=3"></script>
+<script src="assets/dsb-atlas-art.js?v=1"></script>
 </body>
 </html>
