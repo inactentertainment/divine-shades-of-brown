@@ -31,7 +31,7 @@ body[data-theme=light] [data-reading-content] .dsb-speaking{background:#d6a46a44
 .dsb-reader-controls button:focus-visible,.dsb-reading-settings :is(button,select,input):focus-visible{outline:3px solid #e9c393;outline-offset:2px}
 .dsb-reader-controls .reader-spacer{flex:1}
 .dsb-reader-live{font:12px/1.4 Georgia;min-width:75px}
-.dsb-reading-settings{position:absolute;right:12px;bottom:calc(100% + 8px);width:min(360px,calc(100vw - 24px));max-height:65vh;overflow:auto;background:#261a12;color:#f4dfc3;border:1px solid #ba9062;padding:20px;box-shadow:0 12px 45px #0007;font:16px/1.6 Georgia}
+.dsb-reading-settings{position:absolute;right:12px;bottom:calc(100% + 8px);width:min(360px,calc(100% - 24px));max-height:65vh;overflow:auto;background:#261a12;color:#f4dfc3;border:1px solid #ba9062;padding:20px;box-shadow:0 12px 45px #0007;font:16px/1.6 Georgia}
 .dsb-reading-settings h3{font:normal 25px/1.3 Georgia;color:inherit;margin:0 0 18px}
 .dsb-reading-settings label{display:block;margin:12px 0}
 .dsb-reading-settings select{display:block;width:100%;padding:10px;background:#1b120c;color:#f8ead8;border:1px solid #b98a5c;font:16px Georgia}
