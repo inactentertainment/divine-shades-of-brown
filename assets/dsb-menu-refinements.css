@@ -54,3 +54,17 @@ body[data-theme=light] .reaction-options button[aria-pressed=true]{background:#d
 #membership .member-grid article.featured-plan :is(h3,strong,em,p,li,small,.membership-includes){color:#fff1e1!important}
 #membership .art-membership{background:linear-gradient(115deg,#261810,#402619)!important;color:#f6e7d4}
 #membership .art-membership :is(h3,strong,p,li,small){color:#f6e7d4!important}
+/* The Passport accordion needs one grid child so its route introductions never collide. */
+#passportPanel>.passport-content{min-height:0;overflow:hidden}
+#passportPanel .passport-route-intro,#passportPanel .passport-collection,#passportPanel .passport-destinations{border:0;padding:0;background:transparent;margin:0}
+#passportPanel .passport-route-intro{margin:0 0 22px}
+#passportPanel .passport-route-intro>b,#passportPanel .passport-collection>b{font:600 13px/1.6 Georgia,serif;letter-spacing:.08em;color:#362418;margin:0 0 9px}
+#passportPanel .passport-route-intro>span,#passportPanel .passport-collection>span{font:normal 16px/1.7 Georgia,serif;color:#594331;margin:0 0 16px;position:static;overflow-wrap:break-word}
+#passportPanel .passport-destinations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+#passportPanel .passport-destination{margin:0;padding:18px 16px;border-left:2px solid #a2764e;background:#e2d4c4;min-width:0}
+#passportPanel .passport-destination>b{font:600 21px/1.35 Georgia,serif;letter-spacing:.015em;color:#372417;margin:0 0 9px}
+#passportPanel .passport-destination>span{font:normal 14px/1.65 Georgia,serif;color:#5c4837;margin:0;position:static}
+#travel .travel-photo{background:linear-gradient(0deg,#160b06d9,transparent 62%),url('dsb-passport-art.webp') center center/cover no-repeat}
+#travel .travel-overlay :is(strong,span,small){color:#fff0df!important}
+#travel .travel-overlay small{line-height:1.45}
+@media(max-width:620px){#passportPanel .passport-destinations{grid-template-columns:1fr}#travel .travel-overlay strong{font-size:clamp(46px,14vw,62px);line-height:1.05}}

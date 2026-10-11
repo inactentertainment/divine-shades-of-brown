@@ -16,5 +16,9 @@
 
 - Membership belongs only as a standalone script-lettered, sharp rectangular gold-shimmer button at the bottom of the main navigation menu. Remove the jukebox Membership control. No explanatory text or arrow on the menu button.
 - Membership pricing controls: gold diagonal shimmer, restrained hover lift, complete readable labels and aligned card footers. Cards progress from beige Explore through warmer brown Belong to dark Build. The $3.99 art panel retains its dark palette and forthcoming status. Existing prices and payment links remain unchanged.
-- Personalization: a decorative skin-tone chooser leads the navigation menu, with neutral and all five supported skin-tone modifiers. The existing local shade preference is retained.
+- Personalization: a decorative skin-tone chooser leads the navigation menu, with all five supported skin-tone modifiers and no neutral/yellow option. The existing local shade preference is retained.
 - Reactions are initially enabled in The DSB Promise and Four Rooms. Trial selections exist only in memory and reset on refresh. Durable member saving is a future requirement and must use verified accounts and entitlements; no fake payment flags or unverified paid-saving promise.
+
+- Additional steering: replace the photographic Go Farther portrait with the supplied abstract Black America/Africa/diaspora painting. Preserve the homepage banner separately.
+- Repair Passport introductory copy by giving the accordion one content wrapper, clear type and normal line spacing. All four destination previews and contextual video controls remain.
+- Reactions use brown-tone gestures and a brown heart; no yellow/neutral or rainbow selection. The default is Medium, and invalid/old neutral preferences migrate to Medium.

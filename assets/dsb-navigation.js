@@ -67,8 +67,8 @@
   document.getElementById('modalClose').onclick=()=>closeModal();
   searchIndex.push(['My calendar','LifeBook dates, events and milestones','#calendar'],['My DSB','Saved businesses and articles, Black Receipt','#dashboard'],['Personal journal','LifeBook reflection entries and family stories','#lifebook']);
   const tone=document.getElementById('dsbEmojiTone'),key='dsb-emoji-tone';
-  const tones=new Set(['','🏻','🏼','🏽','🏾','🏿']);
-  let choice='';try{choice=localStorage.getItem(key)||'';}catch{}if(!tones.has(choice))choice='';tone.value=choice;
+  const tones=new Set(['🏻','🏼','🏽','🏾','🏿']);
+  let choice='🏽';try{choice=localStorage.getItem(key)||'🏽';}catch{}if(!tones.has(choice))choice='🏽';tone.value=choice;try{localStorage.setItem(key,choice);}catch{}
   function applyTone(){document.querySelectorAll('[data-dsb-person-emoji]').forEach(el=>{el.textContent=el.dataset.dsbPersonEmoji+choice;});}
   tone.onchange=()=>{choice=tone.value;try{localStorage.setItem(key,choice);}catch{}applyTone();};applyTone();
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open')&&!document.getElementById('dsbTravelDialog')?.open){e.preventDefault();e.stopImmediatePropagation();closeModal();}},true);

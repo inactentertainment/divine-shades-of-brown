@@ -3,10 +3,10 @@
   'use strict';
   const tone = document.getElementById('dsbEmojiTone');
   if (!tone) return;
-  const names = new Map([['','Neutral'],['🏻','Light'],['🏼','Medium light'],['🏽','Medium'],['🏾','Medium dark'],['🏿','Dark']]);
+  const names = new Map([['🏻','Light'],['🏼','Medium light'],['🏽','Medium'],['🏾','Medium dark'],['🏿','Dark']]);
   const selections = new Map();
   function reflectShade() {
-    const shade = names.has(tone.value) ? tone.value : '';
+    const shade = names.has(tone.value) ? tone.value : '🏽';
     document.querySelectorAll('[data-shade-choice]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.shadeChoice === shade)));
     document.querySelectorAll('[data-dsb-person-emoji]').forEach(el => { el.textContent = el.dataset.dsbPersonEmoji + shade; });
     document.getElementById('dsbShadeStatus').textContent = names.get(shade) + ' selected · Make yourself at home.';
@@ -47,6 +47,16 @@
     panel.append(heading,intro,options,status,note,link,reset); section.append(panel);
   }
   addReactions('mission','Leave your mark.','Ready to build the change?', [['👍','I’m with you',true],['✊','Let’s build',true],['👏','Keep going',true]]);
-  addReactions('ecosystem','Find your connection.','What’s your feeling about this space?', [['👍','For me',true],['❤️','Love this',false],['✨','Inspired',false]]);
+  addReactions('ecosystem','Find your connection.','What’s your feeling about this space?', [['👍','For me',true],['🤎','Love this',false],['👏','Inspired',true]]);
   reflectShade();
+  const passport = document.getElementById('passportPanel');
+  if (passport) {
+    const reflectPassport = () => {
+      const open = passport.classList.contains('open');
+      passport.inert = !open;
+      passport.setAttribute('aria-hidden',String(!open));
+    };
+    new MutationObserver(reflectPassport).observe(passport,{attributes:true,attributeFilter:['class']});
+    reflectPassport();
+  }
 })();
