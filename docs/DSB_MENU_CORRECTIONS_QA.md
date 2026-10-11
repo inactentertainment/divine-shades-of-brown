@@ -46,3 +46,7 @@ Verified the deployed site in the cloud browser, with a desktop viewport and res
 - Existing checkout links and prices were preserved; no purchase or paid-entitlement test was performed in this visual correction. Durable member reaction saving is not implemented.
 
 Screenshots: dsb-menu-corrected-20261011.jpg and dsb-pricing-corrected-20261011.jpg.
+
+## Superseding price clarification
+
+The separate art panel was an incorrect interpretation of $399 and is now removed. There is no $3.99 membership. Curated art is listed within the $399 Build benefit summaries; monthly packages and the art magazine are labeled in development. Prices remain $0, $49 one-time and $399 lifetime. The old reaction trial panels and emoji promotion were removed. The menu now has only a compact five-shade row. Live browser verification found zero art-offer panels, zero reaction panels, the three correct prices, and curated art in Build. The desktop shade row is 54 px high, and selecting Medium announces Medium selected. Screenshot: dsb-compact-menu-20261011.jpg.
