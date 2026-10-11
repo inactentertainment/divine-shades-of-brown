@@ -296,7 +296,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 .four-head,.utility-head,.commerce-head,.essentials-head,.route-hero{min-width:0}
 .four-head>*,.utility-head>*,.commerce-head>*,.essentials-head>*,.route-hero>*{min-width:0;overflow-wrap:anywhere}
 @media(max-width:900px){.split-heading{grid-template-columns:1fr;gap:16px}.split-heading h2{font-size:clamp(34px,7vw,56px)}}
-</style><link rel="stylesheet" href="assets/dsb-jukebox.css?v=2">
+</style><link rel="stylesheet" href="assets/dsb-jukebox.css?v=motivation1">
 <link rel="stylesheet" href="assets/dsb-navigation.css?v=3" />
 </head>
 <body>
@@ -329,6 +329,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
   
 <aside class="music-panel" id="musicPanel" aria-label="DSB Jukebox" aria-hidden="true">
  <div class="jb-heading"><div><img src="assets/dsb-logo.webp" alt="Divine Shades of Brown"><h2>Jukebox</h2></div><button id="musicClose" aria-label="Minimize jukebox">×</button></div>
+ <div class="jb-taglines"><p>FEED YOUR MIND. FREE YOUR SPIRIT. FEEL YOUR ROOTS.</p><small>Change the energy. Choose your experience.</small></div>
  <button id="jbBack" hidden>‹ Back</button>
  <div id="jbView" aria-live="polite"></div>
  <section id="jbPlayer" hidden aria-label="Now playing"><div class="jb-mini-head"><button id="jbRestore">Open jukebox ↗</button><button id="jbMiniClose" aria-label="Stop and close mini player">×</button></div><p id="jbNow" role="status"></p>
@@ -1477,7 +1478,8 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
   document.getElementById('musicClose').onclick=()=>{const music=document.getElementById('musicPanel');music.classList.remove('open');music.setAttribute('aria-hidden','true');document.getElementById('musicTool').classList.remove('music-on')};
 })();
 </script>
-<script src="assets/dsb-jukebox.js?v=2"></script>
+<script src="assets/dsb-motivation.js?v=1"></script>
+<script src="assets/dsb-jukebox.js?v=motivation1"></script>
 <script src="assets/dsb-navigation.js?v=3"></script>
 </body>
 </html>

@@ -1,0 +1,150 @@
+{
+  "checkedAt": "2026-10-11T18:39:43.023204+00:00",
+  "method": "Public watch-page metadata plus YouTube oEmbed and official thumbnail HTTP checks. Video streams were not fetched. Browser playback QA recorded separately.",
+  "results": [
+    {
+      "speaker": "Les Brown",
+      "id": "gXuSMjrx_e8",
+      "watchUrl": "https://www.youtube.com/watch?v=gXuSMjrx_e8",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Eric Thomas",
+      "id": "7Oxz060iedY",
+      "watchUrl": "https://www.youtube.com/watch?v=7Oxz060iedY",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Inky Johnson",
+      "id": "jCA2AUNwRdI",
+      "watchUrl": "https://www.youtube.com/watch?v=jCA2AUNwRdI",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Lisa Nichols",
+      "id": "dkrH7MkFcMk",
+      "watchUrl": "https://www.youtube.com/watch?v=dkrH7MkFcMk",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "David Goggins",
+      "id": "azROJC2YJ4g",
+      "watchUrl": "https://www.youtube.com/watch?v=azROJC2YJ4g",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Steve Harvey",
+      "id": "y-952IaLtKM",
+      "watchUrl": "https://www.youtube.com/watch?v=y-952IaLtKM",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Denzel Washington",
+      "id": "vpW2sGlCtaE",
+      "watchUrl": "https://www.youtube.com/watch?v=vpW2sGlCtaE",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Oprah Winfrey",
+      "id": "Bpd3raj8xww",
+      "watchUrl": "https://www.youtube.com/watch?v=Bpd3raj8xww",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Trent Shelton",
+      "id": "vmWKXYP2tSI",
+      "watchUrl": "https://www.youtube.com/watch?v=vmWKXYP2tSI",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Simon T. Bailey",
+      "id": "AArAboZ_Oj8",
+      "watchUrl": "https://www.youtube.com/watch?v=AArAboZ_Oj8",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Sarah Jakes Roberts",
+      "id": "k3k8VEN13a0",
+      "watchUrl": "https://www.youtube.com/watch?v=k3k8VEN13a0",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    },
+    {
+      "speaker": "Stormy Wellington",
+      "id": "PYBqNOFmURU",
+      "watchUrl": "https://www.youtube.com/watch?v=PYBqNOFmURU",
+      "oembedStatus": 200,
+      "titleMatch": true,
+      "creatorMatch": true,
+      "embedHtmlAvailable": true,
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "text/html",
+      "thumbnailVerification": "unverified: research network returned HTML instead of image bytes; browser check pending"
+    }
+  ]
+}
