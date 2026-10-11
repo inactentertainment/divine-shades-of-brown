@@ -44,7 +44,7 @@ A shared expandable catalog powers the showcase, native modal, contextual contro
 | Contextual launch sample | Passport travel copy, Unexpected America heading and a lodging card opened modal; Passport destination launch also checked. |
 | Catalog filtering | Iceland search produces its single destination. |
 | Jukebox regression | Existing 12 Voices of Greatness records remain. Les Brown player initialized; travel playback removed it; close removed travel iframe. Membership button opens correct route and hides main jukebox. |
-| Existing Music/Meditation | Source and collection records preserved; full playback not re-tested in this build. |
+| Existing Music/Meditation | Source and collection records preserved. Music genre and History controls and the Meditation recordings list opened successfully in the live browser; full playback not re-tested in this build. |
 | Static validation | Changed JavaScript and inline scripts parsed; checkout URLs and existing lodging counts compared with baseline. |
 | Payments/auth/backend | No billing, entitlements or backend changes. Transaction/auth flows not tested by this targeted build. |
 
