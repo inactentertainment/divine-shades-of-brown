@@ -20,13 +20,17 @@ const genres={
 };
 // Keep the previous DSB catalog available, including Africa, Caribbean and dance music.
 for(const t of dsbMusic)if(!['Classical','Country','Jazz','Blues','Soul','Hip-Hop','R&B'].includes(t.genre)&&!/Rock/.test(t.genre))(genres[t.genre]??=[]).push(t);
+// Curated openings; existing playable recordings remain in the source library.
+for(const key of Object.keys(genres))delete genres[key];
+for(const [name,rows] of Object.entries(window.DSB_MUSIC_CATALOG||{}))genres[name]=rows.map(t=>t.video?t:search(t.artist,t.title,t.era,t.note)).map((t,i)=>({...t,reason:rows[i].reason}));
+const speeches=window.DSB_SPEECHES||[];
 const motivation=(window.DSB_MOTIVATION?.videos||[]);
 const meditation=[{artist:'Toumani Diabaté, Ahmed & Balla Diabaté',title:'Jarabi · Reflective instrumental listening',video:'NxLuqkDxmUY',era:'2020',note:'Kora music for quiet listening. Not a guided meditation or medical treatment.'},{artist:'Miles Davis',title:'Flamenco Sketches',video:'nTwp1sgUJrM',era:'1959',note:'Patient instrumental listening from the IEPLR reflection collection.'}];
 let mine=[];try{const saved=JSON.parse(localStorage.getItem('dsb-jukebox-playlist')||'[]');if(Array.isArray(saved))mine=saved.filter(t=>t&&(/^[\w-]{11}$/.test(t.video||'')||/^[\w-]{10,100}$/.test(t.listId||''))).slice(0,100).map(t=>({video:t.video,listId:t.listId,title:String(t.title||'My selection').slice(0,120),artist:'My playlist',era:'My playlist'}))}catch{}
 let stack=[],page=root,current=null,queue=[],index=0,yt=null,ready=false,epoch=0,shuffle=false,repeat=false,apiPromise;
 function save(){try{localStorage.setItem('dsb-jukebox-playlist',JSON.stringify(mine.filter(t=>!t.src)))}catch{$('jbAddStatus').textContent='Browser storage is unavailable; your selections remain for this session.'}}
 function navigate(next){stack.push(page);page=next;paint();}
-function paint(){view.replaceChildren();page();back.hidden=!stack.length;back.onclick=()=>{page=stack.pop()||root;paint();back.hidden=!stack.length};}
+function paint(){view.replaceChildren();page();back.hidden=false;back.onclick=()=>{if(stack.length){page=stack.pop();paint()}else minimize()};}
 function heading(text,desc){const h=document.createElement('h3');h.textContent=text;view.append(h);if(desc){const p=document.createElement('p');p.textContent=desc;view.append(p)}}
 function button(parent,text,action,cls=''){const b=document.createElement('button');b.type='button';b.textContent=text;b.className=cls;b.onclick=action;parent.append(b);return b}
 function grid(){const el=document.createElement('div');el.className='jb-grid';view.append(el);return el}
@@ -40,9 +44,39 @@ function motivationCollection(){
  if(maxPage){const prev=button(pager,'‹ Previous voices',()=>{pageNumber--;render();searchLabel.scrollIntoView({block:'start'})});prev.disabled=pageNumber===0;const next=button(pager,'More voices ›',()=>{pageNumber++;render();searchLabel.scrollIntoView({block:'start'})});next.disabled=pageNumber===maxPage;}
  }input.oninput=()=>{pageNumber=0;render()};render();
 }
-function music(){heading('Music','Black music across generations, continents and genres.');button(view,'History · Roots of our music',()=>navigate(history),'jb-history');const row=grid();Object.entries(genres).forEach(([name,items])=>button(row,name,()=>navigate(()=>tracks(name,items))));}
-function history(){heading('History','Four connected chapters. Their traditions overlap and remain alive today.');const row=grid();histories.forEach(h=>button(row,h.title,()=>navigate(()=>tracks(h.title,h.items,h.intro))));}
-function tracks(name,items,description='Choose a recording or explore a source collection.'){heading(name,description);const select=document.createElement('select');select.setAttribute('aria-label','Filter music by year or era');const eras=[...new Set(items.map(t=>t.era||'All Eras'))];select.innerHTML='<option value="">All years & eras</option>'+eras.map(e=>'<option>'+safe(e)+'</option>').join('');view.append(select);const list=document.createElement('div');list.className='jb-track-list';view.append(list);function render(){list.replaceChildren();const shown=items.filter(t=>!select.value||(t.era||'All Eras')===select.value);if(!shown.length){const p=document.createElement('p');p.textContent='Your playlist is empty. Add a YouTube selection or local audio below.';list.append(p)}shown.forEach(t=>{const b=button(list,t.title,()=>{if(t.search){window.open(t.search,'_blank','noopener');return}queue=shown.filter(t=>!t.search);index=queue.indexOf(t);play(t)},'jb-track');const small=document.createElement('small');small.textContent=t.artist+' · '+(t.era||'All Eras')+(t.search?' · Find on YouTube ↗':' · Play ▶');b.append(small)});}select.onchange=render;render();}
+function music(){heading('Music','Black music across generations, continents and genres.');button(view,'History · Roots of our music',()=>navigate(history),'jb-history');const row=grid();Object.entries(genres).forEach(([name,items])=>button(row,name,()=>navigate(()=>tracks(name,items))));button(view,'Speeches',()=>navigate(()=>tracks('Speeches',speeches)), 'jb-history jb-speeches');}
+function history(){heading('History','Four connected chapters. Their traditions overlap and remain alive today.');const row=grid();histories.forEach(h=>button(row,h.title,()=>navigate(()=>tracks(h.title,h.items,h.intro))));button(view,'Explore the original DSB collection',()=>navigate(()=>tracks('Original DSB collection',dsbMusic)), 'jb-see-more');}
+function tracks(name,items,description='Choose a recording or explore a source collection.'){
+ const curated=!!genres[name]||name==='Speeches';
+ heading(name,curated?'Our suggested Top Ten is an editorial invitation to debate, chosen for musical character, range and listening value—not an official ranking. '+(name==='Speeches'?'For speeches we consider civic ideas, rhetorical craft and historical context. Historical readings are labeled; versions and excerpts can differ.':name==='Heavy Metal'?'This collection includes metal, hard rock and clearly labeled hardcore crossovers.':'')+' Save your own ten on this device.':description);
+ if(name==='Heavy Metal'){
+  const figure=document.createElement('figure');figure.className='jb-artist-spotlight';const img=document.createElement('img');img.src='https://i.ytimg.com/vi/7xxgRUyzgs0/hqdefault.jpg';img.alt='Living Colour · Cult of Personality official music-video thumbnail';img.loading='lazy';figure.append(img);const caption=document.createElement('figcaption');caption.textContent='Black voices in heavy music · Vernon Reid and Corey Glover of Living Colour';figure.append(caption);view.append(figure);
+ }
+ let favorites=[];const key='dsb-top-ten-'+name;try{const saved=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(saved))favorites=saved.filter(id=>typeof id==='string').slice(0,10)}catch{}
+ const identity=t=>t.artist+' — '+t.title;
+ const modes=document.createElement('div');modes.className='jb-list-modes';let personal=false;
+ if(curated){button(modes,'Suggested Top Ten + discoveries',()=>{personal=false;limit=initial;render()});button(modes,'My Top Ten',()=>{personal=true;render()});view.append(modes)}
+ const select=document.createElement('select');select.setAttribute('aria-label','Filter '+name+' by year or era');const eras=[...new Set(items.map(t=>t.era||'All Eras'))];select.innerHTML='<option value="">All years & eras</option>'+eras.map(e=>'<option>'+safe(e)+'</option>').join('');if(eras.length>1||!curated)view.append(select);
+ const status=document.createElement('p');status.setAttribute('role','status');status.className='jb-catalog-status';view.append(status);
+ const list=document.createElement('div');list.className='jb-track-list';view.append(list);const pager=document.createElement('div');view.append(pager);const initial=name==='Speeches'?10:curated?12:items.length;let limit=initial;
+ function render(){
+  list.replaceChildren();pager.replaceChildren();const shown=items.filter(t=>(!select.value||(t.era||'All Eras')===select.value)&&(!personal||favorites.includes(identity(t))));const visible=shown.slice(0,personal?10:limit);
+  status.textContent=personal?`${favorites.length}/10 saved on this device`:`Showing ${visible.length} of ${shown.length} selections`;
+  if(!shown.length){const p=document.createElement('p');p.textContent=personal?'Choose up to ten favorites from the suggested list.':name==='My playlist'?'Your playlist is empty. Add a YouTube selection or local audio below.':'No selections match this era.';list.append(p)}
+  visible.forEach(t=>{
+   const card=document.createElement('article');card.className='jb-catalog-card';const rank=items.indexOf(t);
+   if(curated&&rank<10){const label=document.createElement('span');label.className='jb-top-ten-label';label.textContent=`Suggested Top Ten · ${rank+1}`;card.append(label)}
+   const b=button(card,t.title,()=>{if(t.search){window.open(t.search,'_blank','noopener');return}queue=shown.filter(t=>!t.search);index=queue.indexOf(t);play(t)},'jb-track');const small=document.createElement('small');small.textContent=t.artist+' · '+(t.era||'All Eras')+(t.search?' · Find on YouTube ↗':' · Play ▶');b.append(small);
+   if(t.reason){const why=document.createElement('p');why.className='jb-ranking-reason';why.textContent='Why we chose it: '+t.reason;card.append(why)}
+   if(t.source){const a=document.createElement('a');a.href=t.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Historical context / source ↗';card.append(a)}
+   if(curated){const chosen=favorites.includes(identity(t));const add=button(card,chosen?'Saved to my ten ✓':'Add to my ten',()=>{const id=identity(t);if(favorites.includes(id))favorites=favorites.filter(x=>x!==id);else if(favorites.length<10)favorites.push(id);else{status.textContent='Your ten is full. Remove a selection before adding another.';return}try{localStorage.setItem(key,JSON.stringify(favorites))}catch{}render()},'jb-save-ten');add.setAttribute('aria-pressed',String(chosen));add.setAttribute('aria-label',(chosen?'Remove ':'Add ')+t.title+(chosen?' from':' to')+' my Top Ten')}
+   list.append(card);
+  });
+  if(!personal&&limit<shown.length){const more=button(pager,'see more',()=>{limit+=10;render()},'jb-see-more');more.setAttribute('aria-label','See '+Math.min(10,shown.length-limit)+' more '+(name==='Speeches'?'speeches':'songs'))}
+ }
+ select.onchange=()=>{limit=initial;render()};render();
+}
+
 function open(){panel.classList.remove('minimized');panel.classList.add('open');panel.setAttribute('aria-hidden','false');$('musicToggle').setAttribute('aria-expanded','true');$('musicTool').classList.add('music-on');$('musicClose').focus({preventScroll:true});}
 function minimize(){panel.classList.remove('open');panel.classList.toggle('minimized',!!current);panel.setAttribute('aria-hidden',String(!current));$('musicToggle').setAttribute('aria-expanded','false');$('musicTool').classList.toggle('music-on',!!current);$('musicToggle').focus({preventScroll:true});}
 function stop(){epoch++;try{yt?.destroy()}catch{}yt=null;ready=false;audio.pause();audio.removeAttribute('src');audio.load();audio.hidden=true;$('jbVideo').replaceChildren();playerBox.hidden=true;current=null;panel.classList.remove('minimized');if(!panel.classList.contains('open'))panel.setAttribute('aria-hidden','true');$('musicTool').classList.remove('music-on');}
@@ -70,3 +104,4 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.con
 document.addEventListener('dsb:media-start',e=>{if(e.detail?.source==='travel')stop();});
 window.addEventListener('pagehide',()=>mine.forEach(t=>{if(t.src)URL.revokeObjectURL(t.src)}));paint();
 })();
+

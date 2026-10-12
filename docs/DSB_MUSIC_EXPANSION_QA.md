@@ -1,0 +1,13 @@
+# Music and menu expansion — October 12, 2026
+
+- 16 distinct genres, including separate R&B and Hip Hop/Rap, Psychedelic Rock, and Heavy Metal. Each has 32 unique selections: initial 12, then 10 per See more action. The first ten have editorial reasons; rankings are suggested, not objective or community-voted.
+- Psychedelic opening includes Hendrix, Funkadelic, Love and Black Merda. Heavy music includes Living Colour, Sevendust, Howard Jones-era Killswitch Engage, Tosin Abasi/Animals as Leaders, Body Count, Skindred, God Forbid, Suffocation, Zeal & Ardor and labeled hardcore crossover.
+- Speeches has a wide bottom button, 30 distinct entries and 10/20/30 expansion. The opening ten include individual selection reasons and source/context links. Pre-recording-era readings and version differences are labeled.
+- My Top Ten is saved locally on the visitor's device, limited to ten. It is not a public vote or shared debate. Original DSB listening collection remains accessible under History.
+- Existing recording IDs preserved where applicable. Newly retrieved official releases include Hendrix/Purple Haze, Living Colour/Cult of Personality and Public Enemy/Fight the Power. Other selections use clearly labeled YouTube search links; embedding is not claimed or verified for those entries.
+- Global themed select dialog preserves original form values and input/change events, supports keyboard navigation, search for long lists, Escape/Back, and focus return. Existing hidden shade select is left untouched. Both theme palettes are explicit; Android's native white select sheet is bypassed.
+- Travel Experiences receives copper/bronze gradient, shimmer, slight floating and hover bounce/shimmy with reduced-motion support. Membership navigation bar is reduced to 46px minimum height and Great Vibes cursive. Prices and payment links unchanged.
+- Passed Node syntax checks for changed JS and all inline scripts. Passed executable DOM-model checks for all 16 catalogs, pagination, favorites limit/removal, Back navigation, picker selection/change events, cancellation, hidden-control preservation and focus return.
+- Visual/browser QA was unavailable in this environment. Full YouTube playback permissions and phone rendering are not claimed as tested.
+
+Reference sources: https://www.jimihendrix.com/ ; https://www.youtube.com/watch?v=WGoDaYjdfSg ; https://www.youtube.com/watch?v=7xxgRUyzgs0 ; https://www.youtube.com/watch?v=mmo3HFa2vjg ; https://freedomsring.stanford.edu/ ; https://www.nelsonmandela.org/news/entry/i-am-prepared-to-die ; https://www.americanrhetoric.com/top100speechesall.html
