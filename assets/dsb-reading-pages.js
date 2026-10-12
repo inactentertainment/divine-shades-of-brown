@@ -3,54 +3,9 @@
  'use strict';
  const page=document.getElementById('routeLayer'),content=document.getElementById('routeContent'),footer=document.querySelector('body>footer');
  const oldOpen=openRoute,oldClose=closeRoute;
- let dock=null,root=null,paragraphs=[],current=0,generation=0,active=false,paused=false,follow=true,rate=1,voiceURI='',size='small';
- const synth=window.speechSynthesis;
- try{size=localStorage.getItem('dsb-reading-size')||'small';rate=Number(localStorage.getItem('dsb-reading-rate'))||1;}catch{}
- if(!['small','medium','large'].includes(size))size='small';
- if(![.75,1,1.25,1.5,1.75].includes(rate))rate=1;
- const escape=lbEsc;
- function stop(){generation++;active=false;paused=false;synth?.cancel();paragraphs.forEach(p=>p.classList.remove('dsb-speaking'));if(dock){dock.querySelector('[data-reading-pause]').disabled=true;dock.querySelector('[data-reading-pause]').textContent='Ⅱ';dock.querySelector('[data-reading-pause]').setAttribute('aria-label','Pause reading');dock.querySelector('[data-reading-status]').textContent='Ready';}}
- window.dsbReaderStop=stop;
- function destroy(){stop();dock?.remove();dock=null;root=null;paragraphs=[];}
- function position(){if(!dock)return;if(document.querySelector('#modal.open,#lbModal.open,#musicPanel.open,dialog[open]')){dock.hidden=true;return;}const overlap=Math.max(0,innerHeight-footer.getBoundingClientRect().top);dock.style.bottom=overlap+'px';dock.hidden=overlap>innerHeight-60;}
+ function destroy(){window.DSBReading?.unmount()}
+ function installReading(el,key){window.DSBReading?.mount(el,key||location.pathname+location.hash)}
  function fullPage(){document.body.classList.add('dsb-page-mode');footer.before(page);page.setAttribute('role','region');page.removeAttribute('aria-modal');document.body.style.overflow='';page.scrollTop=0;content.scrollTop=0;window.scrollTo({top:0,behavior:'instant'});content.querySelectorAll(':scope > .dsb-page-back').forEach(e=>e.remove());const a=document.createElement('a');a.className='dsb-page-back';a.href='#top';a.textContent='← Home';content.prepend(a);}
- function speak(index){
-  if(!synth||index>=paragraphs.length){stop();return;}
-  current=index;paragraphs.forEach(p=>p.classList.remove('dsb-speaking'));const p=paragraphs[index];p.classList.add('dsb-speaking');
-  if(follow)p.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-  const token=generation,u=new SpeechSynthesisUtterance(p.textContent);u.rate=rate;
-  const v=synth.getVoices().find(v=>v.voiceURI===voiceURI);if(v)u.voice=v;
-  u.onstart=()=>{if(token!==generation)return;dock.querySelector('[data-reading-status]').textContent=`Reading ${index+1}/${paragraphs.length}`;};
-  u.onend=()=>{if(token===generation&&active)speak(index+1)};
-  u.onerror=e=>{if(token!==generation)return;stop();if(e.error!=='canceled'&&e.error!=='interrupted')dock.querySelector('[data-reading-status]').textContent='Voice unavailable in this browser';};
-  dock.querySelector('[data-reading-status]').textContent=`Starting ${index+1}/${paragraphs.length}`;synth.speak(u);
- }
- function start(index=0){stop();active=true;dock.querySelector('[data-reading-pause]').disabled=false;speak(index);}
- function voices(){if(!dock)return;const select=dock.querySelector('[data-reading-voice]');select.replaceChildren(new Option('Browser default',''));synth?.getVoices().forEach(v=>select.append(new Option(`${v.name} · ${v.lang}`,v.voiceURI)));select.value=voiceURI;}
- function installReading(el){
-  destroy();root=el;root.dataset.textSize=size;
-  paragraphs=[...root.querySelectorAll('p,h4,li')].filter(p=>p.textContent.trim()&&!p.classList.contains('section-kicker')&&!p.closest('.article-tools')&&!(p.tagName==='LI'&&p.querySelector('p')));
-  if(!paragraphs.length)return;
-  dock=document.createElement('nav');dock.className='dsb-reader-dock';dock.setAttribute('aria-label','Reading controls');
-  dock.innerHTML='<div class="dsb-reader-controls"><button data-reading-light aria-label="Toggle reading lights">Lights on</button><button data-reading-size aria-label="Change text size" title="Text size: small, medium, large">Aa</button><button data-reading-top aria-label="Back to top" title="Back to top">↑</button><span class="reader-spacer"></span><button data-reading-start aria-label="Read aloud">▶ Read aloud</button><button data-reading-pause aria-label="Pause reading" title="Pause or resume" disabled>Ⅱ</button><button data-reading-stop aria-label="Stop reading" title="Stop">■</button><button data-reading-settings aria-label="Reading settings" aria-expanded="false" title="Reading settings">⚙</button><span class="dsb-reader-live" data-reading-status role="status" aria-live="polite">Ready</span></div><section class="dsb-reading-settings" aria-label="Reading settings" hidden><h3>Listen at your pace.</h3><label>Voice<select data-reading-voice></select></label><label>Reading speed<select data-reading-speed><option value=".75">Gentle · 0.75×</option><option value="1">Normal · 1×</option><option value="1.25">Brisk · 1.25×</option><option value="1.5">Fast · 1.5×</option><option value="1.75">Faster · 1.75×</option></select></label><label><input type="checkbox" data-reading-follow checked> Follow the reading</label><button data-reading-here>Read from where I am</button><small>Reads article text and highlights the current paragraph. Available voices depend on your browser.</small></section>';
-  document.body.append(dock);voices();dock.querySelector('[data-reading-speed]').value=String(rate);
-  function lightLabel(){dock.querySelector('[data-reading-light]').textContent=document.body.dataset.theme==='light'?'Lights off':'Lights on';}
-  lightLabel();dock.querySelector('[data-reading-light]').onclick=()=>{setTheme(document.body.dataset.theme==='light'?'dark':'light');lightLabel();};
-  dock.querySelector('[data-reading-size]').onclick=()=>{size={small:'medium',medium:'large',large:'small'}[size];root.dataset.textSize=size;try{localStorage.setItem('dsb-reading-size',size)}catch{}dock.querySelector('[data-reading-status]').textContent='Text size: '+size;dock.querySelector('[data-reading-size]').setAttribute('aria-label','Text size: '+size+'. Change text size');};
-  dock.querySelector('[data-reading-top]').onclick=()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-  dock.querySelector('[data-reading-start]').onclick=()=>start();dock.querySelector('[data-reading-stop]').onclick=stop;
-  dock.querySelector('[data-reading-pause]').onclick=()=>{if(!active)return;if(paused){synth.resume();paused=false;}else{synth.pause();paused=true;}const b=dock.querySelector('[data-reading-pause]');b.textContent=paused?'▶':'Ⅱ';b.setAttribute('aria-label',paused?'Resume reading':'Pause reading');dock.querySelector('[data-reading-status]').textContent=paused?'Paused':`Reading ${current+1}/${paragraphs.length}`;};
-  const settings=dock.querySelector('.dsb-reading-settings'),settingsButton=dock.querySelector('[data-reading-settings]');settingsButton.onclick=()=>{settings.hidden=!settings.hidden;settingsButton.setAttribute('aria-expanded',String(!settings.hidden));if(!settings.hidden)settings.querySelector('select').focus();};
-  settings.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();settings.hidden=true;settingsButton.setAttribute('aria-expanded','false');settingsButton.focus();}});
-  dock.querySelector('[data-reading-speed]').onchange=e=>{rate=Number(e.target.value);try{localStorage.setItem('dsb-reading-rate',rate)}catch{}if(active)start(current);};
-  dock.querySelector('[data-reading-voice]').onchange=e=>{voiceURI=e.target.value;if(active)start(current);};
-  dock.querySelector('[data-reading-follow]').onchange=e=>follow=e.target.checked;
-  dock.querySelector('[data-reading-here]').onclick=()=>{const i=paragraphs.findIndex(p=>p.getBoundingClientRect().bottom>120);settings.hidden=true;settingsButton.setAttribute('aria-expanded','false');start(Math.max(0,i));};
-  if(!synth){dock.querySelectorAll('[data-reading-start],[data-reading-pause],[data-reading-stop],[data-reading-voice],[data-reading-speed],[data-reading-here]').forEach(b=>b.disabled=true);dock.querySelector('[data-reading-status]').textContent='Read aloud unavailable';}
-  position();
- }
- document.getElementById('musicToggle').addEventListener('click',stop);for(const el of document.querySelectorAll('#modal,#lbModal,#musicPanel'))new MutationObserver(position).observe(el,{attributes:true,attributeFilter:['class']});synth?.addEventListener('voiceschanged',voices);window.addEventListener('scroll',position,{passive:true});window.addEventListener('resize',position);
- new MutationObserver(()=>{if(dock)dock.querySelector('[data-reading-light]').textContent=document.body.dataset.theme==='light'?'Lights off':'Lights on';}).observe(document.body,{attributes:true,attributeFilter:['data-theme']});
  function stepUp(parent){const aside=document.createElement('aside');aside.className='dsb-step-up';aside.innerHTML='<p>Keep exploring for free. Membership adds curated magazine collections, downloads, and deeper DSB resources.</p><a href="#/membership">Compare membership benefits →</a>';parent.append(aside);}
  function conversation(parent,story){
   const section=document.createElement('section');section.className='dsb-community';section.setAttribute('aria-label','Blog conversation');
@@ -78,19 +33,19 @@
   content.removeAttribute('data-reading-content');const article=document.createElement('article');article.className='dsb-article-page';article.innerHTML='<a class="dsb-page-back" href="#/journal">← All articles</a><p class="section-kicker">'+escape(story.cat)+' · FREE ARTICLES & IDEAS</p><h1>'+escape(story.title)+'</h1><p class="dsb-article-meta">'+escape(story.author||'Divine Shades of Brown')+' · '+escape(story.date||'Founding collection')+'</p><p class="dsb-article-deck">'+escape(story.dek)+'</p><div data-reading-content>'+story.body+'</div><div class="article-tools"><button class="save-btn" data-story-save>Save article</button><button data-story-copy>Copy article link</button></div>';
   content.append(article);fullPage();article.querySelector('[data-story-save]').onclick=e=>{toggleSaved(story.id,story.title);e.target.textContent=getSaved().some(s=>s.id===id)?'Saved':'Save article';};
   article.querySelector('[data-story-copy]').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('Article link copied.')}catch{toast('Copy the address from your browser.')}};
-  stepUp(article);conversation(article,story);installReading(article.querySelector('[data-reading-content]'));
-  if(push)history.pushState({article:id},'',location.pathname+location.search+'#/journal/'+id);else history.replaceState({article:id},'',location.pathname+location.search+'#/journal/'+id);const h=article.querySelector('h1');h.tabIndex=-1;h.focus({preventScroll:true});
+  stepUp(article);conversation(article,story);
+  if(push)history.pushState({article:id},'',location.pathname+location.search+'#/journal/'+id);else history.replaceState({article:id},'',location.pathname+location.search+'#/journal/'+id);installReading(article.querySelector('[data-reading-content]'));const h=article.querySelector('h1');h.tabIndex=-1;h.focus({preventScroll:true});
  }
  openArticle=id=>article(id);
  openRoute=function(raw,push=true){
   const [name,id]=String(raw).split('/');if(name==='journal'&&id){article(id,push);return;}destroy();content.removeAttribute('data-reading-content');
   if(name==='document'&&legalDocs[id]){
-   const doc=legalDocs[id];oldOpen('journal',false);content.removeAttribute('data-reading-content');content.innerHTML='<article class="dsb-article-page"><h1>'+escape(doc.title)+'</h1><div data-reading-content>'+doc.body+'</div></article>';fullPage();installReading(content.querySelector('[data-reading-content]'));if(push)history.pushState({document:id},'',location.pathname+location.search+'#/document/'+id);return;
+   const doc=legalDocs[id];oldOpen('journal',false);content.removeAttribute('data-reading-content');content.innerHTML='<article class="dsb-article-page"><h1>'+escape(doc.title)+'</h1><div data-reading-content>'+doc.body+'</div></article>';fullPage();installReading(content.querySelector('[data-reading-content]'),'document/'+id);if(push)history.pushState({document:id},'',location.pathname+location.search+'#/document/'+id);return;
   }
   if(name==='magazine'){
-   oldOpen('journal',false);content.innerHTML='<article class="dsb-article-page"><p class="section-kicker">DSB DIGITAL MAGAZINE</p><h1>A collection worth keeping.</h1><div data-reading-content><p>The DSB digital magazine is a curated publication separate from our free articles and ideas.</p><h4>Magazine collections</h4><p>Belong includes the approved magazine starter collection and archive sampler. Build includes the full archive and standard future digital issues, alongside curated art collections.</p><p>The magazine collection is in development. Published issues and their permitted uses will be identified before delivery.</p><p>Explore our free articles while the magazine takes shape.</p></div><a class="dsb-page-back" href="#/journal">Read free articles</a></article>';fullPage();stepUp(content.querySelector('article'));installReading(content.querySelector('[data-reading-content]'));if(push)history.pushState({route:name},'',location.pathname+location.search+'#/magazine');return;
+   oldOpen('journal',false);content.innerHTML='<article class="dsb-article-page"><p class="section-kicker">DSB DIGITAL MAGAZINE</p><h1>A collection worth keeping.</h1><div data-reading-content><p>The DSB digital magazine is a curated publication separate from our free articles and ideas.</p><h4>Magazine collections</h4><p>Belong includes the approved magazine starter collection and archive sampler. Build includes the full archive and standard future digital issues, alongside curated art collections.</p><p>The magazine collection is in development. Published issues and their permitted uses will be identified before delivery.</p><p>Explore our free articles while the magazine takes shape.</p></div><a class="dsb-page-back" href="#/journal">Read free articles</a></article>';fullPage();stepUp(content.querySelector('article'));if(push)history.pushState({route:name},'',location.pathname+location.search+'#/magazine');return;
   }
-  oldOpen(raw,push);if(page.classList.contains('open')){fullPage();if(['history','resources','resource-vault'].includes(name)){content.setAttribute('data-reading-content','');installReading(content);}else content.removeAttribute('data-reading-content');}
+  oldOpen(raw,push);if(page.classList.contains('open')){fullPage();if(['history','resources','resource-vault'].includes(name)){content.setAttribute('data-reading-content','');installReading(content,name);}else content.removeAttribute('data-reading-content');}
  };
  closeRoute=function(push=true){destroy();content.removeAttribute('data-reading-content');document.body.classList.remove('dsb-page-mode');oldClose(push);};
  document.getElementById('routeClose').onclick=()=>closeRoute();
@@ -99,3 +54,4 @@
  openFounderPopup=()=>{};founderPopup.classList.remove('open');founderPopup.setAttribute('aria-hidden','true');
  const returnStory=new URLSearchParams(location.search).get('community_story');if(returnStory&&window.DSB_COMMUNITY_CONFIG?.enabled)article(returnStory,false);else if(location.hash.startsWith('#/'))openRoute(location.hash.slice(2),false);
 })();
+

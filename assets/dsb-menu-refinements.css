@@ -99,3 +99,13 @@ body [data-travel-open].dsb-silver:hover{animation:dsb-travel-bounce .75s ease-i
 @media(prefers-reduced-motion:reduce){body [data-travel-open].dsb-silver,body [data-travel-open].dsb-silver:hover{animation:none;transform:none}body [data-travel-open].dsb-silver::after{animation:none}}
 
 body[data-theme] #musicPanel .dsb-select-trigger{color:var(--dsb-picker-fg);background:var(--dsb-picker-bg)}
+
+
+/* A clear introduction, with no decorative rule crossing the shade hands. */
+.mobile-menu .menu-personalization{display:grid!important;grid-template-columns:1fr;gap:10px;align-items:start;padding:18px 0 24px;margin-bottom:22px;border-top:0!important}
+.mobile-menu .menu-personalization h2{margin:0!important;padding:0!important;border:0!important;line-height:1.4;font:18px Georgia;color:inherit}
+.mobile-menu .menu-personalization h2::before,.mobile-menu .menu-personalization h2::after{display:none!important}
+.mobile-menu .shade-intro p{font:12px/1.5 Georgia;color:inherit;opacity:.8;margin:4px 0 0}.mobile-menu .shade-options{margin:0;flex-wrap:wrap}.mobile-menu .shade-options button{width:44px;height:44px;display:grid;place-items:center;padding:5px;font-size:25px}.mobile-menu .shade-status{margin:0;min-height:18px}
+.commerce-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.commerce-tabs button{min-height:44px;padding:12px 18px;font:15px Georgia;color:#f7e6ce;border:1px solid #b58960;background:#2e1e13;cursor:pointer}.commerce-tabs button.active{background:linear-gradient(115deg,#603b23,#ab7145,#603b23);color:#fff4df;box-shadow:0 4px 13px #0004}.merchant-profile summary{cursor:pointer;font:15px Georgia;color:inherit}.merchant-profile p{font-size:14px;line-height:1.6}.merchant-profile a{display:inline-block;margin-top:8px}.commerce-actions{display:block}
+body[data-theme=light] .commerce-tabs button{color:#342317;background:#f2e6d6}body[data-theme=light] .commerce-tabs button.active{color:#fff3df;background:#795032}
+@media(max-width:680px){body .site-header{height:auto;min-height:96px;display:grid;grid-template-columns:1fr;padding:8px 14px;gap:7px}body .site-header .brand{justify-content:center}body .site-header .brand-logo{width:34px;height:34px}body .header-actions{justify-content:center;gap:8px}body .header-actions :is(.header-tool-btn,.icon-btn,.menu-btn){height:32px}body .music-panel{top:104px;max-height:calc(100dvh - 116px)}.commerce-tabs{gap:7px}.commerce-tabs button{padding:10px 12px;font-size:14px}}
