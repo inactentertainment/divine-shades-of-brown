@@ -1,0 +1,374 @@
+{
+  "amazon": {
+    "affiliateEnabled": false
+  },
+  "books": {
+    "narrative-of-the-life-of-frederick-douglass": {
+      "amazonUrl": null,
+      "freeRead": {
+        "url": "https://www.gutenberg.org/ebooks/23",
+        "label": "Read for free",
+        "provider": "Project Gutenberg",
+        "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
+        "checkedAt": "2026-10-12"
+      }
+    },
+    "beloved": {
+      "amazonUrl": null
+    },
+    "the-souls-of-black-folk": {
+      "amazonUrl": null,
+      "freeRead": {
+        "url": "https://www.gutenberg.org/ebooks/408",
+        "label": "Read for free",
+        "provider": "Project Gutenberg",
+        "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
+        "checkedAt": "2026-10-12"
+      }
+    },
+    "their-eyes-were-watching-god": {
+      "amazonUrl": null
+    },
+    "things-fall-apart": {
+      "amazonUrl": null
+    },
+    "the-autobiography-of-malcolm-x": {
+      "amazonUrl": null
+    },
+    "the-fire-next-time": {
+      "amazonUrl": null
+    },
+    "invisible-man": {
+      "amazonUrl": null
+    },
+    "the-color-purple": {
+      "amazonUrl": null
+    },
+    "kindred": {
+      "amazonUrl": null
+    },
+    "incidents-in-the-life-of-a-slave-girl": {
+      "amazonUrl": null,
+      "freeRead": {
+        "url": "https://www.gutenberg.org/ebooks/11030",
+        "label": "Read for free",
+        "provider": "Project Gutenberg",
+        "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
+        "checkedAt": "2026-10-12"
+      }
+    },
+    "black-reconstruction-in-america": {
+      "amazonUrl": null
+    },
+    "the-wretched-of-the-earth": {
+      "amazonUrl": null
+    },
+    "discourse-on-colonialism": {
+      "amazonUrl": null
+    },
+    "how-europe-underdeveloped-africa": {
+      "amazonUrl": null
+    },
+    "from-slavery-to-freedom": {
+      "amazonUrl": null
+    },
+    "the-new-jim-crow": {
+      "amazonUrl": null
+    },
+    "the-warmth-of-other-suns": {
+      "amazonUrl": null
+    },
+    "the-miseducation-of-the-negro": {
+      "amazonUrl": null
+    },
+    "stamped-from-the-beginning": {
+      "amazonUrl": null
+    },
+    "the-bluest-eye": {
+      "amazonUrl": null
+    },
+    "song-of-solomon": {
+      "amazonUrl": null
+    },
+    "sula": {
+      "amazonUrl": null
+    },
+    "go-tell-it-on-the-mountain": {
+      "amazonUrl": null
+    },
+    "giovanni-s-room": {
+      "amazonUrl": null
+    },
+    "native-son": {
+      "amazonUrl": null
+    },
+    "black-boy": {
+      "amazonUrl": null
+    },
+    "passing": {
+      "amazonUrl": null,
+      "freeRead": {
+        "url": "https://standardebooks.org/ebooks/nella-larsen/short-fiction",
+        "label": "Read for free",
+        "provider": "Standard Ebooks",
+        "rightsNote": "Passing is included in this free Short Fiction collection. Public domain in the United States; check local copyright rules outside the U.S.",
+        "checkedAt": "2026-10-12"
+      }
+    },
+    "cane": {
+      "amazonUrl": null,
+      "freeRead": {
+        "url": "https://www.gutenberg.org/ebooks/60093",
+        "label": "Read for free",
+        "provider": "Project Gutenberg",
+        "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
+        "checkedAt": "2026-10-12"
+      }
+    },
+    "a-raisin-in-the-sun": {
+      "amazonUrl": null
+    },
+    "fences": {
+      "amazonUrl": null
+    },
+    "for-colored-girls-who-have-considered-suicide-when-the-rainbow-is-enuf": {
+      "amazonUrl": null
+    },
+    "i-know-why-the-caged-bird-sings": {
+      "amazonUrl": null
+    },
+    "zami-a-new-spelling-of-my-name": {
+      "amazonUrl": null
+    },
+    "sister-outsider": {
+      "amazonUrl": null
+    },
+    "women-race-class": {
+      "amazonUrl": null
+    },
+    "ain-t-i-a-woman-black-women-and-feminism": {
+      "amazonUrl": null
+    },
+    "all-about-love": {
+      "amazonUrl": null
+    },
+    "teaching-to-transgress": {
+      "amazonUrl": null
+    },
+    "freedom-is-a-constant-struggle": {
+      "amazonUrl": null
+    },
+    "parable-of-the-sower": {
+      "amazonUrl": null
+    },
+    "parable-of-the-talents": {
+      "amazonUrl": null
+    },
+    "dawn": {
+      "amazonUrl": null
+    },
+    "the-fifth-season": {
+      "amazonUrl": null
+    },
+    "who-fears-death": {
+      "amazonUrl": null
+    },
+    "binti": {
+      "amazonUrl": null
+    },
+    "the-deep": {
+      "amazonUrl": null
+    },
+    "black-leopard-red-wolf": {
+      "amazonUrl": null
+    },
+    "brown-girl-in-the-ring": {
+      "amazonUrl": null
+    },
+    "americanah": {
+      "amazonUrl": null
+    },
+    "half-of-a-yellow-sun": {
+      "amazonUrl": null
+    },
+    "purple-hibiscus": {
+      "amazonUrl": null
+    },
+    "a-brief-history-of-seven-killings": {
+      "amazonUrl": null
+    },
+    "the-book-of-night-women": {
+      "amazonUrl": null
+    },
+    "breath-eyes-memory": {
+      "amazonUrl": null
+    },
+    "krik-krak": {
+      "amazonUrl": null
+    },
+    "in-the-castle-of-my-skin": {
+      "amazonUrl": null
+    },
+    "the-black-jacobins": {
+      "amazonUrl": null
+    },
+    "the-lonely-londoners": {
+      "amazonUrl": null
+    },
+    "small-island": {
+      "amazonUrl": null
+    },
+    "girl-woman-other": {
+      "amazonUrl": null
+    },
+    "homegoing": {
+      "amazonUrl": null
+    },
+    "transcendent-kingdom": {
+      "amazonUrl": null
+    },
+    "we-need-new-names": {
+      "amazonUrl": null
+    },
+    "nervous-conditions": {
+      "amazonUrl": null
+    },
+    "so-long-a-letter": {
+      "amazonUrl": null
+    },
+    "when-rain-clouds-gather": {
+      "amazonUrl": null
+    },
+    "petals-of-blood": {
+      "amazonUrl": null
+    },
+    "decolonising-the-mind": {
+      "amazonUrl": null
+    },
+    "the-famished-road": {
+      "amazonUrl": null
+    },
+    "the-joys-of-motherhood": {
+      "amazonUrl": null
+    },
+    "long-walk-to-freedom": {
+      "amazonUrl": null
+    },
+    "born-a-crime": {
+      "amazonUrl": null
+    },
+    "i-write-what-i-like": {
+      "amazonUrl": null
+    },
+    "black-skin-white-masks": {
+      "amazonUrl": null
+    },
+    "between-the-world-and-me": {
+      "amazonUrl": null
+    },
+    "just-mercy": {
+      "amazonUrl": null
+    },
+    "the-autobiography-of-an-ex-colored-man": {
+      "amazonUrl": null,
+      "freeRead": {
+        "url": "https://www.gutenberg.org/ebooks/11012",
+        "label": "Read for free",
+        "provider": "Project Gutenberg",
+        "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
+        "checkedAt": "2026-10-12"
+      }
+    },
+    "up-from-slavery": {
+      "amazonUrl": null,
+      "freeRead": {
+        "url": "https://www.gutenberg.org/ebooks/2376",
+        "label": "Read for free",
+        "provider": "Project Gutenberg",
+        "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
+        "checkedAt": "2026-10-12"
+      }
+    },
+    "assata-an-autobiography": {
+      "amazonUrl": null
+    },
+    "the-salt-eaters": {
+      "amazonUrl": null
+    },
+    "the-women-of-brewster-place": {
+      "amazonUrl": null
+    },
+    "corregidora": {
+      "amazonUrl": null
+    },
+    "mama-day": {
+      "amazonUrl": null
+    },
+    "salvage-the-bones": {
+      "amazonUrl": null
+    },
+    "sing-unburied-sing": {
+      "amazonUrl": null
+    },
+    "the-underground-railroad": {
+      "amazonUrl": null
+    },
+    "the-nickel-boys": {
+      "amazonUrl": null
+    },
+    "an-american-marriage": {
+      "amazonUrl": null
+    },
+    "the-street": {
+      "amazonUrl": null
+    },
+    "the-known-world": {
+      "amazonUrl": null
+    },
+    "the-sellout": {
+      "amazonUrl": null
+    },
+    "the-intuitionist": {
+      "amazonUrl": null
+    },
+    "citizen-an-american-lyric": {
+      "amazonUrl": null
+    },
+    "don-t-call-us-dead": {
+      "amazonUrl": null
+    },
+    "selected-poems-of-langston-hughes": {
+      "amazonUrl": null
+    },
+    "the-collected-poems-of-lucille-clifton-1965-2010": {
+      "amazonUrl": null
+    },
+    "the-collected-poems-of-audre-lorde": {
+      "amazonUrl": null
+    },
+    "the-poet-x": {
+      "amazonUrl": null
+    },
+    "brown-girl-dreaming": {
+      "amazonUrl": null
+    },
+    "they-dream-in-gold": {
+      "amazonUrl": null
+    },
+    "ode-to-keisha": {
+      "amazonUrl": null
+    },
+    "saddest-angriest-black-girl": {
+      "amazonUrl": null
+    },
+    "kin": {
+      "amazonUrl": null
+    },
+    "dream-count": {
+      "amazonUrl": null
+    },
+    "good-dirt": {
+      "amazonUrl": null
+    }
+  }
+}

@@ -33,3 +33,15 @@ body.comfort-still #page-tools *{animation:none!important;transition:none!import
 body.ie-reader #page-tools #read-settings :is(select,textarea){background:#26190f!important;color:#f4e7d5!important;border-color:#ad805e!important}body.ie-reader:not([data-comfort-shade=off]) #page-tools #read-settings :is(select,textarea){background:#fff6e7!important;color:#342317!important}#ie-comfort-panel button[aria-pressed=true]{outline:2px solid #d5a56d}body.ie-reader:not([data-comfort-shade=off]) #ie-comfort-panel button[aria-pressed=true]{outline-color:#70452e}#page-tools>.light-toggle[data-tooltip]::after{left:0;transform:none}#page-tools .reader-right>button:last-child::after{left:auto;right:0;transform:none}
 
 @media(prefers-reduced-motion:reduce){#page-tools #ie-comfort-panel{transform:translate(-50%,-50%)!important}}
+
+
+/* October refinement: bare symbols, with the same seven hit targets and popups. */
+body.ie-reader #page-tools{backdrop-filter:none;min-height:38px;padding-block:3px calc(3px + env(safe-area-inset-bottom));background:#21150ff5;color:#fff0dc}
+body.ie-reader[data-theme=light] #page-tools{background:#f3e8d8f5;color:#342317}
+body.ie-reader #page-tools :is(.light-toggle,.reader-utilities>button,.reader-right>button){height:28px!important;min-height:28px!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:inherit!important;padding:4px!important;animation:none!important;transition:transform .18s,opacity .18s}
+body.ie-reader #page-tools :is(.light-toggle,.reader-utilities>button,.reader-right>button):is(:hover,:focus-visible){background:none!important;box-shadow:none!important;animation:none!important;transform:translateY(-2px)}
+body.ie-reader #page-tools :is(.light-toggle,.reader-utilities>button,.reader-right>button)[data-playing=true]{color:#e8b77c!important}
+body.ie-reader[data-theme=light] #page-tools :is(.light-toggle,.reader-utilities>button,.reader-right>button)[data-playing=true]{color:#6b3d1d!important}
+#page-tools svg{width:19px;height:19px;stroke-width:1.6}
+body.ie-reader #page-tools :is(.light-toggle,.reader-utilities>button,.reader-right>button):focus-visible{outline:2px solid currentColor!important;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){body.ie-reader #page-tools :is(.light-toggle,.reader-utilities>button,.reader-right>button):is(:hover,:focus-visible){transform:none!important}}

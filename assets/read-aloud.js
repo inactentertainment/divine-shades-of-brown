@@ -33,12 +33,19 @@ function mark(part,index=null){
  const first=word||part.words[0],last=word||part.words.at(-1);if(!first?.node.isConnected||!last?.node.isConnected)return;
  const range=document.createRange();range.setStart(first.node,first.start);range.setEnd(last.node,last.end);window.CSS.highlights.set(word?'read-word':'read-passage',new window.Highlight(range));follow(range);
 }
-function populate(){const selected=find('read-voice').value;voices=synth.getVoices();const english=voices.filter(v=>/^en\b/i.test(v.lang));const list=english.length?english:voices;find('read-voice').replaceChildren(new Option('Browser default',''));for(const v of list)find('read-voice').append(new Option(v.name+' ('+v.lang+')',v.voiceURI));if(list.some(v=>v.voiceURI===selected))find('read-voice').value=selected;}
+function populate(){
+ const selected=find('read-voice').value;voices=synth.getVoices();const english=voices.filter(v=>/^en(?:[-_]|$)/i.test(v.lang));const locales=['en-ng','en-ke','en-za','en-gh','en-jm','en-tt','en-bb','en-bs','en-bz','en-gy'];
+ const preferred=v=>locales.indexOf(String(v.lang).replace('_','-').toLowerCase()),base=english.length?english:voices,list=[...base].sort((a,b)=>{const ai=preferred(a),bi=preferred(b);return (ai<0?99:ai)-(bi<0?99:bi)});let savedVoice;
+ try{const prefs=JSON.parse(localStorage.getItem('dsb-reader:v2')||'{}');if(Object.hasOwn(prefs,'read-voice'))savedVoice=prefs['read-voice']}catch{}
+ const regional=list.filter(v=>preferred(v)>=0);find('read-voice').replaceChildren(new Option('Browser default',''));for(const v of list)find('read-voice').append(new Option(v.name+' ('+v.lang+')'+(preferred(v)>=0?' · African / Caribbean English':''),v.voiceURI));
+ if(savedVoice!==undefined)find('read-voice').value=list.some(v=>v.voiceURI===savedVoice)?savedVoice:'';else if(regional.length)find('read-voice').value=regional[0].voiceURI;else if(list.some(v=>v.voiceURI===selected))find('read-voice').value=selected;
+ let note=find('read-voice-availability');if(!note){note=document.createElement('p');note.id='read-voice-availability';find('read-voice').after(note)}note.textContent=regional.length?'Available African and Caribbean English accents appear first. Your selected voice is remembered in this browser.':'Voices come from this browser and device. African and Caribbean English accents will appear first if available.';
+}
 populate();events(synth,'voiceschanged',populate);
 function paint(){find('read-label').textContent=state==='playing'?'Pause':state==='paused'?'Resume':'Read aloud';find('read-symbol').textContent=state==='playing'?'Ⅱ':'▶';play.setAttribute('aria-label',state==='playing'?'Pause reading':state==='paused'?'Resume reading':'Read this page aloud');stop.disabled=state==='idle';box.dataset.state=state;}
 function clear(){if(active)active.classList.remove('read-active');active=null;if(highlights){window.CSS.highlights.delete('read-word');window.CSS.highlights.delete('read-passage')}}
 function halt(message='Stopped. Press Read aloud to start again.'){token++;state='idle';synth.cancel();current=null;clear();position=0;status.textContent=message;paint();}
-function speak(){if(state!=='playing')return;if(position>=chunks.length){halt('Finished reading.');return;}clear();const part=chunks[position];if(!part.element.isConnected){position++;speak();return}active=part.element;active.classList.add('read-active');current=new SpeechSynthesisUtterance(part.text);current.lang=document.documentElement.lang||'en';current.rate=Number(find('read-rate').value);current.voice=voices.find(v=>v.voiceURI===find('read-voice').value)||null;const session=token,utterance=current;
+function speak(){if(state!=='playing')return;if(position>=chunks.length){halt('Finished reading.');return;}clear();const part=chunks[position];if(!part.element.isConnected){position++;speak();return}active=part.element;active.classList.add('read-active');current=new SpeechSynthesisUtterance(part.text);current.lang=(voices.find(v=>v.voiceURI===find('read-voice').value)?.lang)||document.documentElement.lang||'en';current.rate=Number(find('read-rate').value);current.voice=voices.find(v=>v.voiceURI===find('read-voice').value)||null;const session=token,utterance=current;
  current.onstart=()=>{if(token!==session||current!==utterance)return;mark(part)};
  current.onboundary=e=>{if(token!==session||current!==utterance||state!=='playing'||e.name==='sentence'||!Number.isFinite(e.charIndex))return;mark(part,e.charIndex);status.textContent='Listening · '+Math.round(position/chunks.length*100)+'% · '+(highlights?'word highlighting':'passage highlighting')};
  current.onend=()=>{if(token!==session||current!==utterance)return;position++;current=null;if(state==='playing')speak()};
@@ -50,3 +57,4 @@ find('read-rate').onchange=()=>{if(state!=='idle'){const at=position;start(at,fa
 events(window,'pagehide',()=>halt());events(document.querySelector('#audio'),'play',()=>{if(state!=='idle')halt('Reading stopped while music plays.');});events(document,'keydown',e=>{if(e.key==='Escape'&&!settings.hidden){settings.hidden=true;find('read-options').setAttribute('aria-expanded','false');find('read-options').focus();}});paint();
 return ()=>{halt();listeners.forEach(fn=>fn());box.remove()};
 };
+

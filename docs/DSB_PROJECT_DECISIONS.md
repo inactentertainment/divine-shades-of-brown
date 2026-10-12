@@ -57,3 +57,12 @@ Lock in the journal placement: understated 3D inline card with a soft fade/shado
 - Movies: independently ordered 100-film canon, 12 initially and ten more per click, category/search, two original lesson paragraphs and question per film, four selected recent released films. Real trailer IDs matched with live oEmbed title/channel metadata. Runtime/regional embedding remains subject to publisher restrictions. No unverified channel ownership claims.
 - Atlas finds places/services, Shop discovers brands and DSB resources, Travel explores destinations. Remove promoted broad competitor directories/marketplaces from Shop and primary Atlas discovery. Direct merchant introductions open onsite; external official stores require an explicit reader action. Keep actual institutional help/source links.
 - Public counters are not simulated. Media reactions/favorites and reading notes remain browser-local until a shared service is connected.
+
+
+## 12 October 2026 — icon bar and book presentation refinement
+- Reading & Comfort Bar uses the existing seven symbols without visible boxes. Bar minimum height 38px, theme-aware icon color, existing hover labels and centered option panels unchanged.
+- Real book cover images use object-fit:contain, preserving all edges and proportions. Shimmering bronze rank stamps sit above the covers, including previews and individual guides.
+- Guide sidebar keeps Want to Read / Reading / Finished, followed by Read for free where a legal full edition is verified, then See details on Amazon. All cover actions have bronze finishes and separated small hover movement. Tall cover/action columns flow with the page.
+- Seven verified U.S. public-domain editions linked; Passing is explicitly described as included in a complete short-fiction collection. New tabs preserve DSB.
+- Amazon book-link slots are prepared for all 106 books. They remain inactive until real product links are supplied. Affiliate mode remains off; when activated it adds visible paid-link disclosure and the required Associate statement near the link. No Amazon logos, prices or API-sourced content.
+- Browser-provided African/Caribbean English locales appear first and a regional voice becomes the default only if available and no explicit preference exists. Existing choices, Browser default and unavailable-speech fallback are preserved. No paid speech API, new account or per-read service charge. Voice names/locales do not verify racial identity.
