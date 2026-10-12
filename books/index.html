@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1b110c">
+<title>Brown’s Book Club | Divine Shades of Brown</title>
+<meta name="description" content="Enter Brown’s Book Club: the DSB 100, Black literary voices, thoughtful reading guides and a personal reading shelf. A Divine Shades of Brown reading hall.">
+<link rel="icon" href="../favicon.ico"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+<!-- Requested CDN utilities; the authored stylesheet also supplies every essential layout. -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="books.css?v=1">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('dsb-theme')||'dark'}catch{document.documentElement.dataset.theme='dark'}</script>
+</head>
+<body class="antialiased">
+<a class="skip-link" href="#main">Skip to the book hall</a>
+<header class="club-header">
+ <a class="brand" href="../index.html" aria-label="Return to Divine Shades of Brown"><img src="../assets/dsb-logo.webp" alt="" width="54" height="54"><span><strong>DIVINE SHADES</strong><small>OF BROWN</small></span></a>
+ <nav aria-label="Book hall navigation"><a href="#shelf">Books</a><a href="#essay">Why We Must Read</a><button id="myShelfButton">My Reading Shelf <span id="shelfTotal">0</span></button></nav>
+ <button id="lightsButton" class="lights" aria-label="Toggle lights">◐ <span>Lights on</span></button>
+</header>
+<div class="search-ribbon"><div class="search-inner"><label for="bookSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><span class="sr-only">Search the active shelf</span></label><input id="bookSearch" type="search" placeholder="Search this shelf: title, author, theme or year…" autocomplete="off"><span id="searchScope">THE DSB 100</span><button id="clearSearch" aria-label="Clear search" hidden>×</button></div></div>
+<main id="main" tabindex="-1" class="relative">
+<div id="hallView">
+ <section class="club-hero">
+  <div class="hero-copy"><p class="eyebrow">THE READING HALL · DIVINE SHADES OF BROWN</p><h1>Brown’s<br><em>Book Club.</em></h1><p class="hero-deck">Read beyond the cover.<br>Carry something forward.</p><p class="hero-intro">A hundred essential books. Stories across the diaspora. A place to think deeply, find your next read, and make the knowledge your own.</p><div class="hero-actions flex flex-wrap items-center"><a class="signature-button" href="#shelf">Enter the DSB 100 <span>↗</span></a><a class="quiet-link" href="#essay">Start with our story →</a></div></div>
+  <div class="hero-library" aria-label="Three opening selections from the DSB 100"><div class="halo"></div><div class="hero-book hero-book-back"><small>NO. 03 · W. E. B. DU BOIS</small><strong>The Souls<br>of Black Folk</strong><span>A language for belonging.</span></div><div class="hero-book hero-book-middle"><small>NO. 02 · TONI MORRISON</small><strong>Beloved</strong><span>Memory refuses to leave.</span></div><div class="hero-book hero-book-front"><small>NO. 01</small><strong>Narrative<br>of the Life<br>of Frederick<br>Douglass</strong><span>Freedom begins with a voice.</span><b>FREDERICK DOUGLASS</b></div><p class="hero-art-note">DSB shelf artwork · published covers appear in the collection</p></div>
+ </section>
+ <section class="opening-feature" aria-labelledby="openingTitle"><span class="feature-number">01</span><div><p class="eyebrow">THE OPENING STORY · WAYNE WILLIAMS</p><h2 id="openingTitle">They feared us reading.<br><em>We cannot afford to stop.</em></h2><p>Why would a system fear a person learning to read? Follow the evidence, the resistance, and the responsibility we carry into this room.</p></div><a class="signature-button" href="#essay">Read the story <span>↗</span></a></section>
+ <section class="reading-compass" aria-labelledby="compassTitle"><div><p class="eyebrow">ONE QUESTION. YOUR NEXT READ.</p><h2 id="compassTitle">What are you looking for?</h2></div><div class="compass-options flex flex-wrap" role="group" aria-label="Find a starting book"><button data-compass="history">Understand our history</button><button data-compass="fiction">A story that stays with me</button><button data-compass="future">Imagine another future</button><button data-compass="short">Something shorter</button><button data-compass="young">A younger reader’s doorway</button></div><div id="compassResult" role="status" hidden></div></section>
+ <section id="shelf" class="shelf-section" aria-labelledby="shelfHeading">
+  <div class="shelf-heading"><div><p class="eyebrow">CURATED WITH PURPOSE</p><h2 id="shelfHeading">The DSB 100</h2></div><p id="shelfDeck">Our editorial reading sequence—not a sales chart. Begin anywhere. Every number keeps its place.</p></div>
+  <div class="shelf-tabs" role="tablist" aria-label="Choose a book collection"><button id="tabCanon" role="tab" data-tab="canon" aria-controls="bookPanel" aria-selected="true" tabindex="0">The DSB 100 <small>THE ESSENTIAL SHELF</small></button><button id="tabIndie" role="tab" data-tab="indie" aria-controls="bookPanel" aria-selected="false" tabindex="-1">Independent & Rising Voices <small>DISCOVER ANOTHER VOICE</small></button><button id="tabNew" role="tab" data-tab="new" aria-controls="bookPanel" aria-selected="false" tabindex="-1">New & Noteworthy <small>SELECTED RECENT BOOKS</small></button></div>
+  <section id="bookPanel" role="tabpanel" aria-labelledby="tabCanon">
+   <div id="indieSpotlight" hidden></div>
+   <div class="shelf-controls"><details class="category-menu" id="categoryMenu"><summary>Category <span id="categoryLabel">All books</span> ⌄</summary><div id="categoryOptions" class="category-options" role="group" aria-label="Filter by category"></div></details><button id="resetFilters" class="quiet-button">Reset filters</button><p id="resultCount" aria-live="polite" role="status">Loading the collection…</p></div>
+   <div id="shelfNotice" class="shelf-notice"></div><div id="bookGrid" class="book-grid"></div><div id="catalogDiscoveries"></div>
+  </section>
+ </section>
+ <section class="club-principles"><p class="eyebrow">THE AGREEMENT IN THIS ROOM</p><div class="principles-grid"><article><span>01</span><h3>Read with curiosity.</h3><p>The number is an invitation. Your first book can be number one or number ninety-nine.</p></article><article><span>02</span><h3>Question with care.</h3><p>Our takes are interpretations. Test them against the work, the context, and your own thoughtful reading.</p></article><article><span>03</span><h3>Keep what changes you.</h3><p>A question, a connection, a new way of seeing. Your Reading Shelf keeps private notes on this device.</p></article></div><details class="methodology"><summary>How we chose and ordered the DSB 100</summary><p>DSB’s founding selection considers cultural and historical significance, expressive craft, enduring questions, variety of forms and experiences, and useful connections between books. It is an editorial judgment, not a universal consensus, popularity poll or purchasing requirement.</p><p>The sequence opens with literacy and testimony, moves through memory and institutions, makes room for speculative futures and diaspora connections, and ends with poetry and younger readers’ doorways. Repeated authors offer contrasting forms and questions. Categories are browsing labels, not claims that a work has only one identity.</p><p>Years refer to original publication where identified; translations and later editions may differ. Public catalog records are cross-checked where possible, and inconsistent imported dates are not used to replace known original dates. Reading guides introduce themes and critical questions; they do not reproduce the books. This is a fixed founding collection. Independent voices receive an editorial refresh annually; recent releases are selected periodically.</p></details></section>
+</div>
+<section id="readingView" class="reading-view" hidden aria-label="Full reading page"></section>
+<section id="personalView" class="personal-view" hidden aria-label="My Reading Shelf"></section>
+<div id="loadError" class="load-error" role="alert" hidden><h2>The shelf could not load.</h2><p>Please reload the page. Your private notes remain on this device.</p><button class="signature-button" onclick="location.reload()">Reload the shelf</button></div>
+<noscript><p class="load-error">Enable JavaScript to search the collection and use your Reading Shelf.</p></noscript>
+</main>
+<footer id="clubFooter"><a class="brand" href="../index.html"><img src="../assets/dsb-logo.webp" alt="DSB" width="48" height="48"><span><strong>DIVINE SHADES OF BROWN</strong><small>BLACK LIFE. CONNECTED.</small></span></a><p>Read deeply. Keep learning. Carry something forward.</p><div class="footer-links"><a href="../index.html">Our World</a><a href="../index.html#/journal">DSB Journal</a><a href="../index.html#/resources">Resources</a><a href="../index.html#/membership">Membership</a><a href="../index.html#/document/privacy">Privacy</a></div><small>© <span id="copyrightYear">2026</span> Divine Shades of Brown · InAct Entertainment LLC.</small></footer>
+<dialog id="bookModal" class="book-modal" aria-labelledby="modalTitle"><button class="modal-close" aria-label="Close book preview">×</button><div id="modalContent"></div></dialog>
+<p id="clubStatus" class="club-status" role="status" aria-live="polite"></p>
+<script src="review-api.js?v=1"></script><script type="module" src="books.js?v=1"></script>
+</body></html>

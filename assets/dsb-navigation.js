@@ -4,7 +4,7 @@
   const baseOpen = openRoute, baseClose = closeRoute;
   const sections = {'dsb-select':['dsb-select'],essentials:['essentials'],history:['history'],travel:['beyond-horizon','travel','unexpected-america'],resources:['resources','resource-vault'],'resource-vault':['resource-vault'],shop:['shop'],membership:['membership','member-value'],'unexpected-america':['unexpected-america']};
   const labels = {'dsb-select':'DSB SELECT',essentials:'BLACK LIFE ESSENTIALS',history:'HISTORY',travel:'TRAVEL',resources:'RESOURCES & VAULT','resource-vault':'RESOURCE VAULT',shop:'SHOP',membership:'MEMBERSHIP','unexpected-america':'UNEXPECTED AMERICA'};
-  const supported = new Set(['atlas','opportunities','pulse','journal','help','dashboard',...Object.keys(sections),'lifebook','calendar']);
+  const supported = new Set(['atlas','opportunities','pulse','journal','help','dashboard',...Object.keys(sections),'lifebook','calendar','books']);
   let parked = [], originScroll=0, active='';
   const menu = document.getElementById('mobileMenu');
   function hideMenu(){ menu.classList.remove('open');menu.setAttribute('aria-hidden','true');document.getElementById('menuBtn').setAttribute('aria-expanded','false'); }
@@ -16,6 +16,7 @@
   openRoute = function(raw,push=true){
     const [name,article]=String(raw).split('/');
     if(name==='membership'){if(document.getElementById('musicPanel')?.classList.contains('open'))document.getElementById('musicClose')?.click();const popup=document.getElementById('founderPopup');popup?.classList.remove('open');popup?.setAttribute('aria-hidden','true');}
+    if(name==='books'){location.href='books/';return;}
     if(name==='entertainment'){location.href='entertainment.html';return;}
     if(!supported.has(name))return;
     if(!active)originScroll=window.scrollY;
@@ -69,6 +70,7 @@
   const closeArticle=closeModal;
   closeModal=function(){closeArticle();if(location.hash.startsWith('#/journal/'))history.replaceState({route:'journal'},'',location.pathname+location.search+'#/journal');};
   document.getElementById('modalClose').onclick=()=>closeModal();
+  searchIndex.push(['Books','Brown’s Book Club · The DSB 100, independent authors and reading guides','#books']);
   searchIndex.push(['My calendar','LifeBook dates, events and milestones','#calendar'],['My DSB','Saved businesses and articles, Black Receipt','#dashboard'],['Personal journal','LifeBook reflection entries and family stories','#lifebook']);
   const tone=document.getElementById('dsbEmojiTone'),key='dsb-emoji-tone';
   const tones=new Set(['🏻','🏼','🏽','🏾','🏿']);
@@ -79,3 +81,4 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('open')&&(routeLayer.classList.contains('open')||lbModal.classList.contains('open'))&&!menu.classList.contains('open'))closeRoute();});
   if(location.hash.startsWith('#/'))openRoute(location.hash.slice(2),false);
 })();
+

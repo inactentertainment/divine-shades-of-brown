@@ -41,3 +41,10 @@ The available free Supabase organization ie has only Basketball Brilliance and C
 ## Music expansion and themed menus
 
 Add Hip Hop/Rap, Psychedelic Rock and Heavy Metal; retain R&B separately. Each genre starts with 12 selections and adds ten with See more. Speeches occupies a wide bottom button and starts with a suggested Top Ten with selection reasons. Keep Back available. Theme all select menus, including mobile native replacements, with light/dark brown palettes. Travel Experiences uses the bronze/copper signature with shimmer, floating and hover bounce. Membership navigation stays standalone, slimmer, and elegantly cursive. Existing pricing, payments, core layouts and tools are preserved.
+
+
+## Brown's Book Club — main reading hall
+
+User authorized building the book hall now. Provisional short name Brown's Book Club; navigation label Books. Urgent opening editorial “They Feared Us Reading. We Cannot Afford to Stop.” by Wayne Williams, sourced on literacy restrictions, resistance and community learning. DSB 100 fixed and separately ranked; Independent & Rising Voices and selected New & Noteworthy shelves remain separate. Independent editorial refresh roughly annually; recent additions periodically. Remove confusing prescribed 12/one-year/two-year plans in favor of a simple private reading shelf, notes and compass.
+
+Lock in the journal placement: understated 3D inline card with a soft fade/shadow, inserted about one-third through every book guide, gentle journal copy and disabled download/purchase button for now. Youth journal/free-download possibility remains for a later product connection. User's new reader/comfort bar is still being designed and will be supplied later; prepare integration without asserting that bar is complete. Private accountless actions are available immediately; real cross-visitor anonymous counters need connected moderated storage and must never be faked. Canon guides can be deepened toward 2,000 words as editorial content grows; original analysis should encourage engagement with the books rather than copying or replacing them.
