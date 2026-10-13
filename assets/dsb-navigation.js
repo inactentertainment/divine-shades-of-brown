@@ -16,7 +16,7 @@
   openRoute = function(raw,push=true){
     const [name,article]=String(raw).split('/');
     if(name==='membership'){if(document.getElementById('musicPanel')?.classList.contains('open'))document.getElementById('musicClose')?.click();const popup=document.getElementById('founderPopup');popup?.classList.remove('open');popup?.setAttribute('aria-hidden','true');}
-    if(name==='books'){location.href='books/';return;}
+    if(name==='books'){location.href='library/';return;}
     if(name==='entertainment'){location.href='entertainment.html';return;}
     if(!supported.has(name))return;
     if(!active)originScroll=window.scrollY;
@@ -70,7 +70,7 @@
   const closeArticle=closeModal;
   closeModal=function(){closeArticle();if(location.hash.startsWith('#/journal/'))history.replaceState({route:'journal'},'',location.pathname+location.search+'#/journal');};
   document.getElementById('modalClose').onclick=()=>closeModal();
-  searchIndex.push(['Books','Brown’s Book Club · The DSB 100, independent authors and reading guides','#books']);
+  searchIndex.push(['Library','Adult books, children’s reading plans and Banned & Uncovered','#books']);
   searchIndex.push(['My calendar','LifeBook dates, events and milestones','#calendar'],['My DSB','Saved businesses and articles, Black Receipt','#dashboard'],['Personal journal','LifeBook reflection entries and family stories','#lifebook']);
   const tone=document.getElementById('dsbEmojiTone'),key='dsb-emoji-tone';
   const tones=new Set(['🏻','🏼','🏽','🏾','🏿']);
@@ -81,4 +81,5 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('open')&&(routeLayer.classList.contains('open')||lbModal.classList.contains('open'))&&!menu.classList.contains('open'))closeRoute();});
   if(location.hash.startsWith('#/'))openRoute(location.hash.slice(2),false);
 })();
+
 

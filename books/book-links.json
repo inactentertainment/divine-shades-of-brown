@@ -4,371 +4,1677 @@
   },
   "books": {
     "narrative-of-the-life-of-frederick-douglass": {
-      "amazonUrl": null,
+      "amazonUrl": "https://www.amazon.com/s?k=Narrative+of+the+Life+of+Frederick+Douglass+Frederick+Douglass&i=stripbooks",
       "freeRead": {
         "url": "https://www.gutenberg.org/ebooks/23",
         "label": "Read for free",
         "provider": "Project Gutenberg",
         "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
         "checkedAt": "2026-10-12"
-      }
+      },
+      "amazonMode": "search"
     },
     "beloved": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Beloved+Toni+Morrison&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-souls-of-black-folk": {
-      "amazonUrl": null,
+      "amazonUrl": "https://www.amazon.com/s?k=The+Souls+of+Black+Folk+W.+E.+B.+Du+Bois&i=stripbooks",
       "freeRead": {
         "url": "https://www.gutenberg.org/ebooks/408",
         "label": "Read for free",
         "provider": "Project Gutenberg",
         "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
         "checkedAt": "2026-10-12"
-      }
+      },
+      "amazonMode": "search"
     },
     "their-eyes-were-watching-god": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Their+Eyes+Were+Watching+God+Zora+Neale+Hurston&i=stripbooks",
+      "amazonMode": "search"
     },
     "things-fall-apart": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Things+Fall+Apart+Chinua+Achebe&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-autobiography-of-malcolm-x": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Autobiography+of+Malcolm+X+Malcolm+X+with+Alex+Haley&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-fire-next-time": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Fire+Next+Time+James+Baldwin&i=stripbooks",
+      "amazonMode": "search"
     },
     "invisible-man": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Invisible+Man+Ralph+Ellison&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-color-purple": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Color+Purple+Alice+Walker&i=stripbooks",
+      "amazonMode": "search"
     },
     "kindred": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Kindred+Octavia+E.+Butler&i=stripbooks",
+      "amazonMode": "search"
     },
     "incidents-in-the-life-of-a-slave-girl": {
-      "amazonUrl": null,
+      "amazonUrl": "https://www.amazon.com/s?k=Incidents+in+the+Life+of+a+Slave+Girl+Harriet+Jacobs&i=stripbooks",
       "freeRead": {
         "url": "https://www.gutenberg.org/ebooks/11030",
         "label": "Read for free",
         "provider": "Project Gutenberg",
         "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
         "checkedAt": "2026-10-12"
-      }
+      },
+      "amazonMode": "search"
     },
     "black-reconstruction-in-america": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Black+Reconstruction+in+America+W.+E.+B.+Du+Bois&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-wretched-of-the-earth": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Wretched+of+the+Earth+Frantz+Fanon&i=stripbooks",
+      "amazonMode": "search"
     },
     "discourse-on-colonialism": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Discourse+on+Colonialism+Aim%C3%A9+C%C3%A9saire&i=stripbooks",
+      "amazonMode": "search"
     },
     "how-europe-underdeveloped-africa": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=How+Europe+Underdeveloped+Africa+Walter+Rodney&i=stripbooks",
+      "amazonMode": "search"
     },
     "from-slavery-to-freedom": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=From+Slavery+to+Freedom+John+Hope+Franklin+with+Alfred+A.+Moss+Jr.+in+later+editions&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-new-jim-crow": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+New+Jim+Crow+Michelle+Alexander&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-warmth-of-other-suns": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Warmth+of+Other+Suns+Isabel+Wilkerson&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-miseducation-of-the-negro": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Mis-Education+of+the+Negro+Carter+G.+Woodson&i=stripbooks",
+      "amazonMode": "search"
     },
     "stamped-from-the-beginning": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Stamped+from+the+Beginning+Ibram+X.+Kendi&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-bluest-eye": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Bluest+Eye+Toni+Morrison&i=stripbooks",
+      "amazonMode": "search"
     },
     "song-of-solomon": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Song+of+Solomon+Toni+Morrison&i=stripbooks",
+      "amazonMode": "search"
     },
     "sula": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Sula+Toni+Morrison&i=stripbooks",
+      "amazonMode": "search"
     },
     "go-tell-it-on-the-mountain": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Go+Tell+It+on+the+Mountain+James+Baldwin&i=stripbooks",
+      "amazonMode": "search"
     },
     "giovanni-s-room": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Giovanni%27s+Room+James+Baldwin&i=stripbooks",
+      "amazonMode": "search"
     },
     "native-son": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Native+Son+Richard+Wright&i=stripbooks",
+      "amazonMode": "search"
     },
     "black-boy": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Black+Boy+Richard+Wright&i=stripbooks",
+      "amazonMode": "search"
     },
     "passing": {
-      "amazonUrl": null,
+      "amazonUrl": "https://www.amazon.com/s?k=Passing+Nella+Larsen&i=stripbooks",
       "freeRead": {
         "url": "https://standardebooks.org/ebooks/nella-larsen/short-fiction",
         "label": "Read for free",
         "provider": "Standard Ebooks",
         "rightsNote": "Passing is included in this free Short Fiction collection. Public domain in the United States; check local copyright rules outside the U.S.",
         "checkedAt": "2026-10-12"
-      }
+      },
+      "amazonMode": "search"
     },
     "cane": {
-      "amazonUrl": null,
+      "amazonUrl": "https://www.amazon.com/s?k=Cane+Jean+Toomer&i=stripbooks",
       "freeRead": {
         "url": "https://www.gutenberg.org/ebooks/60093",
         "label": "Read for free",
         "provider": "Project Gutenberg",
         "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
         "checkedAt": "2026-10-12"
-      }
+      },
+      "amazonMode": "search"
     },
     "a-raisin-in-the-sun": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=A+Raisin+in+the+Sun+Lorraine+Hansberry&i=stripbooks",
+      "amazonMode": "search"
     },
     "fences": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Fences+August+Wilson&i=stripbooks",
+      "amazonMode": "search"
     },
     "for-colored-girls-who-have-considered-suicide-when-the-rainbow-is-enuf": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=for+colored+girls+who+have+considered+suicide+%2F+when+the+rainbow+is+enuf+Ntozake+Shange&i=stripbooks",
+      "amazonMode": "search"
     },
     "i-know-why-the-caged-bird-sings": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=I+Know+Why+the+Caged+Bird+Sings+Maya+Angelou&i=stripbooks",
+      "amazonMode": "search"
     },
     "zami-a-new-spelling-of-my-name": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Zami%3A+A+New+Spelling+of+My+Name+Audre+Lorde&i=stripbooks",
+      "amazonMode": "search"
     },
     "sister-outsider": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Sister+Outsider+Audre+Lorde&i=stripbooks",
+      "amazonMode": "search"
     },
     "women-race-class": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Women%2C+Race+%26+Class+Angela+Y.+Davis&i=stripbooks",
+      "amazonMode": "search"
     },
     "ain-t-i-a-woman-black-women-and-feminism": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Ain%27t+I+a+Woman%3A+Black+Women+and+Feminism+bell+hooks&i=stripbooks",
+      "amazonMode": "search"
     },
     "all-about-love": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=All+About+Love+bell+hooks&i=stripbooks",
+      "amazonMode": "search"
     },
     "teaching-to-transgress": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Teaching+to+Transgress+bell+hooks&i=stripbooks",
+      "amazonMode": "search"
     },
     "freedom-is-a-constant-struggle": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Freedom+Is+a+Constant+Struggle+Angela+Y.+Davis&i=stripbooks",
+      "amazonMode": "search"
     },
     "parable-of-the-sower": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Parable+of+the+Sower+Octavia+E.+Butler&i=stripbooks",
+      "amazonMode": "search"
     },
     "parable-of-the-talents": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Parable+of+the+Talents+Octavia+E.+Butler&i=stripbooks",
+      "amazonMode": "search"
     },
     "dawn": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Dawn+Octavia+E.+Butler&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-fifth-season": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Fifth+Season+N.+K.+Jemisin&i=stripbooks",
+      "amazonMode": "search"
     },
     "who-fears-death": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Who+Fears+Death+Nnedi+Okorafor&i=stripbooks",
+      "amazonMode": "search"
     },
     "binti": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Binti+Nnedi+Okorafor&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-deep": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Deep+Rivers+Solomon&i=stripbooks",
+      "amazonMode": "search"
     },
     "black-leopard-red-wolf": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Black+Leopard%2C+Red+Wolf+Marlon+James&i=stripbooks",
+      "amazonMode": "search"
     },
     "brown-girl-in-the-ring": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Brown+Girl+in+the+Ring+Nalo+Hopkinson&i=stripbooks",
+      "amazonMode": "search"
     },
     "americanah": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Americanah+Chimamanda+Ngozi+Adichie&i=stripbooks",
+      "amazonMode": "search"
     },
     "half-of-a-yellow-sun": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Half+of+a+Yellow+Sun+Chimamanda+Ngozi+Adichie&i=stripbooks",
+      "amazonMode": "search"
     },
     "purple-hibiscus": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Purple+Hibiscus+Chimamanda+Ngozi+Adichie&i=stripbooks",
+      "amazonMode": "search"
     },
     "a-brief-history-of-seven-killings": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=A+Brief+History+of+Seven+Killings+Marlon+James&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-book-of-night-women": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Book+of+Night+Women+Marlon+James&i=stripbooks",
+      "amazonMode": "search"
     },
     "breath-eyes-memory": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Breath%2C+Eyes%2C+Memory+Edwidge+Danticat&i=stripbooks",
+      "amazonMode": "search"
     },
     "krik-krak": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Krik%3F+Krak%21+Edwidge+Danticat&i=stripbooks",
+      "amazonMode": "search"
     },
     "in-the-castle-of-my-skin": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=In+the+Castle+of+My+Skin+George+Lamming&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-black-jacobins": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Black+Jacobins+C.+L.+R.+James&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-lonely-londoners": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Lonely+Londoners+Sam+Selvon&i=stripbooks",
+      "amazonMode": "search"
     },
     "small-island": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Small+Island+Andrea+Levy&i=stripbooks",
+      "amazonMode": "search"
     },
     "girl-woman-other": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Girl%2C+Woman%2C+Other+Bernardine+Evaristo&i=stripbooks",
+      "amazonMode": "search"
     },
     "homegoing": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Homegoing+Yaa+Gyasi&i=stripbooks",
+      "amazonMode": "search"
     },
     "transcendent-kingdom": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Transcendent+Kingdom+Yaa+Gyasi&i=stripbooks",
+      "amazonMode": "search"
     },
     "we-need-new-names": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=We+Need+New+Names+NoViolet+Bulawayo&i=stripbooks",
+      "amazonMode": "search"
     },
     "nervous-conditions": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Nervous+Conditions+Tsitsi+Dangarembga&i=stripbooks",
+      "amazonMode": "search"
     },
     "so-long-a-letter": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=So+Long+a+Letter+Mariama+B%C3%A2&i=stripbooks",
+      "amazonMode": "search"
     },
     "when-rain-clouds-gather": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=When+Rain+Clouds+Gather+Bessie+Head&i=stripbooks",
+      "amazonMode": "search"
     },
     "petals-of-blood": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Petals+of+Blood+Ng%C5%A9g%C4%A9+wa+Thiong%E2%80%99o&i=stripbooks",
+      "amazonMode": "search"
     },
     "decolonising-the-mind": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Decolonising+the+Mind+Ng%C5%A9g%C4%A9+wa+Thiong%E2%80%99o&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-famished-road": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Famished+Road+Ben+Okri&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-joys-of-motherhood": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Joys+of+Motherhood+Buchi+Emecheta&i=stripbooks",
+      "amazonMode": "search"
     },
     "long-walk-to-freedom": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Long+Walk+to+Freedom+Nelson+Mandela&i=stripbooks",
+      "amazonMode": "search"
     },
     "born-a-crime": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Born+a+Crime+Trevor+Noah&i=stripbooks",
+      "amazonMode": "search"
     },
     "i-write-what-i-like": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=I+Write+What+I+Like+Steve+Biko&i=stripbooks",
+      "amazonMode": "search"
     },
     "black-skin-white-masks": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Black+Skin%2C+White+Masks+Frantz+Fanon&i=stripbooks",
+      "amazonMode": "search"
     },
     "between-the-world-and-me": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Between+the+World+and+Me+Ta-Nehisi+Coates&i=stripbooks",
+      "amazonMode": "search"
     },
     "just-mercy": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Just+Mercy+Bryan+Stevenson&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-autobiography-of-an-ex-colored-man": {
-      "amazonUrl": null,
+      "amazonUrl": "https://www.amazon.com/s?k=The+Autobiography+of+an+Ex-Colored+Man+James+Weldon+Johnson&i=stripbooks",
       "freeRead": {
         "url": "https://www.gutenberg.org/ebooks/11012",
         "label": "Read for free",
         "provider": "Project Gutenberg",
         "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
         "checkedAt": "2026-10-12"
-      }
+      },
+      "amazonMode": "search"
     },
     "up-from-slavery": {
-      "amazonUrl": null,
+      "amazonUrl": "https://www.amazon.com/s?k=Up+from+Slavery+Booker+T.+Washington&i=stripbooks",
       "freeRead": {
         "url": "https://www.gutenberg.org/ebooks/2376",
         "label": "Read for free",
         "provider": "Project Gutenberg",
         "rightsNote": "Public domain in the United States. Check local copyright rules outside the U.S.",
         "checkedAt": "2026-10-12"
-      }
+      },
+      "amazonMode": "search"
     },
     "assata-an-autobiography": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Assata%3A+An+Autobiography+Assata+Shakur&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-salt-eaters": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Salt+Eaters+Toni+Cade+Bambara&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-women-of-brewster-place": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Women+of+Brewster+Place+Gloria+Naylor&i=stripbooks",
+      "amazonMode": "search"
     },
     "corregidora": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Corregidora+Gayl+Jones&i=stripbooks",
+      "amazonMode": "search"
     },
     "mama-day": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Mama+Day+Gloria+Naylor&i=stripbooks",
+      "amazonMode": "search"
     },
     "salvage-the-bones": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Salvage+the+Bones+Jesmyn+Ward&i=stripbooks",
+      "amazonMode": "search"
     },
     "sing-unburied-sing": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Sing%2C+Unburied%2C+Sing+Jesmyn+Ward&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-underground-railroad": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Underground+Railroad+Colson+Whitehead&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-nickel-boys": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Nickel+Boys+Colson+Whitehead&i=stripbooks",
+      "amazonMode": "search"
     },
     "an-american-marriage": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=An+American+Marriage+Tayari+Jones&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-street": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Street+Ann+Petry&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-known-world": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Known+World+Edward+P.+Jones&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-sellout": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Sellout+Paul+Beatty&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-intuitionist": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Intuitionist+Colson+Whitehead&i=stripbooks",
+      "amazonMode": "search"
     },
     "citizen-an-american-lyric": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Citizen%3A+An+American+Lyric+Claudia+Rankine&i=stripbooks",
+      "amazonMode": "search"
     },
     "don-t-call-us-dead": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Don%27t+Call+Us+Dead+Danez+Smith&i=stripbooks",
+      "amazonMode": "search"
     },
     "selected-poems-of-langston-hughes": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Selected+Poems+of+Langston+Hughes+Langston+Hughes&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-collected-poems-of-lucille-clifton-1965-2010": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Collected+Poems+of+Lucille+Clifton+1965%E2%80%932010+Lucille+Clifton&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-collected-poems-of-audre-lorde": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Collected+Poems+of+Audre+Lorde+Audre+Lorde&i=stripbooks",
+      "amazonMode": "search"
     },
     "the-poet-x": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Poet+X+Elizabeth+Acevedo&i=stripbooks",
+      "amazonMode": "search"
     },
     "brown-girl-dreaming": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Brown+Girl+Dreaming+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
     },
     "they-dream-in-gold": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=They+Dream+in+Gold+Mai+Sennaar&i=stripbooks",
+      "amazonMode": "search"
     },
     "ode-to-keisha": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Ode+to+Keisha+Jamila+Rowser%3B+illustrated+by+Trinidad+Escobar&i=stripbooks",
+      "amazonMode": "search"
     },
     "saddest-angriest-black-girl": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=The+Saddest+Angriest+Black+Girl+in+Town+Robyn+Smith&i=stripbooks",
+      "amazonMode": "search"
     },
     "kin": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Kin+Tayari+Jones&i=stripbooks",
+      "amazonMode": "search"
     },
     "dream-count": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Dream+Count+Chimamanda+Ngozi+Adichie&i=stripbooks",
+      "amazonMode": "search"
     },
     "good-dirt": {
-      "amazonUrl": null
+      "amazonUrl": "https://www.amazon.com/s?k=Good+Dirt+Charmaine+Wilkerson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-curls": {
+      "amazonUrl": "https://www.amazon.com/s?k=Curls+Ruth+Forman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-glow": {
+      "amazonUrl": "https://www.amazon.com/s?k=Glow+Ruth+Forman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-bloom": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bloom+Ruth+Forman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-ours": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ours+Ruth+Forman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-whose-toes-are-those": {
+      "amazonUrl": "https://www.amazon.com/s?k=Whose+Toes+Are+Those%3F+Jabari+Asim&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-whose-knees-are-these": {
+      "amazonUrl": "https://www.amazon.com/s?k=Whose+Knees+Are+These%3F+Jabari+Asim&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-joshua-by-the-sea": {
+      "amazonUrl": "https://www.amazon.com/s?k=Joshua+by+the+Sea+Angela+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-rain-feet": {
+      "amazonUrl": "https://www.amazon.com/s?k=Rain+Feet+Angela+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-baby-sleepy-baby": {
+      "amazonUrl": "https://www.amazon.com/s?k=Baby%2C+Sleepy+Baby+Atinuke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-bright-brown-baby": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bright+Brown+Baby+Andrea+Davis+Pinkney&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-pretty-brown-face": {
+      "amazonUrl": "https://www.amazon.com/s?k=Pretty+Brown+Face+Andrea+Davis+Pinkney&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-so-much": {
+      "amazonUrl": "https://www.amazon.com/s?k=So+Much%21+Trish+Cooke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-full-full-full-of-love": {
+      "amazonUrl": "https://www.amazon.com/s?k=Full%2C+Full%2C+Full+of+Love+Trish+Cooke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-thank-you-omu": {
+      "amazonUrl": "https://www.amazon.com/s?k=Thank+You%2C+Omu%21+Oge+Mora&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-saturday": {
+      "amazonUrl": "https://www.amazon.com/s?k=Saturday+Oge+Mora&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-hair-love": {
+      "amazonUrl": "https://www.amazon.com/s?k=Hair+Love+Matthew+A.+Cherry&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-i-love-my-hair": {
+      "amazonUrl": "https://www.amazon.com/s?k=I+Love+My+Hair%21+Natasha+Anastasia+Tarpley&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-sulwe": {
+      "amazonUrl": "https://www.amazon.com/s?k=Sulwe+Lupita+Nyong%27o&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-i-am-enough": {
+      "amazonUrl": "https://www.amazon.com/s?k=I+Am+Enough+Grace+Byers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-i-believe-i-can": {
+      "amazonUrl": "https://www.amazon.com/s?k=I+Believe+I+Can+Grace+Byers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-you-matter": {
+      "amazonUrl": "https://www.amazon.com/s?k=You+Matter+Christian+Robinson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-another": {
+      "amazonUrl": "https://www.amazon.com/s?k=Another+Christian+Robinson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-something-someday": {
+      "amazonUrl": "https://www.amazon.com/s?k=Something%2C+Someday+Amanda+Gorman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-day-you-begin": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Day+You+Begin+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-year-we-learned-to-fly": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Year+We+Learned+to+Fly+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-this-is-the-rope": {
+      "amazonUrl": "https://www.amazon.com/s?k=This+Is+the+Rope+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-pecan-pie-baby": {
+      "amazonUrl": "https://www.amazon.com/s?k=Pecan+Pie+Baby+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-other-side": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Other+Side+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-each-kindness": {
+      "amazonUrl": "https://www.amazon.com/s?k=Each+Kindness+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-king-of-kindergarten": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+King+of+Kindergarten+Derrick+Barnes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-queen-of-kindergarten": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Queen+of+Kindergarten+Derrick+Barnes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-i-am-every-good-thing": {
+      "amazonUrl": "https://www.amazon.com/s?k=I+Am+Every+Good+Thing+Derrick+Barnes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-crown-an-ode-to-the-fresh-cut": {
+      "amazonUrl": "https://www.amazon.com/s?k=Crown%3A+An+Ode+to+the+Fresh+Cut+Derrick+Barnes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-grandma-s-purse": {
+      "amazonUrl": "https://www.amazon.com/s?k=Grandma%27s+Purse+Vanessa+Brantley-Newton&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-becoming-vanessa": {
+      "amazonUrl": "https://www.amazon.com/s?k=Becoming+Vanessa+Vanessa+Brantley-Newton&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-just-like-me": {
+      "amazonUrl": "https://www.amazon.com/s?k=Just+Like+Me+Vanessa+Brantley-Newton&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-beautiful-blackbird": {
+      "amazonUrl": "https://www.amazon.com/s?k=Beautiful+Blackbird+Ashley+Bryan&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-story-of-lightning-and-thunder": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Story+of+Lightning+and+Thunder+Ashley+Bryan&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-bedtime-for-sweet-creatures": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bedtime+for+Sweet+Creatures+Nikki+Grimes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-off-to-see-the-sea": {
+      "amazonUrl": "https://www.amazon.com/s?k=Off+to+See+the+Sea+Nikki+Grimes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-a-walk-in-the-woods": {
+      "amazonUrl": "https://www.amazon.com/s?k=A+Walk+in+the+Woods+Nikki+Grimes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-honey-i-love-and-other-love-poems": {
+      "amazonUrl": "https://www.amazon.com/s?k=Honey%2C+I+Love+and+Other+Love+Poems+Eloise+Greenfield&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-grandpa-s-face": {
+      "amazonUrl": "https://www.amazon.com/s?k=Grandpa%27s+Face+Eloise+Greenfield&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-rosa": {
+      "amazonUrl": "https://www.amazon.com/s?k=Rosa+Nikki+Giovanni&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-looking-like-me": {
+      "amazonUrl": "https://www.amazon.com/s?k=Looking+Like+Me+Walter+Dean+Myers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-harlem": {
+      "amazonUrl": "https://www.amazon.com/s?k=Harlem+Walter+Dean+Myers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-undefeated": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Undefeated+Kwame+Alexander&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-how-to-read-a-book": {
+      "amazonUrl": "https://www.amazon.com/s?k=How+to+Read+a+Book+Kwame+Alexander&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-baby-bear": {
+      "amazonUrl": "https://www.amazon.com/s?k=Baby+Bear+Kadir+Nelson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-if-you-plant-a-seed": {
+      "amazonUrl": "https://www.amazon.com/s?k=If+You+Plant+a+Seed+Kadir+Nelson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-heart-and-soul-the-story-of-america-and-african-americans": {
+      "amazonUrl": "https://www.amazon.com/s?k=Heart+and+Soul%3A+The+Story+of+America+and+African+Americans+Kadir+Nelson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-radiant-child": {
+      "amazonUrl": "https://www.amazon.com/s?k=Radiant+Child+Javaka+Steptoe&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-let-s-talk-about-race": {
+      "amazonUrl": "https://www.amazon.com/s?k=Let%27s+Talk+About+Race+Julius+Lester&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-all-because-you-matter": {
+      "amazonUrl": "https://www.amazon.com/s?k=All+Because+You+Matter+Tami+Charles&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-we-are-here": {
+      "amazonUrl": "https://www.amazon.com/s?k=We+Are+Here+Tami+Charles&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-my-day-with-the-panye": {
+      "amazonUrl": "https://www.amazon.com/s?k=My+Day+with+the+Panye+Tami+Charles&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-sleep-well-siba-and-saba": {
+      "amazonUrl": "https://www.amazon.com/s?k=Sleep+Well%2C+Siba+and+Saba+Nansubuga+Nagadya+Isdahl&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-sing-to-the-moon": {
+      "amazonUrl": "https://www.amazon.com/s?k=Sing+to+the+Moon+Nansubuga+Nagadya+Isdahl&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-baby-goes-to-market": {
+      "amazonUrl": "https://www.amazon.com/s?k=Baby+Goes+to+Market+Atinuke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-b-is-for-baby": {
+      "amazonUrl": "https://www.amazon.com/s?k=B+Is+for+Baby+Atinuke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-catch-that-chicken": {
+      "amazonUrl": "https://www.amazon.com/s?k=Catch+That+Chicken%21+Atinuke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-anna-hibiscus": {
+      "amazonUrl": "https://www.amazon.com/s?k=Anna+Hibiscus+Atinuke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-too-small-tola": {
+      "amazonUrl": "https://www.amazon.com/s?k=Too+Small+Tola+Atinuke&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-chicken-in-the-kitchen": {
+      "amazonUrl": "https://www.amazon.com/s?k=Chicken+in+the+Kitchen+Nnedi+Okorafor&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-mae-among-the-stars": {
+      "amazonUrl": "https://www.amazon.com/s?k=Mae+Among+the+Stars+Roda+Ahmed&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-freight-train": {
+      "amazonUrl": "https://www.amazon.com/s?k=Freight+Train+Donald+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-truck": {
+      "amazonUrl": "https://www.amazon.com/s?k=Truck+Donald+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-flying": {
+      "amazonUrl": "https://www.amazon.com/s?k=Flying+Donald+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-bigmama-s": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bigmama%27s+Donald+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-shortcut": {
+      "amazonUrl": "https://www.amazon.com/s?k=Shortcut+Donald+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-ten-black-dots": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ten+Black+Dots+Donald+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-one-hot-summer-day": {
+      "amazonUrl": "https://www.amazon.com/s?k=One+Hot+Summer+Day+Nina+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-i-m-not-small": {
+      "amazonUrl": "https://www.amazon.com/s?k=I%27m+Not+Small+Nina+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-seeing-into-tomorrow-haiku-by-richard-wright": {
+      "amazonUrl": "https://www.amazon.com/s?k=Seeing+into+Tomorrow%3A+Haiku+by+Richard+Wright+Richard+Wright&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-neighborhood-mother-goose": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Neighborhood+Mother+Goose+Nina+Crews&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-a-sweet-smell-of-roses": {
+      "amazonUrl": "https://www.amazon.com/s?k=A+Sweet+Smell+of+Roses+Angela+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-just-like-josh-gibson": {
+      "amazonUrl": "https://www.amazon.com/s?k=Just+Like+Josh+Gibson+Angela+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-tell-me-a-story-mama": {
+      "amazonUrl": "https://www.amazon.com/s?k=Tell+Me+a+Story%2C+Mama+Angela+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-leaving-morning": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Leaving+Morning+Angela+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-preaching-to-the-chickens": {
+      "amazonUrl": "https://www.amazon.com/s?k=Preaching+to+the+Chickens+Jabari+Asim&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-freedom-in-congo-square": {
+      "amazonUrl": "https://www.amazon.com/s?k=Freedom+in+Congo+Square+Carole+Boston+Weatherford&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-before-she-was-harriet": {
+      "amazonUrl": "https://www.amazon.com/s?k=Before+She+Was+Harriet+Lesa+Cline-Ransome&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-duke-ellington": {
+      "amazonUrl": "https://www.amazon.com/s?k=Duke+Ellington+Andrea+Davis+Pinkney&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-sit-in": {
+      "amazonUrl": "https://www.amazon.com/s?k=Sit-In+Andrea+Davis+Pinkney&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-shades-of-black": {
+      "amazonUrl": "https://www.amazon.com/s?k=Shades+of+Black+Sandra+L.+Pinkney&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-little-leaders-bold-women-in-black-history": {
+      "amazonUrl": "https://www.amazon.com/s?k=Little+Leaders%3A+Bold+Women+in+Black+History+Vashti+Harrison&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-big": {
+      "amazonUrl": "https://www.amazon.com/s?k=Big+Vashti+Harrison&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-stacey-s-extraordinary-words": {
+      "amazonUrl": "https://www.amazon.com/s?k=Stacey%27s+Extraordinary+Words+Stacey+Abrams&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-the-electric-slide-and-kai": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Electric+Slide+and+Kai+Kelly+J.+Baptist&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-one-more-dino-on-the-floor": {
+      "amazonUrl": "https://www.amazon.com/s?k=One+More+Dino+on+the+Floor+Kelly+Starling+Lyons&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-kick-push": {
+      "amazonUrl": "https://www.amazon.com/s?k=Kick+Push+Frank+Morrison&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-southwest-sunrise": {
+      "amazonUrl": "https://www.amazon.com/s?k=Southwest+Sunrise+Nikki+Grimes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-ty-s-travels-all-aboard": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ty%27s+Travels%3A+All+Aboard%21+Kelly+Starling+Lyons&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-ty-s-travels-zip-zoom": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ty%27s+Travels%3A+Zip%2C+Zoom%21+Kelly+Starling+Lyons&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-ty-s-travels-beach-day": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ty%27s+Travels%3A+Beach+Day%21+Kelly+Starling+Lyons&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-ty-s-travels-lab-magic": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ty%27s+Travels%3A+Lab+Magic+Kelly+Starling+Lyons&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-ty-s-travels-showtime": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ty%27s+Travels%3A+Showtime%21+Kelly+Starling+Lyons&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-bradford-street-buddies-backyard-camp-out": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bradford+Street+Buddies%3A+Backyard+Camp-Out+Jerdine+Nolen&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-bradford-street-buddies-block-party-surprise": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bradford+Street+Buddies%3A+Block+Party+Surprise+Jerdine+Nolen&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "early-bradford-street-buddies-springtime-blossoms": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bradford+Street+Buddies%3A+Springtime+Blossoms+Jerdine+Nolen&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-new-kid": {
+      "amazonUrl": "https://www.amazon.com/s?k=New+Kid+Jerry+Craft&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-one-crazy-summer": {
+      "amazonUrl": "https://www.amazon.com/s?k=One+Crazy+Summer+Rita+Williams-Garcia&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-crossover": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Crossover+Kwame+Alexander&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-bud-not-buddy": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bud%2C+Not+Buddy+Christopher+Paul+Curtis&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-watsons-go-to-birmingham1963": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Watsons+Go+to+Birmingham%E2%80%941963+Christopher+Paul+Curtis&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-roll-of-thunder-hear-my-cry": {
+      "amazonUrl": "https://www.amazon.com/s?k=Roll+of+Thunder%2C+Hear+My+Cry+Mildred+D.+Taylor&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ghost": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ghost+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-finding-langston": {
+      "amazonUrl": "https://www.amazon.com/s?k=Finding+Langston+Lesa+Cline-Ransome&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ways-to-make-sunshine": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ways+to+Make+Sunshine+Ren%C3%A9e+Watson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-tristan-strong-punches-a-hole-in-the-sky": {
+      "amazonUrl": "https://www.amazon.com/s?k=Tristan+Strong+Punches+a+Hole+in+the+Sky+Kwame+Mbalia&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-parker-inheritance": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Parker+Inheritance+Varian+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-harbor-me": {
+      "amazonUrl": "https://www.amazon.com/s?k=Harbor+Me+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-clean-getaway": {
+      "amazonUrl": "https://www.amazon.com/s?k=Clean+Getaway+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-garvey-s-choice": {
+      "amazonUrl": "https://www.amazon.com/s?k=Garvey%27s+Choice+Nikki+Grimes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-freewater": {
+      "amazonUrl": "https://www.amazon.com/s?k=Freewater+Amina+Luqman-Dawson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ikenga": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ikenga+Nnedi+Okorafor&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-black-girl-power-15-stories-celebrating-black-girlhood": {
+      "amazonUrl": "https://www.amazon.com/s?k=Black+Girl+Power%3A+15+Stories+Celebrating+Black+Girlhood+Leah+Johnson%2C+editor&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-elijah-of-buxton": {
+      "amazonUrl": "https://www.amazon.com/s?k=Elijah+of+Buxton+Christopher+Paul+Curtis&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-dragons-in-a-bag": {
+      "amazonUrl": "https://www.amazon.com/s?k=Dragons+in+a+Bag+Zetta+Elliott&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-amari-and-the-night-brothers": {
+      "amazonUrl": "https://www.amazon.com/s?k=Amari+and+the+Night+Brothers+B.+B.+Alston&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-last-last-day-of-summer": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Last+Last-Day-of-Summer+Lamar+Giles&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-jumbies": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Jumbies+Tracey+Baptiste&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-when-life-gives-you-mangos": {
+      "amazonUrl": "https://www.amazon.com/s?k=When+Life+Gives+You+Mangos+Kereen+Getten&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-onyeka-and-the-academy-of-the-sun": {
+      "amazonUrl": "https://www.amazon.com/s?k=Onyeka+and+the+Academy+of+the+Sun+Tol%C3%A1+Okogwu&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-hidden-figures-young-readers-edition": {
+      "amazonUrl": "https://www.amazon.com/s?k=Hidden+Figures%3A+Young+Readers%27+Edition+Margot+Lee+Shetterly&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-boy-who-harnessed-the-wind-young-readers-edition": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Boy+Who+Harnessed+the+Wind%3A+Young+Readers+Edition+William+Kamkwamba+and+Bryan+Mealer&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-how-to-be-a-math-wizard": {
+      "amazonUrl": "https://www.amazon.com/s?k=How+to+Be+a+Math+Wizard+Anne-Marie+Imafidon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-dr-maggie-s-grand-tour-of-the-solar-system": {
+      "amazonUrl": "https://www.amazon.com/s?k=Dr+Maggie%27s+Grand+Tour+of+the+Solar+System+Maggie+Aderin-Pocock&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-african-icons-ten-people-who-shaped-history": {
+      "amazonUrl": "https://www.amazon.com/s?k=African+Icons%3A+Ten+People+Who+Shaped+History+Tracey+Baptiste&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-black-brother-black-brother": {
+      "amazonUrl": "https://www.amazon.com/s?k=Black+Brother%2C+Black+Brother+Jewell+Parker+Rhodes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-class-act": {
+      "amazonUrl": "https://www.amazon.com/s?k=Class+Act+Jerry+Craft&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-school-trip": {
+      "amazonUrl": "https://www.amazon.com/s?k=School+Trip+Jerry+Craft&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-twins": {
+      "amazonUrl": "https://www.amazon.com/s?k=Twins+Varian+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-fast-pitch": {
+      "amazonUrl": "https://www.amazon.com/s?k=Fast+Pitch+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-shuri-a-black-panther-novel": {
+      "amazonUrl": "https://www.amazon.com/s?k=Shuri%3A+A+Black+Panther+Novel+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ellie-engle-saves-herself": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ellie+Engle+Saves+Herself+Leah+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-maya-and-the-robot": {
+      "amazonUrl": "https://www.amazon.com/s?k=Maya+and+the+Robot+Eve+L.+Ewing&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-a-good-kind-of-trouble": {
+      "amazonUrl": "https://www.amazon.com/s?k=A+Good+Kind+of+Trouble+Lisa+Moore+Ram%C3%A9e&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-from-the-desk-of-zoe-washington": {
+      "amazonUrl": "https://www.amazon.com/s?k=From+the+Desk+of+Zoe+Washington+Janae+Marks&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-only-black-girls-in-town": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Only+Black+Girls+in+Town+Brandy+Colbert&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-genesis-begins-again": {
+      "amazonUrl": "https://www.amazon.com/s?k=Genesis+Begins+Again+Alicia+D.+Williams&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-my-life-as-an-ice-cream-sandwich": {
+      "amazonUrl": "https://www.amazon.com/s?k=My+Life+as+an+Ice+Cream+Sandwich+Ibi+Zoboi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-some-places-more-than-others": {
+      "amazonUrl": "https://www.amazon.com/s?k=Some+Places+More+Than+Others+Ren%C3%A9e+Watson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-operation-sisterhood": {
+      "amazonUrl": "https://www.amazon.com/s?k=Operation+Sisterhood+Olugbemisola+Rhuday-Perkovich&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ruby-finley-vs-the-interstellar-invasion": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ruby+Finley+vs.+the+Interstellar+Invasion+K.+Tempest+Bradford&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-stuntboy-in-the-meantime": {
+      "amazonUrl": "https://www.amazon.com/s?k=Stuntboy%2C+in+the+Meantime+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-look-both-ways": {
+      "amazonUrl": "https://www.amazon.com/s?k=Look+Both+Ways+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-as-brave-as-you": {
+      "amazonUrl": "https://www.amazon.com/s?k=As+Brave+as+You+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-patina": {
+      "amazonUrl": "https://www.amazon.com/s?k=Patina+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-sunny": {
+      "amazonUrl": "https://www.amazon.com/s?k=Sunny+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-lu": {
+      "amazonUrl": "https://www.amazon.com/s?k=Lu+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-booked": {
+      "amazonUrl": "https://www.amazon.com/s?k=Booked+Kwame+Alexander&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-rebound": {
+      "amazonUrl": "https://www.amazon.com/s?k=Rebound+Kwame+Alexander&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-words-with-wings": {
+      "amazonUrl": "https://www.amazon.com/s?k=Words+with+Wings+Nikki+Grimes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-planet-middle-school": {
+      "amazonUrl": "https://www.amazon.com/s?k=Planet+Middle+School+Nikki+Grimes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-midnight-without-a-moon": {
+      "amazonUrl": "https://www.amazon.com/s?k=Midnight+Without+a+Moon+Linda+Williams+Jackson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-red-pencil": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Red+Pencil+Andrea+Davis+Pinkney&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-lucky-ones": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Lucky+Ones+Linda+Williams+Jackson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-gone-crazy-in-alabama": {
+      "amazonUrl": "https://www.amazon.com/s?k=Gone+Crazy+in+Alabama+Rita+Williams-Garcia&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-p-s-be-eleven": {
+      "amazonUrl": "https://www.amazon.com/s?k=P.S.+Be+Eleven+Rita+Williams-Garcia&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-clayton-byrd-goes-underground": {
+      "amazonUrl": "https://www.amazon.com/s?k=Clayton+Byrd+Goes+Underground+Rita+Williams-Garcia&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-mighty-miss-malone": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Mighty+Miss+Malone+Christopher+Paul+Curtis&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-madman-of-piney-woods": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Madman+of+Piney+Woods+Christopher+Paul+Curtis&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-leaving-lymon": {
+      "amazonUrl": "https://www.amazon.com/s?k=Leaving+Lymon+Lesa+Cline-Ransome&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-being-clem": {
+      "amazonUrl": "https://www.amazon.com/s?k=Being+Clem+Lesa+Cline-Ransome&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ninth-ward": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ninth+Ward+Jewell+Parker+Rhodes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-sugar": {
+      "amazonUrl": "https://www.amazon.com/s?k=Sugar+Jewell+Parker+Rhodes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-bayou-magic": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bayou+Magic+Jewell+Parker+Rhodes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-paradise-on-fire": {
+      "amazonUrl": "https://www.amazon.com/s?k=Paradise+on+Fire+Jewell+Parker+Rhodes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-towers-falling": {
+      "amazonUrl": "https://www.amazon.com/s?k=Towers+Falling+Jewell+Parker+Rhodes&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-amari-and-the-great-game": {
+      "amazonUrl": "https://www.amazon.com/s?k=Amari+and+the+Great+Game+B.+B.+Alston&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-last-mirror-on-the-left": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Last+Mirror+on+the+Left+Lamar+Giles&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-tristan-strong-destroys-the-world": {
+      "amazonUrl": "https://www.amazon.com/s?k=Tristan+Strong+Destroys+the+World+Kwame+Mbalia&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-tristan-strong-keeps-punching": {
+      "amazonUrl": "https://www.amazon.com/s?k=Tristan+Strong+Keeps+Punching+Kwame+Mbalia&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-rise-of-the-jumbies": {
+      "amazonUrl": "https://www.amazon.com/s?k=Rise+of+the+Jumbies+Tracey+Baptiste&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-jumbie-god-s-revenge": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Jumbie+God%27s+Revenge+Tracey+Baptiste&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-onyeka-and-the-rise-of-the-rebels": {
+      "amazonUrl": "https://www.amazon.com/s?k=Onyeka+and+the+Rise+of+the+Rebels+Tol%C3%A1+Okogwu&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-onyeka-and-the-heroes-of-the-dawn": {
+      "amazonUrl": "https://www.amazon.com/s?k=Onyeka+and+the+Heroes+of+the+Dawn+Tol%C3%A1+Okogwu&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-serwa-boateng-s-guide-to-vampire-hunting": {
+      "amazonUrl": "https://www.amazon.com/s?k=Serwa+Boateng%27s+Guide+to+Vampire+Hunting+Roseanne+A.+Brown&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-serwa-boateng-s-guide-to-witchcraft-and-mayhem": {
+      "amazonUrl": "https://www.amazon.com/s?k=Serwa+Boateng%27s+Guide+to+Witchcraft+and+Mayhem+Roseanne+A.+Brown&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-high-rise-mystery": {
+      "amazonUrl": "https://www.amazon.com/s?k=High-Rise+Mystery+Sharna+Jackson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-mic-drop": {
+      "amazonUrl": "https://www.amazon.com/s?k=Mic+Drop+Sharna+Jackson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-hacker": {
+      "amazonUrl": "https://www.amazon.com/s?k=Hacker+Malorie+Blackman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-cloud-busting": {
+      "amazonUrl": "https://www.amazon.com/s?k=Cloud+Busting+Malorie+Blackman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-pig-heart-boy": {
+      "amazonUrl": "https://www.amazon.com/s?k=Pig-Heart+Boy+Malorie+Blackman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-am-i-made-of-stardust": {
+      "amazonUrl": "https://www.amazon.com/s?k=Am+I+Made+of+Stardust%3F+Maggie+Aderin-Pocock&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-changing-the-equation-50-us-black-women-in-stem": {
+      "amazonUrl": "https://www.amazon.com/s?k=Changing+the+Equation%3A+50%2B+US+Black+Women+in+STEM+Tonya+Bolden&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-what-color-is-my-world-the-lost-history-of-african-american-inventors": {
+      "amazonUrl": "https://www.amazon.com/s?k=What+Color+Is+My+World%3F+The+Lost+History+of+African-American+Inventors+Kareem+Abdul-Jabbar+and+Raymond+Obstfeld&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-pathfinders-the-journeys-of-16-extraordinary-black-souls": {
+      "amazonUrl": "https://www.amazon.com/s?k=Pathfinders%3A+The+Journeys+of+16+Extraordinary+Black+Souls+Tonya+Bolden&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-saving-earth-climate-change-and-the-fight-for-our-future": {
+      "amazonUrl": "https://www.amazon.com/s?k=Saving+Earth%3A+Climate+Change+and+the+Fight+for+Our+Future+Olugbemisola+Rhuday-Perkovich&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-above-and-beyond-nasa-s-journey-to-tomorrow": {
+      "amazonUrl": "https://www.amazon.com/s?k=Above+and+Beyond%3A+NASA%27s+Journey+to+Tomorrow+Olugbemisola+Rhuday-Perkovich&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ways-to-grow-love": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ways+to+Grow+Love+Ren%C3%A9e+Watson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-ways-to-share-joy": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ways+to+Share+Joy+Ren%C3%A9e+Watson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-on-air-with-zoe-washington": {
+      "amazonUrl": "https://www.amazon.com/s?k=On+Air+with+Zoe+Washington+Janae+Marks&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-a-soft-place-to-land": {
+      "amazonUrl": "https://www.amazon.com/s?k=A+Soft+Place+to+Land+Janae+Marks&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-something-to-say": {
+      "amazonUrl": "https://www.amazon.com/s?k=Something+to+Say+Lisa+Moore+Ram%C3%A9e&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-usual-suspects": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Usual+Suspects+Maurice+Broaddus&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-just-south-of-home": {
+      "amazonUrl": "https://www.amazon.com/s?k=Just+South+of+Home+Karen+Strong&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-root-magic": {
+      "amazonUrl": "https://www.amazon.com/s?k=Root+Magic+Eden+Royce&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "middle-the-forgotten-girl": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Forgotten+Girl+India+Hill+Brown&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-piecing-me-together": {
+      "amazonUrl": "https://www.amazon.com/s?k=Piecing+Me+Together+Ren%C3%A9e+Watson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-you-should-see-me-in-a-crown": {
+      "amazonUrl": "https://www.amazon.com/s?k=You+Should+See+Me+in+a+Crown+Leah+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-akata-witch": {
+      "amazonUrl": "https://www.amazon.com/s?k=Akata+Witch+Nnedi+Okorafor&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-with-the-fire-on-high": {
+      "amazonUrl": "https://www.amazon.com/s?k=With+the+Fire+on+High+Elizabeth+Acevedo&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-slay": {
+      "amazonUrl": "https://www.amazon.com/s?k=SLAY+Brittney+Morris&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-reaching-for-the-moon": {
+      "amazonUrl": "https://www.amazon.com/s?k=Reaching+for+the+Moon+Katherine+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-star-child-a-biographical-constellation-of-octavia-estelle-butler": {
+      "amazonUrl": "https://www.amazon.com/s?k=Star+Child%3A+A+Biographical+Constellation+of+Octavia+Estelle+Butler+Ibi+Zoboi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-love-is-a-revolution": {
+      "amazonUrl": "https://www.amazon.com/s?k=Love+Is+a+Revolution+Ren%C3%A9e+Watson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-pride": {
+      "amazonUrl": "https://www.amazon.com/s?k=Pride+Ibi+Zoboi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-friday-i-m-in-love": {
+      "amazonUrl": "https://www.amazon.com/s?k=Friday+I%27m+in+Love+Camryn+Garrett&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-for-every-one": {
+      "amazonUrl": "https://www.amazon.com/s?k=For+Every+One+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-sun-is-also-a-star": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Sun+Is+Also+a+Star+Nicola+Yoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-bad-boy-a-memoir": {
+      "amazonUrl": "https://www.amazon.com/s?k=Bad+Boy%3A+A+Memoir+Walter+Dean+Myers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-voting-booth": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Voting+Booth+Brandy+Colbert&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-home-is-not-a-country": {
+      "amazonUrl": "https://www.amazon.com/s?k=Home+Is+Not+a+Country+Safia+Elhillo&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-long-way-down": {
+      "amazonUrl": "https://www.amazon.com/s?k=Long+Way+Down+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-hate-u-give": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Hate+U+Give+Angie+Thomas&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-dear-martin": {
+      "amazonUrl": "https://www.amazon.com/s?k=Dear+Martin+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-legendborn": {
+      "amazonUrl": "https://www.amazon.com/s?k=Legendborn+Tracy+Deonn&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-pet": {
+      "amazonUrl": "https://www.amazon.com/s?k=Pet+Akwaeke+Emezi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-black-flamingo": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Black+Flamingo+Dean+Atta&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-stamped-racism-antiracism-and-you": {
+      "amazonUrl": "https://www.amazon.com/s?k=Stamped%3A+Racism%2C+Antiracism%2C+and+You+Jason+Reynolds+and+Ibram+X.+Kendi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-march-book-one": {
+      "amazonUrl": "https://www.amazon.com/s?k=March%3A+Book+One+John+Lewis+and+Andrew+Aydin%3B+illustrated+by+Nate+Powell&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-revolution-in-our-time": {
+      "amazonUrl": "https://www.amazon.com/s?k=Revolution+in+Our+Time+Kekla+Magoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-black-birds-in-the-sky": {
+      "amazonUrl": "https://www.amazon.com/s?k=Black+Birds+in+the+Sky+Brandy+Colbert&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-turning-15-on-the-road-to-freedom": {
+      "amazonUrl": "https://www.amazon.com/s?k=Turning+15+on+the+Road+to+Freedom+Lynda+Blackmon+Lowery+with+Elspeth+Leacock+and+Susan+Buckley&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-boy-in-the-black-suit": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Boy+in+the+Black+Suit+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-when-i-was-the-greatest": {
+      "amazonUrl": "https://www.amazon.com/s?k=When+I+Was+the+Greatest+Jason+Reynolds&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-ain-t-burned-all-the-bright": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ain%27t+Burned+All+the+Bright+Jason+Reynolds+with+Jason+Griffin&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-if-you-come-softly": {
+      "amazonUrl": "https://www.amazon.com/s?k=If+You+Come+Softly+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-behind-you": {
+      "amazonUrl": "https://www.amazon.com/s?k=Behind+You+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-hush": {
+      "amazonUrl": "https://www.amazon.com/s?k=Hush+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-after-tupac-and-d-foster": {
+      "amazonUrl": "https://www.amazon.com/s?k=After+Tupac+and+D+Foster+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-beneath-a-meth-moon": {
+      "amazonUrl": "https://www.amazon.com/s?k=Beneath+a+Meth+Moon+Jacqueline+Woodson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-monster": {
+      "amazonUrl": "https://www.amazon.com/s?k=Monster+Walter+Dean+Myers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-fallen-angels": {
+      "amazonUrl": "https://www.amazon.com/s?k=Fallen+Angels+Walter+Dean+Myers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-slam": {
+      "amazonUrl": "https://www.amazon.com/s?k=Slam%21+Walter+Dean+Myers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-hoops": {
+      "amazonUrl": "https://www.amazon.com/s?k=Hoops+Walter+Dean+Myers&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-copper-sun": {
+      "amazonUrl": "https://www.amazon.com/s?k=Copper+Sun+Sharon+M.+Draper&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-romiette-and-julio": {
+      "amazonUrl": "https://www.amazon.com/s?k=Romiette+and+Julio+Sharon+M.+Draper&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-double-dutch": {
+      "amazonUrl": "https://www.amazon.com/s?k=Double+Dutch+Sharon+M.+Draper&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-battle-of-jericho": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Battle+of+Jericho+Sharon+M.+Draper&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-american-street": {
+      "amazonUrl": "https://www.amazon.com/s?k=American+Street+Ibi+Zoboi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-chlorine-sky": {
+      "amazonUrl": "https://www.amazon.com/s?k=Chlorine+Sky+Mahogany+L.+Browne&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-punching-the-air": {
+      "amazonUrl": "https://www.amazon.com/s?k=Punching+the+Air+Ibi+Zoboi+and+Yusef+Salaam&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-dear-justyce": {
+      "amazonUrl": "https://www.amazon.com/s?k=Dear+Justyce+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-odd-one-out": {
+      "amazonUrl": "https://www.amazon.com/s?k=Odd+One+Out+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-jackpot": {
+      "amazonUrl": "https://www.amazon.com/s?k=Jackpot+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-chaos-theory": {
+      "amazonUrl": "https://www.amazon.com/s?k=Chaos+Theory+Nic+Stone&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-on-the-come-up": {
+      "amazonUrl": "https://www.amazon.com/s?k=On+the+Come+Up+Angie+Thomas&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-concrete-rose": {
+      "amazonUrl": "https://www.amazon.com/s?k=Concrete+Rose+Angie+Thomas&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-clap-when-you-land": {
+      "amazonUrl": "https://www.amazon.com/s?k=Clap+When+You+Land+Elizabeth+Acevedo&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-everything-everything": {
+      "amazonUrl": "https://www.amazon.com/s?k=Everything%2C+Everything+Nicola+Yoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-instructions-for-dancing": {
+      "amazonUrl": "https://www.amazon.com/s?k=Instructions+for+Dancing+Nicola+Yoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-rise-to-the-sun": {
+      "amazonUrl": "https://www.amazon.com/s?k=Rise+to+the+Sun+Leah+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-cost-of-knowing": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Cost+of+Knowing+Brittney+Morris&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-jump": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Jump+Brittney+Morris&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-felix-ever-after": {
+      "amazonUrl": "https://www.amazon.com/s?k=Felix+Ever+After+Kacen+Callender&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-this-is-kind-of-an-epic-love-story": {
+      "amazonUrl": "https://www.amazon.com/s?k=This+Is+Kind+of+an+Epic+Love+Story+Kacen+Callender&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-beauty-that-remains": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Beauty+That+Remains+Ashley+Woodfolk&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-when-you-were-everything": {
+      "amazonUrl": "https://www.amazon.com/s?k=When+You+Were+Everything+Ashley+Woodfolk&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-nothing-burns-as-bright-as-you": {
+      "amazonUrl": "https://www.amazon.com/s?k=Nothing+Burns+as+Bright+as+You+Ashley+Woodfolk&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-full-disclosure": {
+      "amazonUrl": "https://www.amazon.com/s?k=Full+Disclosure+Camryn+Garrett&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-off-the-record": {
+      "amazonUrl": "https://www.amazon.com/s?k=Off+the+Record+Camryn+Garrett&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-little-lion": {
+      "amazonUrl": "https://www.amazon.com/s?k=Little+%26+Lion+Brandy+Colbert&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-revolution-of-birdie-randolph": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Revolution+of+Birdie+Randolph+Brandy+Colbert&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-tyler-johnson-was-here": {
+      "amazonUrl": "https://www.amazon.com/s?k=Tyler+Johnson+Was+Here+Jay+Coles&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-things-we-couldn-t-say": {
+      "amazonUrl": "https://www.amazon.com/s?k=Things+We+Couldn%27t+Say+Jay+Coles&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-calling-my-name": {
+      "amazonUrl": "https://www.amazon.com/s?k=Calling+My+Name+Liara+Tamani&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-all-the-things-we-never-knew": {
+      "amazonUrl": "https://www.amazon.com/s?k=All+the+Things+We+Never+Knew+Liara+Tamani&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-rock-and-the-river": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Rock+and+the+River+Kekla+Magoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-how-it-went-down": {
+      "amazonUrl": "https://www.amazon.com/s?k=How+It+Went+Down+Kekla+Magoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-light-it-up": {
+      "amazonUrl": "https://www.amazon.com/s?k=Light+It+Up+Kekla+Magoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-x-a-novel": {
+      "amazonUrl": "https://www.amazon.com/s?k=X%3A+A+Novel+Ilyasah+Shabazz+and+Kekla+Magoon&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-awakening-of-malcolm-x": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Awakening+of+Malcolm+X+Ilyasah+Shabazz+and+Tiffany+D.+Jackson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-this-is-my-america": {
+      "amazonUrl": "https://www.amazon.com/s?k=This+Is+My+America+Kim+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-invisible-son": {
+      "amazonUrl": "https://www.amazon.com/s?k=Invisible+Son+Kim+Johnson&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-black-kids": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Black+Kids+Christina+Hammonds+Reed&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-noughts-crosses": {
+      "amazonUrl": "https://www.amazon.com/s?k=Noughts+%26+Crosses+Malorie+Blackman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-boys-don-t-cry": {
+      "amazonUrl": "https://www.amazon.com/s?k=Boys+Don%27t+Cry+Malorie+Blackman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-chasing-the-stars": {
+      "amazonUrl": "https://www.amazon.com/s?k=Chasing+the+Stars+Malorie+Blackman&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-liccle-bit": {
+      "amazonUrl": "https://www.amazon.com/s?k=Liccle+Bit+Alex+Wheatle&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-crongton-knights": {
+      "amazonUrl": "https://www.amazon.com/s?k=Crongton+Knights+Alex+Wheatle&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-cane-warriors": {
+      "amazonUrl": "https://www.amazon.com/s?k=Cane+Warriors+Alex+Wheatle&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-refugee-boy": {
+      "amazonUrl": "https://www.amazon.com/s?k=Refugee+Boy+Benjamin+Zephaniah&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-face": {
+      "amazonUrl": "https://www.amazon.com/s?k=Face+Benjamin+Zephaniah&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-raybearer": {
+      "amazonUrl": "https://www.amazon.com/s?k=Raybearer+Jordan+Ifueko&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-redemptor": {
+      "amazonUrl": "https://www.amazon.com/s?k=Redemptor+Jordan+Ifueko&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-children-of-blood-and-bone": {
+      "amazonUrl": "https://www.amazon.com/s?k=Children+of+Blood+and+Bone+Tomi+Adeyemi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-children-of-virtue-and-vengeance": {
+      "amazonUrl": "https://www.amazon.com/s?k=Children+of+Virtue+and+Vengeance+Tomi+Adeyemi&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-the-belles": {
+      "amazonUrl": "https://www.amazon.com/s?k=The+Belles+Dhonielle+Clayton&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-a-blade-so-black": {
+      "amazonUrl": "https://www.amazon.com/s?k=A+Blade+So+Black+L.+L.+McKinney&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-wings-of-ebony": {
+      "amazonUrl": "https://www.amazon.com/s?k=Wings+of+Ebony+J.+Elle&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-beasts-of-prey": {
+      "amazonUrl": "https://www.amazon.com/s?k=Beasts+of+Prey+Ayana+Gray&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-skin-of-the-sea": {
+      "amazonUrl": "https://www.amazon.com/s?k=Skin+of+the+Sea+Natasha+Bowen&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-cinderella-is-dead": {
+      "amazonUrl": "https://www.amazon.com/s?k=Cinderella+Is+Dead+Kalynn+Bayron&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-this-poison-heart": {
+      "amazonUrl": "https://www.amazon.com/s?k=This+Poison+Heart+Kalynn+Bayron&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-ace-of-spades": {
+      "amazonUrl": "https://www.amazon.com/s?k=Ace+of+Spades+Faridah+%C3%80b%C3%ADk%C3%A9-%C3%8Dy%C3%ADm%C3%ADd%C3%A9&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-dread-nation": {
+      "amazonUrl": "https://www.amazon.com/s?k=Dread+Nation+Justina+Ireland&i=stripbooks",
+      "amazonMode": "search"
+    },
+    "teen-beasts-made-of-night": {
+      "amazonUrl": "https://www.amazon.com/s?k=Beasts+Made+of+Night+Tochi+Onyebuchi&i=stripbooks",
+      "amazonMode": "search"
     }
   }
 }
