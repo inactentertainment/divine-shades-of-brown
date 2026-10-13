@@ -79,3 +79,11 @@ Lock in the journal placement: understated 3D inline card with a soft fade/shado
 - All 406 curated book/discovery entries have ordinary untagged Amazon search links labelled Find on Amazon. Search does not assert an exact edition, stock, price or Amazon availability. Existing seven legal full-read links remain. Affiliate mode remains off until approved IDs are supplied.
 - Banned & Uncovered distinguishes released records, public primary sources and documented challenges. Twelve starter records; twenty direct file links from the official MLK release index. No claim that all materials were banned or previously secret, or that government allegations establish truth.
 - Existing seven-icon comfort bar mounts only book guides, opening essay and substantial record briefings; no bar on Library entrances, shelves or parent forms. Preserve shared header, branded buttons, cover containment, existing footer lifecycle and reduced motion.
+
+
+## 13 October 2026 — four paintings and Atlas usability
+- Four artwork previews: Library book-letter wordmark with carved African-inspired bookmark; Black Life Essentials; Our Next Chapter; Black Atlas companion painting. Preserve the deep earthy painterly direction and abstract figures. No extra visible text in the three editorial paintings.
+- Install only the requested Library title replacement now; other paintings remain preview assets pending the user's review. Remove the heading's programmatic focus outline without removing focus indication on controls. Publish optimized WebP files, preserve PNG masters locally.
+- Add twelve city destinations (total 90) to the existing painted Atlas, plus zoom slider, recenter control, resize guards, expanded-map background scroll lock and correct Escape return. No invented business ownership/rating claims for new cities.
+- Research recommends painted entrance plus optional MapLibre/OpenFreeMap detailed vector map, using a DSB style and preserved attribution. Satellite imagery and live cameras remain distinct features. Official African wildlife camera collection is linked explicitly; no feed is presented as a live view of the selected city.
+- No paid mapping API or hosting service added. See DSB_ARTWORK_REEL.md for source research, actual implementation boundaries, delivery paths, final prompts and QA limits.

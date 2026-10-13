@@ -35,3 +35,7 @@
 @media(prefers-reduced-motion:reduce){.atlas-art-plane{will-change:auto}}
 
 #atlasMap{min-height:0;overflow:visible;background:#21140d;border:0;margin-bottom:20px}
+
+
+.atlas-zoom-control{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font:14px Georgia;color:#f6e2c7}.atlas-zoom-control input{width:135px;accent-color:#d5a270;min-height:44px;cursor:pointer}.atlas-zoom-control output{min-width:46px;font-variant-numeric:tabular-nums}.atlas-art-toolbar button:disabled{opacity:.5;cursor:default}.atlas-city-selection>a{display:inline-flex;align-items:center;min-height:44px;margin:8px 16px 8px 0;overflow-wrap:anywhere}.atlas-art-caption p+p{font-size:12px;margin-top:9px;line-height:1.6}.atlas-zoom-control input:focus-visible{outline:2px solid #f4d4a6;outline-offset:3px}@media(max-width:600px){.atlas-zoom-control{width:100%}.atlas-zoom-control input{flex:1}.atlas-art-toolbar button[data-map-action=expand]{margin-left:auto}}
+.atlas-camera-sources{margin:15px 0;padding:16px;border:1px solid #866044;font:14px/1.7 Georgia}.atlas-camera-sources summary{cursor:pointer}.atlas-camera-sources a{display:inline-block;padding:10px 0;color:#f4cea1}.atlas-camera-sources p{margin:12px 0}

@@ -78,9 +78,10 @@
   let choice='🏽';try{choice=localStorage.getItem(key)||'🏽';}catch{}if(!tones.has(choice))choice='🏽';tone.value=choice;try{localStorage.setItem(key,choice);}catch{}
   function applyTone(){document.querySelectorAll('[data-dsb-person-emoji]').forEach(el=>{el.textContent=el.dataset.dsbPersonEmoji+choice;});}
   tone.onchange=()=>{choice=tone.value;try{localStorage.setItem(key,choice);}catch{}applyTone();};applyTone();
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open')&&!document.getElementById('dsbTravelDialog')?.open){e.preventDefault();e.stopImmediatePropagation();closeModal();}},true);
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('open')&&(routeLayer.classList.contains('open')||lbModal.classList.contains('open'))&&!menu.classList.contains('open'))closeRoute();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.querySelector('.atlas-map.is-expanded')&&modal.classList.contains('open')&&!document.getElementById('dsbTravelDialog')?.open){e.preventDefault();e.stopImmediatePropagation();closeModal();}},true);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.querySelector('.atlas-map.is-expanded')&&!modal.classList.contains('open')&&(routeLayer.classList.contains('open')||lbModal.classList.contains('open'))&&!menu.classList.contains('open'))closeRoute();});
   const initial=location.hash.replace(/^#\/?/,'');if(supported.has(initial.split('/')[0])){if(!location.hash.startsWith('#/'))history.replaceState({route:initial},'',location.pathname+location.search+'#/'+initial);openRoute(initial,false);}
 })();
+
 
 

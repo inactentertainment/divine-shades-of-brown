@@ -1,4 +1,4 @@
-import {initLibrary,caregiverGuideSections} from './library.js';
+import {initLibrary,caregiverGuideSections} from './library.js?v=art1';
 import {filterBooks,validateCanon,journalInsertionPoint,shelfCounts} from './books-model.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
