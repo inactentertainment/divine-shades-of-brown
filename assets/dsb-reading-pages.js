@@ -28,9 +28,9 @@
   section.querySelector('[data-draft-clear]').onclick=()=>{try{localStorage.removeItem(key)}catch{}state={name:'',body:'',reaction:'',sticker:''};name.value='';body.value='';draw();status.textContent='Private draft cleared.'};draw();
  }
  function article(id,push=true){
-  const story=journalPosts.find(p=>p.id===id);if(!story)return;
+  const story=journalPosts.find(p=>p.id===id);if(!story){oldOpen('journal',false);fullPage();toast('That article is unavailable. Choose another from the Journal.');history.replaceState({route:'journal'},'',location.pathname+location.search+'#/journal');return;}
   destroy();closeModal();oldOpen('journal',false);content.replaceChildren();
-  content.removeAttribute('data-reading-content');const article=document.createElement('article');article.className='dsb-article-page';article.innerHTML='<a class="dsb-page-back" href="#/journal">← All articles</a><p class="section-kicker">'+escape(story.cat)+' · FREE ARTICLES & IDEAS</p><h1>'+escape(story.title)+'</h1><p class="dsb-article-meta">'+escape(story.author||'Divine Shades of Brown')+' · '+escape(story.date||'Founding collection')+'</p><p class="dsb-article-deck">'+escape(story.dek)+'</p><div data-reading-content>'+story.body+'</div><div class="article-tools"><button class="save-btn" data-story-save>Save article</button><button data-story-copy>Copy article link</button></div>';
+  content.removeAttribute('data-reading-content');const article=document.createElement('article');article.className='dsb-article-page';article.innerHTML='<a class="dsb-page-back" href="#/journal">← All articles</a><p class="section-kicker">'+lbEsc(story.cat)+' · FREE ARTICLES & IDEAS</p><h1>'+lbEsc(story.title)+'</h1><p class="dsb-article-meta">'+lbEsc(story.author||'Divine Shades of Brown')+' · '+lbEsc(story.date||'Founding collection')+'</p><p class="dsb-article-deck">'+lbEsc(story.dek)+'</p><div data-reading-content>'+story.body+'</div><div class="article-tools"><button class="save-btn" data-story-save>Save article</button><button data-story-copy>Copy article link</button></div>';
   content.append(article);fullPage();article.querySelector('[data-story-save]').onclick=e=>{toggleSaved(story.id,story.title);e.target.textContent=getSaved().some(s=>s.id===id)?'Saved':'Save article';};
   article.querySelector('[data-story-copy]').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);toast('Article link copied.')}catch{toast('Copy the address from your browser.')}};
   stepUp(article);conversation(article,story);
@@ -40,7 +40,7 @@
  openRoute=function(raw,push=true){
   const [name,id]=String(raw).split('/');if(name==='journal'&&id){article(id,push);return;}destroy();content.removeAttribute('data-reading-content');
   if(name==='document'&&legalDocs[id]){
-   const doc=legalDocs[id];oldOpen('journal',false);content.removeAttribute('data-reading-content');content.innerHTML='<article class="dsb-article-page"><h1>'+escape(doc.title)+'</h1><div data-reading-content>'+doc.body+'</div></article>';fullPage();installReading(content.querySelector('[data-reading-content]'),'document/'+id);if(push)history.pushState({document:id},'',location.pathname+location.search+'#/document/'+id);return;
+   const doc=legalDocs[id];oldOpen('journal',false);content.removeAttribute('data-reading-content');content.innerHTML='<article class="dsb-article-page"><h1>'+lbEsc(doc.title)+'</h1><div data-reading-content>'+doc.body+'</div></article>';fullPage();installReading(content.querySelector('[data-reading-content]'),'document/'+id);if(push)history.pushState({document:id},'',location.pathname+location.search+'#/document/'+id);return;
   }
   if(name==='magazine'){
    oldOpen('journal',false);content.innerHTML='<article class="dsb-article-page"><p class="section-kicker">DSB DIGITAL MAGAZINE</p><h1>A collection worth keeping.</h1><div data-reading-content><p>The DSB digital magazine is a curated publication separate from our free articles and ideas.</p><h4>Magazine collections</h4><p>Belong includes the approved magazine starter collection and archive sampler. Build includes the full archive and standard future digital issues, alongside curated art collections.</p><p>The magazine collection is in development. Published issues and their permitted uses will be identified before delivery.</p><p>Explore our free articles while the magazine takes shape.</p></div><a class="dsb-page-back" href="#/journal">Read free articles</a></article>';fullPage();stepUp(content.querySelector('article'));if(push)history.pushState({route:name},'',location.pathname+location.search+'#/magazine');return;
@@ -54,4 +54,5 @@
  openFounderPopup=()=>{};founderPopup.classList.remove('open');founderPopup.setAttribute('aria-hidden','true');
  const returnStory=new URLSearchParams(location.search).get('community_story');if(returnStory&&window.DSB_COMMUNITY_CONFIG?.enabled)article(returnStory,false);else if(location.hash.startsWith('#/'))openRoute(location.hash.slice(2),false);
 })();
+
 

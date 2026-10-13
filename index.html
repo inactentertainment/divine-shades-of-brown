@@ -306,6 +306,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 <link rel="stylesheet" href="assets/read-aloud.css?v=dsb1">
 <link rel="stylesheet" href="assets/page-tools.css?v=dsb1">
 <link rel="stylesheet" href="assets/dsb-comfort-brand.css?v=polish1">
+<style>.room-card li a,.room-card li button{display:inline-flex;align-items:center;min-height:32px;color:inherit;text-decoration:none;border:0;background:none;padding:6px 0;text-align:left;font:inherit;letter-spacing:inherit;cursor:pointer}.room-card li a:hover,.room-card li button:hover{color:#f4cf9e;text-decoration:underline;text-underline-offset:4px}.room-card :is(a,button):focus-visible,.action-card:focus-visible{outline:2px solid #d7a77d;outline-offset:4px}</style>
 </head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
@@ -393,10 +394,10 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
     <section class="four-rooms reveal" id="ecosystem">
       <div class="four-head"><div><p class="section-kicker">ONE PLATFORM · FOUR ROOMS</p><h2>Come for one thing.<br><em>Discover the whole world.</em></h2></div><p>Find your way through four clear rooms: read a useful article, learn our history, support Black-owned businesses, or connect with people and resources.</p></div>
       <div class="four-grid">
-        <article class="room-card"><b>01</b><h3>Read</h3><p>Clear educational articles on Black life, culture, money, wellness, the diaspora, and technology — with sources and practical next steps.</p><ul><li>DSB JOURNAL</li><li>FEATURED ESSAYS</li><li>DIASPORA FEED</li><li>VIDEO + MAGAZINE</li></ul></article>
-        <article class="room-card"><b>02</b><h3>Learn</h3><p>A beautiful knowledge library connecting African origins, global Black history, people, places, music, documents, books and timelines.</p><ul><li>TODAY IN BLACK</li><li>HISTORY EXPLORER</li><li>BROWN’S BOOK CLUB</li><li>MUSIC TIMELINE</li></ul></article>
-        <article class="room-card"><b>03</b><h3>Support</h3><p>Turn pride into economic action through Black-owned discovery, spending records, products, creators and practical opportunities.</p><ul><li>BLACK ATLAS</li><li>BLACK RECEIPT</li><li>CREATOR MARKETPLACE</li><li>OPPORTUNITIES</li></ul></article>
-        <article class="room-card"><b>04</b><h3>Connect</h3><p>What is happening now: events, travel, resources, help and community pathways designed to move people from information to action.</p><ul><li>BLACK PULSE</li><li>BROWN PASSPORT</li><li>FIND HELP</li><li>RESOURCE VAULT</li></ul></article>
+        <article class="room-card"><b>01</b><h3>Read</h3><p>Clear educational articles on Black life, culture, money, wellness, the diaspora, and technology — with sources and practical next steps.</p><ul><li><a href="library/">LIBRARY · BOOKS &amp; ARCHIVES →</a></li><li><a href="#/journal">DSB JOURNAL · READ ARTICLES →</a></li><li><a href="#/journal">FEATURED ESSAYS →</a></li><li><a href="#/magazine">DIGITAL MAGAZINE →</a></li></ul></article>
+        <article class="room-card"><b>02</b><h3>Learn</h3><p>A beautiful knowledge library connecting African origins, global Black history, people, places, music, documents, books and timelines.</p><ul><li><a href="#/history">TODAY IN BLACK →</a></li><li><a href="#/history">HISTORY EXPLORER →</a></li><li><a href="library/">DSB LIBRARY →</a></li><li><button type="button" data-open-jukebox>DSB JUKEBOX →</button></li></ul></article>
+        <article class="room-card"><b>03</b><h3>Support</h3><p>Turn pride into economic action through Black-owned discovery, spending records, products, creators and practical opportunities.</p><ul><li><a href="#/atlas">BLACK ATLAS →</a></li><li><a href="#/dashboard">BLACK RECEIPT →</a></li><li><a href="#/shop">SHOP BRANDS &amp; DSB →</a></li><li><a href="#/opportunities">OPPORTUNITIES →</a></li></ul></article>
+        <article class="room-card"><b>04</b><h3>Connect</h3><p>What is happening now: events, travel, resources, help and community pathways designed to move people from information to action.</p><ul><li><a href="#/pulse">BLACK PULSE →</a></li><li><a href="#/travel">BROWN PASSPORT →</a></li><li><a href="#/help">FIND HELP →</a></li><li><a href="#/resource-vault">RESOURCE VAULT →</a></li></ul></article>
       </div>
     </section>
 
@@ -624,7 +625,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
         <article class="ed-card"><small>HISTORY · ORIGINS</small><h3>Humanity’s African origins belong in the same conversation as tomorrow.</h3><p>History should connect ancient societies, migration, invention and the global diaspora to the world we are building now.</p><a href="#history">EXPLORE HISTORY →</a></article>
         <article class="ed-card"><small>MONEY · POWER</small><h3>Discovery is part of economic infrastructure.</h3><p>Black Atlas, opportunity discovery and Black Receipt turn economic support into repeatable habits.</p><a href="#atlas">SUPPORT BLACK →</a></article>
         <article class="ed-card"><small>LIBRARY · IDEAS</small><h3>The DSB Library</h3><p>400 essential selections. Choose adult books, build a child’s reading plan, or examine the records in Banned & Uncovered.</p><a href="library/">ENTER THE LIBRARY →</a></article>
-        <article class="ed-card"><small>MUSIC · CULTURE</small><h3>Hear the history.</h3><p>Use the new music control at the top of the page to move from early blues and gospel through soul, country, rock, Afrobeat and modern global sounds.</p><a href="#top">OPEN MUSIC ↑</a></article>
+        <article class="ed-card"><small>MUSIC · CULTURE</small><h3>Hear the history.</h3><p>Use the new music control at the top of the page to move from early blues and gospel through soul, country, rock, Afrobeat and modern global sounds.</p><button type="button" class="text-link" data-open-jukebox>OPEN THE JUKEBOX →</button></article>
       </div>
     </section>
 
@@ -891,8 +892,8 @@ const actions=[
  {icon:'◎',title:'My DSB',desc:'Revisit saved discoveries and record purchases from Black-owned businesses.',target:'#dashboard'}
 ];
 const actionGrid=document.querySelector('#actionGrid');
-actionGrid.innerHTML=actions.map((a,i)=>`<article class="action-card" data-target="${a.target}"><b>0${i+1}</b><div class="action-icon">${a.icon}</div><h3>${a.title}</h3><p>${a.desc}</p></article>`).join('');
-actionGrid.insertAdjacentHTML('beforeend','<a class="action-card action-card-books" href="library/" style="text-decoration:none;color:inherit"><b>09</b><div class="action-icon" aria-hidden="true">▤</div><h3>Brown’s Book Club</h3><p>The DSB 100, rising voices, full reading guides and a private shelf for ideas worth keeping.</p></a>');
+actionGrid.innerHTML=actions.map((a,i)=>`<a class="action-card" href="${a.target}" data-target="${a.target}" style="text-decoration:none;color:inherit"><b>0${i+1}</b><div class="action-icon">${a.icon}</div><h3>${a.title}</h3><p>${a.desc}</p></a>`).join('');
+actionGrid.insertAdjacentHTML('beforeend','<a class="action-card action-card-books" href="library/" style="text-decoration:none;color:inherit"><b>09</b><div class="action-icon" aria-hidden="true">▤</div><h3>The DSB Library</h3><p>400 essential selections, children’s reading plans, adult guides and Banned &amp; Uncovered records.</p></a>');
 
 document.querySelectorAll('[data-scroll],.action-card').forEach(el=>el.addEventListener('click',()=>{const t=el.dataset.scroll||el.dataset.target;if(t)document.querySelector(t)?.scrollIntoView({behavior:'smooth'});}));
 
@@ -955,7 +956,7 @@ let selectCat='All';
 function renderSelect(){
  const filters=document.getElementById('selectFilters'),grid=document.getElementById('selectGrid');if(!filters||!grid)return;
  const cats=['All',...new Set(dsbSelectBusinesses.map(x=>x.cat))];
- filters.innerHTML=cats.map(x=>'<button class="'+(x===selectCat?'active':'')+'" data-select-cat="'+x+'">'+labels[x]+'</button>').join('');
+ filters.innerHTML=cats.map(x=>'<button class="'+(x===selectCat?'active':'')+'" data-select-cat="'+x+'">'+x+'</button>').join('');
  filters.querySelectorAll('button').forEach(b=>b.onclick=()=>{selectCat=b.dataset.selectCat;renderSelect()});
  const list=dsbSelectBusinesses.filter(x=>selectCat==='All'||x.cat===selectCat);
  grid.innerHTML=list.map(x=>'<article class="select-card"><span class="select-badge">DSB SELECT · '+x.cat.toUpperCase()+'</span><h3>'+x.name+'</h3><div class="select-city">'+x.city.toUpperCase()+'</div><div class="select-rating"><strong>'+x.rating.toFixed(1)+' ★</strong><span>'+x.reviews.toLocaleString()+' PUBLIC REVIEWS · SNAPSHOT OCT 2026</span></div><p class="select-why"><b>WHY DSB SELECTED IT</b><br>'+x.why+'</p><div class="select-actions"><a class="primary" href="'+x.url+'" target="_blank" rel="noopener noreferrer">VISIT OFFICIAL SITE ↗</a><button data-select-save="'+x.name+'">SAVE</button></div></article>').join('');
@@ -1006,7 +1007,7 @@ function renderEssentials(){
  const q=(document.getElementById('essentialsSearch')?.value||'').trim().toLowerCase();
  const filters=document.getElementById('essentialsFilters'),grid=document.getElementById('essentialsGrid');if(!filters||!grid)return;
  const cats=['All',...new Set(essentialResources.map(x=>x.cat))];
- filters.innerHTML=cats.map(x=>'<button class="'+(x===essentialCat?'active':'')+'" data-essential-cat="'+x+'">'+labels[x]+'</button>').join('');
+ filters.innerHTML=cats.map(x=>'<button class="'+(x===essentialCat?'active':'')+'" data-essential-cat="'+x+'">'+x+'</button>').join('');
  filters.querySelectorAll('button').forEach(b=>b.onclick=()=>{essentialCat=b.dataset.essentialCat;renderEssentials()});
  const list=essentialResources.filter(x=>(essentialCat==='All'||x.cat===essentialCat)&&(x.name+' '+x.cat+' '+x.city+' '+x.note+' '+x.address).toLowerCase().includes(q));
  grid.innerHTML=list.map(x=>'<article class="essential-card"><small>'+x.cat.toUpperCase()+'</small><h3>'+x.name+'</h3><div class="where">'+x.city.toUpperCase()+'</div><div class="essential-proof"><span>'+x.proof+'</span></div><p>'+x.note+'</p><div class="essential-contact">'+(x.phone?'<b>PHONE</b> '+x.phone+'<br>':'')+'<b>ADDRESS / AREA</b> '+x.address+'</div><div class="essential-actions"><a href="'+x.url+'" target="_blank" rel="noopener noreferrer">OFFICIAL / VERIFIED SOURCE ↗</a><button data-essential-save="'+x.name+'">SAVE</button></div></article>').join('');
@@ -1021,7 +1022,7 @@ const unexpectedTrips=[
  {place:'Middleburg, Virginia',stay:'Salamander Middleburg',proof:'4.3 ★ · 2,281 REVIEWS · BLACK-FOUNDED',why:'Virginia horse and wine country may not be the first place Black travelers think of for luxury, but Sheila Johnson built one of the region’s defining destination resorts here.',move:'Drive from the DMV or fly into Dulles; Middleburg is roughly an hour from Washington and much closer to IAD. Reserve spa, dining and equestrian activities early.',black:'The resort itself is the Black-founded anchor. Pair it with a wider Loudoun/DMV Black Atlas search before heading into smaller surrounding towns.',url:'https://salamanderresort.com/'},
  {place:'Upper Marlboro, Maryland',stay:'Wellspring Manor & Spa',proof:'5.0 ★ · 13 REVIEWS · BLACK-OWNED',why:'A wooded Prince George’s County estate turns a close-to-home DMV trip into an art, spa and rest-focused getaway without flying anywhere.',move:'Drive from D.C., Baltimore or Southern Maryland. The property is better treated as a destination retreat than as a walkable hotel base.',black:'Black ownership is built into the stay itself, including an art collection centered on artists of color and culture-forward hospitality.',url:'https://wellspringmanor.com/'},
  {place:'Indianapolis, Indiana',stay:'Tiny Urban Escapes',proof:'BLACK WOMAN-FOUNDED · CULTURAL HERITAGE STAY',why:'Indianapolis rarely appears at the top of Black luxury travel lists, which is exactly why this Haughville boutique concept matters: wellness and design rooted in a historic Black neighborhood.',move:'Fly IND or drive in from the Midwest. Use the stay as a base for neighborhood history, Madam C.J. Walker connections and downtown Indianapolis.',black:'Founder Robin Staten explicitly built the property around community enhancement, cultural elevation and Black heritage tourism.',url:'https://www.tinyurbanescapes.com/'},
- {place:'El Reno, Oklahoma',stay:'Home2 Suites by Hilton El Reno',proof:'4.4 ★ · 69 REVIEWS · BLACK INVESTMENT CONNECTION',why:'A small Oklahoma stop becomes more interesting when the lodging itself connects to Black women in hotel ownership and investment rather than only front-line hospitality jobs.',move:'Fly into Oklahoma City or use it as an I-40 road-trip stop. The hotel sits about 25 minutes from downtown Oklahoma City.',black:'Travel Noire traces the ownership deal to Davonne Reaves and Jessica Myers of Epiq Collective with investment partners. Treat this as a Black investment connection rather than a small independent B&B.',url:'https://www.hilton.com/en/hotels/okcerht-home2-suites-el-reno/'}
+ {place:'El Reno, Oklahoma',stay:'Home2 Suites by Hilton El Reno',proof:'4.4 ★ · 69 REVIEWS · BLACK INVESTMENT CONNECTION',why:'A small Oklahoma stop becomes more interesting when the lodging itself connects to Black women in hotel ownership and investment rather than only front-line hospitality jobs.',move:'Fly into Oklahoma City or use it as an I-40 road-trip stop. The hotel sits about 25 minutes from downtown Oklahoma City.',black:'Travel Noire traces the ownership deal to Davonne Reaves and Jessica Myers of Epiq Collective with investment partners. Treat this as a Black investment connection rather than a small independent B&B.',url:'https://www.hilton.com/en/hotels/okcelht-home2-suites-el-reno/'}
 ];
 function renderUnexpected(){
  const el=document.getElementById('unexpectedGrid');if(!el)return;
@@ -1030,7 +1031,7 @@ function renderUnexpected(){
 renderUnexpected();
 
 const historyData={
- people:{tag:'PEOPLE',title:'People, ideas and primary sources',text:'Profiles connect biography to speeches, books, interviews, archives and the ideas each person advanced.',link:'https://nmaahc.si.edu/explore',label:'EXPLORE NMAAHC COLLECTIONS'},
+ people:{tag:'PEOPLE',title:'People, ideas and primary sources',text:'Profiles connect biography to speeches, books, interviews, archives and the ideas each person advanced.',link:'https://nmaahc.si.edu/explore/stories',label:'EXPLORE NMAAHC STORIES'},
  places:{tag:'PLACES',title:'History by geography',text:'Explore Harlem, Bahia, Accra, Kingston, London, Lagos, Johannesburg and other places through a Black-history lens.',link:'https://www.loc.gov/collections/',label:'EXPLORE LIBRARY OF CONGRESS COLLECTIONS'},
  movements:{tag:'MOVEMENTS',title:'Ideas in motion',text:'Organizing traditions, cultural movements, economic strategies and social change make more sense when the people, documents and institutions are connected.',link:'https://www.archives.gov/research/african-americans',label:'EXPLORE NATIONAL ARCHIVES'},
  documents:{tag:'DOCUMENTS',title:'Read the source',text:'Speeches, letters, court decisions, newspapers, photographs and archival materials should point back to the institution that holds them.',link:'https://www.loc.gov/collections/african-american-perspectives-rare-books-and-special-collections/about-this-collection/',label:'OPEN PRIMARY-SOURCE COLLECTION'}
@@ -1038,8 +1039,8 @@ const historyData={
 function setHistory(key){const d=historyData[key];document.querySelector('#historyPreview').innerHTML=`<small>${d.tag}</small><h4>${d.title}</h4><p>${d.text}</p><a href="${d.link}" target="_blank" rel="noreferrer">${d.label} ↗</a>`;document.querySelectorAll('.history-tab').forEach(b=>b.classList.toggle('active',b.dataset.history===key));}document.querySelectorAll('.history-tab').forEach(b=>b.onclick=()=>setHistory(b.dataset.history));setHistory('people');
 
 const helpData={
- 'Mental Health':{icon:'♡',desc:'Start with culturally responsive care, crisis support, therapist directories and community mental-health organizations.',links:[['988 Suicide & Crisis Lifeline','U.S. call/text/chat crisis support','https://988lifeline.org/'],['Therapy for Black Girls','Therapist directory + mental-health resources','https://therapyforblackgirls.com/'],['Therapy for Black Men','Therapist directory + resources','https://therapyforblackmen.org/'],['BEAM','Black Emotional and Mental Health Collective','https://beam.community/']]},
- 'Housing':{icon:'⌂',desc:'Trusted starting points for housing counseling, renter/homeowner resources and assistance navigation.',links:[['HUD Housing Counseling','Official U.S. housing counselor search','https://www.hud.gov/housing-counseling'],['211','Local help with housing and essentials','https://www.211.org/']]},
+ 'Mental Health':{icon:'♡',desc:'Start with culturally responsive care, crisis support, therapist directories and community mental-health organizations.',links:[['988 Suicide & Crisis Lifeline','U.S. call/text/chat crisis support','https://988lifeline.org/'],['Therapy for Black Girls','Therapist directory + mental-health resources','https://therapyforblackgirls.com/'],['Black Mental Health Alliance','Confidential referrals to culturally responsive mental-health professionals','https://blackmentalhealth.com/connect-with-a-therapist/'],['BEAM','Black Emotional and Mental Health Collective','https://beam.community/']]},
+ 'Housing':{icon:'⌂',desc:'Trusted starting points for housing counseling, renter/homeowner resources and assistance navigation.',links:[['HUD Housing Counseling','Official U.S. housing counselor search','https://www.hud.gov/hud-partners/housing-national-agencies'],['211','Local help with housing and essentials','https://www.211.org/']]},
  'Money':{icon:'$',desc:'Financial education, credit, consumer protection and money-management starting points.',links:[['Consumer Financial Protection Bureau','Official financial tools and consumer help','https://www.consumerfinance.gov/'],['MyMoney.gov','U.S. government financial education','https://www.mymoney.gov/']]},
  'Legal':{icon:'§',desc:'Starting points for legal-aid directories, civil-rights resources and official information.',links:[['LawHelp.org','Find nonprofit legal aid in the U.S.','https://www.lawhelp.org/'],['NAACP Resources','Civil-rights and community resources','https://naacp.org/find-resources']]},
  'Education':{icon:'✎',desc:'Scholarships, college planning, financial aid and learning support.',links:[['Federal Student Aid','Official U.S. financial aid information','https://studentaid.gov/'],['UNCF','Scholarships and education resources','https://uncf.org/'],['NAACP Scholarships','Scholarship opportunities and requirements','https://naacp.org/find-resources/scholarships-awards-internships/scholarships']]},
@@ -1078,7 +1079,7 @@ let utilityCat='All';
 function renderUtility(){
  const tabs=document.getElementById('utilityTabs'),grid=document.getElementById('utilityGrid');if(!tabs||!grid)return;
  const cats=['All',...new Set(utilityData.map(x=>x.cat))];
- tabs.innerHTML=cats.map(x=>'<button class="'+(x===utilityCat?'active':'')+'" data-util="'+x+'">'+labels[x]+'</button>').join('');
+ tabs.innerHTML=cats.map(x=>'<button class="'+(x===utilityCat?'active':'')+'" data-util="'+x+'">'+x+'</button>').join('');
  tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{utilityCat=b.dataset.util;renderUtility()});
  const list=utilityData.filter(x=>utilityCat==='All'||x.cat===utilityCat);
  grid.innerHTML=list.map(x=>'<article class="utility-card"><small>'+x.cat.toUpperCase()+'</small><h3>'+x.title+'</h3><p>'+x.desc+'</p><button data-util-download="'+x.action+'">DOWNLOAD STARTER PAGE ↓</button></article>').join('');
@@ -1162,7 +1163,7 @@ const opportunities=[
  {id:'sba',type:'Business',title:'SBA Funding Programs',source:'U.S. Small Business Administration',place:'United States',timing:'Ongoing resources',desc:'Official funding, loan, investment and business-support starting points.',url:'https://www.sba.gov/funding-programs'},
  {id:'usajobs',type:'Jobs',title:'USAJOBS',source:'U.S. Office of Personnel Management',place:'United States',timing:'Updated daily',desc:'Search federal career opportunities by location, agency, occupation and eligibility.',url:'https://www.usajobs.gov/'},
  {id:'apprentice',type:'Career',title:'Apprenticeship Job Finder',source:'Apprenticeship.gov',place:'United States',timing:'Ongoing directory',desc:'Explore paid registered apprenticeship pathways across industries and locations.',url:'https://www.apprenticeship.gov/apprenticeship-job-finder'},
- {id:'hudhome',type:'Homebuyer',title:'HUD Housing Counseling',source:'HUD',place:'United States',timing:'Ongoing resource',desc:'Find approved housing counselors for homebuying, renting, foreclosure prevention and financial readiness.',url:'https://www.hud.gov/housing-counseling'},
+ {id:'hudhome',type:'Homebuyer',title:'HUD Housing Counseling',source:'HUD',place:'United States',timing:'Ongoing resource',desc:'Find approved housing counselors for homebuying, renting, foreclosure prevention and financial readiness.',url:'https://www.hud.gov/hud-partners/housing-national-agencies'},
  {id:'mbda',type:'Business',title:'Minority Business Development Agency',source:'U.S. Department of Commerce',place:'United States',timing:'Ongoing business-development resources',desc:'Federal starting point for minority business centers, contracts, capital readiness and growth resources.',url:'https://www.mbda.gov/'},
  {id:'career-onestop',type:'Jobs',title:'CareerOneStop',source:'U.S. Department of Labor',place:'United States',timing:'Updated continuously',desc:'Official career, training, salary, job-search and local workforce resources.',url:'https://www.careeronestop.org/'},
  {id:'studentaid',type:'Education',title:'Federal Student Aid',source:'U.S. Department of Education',place:'United States',timing:'Aid cycles and deadlines vary',desc:'Official FAFSA, grants, federal student loans and college-aid guidance.',url:'https://studentaid.gov/'},
@@ -1375,7 +1376,7 @@ function atlas3Render(){
  const filters=['All','Essentials','Infrastructure','Capital','Future','Production','Knowledge'];
  const fc=document.getElementById('atlas3Filters'),list=document.getElementById('atlas3List'),detail=document.getElementById('atlas3Detail');
  if(!fc||!list||!detail)return;
- fc.innerHTML=filters.map(x=>'<button class="'+(x===atlas3Filter?'active':'')+'" data-a3-filter="'+x+'">'+labels[x]+'</button>').join('');
+ fc.innerHTML=filters.map(x=>'<button class="'+(x===atlas3Filter?'active':'')+'" data-a3-filter="'+x+'">'+x+'</button>').join('');
  fc.querySelectorAll('button').forEach(b=>b.onclick=()=>{atlas3Filter=b.dataset.a3Filter;atlas3Selected=0;atlas3Render()});
  const items=atlas3Data.filter(x=>atlas3Filter==='All'||x.category===atlas3Filter);
  if(!items.length){list.innerHTML='<div class="atlas-principle">No sectors in this view yet.</div>';detail.innerHTML='';return;}
@@ -1429,7 +1430,7 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 <script src="assets/dsb-music-catalog.js?v=1"></script>
 <script src="assets/dsb-speeches.js?v=1"></script>
 <script src="assets/dsb-jukebox.js?v=movies1"></script>
-<script src="assets/dsb-navigation.js?v=library1"></script>
+<script src="assets/dsb-navigation.js?v=links2"></script>
 <script src="assets/dsb-travel-catalog.js?v=1"></script>
 <script src="assets/dsb-horizon.js?v=2"></script>
 <script src="assets/dsb-menu-refinements.js?v=3"></script>
@@ -1440,7 +1441,7 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 <script src="assets/read-aloud.js?v=polish1"></script>
 <script src="assets/reader-comfort.js?v=dsb1"></script>
 <script src="assets/dsb-comfort-lifecycle.js?v=dsb1"></script>
-<script src="assets/dsb-reading-pages.js?v=6"></script>
+<script src="assets/dsb-reading-pages.js?v=links2"></script>
 <script src="assets/dsb-themed-selects.js?v=1"></script>
 </body>
 </html>
