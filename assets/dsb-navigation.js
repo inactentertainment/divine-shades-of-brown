@@ -1,6 +1,8 @@
 /* DSB destinations: preserve existing live sections, events, and personal data. */
 (() => {
   'use strict';
+  const paintings={"essentials": {"file": "dsb-essentials-painting.webp", "alt": "Painted scenes of Black families, farming, learning, care and neighborhood life."}, "chapter": {"file": "dsb-next-chapter-painting.webp", "alt": "A painting of young Black adults creating, writing and sharing ideas in a studio that opens onto a city and diaspora horizon."}, "atlas": {"file": "dsb-atlas-companion-painting.webp", "alt": "An expressive painting connecting Africa and the diaspora through landscapes, cultural spaces and flowing journeys."}};
+  function editorialArt(key){const art=paintings[key];return art?`<figure class="dsb-editorial-art dsb-editorial-art--${key}" data-dsb-artwork="${key}"><img src="assets/artwork/${art.file}" alt="${art.alt}" width="1672" height="941" loading="lazy" decoding="async"></figure>`:"";}
   const baseOpen = openRoute, baseClose = closeRoute;
   const sections = {'dsb-select':['dsb-select'],essentials:['essentials'],history:['history'],travel:['beyond-horizon','travel','unexpected-america'],resources:['resources','resource-vault'],'resource-vault':['resource-vault'],shop:['shop'],membership:['membership','member-value'],'unexpected-america':['unexpected-america']};
   const labels = {'dsb-select':'DSB SELECT',essentials:'BLACK LIFE ESSENTIALS',history:'HISTORY',travel:'TRAVEL',resources:'RESOURCES & VAULT','resource-vault':'RESOURCE VAULT',shop:'SHOP',membership:'MEMBERSHIP','unexpected-america':'UNEXPECTED AMERICA'};
@@ -32,6 +34,7 @@
     if(name==='journal'){renderBlog();show();activate(name,push);headingFocus();if(article)openArticle(article);return;}
     baseOpen(name,false);activate(name,push);
     if(name==='atlas'){
+      routeContent.querySelector('.route-hero')?.insertAdjacentHTML('afterend',editorialArt('atlas'));
       const map=document.getElementById('atlasMap'),grid=document.getElementById('atlasRouteGrid');
       if(map&&grid){const marker=document.createComment('DSB Atlas map home');map.before(marker);parked.push([map,marker]);grid.before(map);}
     }
@@ -46,7 +49,7 @@
   document.getElementById('lifeBookClose').onclick=()=>closeRoute();
   function renderBlog(){
     routeLabel.textContent='DSB JOURNAL';
-    routeContent.innerHTML=routeHero('OUR NEXT CHAPTER','Our lives. Our ideas. <em>Our next chapter.</em>','Clear articles about the issues that shape Black life today and tomorrow. Learn from Black voices, explore the sources, and choose one useful next step.')+'<div class="blog-tools"><label>Search articles<input type="search" id="dsbBlogSearch" placeholder="Try business, family, AI, or rest"></label><label>Topic<select id="dsbBlogCategory"><option value="">All topics</option>'+[...new Set(journalPosts.map(x=>x.cat))].sort().map(c=>'<option>'+lbEsc(c)+'</option>').join('')+'</select></label><label>Order<select id="dsbBlogOrder"><option value="new">Newest first</option><option value="title">Title A–Z</option></select></label><label class="blog-saved"><input type="checkbox" id="dsbBlogSaved"> Saved articles only</label></div><p id="dsbBlogCount" role="status" aria-live="polite"></p><div class="route-grid" id="dsbBlogGrid"></div>';
+    routeContent.innerHTML=routeHero('OUR NEXT CHAPTER','Our lives. Our ideas. <em>Our next chapter.</em>','Clear articles about the issues that shape Black life today and tomorrow. Learn from Black voices, explore the sources, and choose one useful next step.')+editorialArt('chapter')+'<div class="blog-tools"><label>Search articles<input type="search" id="dsbBlogSearch" placeholder="Try business, family, AI, or rest"></label><label>Topic<select id="dsbBlogCategory"><option value="">All topics</option>'+[...new Set(journalPosts.map(x=>x.cat))].sort().map(c=>'<option>'+lbEsc(c)+'</option>').join('')+'</select></label><label>Order<select id="dsbBlogOrder"><option value="new">Newest first</option><option value="title">Title A–Z</option></select></label><label class="blog-saved"><input type="checkbox" id="dsbBlogSaved"> Saved articles only</label></div><p id="dsbBlogCount" role="status" aria-live="polite"></p><div class="route-grid" id="dsbBlogGrid"></div>';
     const draw=()=>{
       const q=document.getElementById('dsbBlogSearch').value.trim().toLowerCase(),cat=document.getElementById('dsbBlogCategory').value,savedOnly=document.getElementById('dsbBlogSaved').checked,ids=new Set(getSaved().map(x=>x.id));
       let list=journalPosts.filter(x=>(!cat||x.cat===cat)&&(!savedOnly||ids.has(x.id))&&[x.title,x.dek,x.cat,x.body.replace(/<[^>]*>/g,' ')].join(' ').toLowerCase().includes(q));
@@ -82,6 +85,7 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.querySelector('.atlas-map.is-expanded')&&!modal.classList.contains('open')&&(routeLayer.classList.contains('open')||lbModal.classList.contains('open'))&&!menu.classList.contains('open'))closeRoute();});
   const initial=location.hash.replace(/^#\/?/,'');if(supported.has(initial.split('/')[0])){if(!location.hash.startsWith('#/'))history.replaceState({route:initial},'',location.pathname+location.search+'#/'+initial);openRoute(initial,false);}
 })();
+
 
 
 

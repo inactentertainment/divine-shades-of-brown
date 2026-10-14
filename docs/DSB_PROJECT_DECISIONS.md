@@ -87,3 +87,11 @@ Lock in the journal placement: understated 3D inline card with a soft fade/shado
 - Add twelve city destinations (total 90) to the existing painted Atlas, plus zoom slider, recenter control, resize guards, expanded-map background scroll lock and correct Escape return. No invented business ownership/rating claims for new cities.
 - Research recommends painted entrance plus optional MapLibre/OpenFreeMap detailed vector map, using a DSB style and preserved attribution. Satellite imagery and live cameras remain distinct features. Official African wildlife camera collection is linked explicitly; no feed is presented as a live view of the selected city.
 - No paid mapping API or hosting service added. See DSB_ARTWORK_REEL.md for source research, actual implementation boundaries, delivery paths, final prompts and QA limits.
+
+
+## 13 October 2026 — approved artwork installed
+- User approved placement of all four existing paintings. Retain the installed Library book-letter wordmark; place Essentials below its heading, Our Next Chapter under the Journal hero, and the Atlas companion above the interactive map.
+- Add the three editorial images to the homepage sections as well as dedicated Journal/Atlas routes. The Essentials section carries its artwork when moved into its full-page route. Retain readable HTML headings and existing copy, search, filters, menus and map controls.
+- Preserve full image proportions on desktop/mobile; no forced crops, new image generation or large PNG downloads. Reuse existing optimized WebP files, include descriptive alt text and intrinsic dimensions, and load editorial paintings lazily.
+- Repeated route checks confirm one banner per active destination, original map node retained, and moved Essentials/map nodes restored to the homepage on exit. No new map service, pricing, membership or reader behavior in this placement build.
+- Next planned pass: review artwork on actual mobile/light/dark screens, then decide whether to add the researched optional detailed-map view.
