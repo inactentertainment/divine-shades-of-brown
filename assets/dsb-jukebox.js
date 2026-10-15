@@ -30,7 +30,7 @@ let mine=[];try{const saved=JSON.parse(localStorage.getItem('dsb-jukebox-playlis
 let focused=false,movieData=null,movieLoading=null;let stack=[],page=root,current=null,queue=[],index=0,yt=null,ready=false,epoch=0,shuffle=false,repeat=false,apiPromise;
 function save(){try{localStorage.setItem('dsb-jukebox-playlist',JSON.stringify(mine.filter(t=>!t.src)))}catch{$('jbAddStatus').textContent='Browser storage is unavailable; your selections remain for this session.'}}
 function navigate(next){stack.push(page);page=next;paint();}
-function paint(){view.replaceChildren();page();back.hidden=false;back.onclick=()=>{if(focused){stop();focused=false;panel.classList.remove('player-focused');view.hidden=false;back.focus();return;}if(stack.length){page=stack.pop();paint()}else minimize()};}
+function paint(){view.replaceChildren();panel.dataset.browse=page===root?'root':'branch';page();back.hidden=!focused&&stack.length===0;back.onclick=()=>{if(focused){stop();focused=false;panel.classList.remove('player-focused');view.hidden=false;back.focus();return;}if(stack.length){page=stack.pop();paint()}else minimize()};}
 function heading(text,desc){const h=document.createElement('h3');h.textContent=text;view.append(h);if(desc){const p=document.createElement('p');p.textContent=desc;view.append(p)}}
 function button(parent,text,action,cls=''){const b=document.createElement('button');b.type='button';b.textContent=text;b.className=cls;b.onclick=action;parent.append(b);return b}
 function grid(){const el=document.createElement('div');el.className='jb-grid';view.append(el);return el}
