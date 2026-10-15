@@ -61,3 +61,20 @@ elif slug=='examine-the-past-home':
   s=s.replace("+playlist.length+'</button><p>Your playlist", "+playlist.length+'</button></details><p>Your playlist")
   p.write_text(s)
 print(slug+': site-specific refinements complete')
+
+# Keep installed and browser visits on this build's shared presentation assets.
+for page in root.rglob('*.html'):
+ text=page.read_text()
+ clean=re.sub(r'(src=["\'](?:\.\./)*app-assets/install\.js)(?:\?[^"\']*)?',r'\1?v=20261015-refine5',text)
+ clean=clean.replace('<span class="tool-word">MUSIC</span>','<span class="tool-word">JUKEBOX</span>')
+ if clean!=text:page.write_text(clean)
+
+# The companion painting follows Travel Experiences, outside the Find Us map section.
+p=root/'index.html';text=p.read_text()
+art=re.search(r'\s*<figure class="dsb-editorial-art dsb-editorial-art--atlas".*?</figure>',text,re.S)
+anchor='<button class="dsb-silver" data-travel-open>Travel Experiences <span aria-hidden="true">↗</span></button>'
+assert art and anchor in text
+figure=art[0].strip();text=text[:art.start()]+text[art.end():]
+text=text.replace(anchor,anchor+'\n      '+figure,1)
+text=text.replace('Use the new music control at the top of the page','Use the jukebox control at the top of the page')
+p.write_text(text)
