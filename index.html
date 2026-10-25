@@ -315,7 +315,7 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 <script defer src="app-assets/install.js?v=20261015-refine5"></script>
 <link rel="icon" type="image/png" sizes="64x64" href="app-assets/icon-64-large-20261015.png">
 <link rel="apple-touch-icon" sizes="180x180" href="app-assets/icon-180-large-20261015.png">
-</head>
+<style id="dsb-free-first-no-marketing-forms">#foundingForm,#founderPopupForm{display:none!important}</style></head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
   <div class="announcement"><span>FOUNDING EDITION</span> Divine Shades of Brown — Black life, connected. <button data-scroll="#membership">Explore founding access</button></div>
@@ -1119,7 +1119,7 @@ const founderPopup=document.getElementById('founderPopup');
 const founderPopupKey='dsb-founding-popup-dismissed';
 const founderSignupKey='dsb-founding-email';
 let founderPopupShown=false;
-function canShowFounderPopup(){if(localStorage.getItem(founderSignupKey))return false;const dismissed=Number(localStorage.getItem(founderPopupKey)||0);return !dismissed||(Date.now()-dismissed)>(7*24*60*60*1000);}
+function canShowFounderPopup(){return false; /* Free-first transition: disable automatic marketing email popup; keep product purchase flows intact. */}
 function openFounderPopup(){if(founderPopupShown||!canShowFounderPopup())return;founderPopupShown=true;founderPopup.classList.add('open');founderPopup.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>document.getElementById('founderPopupEmail')?.focus(),150);}
 function closeFounderPopup(){founderPopup.classList.remove('open');founderPopup.setAttribute('aria-hidden','true');document.body.style.overflow='';localStorage.setItem(founderPopupKey,String(Date.now()));}
 document.getElementById('founderClose').onclick=closeFounderPopup;
