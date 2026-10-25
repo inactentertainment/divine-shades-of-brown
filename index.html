@@ -1119,7 +1119,7 @@ const founderPopup=document.getElementById('founderPopup');
 const founderPopupKey='dsb-founding-popup-dismissed';
 const founderSignupKey='dsb-founding-email';
 let founderPopupShown=false;
-function canShowFounderPopup(){if(localStorage.getItem(founderSignupKey))return false;const dismissed=Number(localStorage.getItem(founderPopupKey)||0);return !dismissed||(Date.now()-dismissed)>(7*24*60*60*1000);}
+function canShowFounderPopup(){return false; /* Free-first transition: disable automatic marketing email popup; keep product purchase flows intact. */}
 function openFounderPopup(){if(founderPopupShown||!canShowFounderPopup())return;founderPopupShown=true;founderPopup.classList.add('open');founderPopup.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>document.getElementById('founderPopupEmail')?.focus(),150);}
 function closeFounderPopup(){founderPopup.classList.remove('open');founderPopup.setAttribute('aria-hidden','true');document.body.style.overflow='';localStorage.setItem(founderPopupKey,String(Date.now()));}
 document.getElementById('founderClose').onclick=closeFounderPopup;
