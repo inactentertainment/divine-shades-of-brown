@@ -335,7 +335,18 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 .dsb-gift-card .dsb-gift-note{font-size:11px;color:#bca493}.dsb-gift-card button[type=submit]{margin-top:12px}
 @media(max-width:620px){.dsb-gift-fields{grid-template-columns:1fr}.dsb-gift-card{padding:34px 20px 24px}}
 </style>
-</head>
+<style id="dsb-magazine-invitation-style">
+.dsb-mag-overlay{position:fixed;inset:0;z-index:1601;display:none;place-items:center;padding:18px;background:#070402e8;backdrop-filter:blur(12px)}
+.dsb-mag-overlay.open{display:grid}.dsb-mag-shell{position:relative;width:min(940px,96vw);max-height:92dvh;overflow:auto;display:grid;grid-template-columns:minmax(220px,.85fr) minmax(300px,1.15fr);gap:clamp(20px,4vw,45px);align-items:center;padding:clamp(22px,4vw,42px);border:1px solid #a87955;background:linear-gradient(140deg,#352013,#130b07 65%);box-shadow:0 36px 110px #000}
+.dsb-mag-cover{aspect-ratio:3/4.15;position:relative;overflow:hidden;background:linear-gradient(0deg,#0f0804 5%,transparent 65%),url('assets/dsb-logo.webp') 50% 52%/73% auto no-repeat,radial-gradient(ellipse at 48% 50%,#ab7551 0%,#593522 45%,#180f09 100%);border:1px solid #d4a77c;box-shadow:14px 16px 0 #090503,22px 30px 45px #0009;color:#fff4e8;padding:18px;display:flex;flex-direction:column;justify-content:space-between;text-align:center}
+.dsb-mag-cover:after{content:'';position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 8px #f7dfbd13;background:linear-gradient(105deg,#ffffff11,transparent 22%,transparent 76%,#0004)}
+.dsb-mag-masthead{font:700 clamp(20px,3vw,33px)/.9 var(--serif);letter-spacing:-.035em;text-shadow:0 2px 5px #000b}.dsb-mag-masthead span{display:block;font-size:.43em;letter-spacing:.2em;margin-top:10px}
+.dsb-mag-cover-lines{font:600 clamp(20px,3vw,34px)/1 var(--serif);text-shadow:0 3px 5px #000}.dsb-mag-cover-lines small{display:block;font:700 9px var(--sans);letter-spacing:.15em;margin-top:12px;color:#ffe1bd}
+.dsb-mag-copy h2{font:600 clamp(35px,5vw,62px)/1 var(--serif);margin:12px 0 17px;color:#fff4e5}.dsb-mag-copy>p{color:#d1baa7;line-height:1.65;font-size:14px}
+.dsb-mag-form{display:grid;gap:12px;margin-top:20px}.dsb-mag-form label{font-size:12px;color:#ecd4c0;display:grid;gap:6px}.dsb-mag-form input[type=email],.dsb-mag-form input[type=text]{width:100%;padding:13px;background:#0c0705;border:1px solid #926648;color:#fff;font:14px var(--sans)}
+.dsb-mag-consent{display:flex!important;grid-template-columns:none!important;align-items:flex-start;gap:10px!important;font-size:11px!important;line-height:1.6}.dsb-mag-consent input{margin-top:4px}.dsb-mag-note{font-size:11px;color:#bda38f}.dsb-mag-x{position:absolute;right:12px;top:12px;z-index:2;background:#170c07;color:#fff;border:1px solid #ad7952;width:40px;height:40px;border-radius:50%;cursor:pointer}
+@media(max-width:690px){.dsb-mag-shell{grid-template-columns:1fr}.dsb-mag-cover{width:min(230px,65vw);margin:auto}.dsb-mag-copy h2{font-size:34px}}
+</style></head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
   <div class="announcement"><span>FOUNDING EDITION</span> Divine Shades of Brown — Black life, connected. <button data-scroll="#membership">Explore founding access</button></div>
@@ -877,6 +888,23 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
     </form>
   </div>
 </div>
+<div class="dsb-mag-overlay" id="dsbMagazineInvitation" aria-hidden="true">
+<div class="dsb-mag-shell" role="dialog" aria-modal="true" aria-labelledby="dsbMagazineTitle">
+<button class="dsb-mag-x" id="dsbMagazineClose" type="button" aria-label="Close magazine invitation">×</button>
+<div class="dsb-mag-cover" role="img" aria-label="Concept cover for Divine Shades of Brown Magazine, with a bronze-and-brown design and DSB emblem">
+<div class="dsb-mag-masthead">DIVINE SHADES<br>OF BROWN<span>MAGAZINE · COVER CONCEPT</span></div>
+<div class="dsb-mag-cover-lines">Our stories.<br>Our culture.<br>Our future.<small>HISTORY · COMMUNITY · CULTURE · BLACK LIFE</small></div>
+</div>
+<div class="dsb-mag-copy"><span class="section-kicker">COMING TO DIVINE SHADES OF BROWN</span>
+<h2 id="dsbMagazineTitle">A magazine for<br><em>the lives we live.</em></h2>
+<p>Black-centered stories exploring community, history, books, business, travel, music, family, and the everyday culture shaping our world. Sign up to hear when the magazine is ready.</p>
+<form class="dsb-mag-form" id="dsbMagazineForm">
+<label>Your name<input name="name" autocomplete="name" type="text" required maxlength="120"></label>
+<label>Email address<input name="email" autocomplete="email" type="email" required maxlength="254"></label>
+<label class="dsb-mag-consent"><input name="consent" type="checkbox" required><span>I agree to receive Divine Shades of Brown Magazine editions and occasional promotional emails. I can unsubscribe at any time.</span></label>
+<button type="submit" class="shine-btn" disabled>MAGAZINE SIGNUP · COMING SOON</button>
+<div class="dsb-mag-note" id="dsbMagazineStatus" role="status">Preview only. Subscriptions are not being collected yet.</div>
+</form></div></div></div>
 <div class="founder-popup" id="founderPopup" aria-hidden="true">
     <div class="founder-shell" role="dialog" aria-modal="true" aria-labelledby="founderPopupTitle">
       <button class="founder-close" id="founderClose" aria-label="Close">×</button>
@@ -1511,6 +1539,15 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&gift.classList.contains('open'))dismiss()});
   setInterval(()=>{const now=Date.now(),elapsed=Math.min(now-lastTick,1000);lastTick=now;if(GIFT_READY&&!document.hidden&&document.hasFocus()&&!busy())activeMs+=elapsed;show()},1000);
   form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('dsbGiftStatus').textContent='Journal requests are not open yet.'});
+})();
+</script>
+<script id="dsb-magazine-invitation-controller">
+(()=>{const overlay=document.getElementById('dsbMagazineInvitation'),close=document.getElementById('dsbMagazineClose'),form=document.getElementById('dsbMagazineForm');const MAGAZINE_READY=false;let active=0,shown=false,last=Date.now();
+const busy=()=>Boolean(document.querySelector('.dsb-gift-overlay.open,.modal.open,.route-layer.open,.lifebook-modal.open,.ffp-modal.open,.founder-popup.open,.mobile-menu.open,.music-panel.open,[aria-modal="true"].open'))||Boolean(document.activeElement?.closest('form,[contenteditable="true"]'));
+const hide=()=>{overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');try{localStorage.setItem('dsb-magazine-dismissed',String(Date.now()))}catch(e){}};
+close.addEventListener('click',hide);overlay.addEventListener('click',e=>{if(e.target===overlay)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))hide()});
+setInterval(()=>{const now=Date.now(),delta=Math.min(now-last,1000);last=now;if(!MAGAZINE_READY||document.hidden||!document.hasFocus()||busy())return;active+=delta;let lastDismissed=0;try{lastDismissed=Number(localStorage.getItem('dsb-magazine-dismissed')||0)}catch(e){}if(!shown&&active>=120000&&now-lastDismissed>86400000){shown=true;overlay.classList.add('open');overlay.setAttribute('aria-hidden','false')}},1000);
+form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('dsbMagazineStatus').textContent='Magazine signups are not available yet.'});
 })();
 </script>
 </body>
