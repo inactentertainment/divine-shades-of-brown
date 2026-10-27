@@ -1525,12 +1525,13 @@ window.DSBSignup={
   async send(type,form,consent){
     const fd=new FormData(form),name=String(fd.get('name')||'').trim(),email=String(fd.get('email')||'').trim();
     if(!name||!email||!form.reportValidity())throw Error('Enter your name and a valid email address.');
+    if(String(fd.get('_honey')||'').trim())throw Error('Submission could not be accepted.');
     const data={name,email,_subject:'DSB '+(type==='magazine'?'Magazine Subscription':'Journal Gift Request'),brand:'Divine Shades of Brown',
       request_type:type,source:'https://inactentertainment.github.io/divine-shades-of-brown/',
       requested_at:new Date().toISOString(),consent:consent||'No marketing consent provided',_captcha:'false',_honey:String(fd.get('_honey')||'')};
     const res=await fetch(this.endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
     const json=await res.json().catch(()=>({success:'false',message:'Unexpected response from delivery provider'}));
-    if(!res.ok||!(json.success===true||json.success==='true'))throw Error(json.message||'Submission not accepted. Please try again later.');
+    if(!res.ok||!(json.success===true||json.success==='true'))throw Error(typeof json.message==='string'?json.message:'Submission not accepted. Please try again later.');
     try{localStorage.setItem('dsb-signup-'+type,'completed')}catch(e){}
     return json;
   },
@@ -1545,7 +1546,7 @@ window.DSBSignup={
 const hide=()=>{gift.classList.remove('open');gift.setAttribute('aria-hidden','true');window.DSBSignup.dismiss();try{sessionStorage.setItem('dsb-journal-gift-dismissed','1')}catch(e){}};
 close.addEventListener('click',hide);gift.addEventListener('click',e=>{if(e.target===gift)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&gift.classList.contains('open'))hide()});
 setInterval(()=>{const now=Date.now(),delta=Math.min(now-last,1000);last=now;if(!GIFT_READY||document.hidden||!document.hasFocus()||window.DSBSignup.busy()||window.DSBSignup.cooldown()||window.DSBSignup.completed('gift'))return;active+=delta;if(!shown&&active>=25000){shown=true;gift.classList.add('open');gift.setAttribute('aria-hidden','false')}},1000);
-form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;const status=document.getElementById('dsbGiftStatus'),btn=form.querySelector('button[type="submit"]');btn.disabled=true;status.textContent='Sending your journal request…';try{await window.DSBSignup.send('gift',form,'No marketing consent requested or granted');status.innerHTML='Request accepted. <a href="assets/my-story-starter-journal.html" target="_blank" rel="noopener" style="color:#f3c292;text-decoration:underline">OPEN YOUR FREE JOURNAL</a> (print or save as PDF).';form.reset();}catch(err){status.textContent='Delivery not confirmed: '+err.message}finally{btn.disabled=false}});
+form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;const status=document.getElementById('dsbGiftStatus'),btn=form.querySelector('button[type="submit"]');btn.disabled=true;status.textContent='Sending your journal request…';try{await window.DSBSignup.send('gift',form,'No marketing consent requested or granted');status.innerHTML='Request accepted. <a href="assets/my-story-starter-journal.html" target="_blank" rel="noopener" style="color:#f3c292;text-decoration:underline">OPEN YOUR FREE JOURNAL</a> (print or save as PDF).';form.reset();btn.textContent='REQUEST ACCEPTED';}catch(err){status.textContent='Delivery not confirmed: '+err.message;btn.disabled=false}});
 })();
 </script>
 <script id="dsb-magazine-invitation-controller">
@@ -1554,7 +1555,7 @@ btn.disabled=false;btn.textContent='REQUEST FREE MAGAZINE UPDATES';
 const hide=()=>{overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');window.DSBSignup.dismiss();try{localStorage.setItem('dsb-magazine-dismissed',String(Date.now()))}catch(e){}};
 close.addEventListener('click',hide);overlay.addEventListener('click',e=>{if(e.target===overlay)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))hide()});
 setInterval(()=>{const now=Date.now(),delta=Math.min(now-last,1000);last=now;if(document.hidden||!document.hasFocus()||window.DSBSignup.busy()||window.DSBSignup.completed('magazine')||window.DSBSignup.cooldown())return;active+=delta;let dismissed=0;try{dismissed=Number(localStorage.getItem('dsb-magazine-dismissed')||0)}catch(e){}if(!shown&&active>=120000&&now-dismissed>86400000){shown=true;overlay.classList.add('open');overlay.setAttribute('aria-hidden','false')}},1000);
-form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity()||!form.elements.consent.checked)return;btn.disabled=true;status.textContent='Sending request…';try{await window.DSBSignup.send('magazine',form,'I agree to receive Divine Shades of Brown Magazine editions and occasional promotional emails. I can unsubscribe at any time.');status.textContent='Your subscription request was accepted. Thank you!';setTimeout(hide,1800)}catch(err){status.textContent='Request not confirmed: '+err.message}finally{btn.disabled=false}});
+form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity()||!form.elements.consent.checked)return;btn.disabled=true;status.textContent='Sending request…';try{await window.DSBSignup.send('magazine',form,'I agree to receive Divine Shades of Brown Magazine editions and occasional promotional emails. I can unsubscribe at any time.');status.textContent='Your subscription request was accepted. Thank you!';btn.textContent='SUBSCRIBED';setTimeout(hide,1800)}catch(err){status.textContent='Request not confirmed: '+err.message}finally{if(!window.DSBSignup.completed('magazine'))btn.disabled=false}});
 })();
 </script>
 </body>
