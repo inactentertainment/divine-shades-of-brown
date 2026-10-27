@@ -902,8 +902,8 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 <label>Your name<input name="name" autocomplete="name" type="text" required maxlength="120"></label>
 <label>Email address<input name="email" autocomplete="email" type="email" required maxlength="254"></label>
 <label class="dsb-mag-consent"><input name="consent" type="checkbox" required><span>I agree to receive Divine Shades of Brown Magazine editions and occasional promotional emails. I can unsubscribe at any time.</span></label>
-<button type="submit" class="shine-btn" disabled>MAGAZINE SIGNUP · COMING SOON</button>
-<div class="dsb-mag-note" id="dsbMagazineStatus" role="status">Preview only. Subscriptions are not being collected yet.</div>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"><button type="submit" class="shine-btn">REQUEST FREE MAGAZINE UPDATES</button>
+<div class="dsb-mag-note" id="dsbMagazineStatus" role="status">Receive an email when a future edition is available; no issue is available for immediate download.</div>
 </form></div></div></div>
 <div class="founder-popup" id="founderPopup" aria-hidden="true">
     <div class="founder-shell" role="dialog" aria-modal="true" aria-labelledby="founderPopupTitle">
@@ -1307,7 +1307,7 @@ function closeRoute(push=true){routeLayer.classList.remove('open');routeLayer.se
 document.getElementById('routeClose').onclick=()=>closeRoute();document.querySelectorAll('[data-route]').forEach(b=>b.onclick=()=>openRoute(b.dataset.route));window.addEventListener('popstate',()=>{if(location.hash.startsWith('#/'))openRoute(location.hash.slice(2),false);else if(routeLayer.classList.contains('open'))closeRoute(false)});if(location.hash.startsWith('#/'))setTimeout(()=>openRoute(location.hash.slice(2),false),100);
 
 const legalDocs={
- privacy:{title:'Privacy Policy',body:'<p><strong>Effective:</strong> October 10, 2026 · Founding Edition</p><p>Divine Shades of Brown is operated by InAct Entertainment LLC. Most interactive data in the current local-first experience is stored only in your browser. If you use a feature that sends information to DSB or a connected service, we may collect information you choose to provide, such as name, email, profile preferences, submissions and membership or payment status.</p><h4>How information is used</h4><p>We use information to operate DSB, provide requested features, administer memberships, moderate submissions, improve services and communicate about the platform. We do not sell personal information to advertisers.</p><h4>Third parties</h4><p>DSB may use service providers for hosting, authentication, payments, analytics, email and maps. External links take you to third-party websites governed by their own policies.</p><h4>Your choices</h4><p>You may contact DSB to request access, correction or deletion of personal information DSB holds about you. Additional state or regional privacy rights will be honored where applicable.</p>'},
+ privacy:{title:'Privacy Policy',body:'<p><strong>Effective:</strong> October 10, 2026 · Founding Edition</p><p>Divine Shades of Brown is operated by InAct Entertainment LLC. Most interactive data in the current local-first experience is stored only in your browser. If you use a feature that sends information to DSB or a connected service, we may collect information you choose to provide, such as name, email, profile preferences, submissions and membership or payment status.</p><h4>How information is used</h4><p>We use information to operate DSB, provide requested features, moderate submissions, improve services and communicate about the platform. Magazine signup data is used to send requested editions and, only with explicit consent, occasional promotions. A separate journal gift request does not enroll anyone in magazine or promotional messages. Signup data (including request type, date, source, and consent text) may be processed by our form-delivery provider. You can request unsubscribing or deletion by emailing divineshadesofbrown@gmail.com. We do not sell personal information to advertisers.</p><h4>Third parties</h4><p>DSB may use service providers for hosting, authentication, payments, analytics, email and maps. External links take you to third-party websites governed by their own policies.</p><h4>Your choices</h4><p>You may contact DSB to request access, correction or deletion of personal information DSB holds about you. Additional state or regional privacy rights will be honored where applicable.</p>'},
  terms:{title:'Terms of Use',body:'<p><strong>Effective:</strong> October 10, 2026 · Founding Edition</p><p>By using Divine Shades of Brown, you agree to use the platform lawfully and respectfully. DSB provides directories, educational material, external resources, community submissions and discovery tools for informational purposes.</p><h4>Directory and opportunity information</h4><p>Listings may change. Users should confirm prices, eligibility, deadlines, ownership, hours, safety information and other important details with the original source before acting.</p><h4>User submissions</h4><p>Submitting an event, business or other listing does not guarantee publication. DSB may review, edit, decline or remove submissions that are inaccurate, unsafe, unlawful, abusive, promotional spam or inconsistent with community standards.</p><h4>Intellectual property</h4><p>DSB branding, original text, designs and downloadable materials are protected by applicable law. Third-party names and materials remain the property of their respective owners.</p>'},
  disclaimer:{title:'General Disclaimer',body:'<p>Divine Shades of Brown provides educational and informational resources. Content is not legal, medical, mental-health, financial, tax or other professional advice.</p><p>For health or mental-health concerns, consult an appropriately qualified professional. If you are in immediate danger, contact local emergency services. In the United States, call or text 988 for the Suicide & Crisis Lifeline.</p><p>DSB links to independent third-party organizations and websites. A link does not guarantee or endorse every service, statement or practice of that organization.</p>'},
  affiliate:{title:'Affiliate Disclosure',body:'<p>Some Divine Shades of Brown commerce pages may contain affiliate links. When a link is actually monetized, DSB will label the relevant card or placement as AFFILIATE or SPONSORED. If you purchase through an eligible affiliate link, InAct Entertainment LLC may receive compensation at no additional cost to you.</p><p>Standard discovery links are not represented as affiliate relationships. Affiliate compensation does not determine inclusion in core directories, Find Help, opportunities, history resources or other essential public utilities. Black-owned, verified, partner and sponsored labels are used only after the applicable status is confirmed.</p>'},
@@ -1519,35 +1519,42 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 <script src="assets/dsb-comfort-lifecycle.js?v=dsb1"></script>
 <script src="assets/dsb-reading-pages.js?v=links2"></script>
 <script src="assets/dsb-themed-selects.js?v=1"></script>
+<script id="dsb-signup-delivery">
+window.DSBSignup={
+  endpoint:'https://formsubmit.co/ajax/divineshadesofbrown@gmail.com',
+  async send(type,form,consent){
+    const fd=new FormData(form),name=String(fd.get('name')||'').trim(),email=String(fd.get('email')||'').trim();
+    if(!name||!email||!form.reportValidity())throw Error('Enter your name and a valid email address.');
+    const data={name,email,_subject:'DSB '+(type==='magazine'?'Magazine Subscription':'Journal Gift Request'),brand:'Divine Shades of Brown',
+      request_type:type,source:'https://inactentertainment.github.io/divine-shades-of-brown/',
+      requested_at:new Date().toISOString(),consent:consent||'No marketing consent provided',_captcha:'false',_honey:String(fd.get('_honey')||'')};
+    const res=await fetch(this.endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+    const json=await res.json().catch(()=>({success:'false',message:'Unexpected response from delivery provider'}));
+    if(!res.ok||!(json.success===true||json.success==='true'))throw Error(json.message||'Submission not accepted. Please try again later.');
+    try{localStorage.setItem('dsb-signup-'+type,'completed')}catch(e){}
+    return json;
+  },
+  busy(){return Boolean(document.querySelector('.dsb-gift-overlay.open,.dsb-mag-overlay.open,.modal.open,.route-layer.open,.lifebook-modal.open,.ffp-modal.open,.founder-popup.open,.mobile-menu.open,.music-panel.open'))||Boolean(document.activeElement?.closest('form,[contenteditable="true"]'))},
+  cooldown(){try{return Date.now()-Number(localStorage.getItem('dsb-signup-last-dismiss')||0)<60000}catch(e){return false}},
+  dismiss(){try{localStorage.setItem('dsb-signup-last-dismiss',String(Date.now()))}catch(e){}},
+  completed(type){try{return localStorage.getItem('dsb-signup-'+type)==='completed'}catch(e){return false}}
+};
+</script>
 <script id="dsb-journal-gift-controller">
-(()=>{
-  const gift=document.getElementById('dsbJournalGift');
-  const close=document.getElementById('dsbGiftClose');
-  const form=document.getElementById('dsbGiftForm');
-  // Gate remains OFF until a real gift file and accepted-delivery workflow are verified.
-  const GIFT_READY=false;
-  const requiredActiveMs=25000;
-  let activeMs=0, lastTick=Date.now(), shown=false;
-  const busy=()=>document.querySelector('.modal.open,.route-layer.open,.lifebook-modal.open,.ffp-modal.open,.founder-popup.open,.mobile-menu.open,.music-panel.open,.dsb-gift-overlay.open,[aria-modal="true"].open')!==null
-    || Boolean(document.activeElement?.closest('form,[contenteditable="true"]'));
-  const eligible=()=>GIFT_READY&&!shown&&!document.hidden&&document.hasFocus()&&!busy()
-    &&sessionStorage.getItem('dsb-journal-gift-dismissed')!=='1';
-  const show=()=>{if(!eligible()||activeMs<requiredActiveMs)return;shown=true;gift.classList.add('open');gift.setAttribute('aria-hidden','false');gift.querySelector('input[name="name"]').focus()};
-  const dismiss=()=>{gift.classList.remove('open');gift.setAttribute('aria-hidden','true');sessionStorage.setItem('dsb-journal-gift-dismissed','1');};
-  close.addEventListener('click',dismiss);
-  gift.addEventListener('click',e=>{if(e.target===gift)dismiss()});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&gift.classList.contains('open'))dismiss()});
-  setInterval(()=>{const now=Date.now(),elapsed=Math.min(now-lastTick,1000);lastTick=now;if(GIFT_READY&&!document.hidden&&document.hasFocus()&&!busy())activeMs+=elapsed;show()},1000);
-  form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('dsbGiftStatus').textContent='Journal requests are not open yet.'});
+(()=>{const gift=document.getElementById('dsbJournalGift'),close=document.getElementById('dsbGiftClose'),form=document.getElementById('dsbGiftForm');const GIFT_READY=false;let active=0,last=Date.now(),shown=false;
+const hide=()=>{gift.classList.remove('open');gift.setAttribute('aria-hidden','true');window.DSBSignup.dismiss();try{sessionStorage.setItem('dsb-journal-gift-dismissed','1')}catch(e){}};
+close.addEventListener('click',hide);gift.addEventListener('click',e=>{if(e.target===gift)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&gift.classList.contains('open'))hide()});
+setInterval(()=>{const now=Date.now(),delta=Math.min(now-last,1000);last=now;if(!GIFT_READY||document.hidden||!document.hasFocus()||window.DSBSignup.busy()||window.DSBSignup.cooldown()||window.DSBSignup.completed('gift'))return;active+=delta;if(!shown&&active>=25000){shown=true;gift.classList.add('open');gift.setAttribute('aria-hidden','false')}},1000);
+form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('dsbGiftStatus').textContent='Gift is not available yet. Requests are not being collected.'});
 })();
 </script>
 <script id="dsb-magazine-invitation-controller">
-(()=>{const overlay=document.getElementById('dsbMagazineInvitation'),close=document.getElementById('dsbMagazineClose'),form=document.getElementById('dsbMagazineForm');const MAGAZINE_READY=false;let active=0,shown=false,last=Date.now();
-const busy=()=>Boolean(document.querySelector('.dsb-gift-overlay.open,.modal.open,.route-layer.open,.lifebook-modal.open,.ffp-modal.open,.founder-popup.open,.mobile-menu.open,.music-panel.open,[aria-modal="true"].open'))||Boolean(document.activeElement?.closest('form,[contenteditable="true"]'));
-const hide=()=>{overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');try{localStorage.setItem('dsb-magazine-dismissed',String(Date.now()))}catch(e){}};
+(()=>{const overlay=document.getElementById('dsbMagazineInvitation'),close=document.getElementById('dsbMagazineClose'),form=document.getElementById('dsbMagazineForm'),status=document.getElementById('dsbMagazineStatus'),btn=form.querySelector('button[type="submit"]');let active=0,shown=false,last=Date.now();
+btn.disabled=false;btn.textContent='REQUEST FREE MAGAZINE UPDATES';
+const hide=()=>{overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');window.DSBSignup.dismiss();try{localStorage.setItem('dsb-magazine-dismissed',String(Date.now()))}catch(e){}};
 close.addEventListener('click',hide);overlay.addEventListener('click',e=>{if(e.target===overlay)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))hide()});
-setInterval(()=>{const now=Date.now(),delta=Math.min(now-last,1000);last=now;if(!MAGAZINE_READY||document.hidden||!document.hasFocus()||busy())return;active+=delta;let lastDismissed=0;try{lastDismissed=Number(localStorage.getItem('dsb-magazine-dismissed')||0)}catch(e){}if(!shown&&active>=120000&&now-lastDismissed>86400000){shown=true;overlay.classList.add('open');overlay.setAttribute('aria-hidden','false')}},1000);
-form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('dsbMagazineStatus').textContent='Magazine signups are not available yet.'});
+setInterval(()=>{const now=Date.now(),delta=Math.min(now-last,1000);last=now;if(document.hidden||!document.hasFocus()||window.DSBSignup.busy()||window.DSBSignup.completed('magazine')||window.DSBSignup.cooldown())return;active+=delta;let dismissed=0;try{dismissed=Number(localStorage.getItem('dsb-magazine-dismissed')||0)}catch(e){}if(!shown&&active>=120000&&now-dismissed>86400000){shown=true;overlay.classList.add('open');overlay.setAttribute('aria-hidden','false')}},1000);
+form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity()||!form.elements.consent.checked)return;btn.disabled=true;status.textContent='Sending request…';try{await window.DSBSignup.send('magazine',form,'I agree to receive Divine Shades of Brown Magazine editions and occasional promotional emails. I can unsubscribe at any time.');status.textContent='Your subscription request was accepted. Thank you!';setTimeout(hide,1800)}catch(err){status.textContent='Request not confirmed: '+err.message}finally{btn.disabled=false}});
 })();
 </script>
 </body>
