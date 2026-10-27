@@ -321,6 +321,20 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 #membership .member-grid{display:grid;grid-template-columns:minmax(0,1fr);max-width:750px;margin-inline:auto}
 #membership .member-grid>article:first-child{width:100%;max-width:none}
 </style>
+<style id="dsb-journal-gift-preparation">
+/* Inactive until the journal file and delivery endpoint are approved and tested. */
+.dsb-gift-overlay{position:fixed;inset:0;z-index:1600;display:none;place-items:center;padding:18px;background:rgba(7,4,2,.86);backdrop-filter:blur(10px)}
+.dsb-gift-overlay.open{display:grid}
+.dsb-gift-card{position:relative;width:min(850px,96vw);max-height:90dvh;overflow:auto;padding:clamp(24px,5vw,46px);border:1px solid #a56b42;background:radial-gradient(circle at 95% 0%,#72422955,transparent 48%),linear-gradient(135deg,#321d12,#100a07 70%);color:#f3eadc;box-shadow:0 30px 95px #000b}
+.dsb-gift-card h2{font:600 clamp(38px,6vw,65px)/1.04 var(--serif);margin:14px 0}.dsb-gift-card h2 em{color:#e6bd94}
+.dsb-gift-card p{max-width:660px;font-size:14px;line-height:1.65;color:#dbc7b5}
+.dsb-gift-close{position:absolute;right:14px;top:14px;background:#1b100b;border:1px solid #936446;color:white;border-radius:50%;width:40px;height:40px;cursor:pointer}
+.dsb-gift-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0 12px}
+.dsb-gift-fields label{display:grid;gap:7px;color:#e8cab0;font-size:12px}
+.dsb-gift-fields input{min-width:0;padding:14px;background:#120c08;border:1px solid #896044;color:white;font:14px var(--sans)}
+.dsb-gift-card .dsb-gift-note{font-size:11px;color:#bca493}.dsb-gift-card button[type=submit]{margin-top:12px}
+@media(max-width:620px){.dsb-gift-fields{grid-template-columns:1fr}.dsb-gift-card{padding:34px 20px 24px}}
+</style>
 </head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
@@ -846,6 +860,23 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
     </div>
   </div>
 
+<div class="dsb-gift-overlay" id="dsbJournalGift" aria-hidden="true">
+  <div class="dsb-gift-card" role="dialog" aria-modal="true" aria-labelledby="dsbGiftTitle">
+    <button type="button" class="dsb-gift-close" id="dsbGiftClose" aria-label="Close journal invitation">×</button>
+    <span class="section-kicker">DIVINE SHADES OF BROWN · A GIFT FOR YOUR STORY</span>
+    <h2 id="dsbGiftTitle">Your story<br><em>deserves a page.</em></h2>
+    <p>Our planned free reflection-journal gift draws on identity, roots, strength, goals and legacy. The finished download will be available after approval.</p>
+    <form id="dsbGiftForm">
+      <div class="dsb-gift-fields">
+        <label>Your name<input type="text" name="name" required autocomplete="name" maxlength="120"></label>
+        <label>Email address<input type="email" name="email" required autocomplete="email" maxlength="254"></label>
+      </div>
+      <p class="dsb-gift-note">This request is for the journal gift only. It does not subscribe you to marketing emails.</p>
+      <button type="submit" class="shine-btn" disabled>FREE JOURNAL · COMING SOON</button>
+      <p class="dsb-gift-note" role="status" id="dsbGiftStatus">Not accepting requests yet; download and delivery are being prepared.</p>
+    </form>
+  </div>
+</div>
 <div class="founder-popup" id="founderPopup" aria-hidden="true">
     <div class="founder-shell" role="dialog" aria-modal="true" aria-labelledby="founderPopupTitle">
       <button class="founder-close" id="founderClose" aria-label="Close">×</button>
@@ -1460,6 +1491,28 @@ document.querySelectorAll('#atlasIntelTabs [data-atlas-panel]').forEach(btn=>btn
 <script src="assets/dsb-comfort-lifecycle.js?v=dsb1"></script>
 <script src="assets/dsb-reading-pages.js?v=links2"></script>
 <script src="assets/dsb-themed-selects.js?v=1"></script>
+<script id="dsb-journal-gift-controller">
+(()=>{
+  const gift=document.getElementById('dsbJournalGift');
+  const close=document.getElementById('dsbGiftClose');
+  const form=document.getElementById('dsbGiftForm');
+  // Gate remains OFF until a real gift file and accepted-delivery workflow are verified.
+  const GIFT_READY=false;
+  const requiredActiveMs=25000;
+  let activeMs=0, lastTick=Date.now(), shown=false;
+  const busy=()=>document.querySelector('.modal.open,.route-layer.open,.lifebook-modal.open,.ffp-modal.open,.founder-popup.open,.mobile-menu.open,.music-panel.open,.dsb-gift-overlay.open,[aria-modal="true"].open')!==null
+    || Boolean(document.activeElement?.closest('form,[contenteditable="true"]'));
+  const eligible=()=>GIFT_READY&&!shown&&!document.hidden&&document.hasFocus()&&!busy()
+    &&sessionStorage.getItem('dsb-journal-gift-dismissed')!=='1';
+  const show=()=>{if(!eligible()||activeMs<requiredActiveMs)return;shown=true;gift.classList.add('open');gift.setAttribute('aria-hidden','false');gift.querySelector('input[name="name"]').focus()};
+  const dismiss=()=>{gift.classList.remove('open');gift.setAttribute('aria-hidden','true');sessionStorage.setItem('dsb-journal-gift-dismissed','1');};
+  close.addEventListener('click',dismiss);
+  gift.addEventListener('click',e=>{if(e.target===gift)dismiss()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&gift.classList.contains('open'))dismiss()});
+  setInterval(()=>{const now=Date.now(),elapsed=Math.min(now-lastTick,1000);lastTick=now;if(GIFT_READY&&!document.hidden&&document.hasFocus()&&!busy())activeMs+=elapsed;show()},1000);
+  form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('dsbGiftStatus').textContent='Journal requests are not open yet.'});
+})();
+</script>
 </body>
 </html>
 
