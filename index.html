@@ -876,15 +876,15 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
     <button type="button" class="dsb-gift-close" id="dsbGiftClose" aria-label="Close journal invitation">×</button>
     <span class="section-kicker">DIVINE SHADES OF BROWN · A GIFT FOR YOUR STORY</span>
     <h2 id="dsbGiftTitle">Your story<br><em>deserves a page.</em></h2>
-    <p>Our planned free reflection-journal gift draws on identity, roots, strength, goals and legacy. The finished download will be available after approval.</p>
+    <p>Get the free My Story starter reflection journal, with pages on identity, roots, strength, goals and legacy.</p>
     <form id="dsbGiftForm">
       <div class="dsb-gift-fields">
         <label>Your name<input type="text" name="name" required autocomplete="name" maxlength="120"></label>
         <label>Email address<input type="email" name="email" required autocomplete="email" maxlength="254"></label>
       </div>
       <p class="dsb-gift-note">This request is for the journal gift only. It does not subscribe you to marketing emails.</p>
-      <button type="submit" class="shine-btn" disabled>FREE JOURNAL · COMING SOON</button>
-      <p class="dsb-gift-note" role="status" id="dsbGiftStatus">Not accepting requests yet; download and delivery are being prepared.</p>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"><button type="submit" class="shine-btn">GET MY FREE JOURNAL</button>
+      <p class="dsb-gift-note" role="status" id="dsbGiftStatus">Enter your details to request the free starter journal. Delivery confirmation may be required.</p>
     </form>
   </div>
 </div>
@@ -1541,11 +1541,11 @@ window.DSBSignup={
 };
 </script>
 <script id="dsb-journal-gift-controller">
-(()=>{const gift=document.getElementById('dsbJournalGift'),close=document.getElementById('dsbGiftClose'),form=document.getElementById('dsbGiftForm');const GIFT_READY=false;let active=0,last=Date.now(),shown=false;
+(()=>{const gift=document.getElementById('dsbJournalGift'),close=document.getElementById('dsbGiftClose'),form=document.getElementById('dsbGiftForm');const GIFT_READY=true;let active=0,last=Date.now(),shown=false;
 const hide=()=>{gift.classList.remove('open');gift.setAttribute('aria-hidden','true');window.DSBSignup.dismiss();try{sessionStorage.setItem('dsb-journal-gift-dismissed','1')}catch(e){}};
 close.addEventListener('click',hide);gift.addEventListener('click',e=>{if(e.target===gift)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&gift.classList.contains('open'))hide()});
 setInterval(()=>{const now=Date.now(),delta=Math.min(now-last,1000);last=now;if(!GIFT_READY||document.hidden||!document.hasFocus()||window.DSBSignup.busy()||window.DSBSignup.cooldown()||window.DSBSignup.completed('gift'))return;active+=delta;if(!shown&&active>=25000){shown=true;gift.classList.add('open');gift.setAttribute('aria-hidden','false')}},1000);
-form.addEventListener('submit',e=>{e.preventDefault();document.getElementById('dsbGiftStatus').textContent='Gift is not available yet. Requests are not being collected.'});
+form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;const status=document.getElementById('dsbGiftStatus'),btn=form.querySelector('button[type="submit"]');btn.disabled=true;status.textContent='Sending your journal request…';try{await window.DSBSignup.send('gift',form,'No marketing consent requested or granted');status.innerHTML='Request accepted. <a href="assets/my-story-starter-journal.html" target="_blank" rel="noopener" style="color:#f3c292;text-decoration:underline">OPEN YOUR FREE JOURNAL</a> (print or save as PDF).';form.reset();}catch(err){status.textContent='Delivery not confirmed: '+err.message}finally{btn.disabled=false}});
 })();
 </script>
 <script id="dsb-magazine-invitation-controller">
