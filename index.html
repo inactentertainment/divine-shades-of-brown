@@ -315,7 +315,13 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 <script defer src="app-assets/install.js?v=20261015-refine5"></script>
 <link rel="icon" type="image/png" sizes="64x64" href="app-assets/icon-64-large-20261015.png">
 <link rel="apple-touch-icon" sizes="180x180" href="app-assets/icon-180-large-20261015.png">
-<style id="dsb-free-first-no-marketing-forms">#foundingForm,#founderPopupForm{display:none!important}</style></head>
+<style id="dsb-free-first-no-marketing-forms">#foundingForm,#founderPopupForm{display:none!important}</style><style id="dsb-free-first-access">
+/* BUILD 1 — FREE-FIRST: preserve purchase and legacy access code, but do not market paid website memberships. */
+#member-value,#membership .member-grid>article:nth-child(n+2),#membership .ffp-entry,#membership .founding-form,#founderPopup{display:none!important}
+#membership .member-grid{display:grid;grid-template-columns:minmax(0,1fr);max-width:750px;margin-inline:auto}
+#membership .member-grid>article:first-child{width:100%;max-width:none}
+</style>
+</head>
 <body>
   <div class="noise"></div><div class="diaspora-tunnel" id="diasporaTunnel" aria-hidden="true"><div class="diaspora-tunnel-core"><i></i><i></i><i></i><strong>Black Diaspora<span>CONNECTING THE MAP</span></strong></div></div>
   <div class="announcement"><span>FOUNDING EDITION</span> Divine Shades of Brown — Black life, connected. <button data-scroll="#membership">Explore founding access</button></div>
@@ -734,18 +740,18 @@ body,input,button,select,textarea{font-family:Georgia,'Times New Roman',serif}
 
     <section class="membership-section reveal" id="membership">
       <div class="member-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
-      <p class="section-kicker">CHOOSE YOUR DSB EXPERIENCE</p>
-      <h2>Start free. Step deeper<br><em>when it earns your trust.</em></h2>
-      <p>No recurring membership is required. The public platform stays useful; the paid levels unlock curated premium digital collections.</p>
+      <p class="section-kicker">DIVINE SHADES OF BROWN · FREE FOR EVERYONE</p>
+      <h2>Explore freely.<br><em>Build your story.</em></h2>
+      <p>Explore our Black-centered library, history, business discovery, music, community tools and personal journals freely. No membership purchase is required to use the website. Personal information you save stays in this browser unless you export a backup.</p>
       <div class="member-grid">
-        <article><small>PUBLIC DSB</small><h3>Explore</h3><strong>$0</strong><p>Use the public discovery, knowledge and community platform.</p><ul><li>Black Atlas</li><li>Opportunity Finder</li><li>Find Help</li><li>Public Journal + history</li><li>Black Pulse + Brown Passport</li><li>Free downloads</li></ul><div class="member-actions"><a class="ghost-btn membership-action" href="#/atlas">Explore DSB</a><small>Free to explore.</small></div></article>
+        <article><small>OPEN ACCESS</small><h3>Discover</h3><strong>FREE</strong><p>Explore Divine Shades of Brown without a paid website membership.</p><ul><li>Black Atlas</li><li>Opportunity Finder</li><li>Find Help</li><li>Public Journal + history</li><li>Black Pulse + Brown Passport</li><li>Free downloads</li></ul><div class="member-actions"><a class="ghost-btn membership-action" href="#/atlas">Explore DSB</a><small>Free to explore.</small></div></article>
         <article class="featured-plan"><div class="plan-glint"></div><small>FOUNDING ACCESS</small><h3>Belong</h3><strong>$49<em> once</em></strong><p>A premium starter collection without another bill.</p><p class="membership-includes">Everything in Explore, plus…</p><ul><li>Digital magazine + archive sampler</li><li>Premium resource starter bundle</li><li>Brown Passport starter pack</li><li>Music/history expanded sampler</li><li>Premium field guides + downloads</li></ul><div class="member-actions"><a class="shine-btn checkout-link membership-action" href="https://buy.stripe.com/14A6oI2bU3Tt11z1Gf7Re07" target="_blank" rel="noopener" data-plan="founding">Get $49 Founding Access</a><small>One-time payment · No recurring subscription.</small></div></article>
         <article><small>LIFETIME ALL-ACCESS</small><h3>Build</h3><strong>$399</strong><p>The complete premium DSB digital ecosystem with no annual renewal.</p><p class="membership-includes">Everything in Belong, plus…</p><ul><li>Full DSB Magazine archive</li><li>Standard future digital issues</li><li>The Divine LifeBook — full personalized legacy journal</li><li>Complete premium Resource Vault</li><li>Full premium travel + music archives</li><li>Curated Shades of Brown art collections</li><li>Monthly art packages and a curated art magazine — in development</li><li>Founding Lifetime recognition</li></ul><div class="member-actions"><a class="ghost-btn checkout-link membership-action" href="https://buy.stripe.com/eVqeVeaIq4XxcKhet17Re06" target="_blank" rel="noopener" data-plan="lifetime">Get Lifetime All-Access</a><small>$399 one-time · Lifetime access.</small></div></article>
       </div>
-      <p class="membership-rollout-note">Premium collections are rolling out. Available releases and their usage terms will be identified before delivery. Lifetime access covers standard premium digital releases while DSB operates.</p>
+      <p class="membership-rollout-note">Your personal LifeBook, saved favorites and journal entries remain on this browser. Export backups regularly; clearing browser data may remove locally saved information.</p>
       <form class="founding-form" id="foundingForm"><input type="email" id="foundingEmail" placeholder="Email for founding rollout updates" required><button type="submit">I'M IN <span>↗</span></button></form>
       <div class="form-message" id="formMessage"></div>
-      <div class="member-preview"><div><h3>Choose your DSB access level.</h3><p>Public DSB remains free. Founding Access is a $49 one-time premium starter collection. Lifetime All-Access is a $399 one-time purchase that includes the full premium ecosystem and The Divine LifeBook. No recurring DSB membership fee.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
+      <div class="member-preview"><div><h3>Welcome to your free DSB experience.</h3><p>Explore the library, Black Atlas, resources, and your personal LifeBook. No checkout is required for website access. Saved work is stored on your device.</p></div><button class="shine-btn" data-route="dashboard">OPEN MY DSB <span>↗</span></button></div>
       <div class="ffp-entry"><button id="openFfpAccess">FAMILY · FRIENDS · PARTNERS ACCESS</button></div>
     </section>
 </main>
